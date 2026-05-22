@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImpls" namespace="Wcs.DefaultImpls.Conveyor">
+  <subclass name="AlarmDataLog" discriminator-value="AlarmDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="PosNo" column="`AlarmDataLog_PosNo`" type="Int32" />
+    <property name="Manual" column="`AlarmDataLog_Manual`" type="Boolean" />
+    <property name="Isolator" column="`AlarmDataLog_Isolator`" type="Boolean" />
+    <property name="Breaker" column="`AlarmDataLog_Breaker`" type="Boolean" />
+    <property name="Photocell" column="`AlarmDataLog_Photocell`" type="Boolean" />
+    <property name="RunOvertime" column="`AlarmDataLog_RunOvertime`" type="Boolean" />
+    <property name="OccupyOvertime" column="`AlarmDataLog_OccupyOvertime`" type="Boolean" />
+    <property name="TaskNoGoods" column="`AlarmDataLog_TaskNoGoods`" type="Boolean" />
+    <property name="MotorUseStatus" column="`AlarmDataLog_MotorUseStatus`" type="Int32" />
+    <property name="X_MotorVAF" column="`AlarmDataLog_X_MotorVAF`" type="Boolean" />
+    <property name="Y_MotorVAF" column="`AlarmDataLog_Y_MotorVAF`" type="Boolean" />
+    <property name="X_MotorContactor" column="`AlarmDataLog_X_MotorContactor`" type="Boolean" />
+    <property name="X_MotorBraker" column="`AlarmDataLog_X_MotorBraker`" type="Boolean" />
+    <property name="Y_MotorContactor" column="`AlarmDataLog_Y_MotorContactor`" type="Boolean" />
+    <property name="Y_MotorBraker" column="`AlarmDataLog_Y_MotorBraker`" type="Boolean" />
+    <property name="Lift_MotorContactor" column="`AlarmDataLog_Lift_MotorContactor`" type="Boolean" />
+    <property name="Lift_MotorBraker" column="`AlarmDataLog_Lift_MotorBraker`" type="Boolean" />
+    <property name="Spare" column="`AlarmDataLog_Spare`" type="Int32" />
+  </subclass>
+
+  <subclass name="HoldSignalDataLog" discriminator-value="HoldSignalDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="PosNo" column="`HoldSignalDataLog_PosNo`" type="Int32" />
+    <property name="HandShake" column="`HoldSignalDataLog_HandShake`" type="HoldSignalNetTransferObjectHandShake" />
+    <property name="AssignmentID" column="`HoldSignalDataLog_AssignmentID`" type="Int32" />
+    <property name="TU_ID" column="`HoldSignalDataLog_TU_ID`" type="Int32" />
+    <property name="TU_Type" column="`HoldSignalDataLog_TU_Type`" type="Int32" />
+    <property name="IO_Data" column="`HoldSignalDataLog_IO_Data`" type="Int32" />
+  </subclass>
+
+  <subclass name="LocationTaskDataLog" discriminator-value="LocationTaskDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="PosNo" column="`LocationTaskDataLog_PosNo`" type="Int32" />
+    <property name="TaskNo" column="`LocationTaskDataLog_TaskNo`" type="Int32" />
+    <property name="TUID" column="`LocationTaskDataLog_TUID`" type="Int32" />
+    <property name="Str_Rcv_X" column="`LocationTaskDataLog_Str_Rcv_X`" type="Boolean" />
+    <property name="Fnh_Rcv_X" column="`LocationTaskDataLog_Fnh_Rcv_X`" type="Boolean" />
+    <property name="Rqs_Snt" column="`LocationTaskDataLog_Rqs_Snt`" type="Boolean" />
+    <property name="Rcv_Rdy" column="`LocationTaskDataLog_Rcv_Rdy`" type="Boolean" />
+    <property name="Str_Rcv_Y" column="`LocationTaskDataLog_Str_Rcv_Y`" type="Boolean" />
+    <property name="Fnh_Rcv_Y" column="`LocationTaskDataLog_Fnh_Rcv_Y`" type="Boolean" />
+  </subclass>
+
+  <subclass name="OccupyDataLog" discriminator-value="OccupyDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="PosNo" column="`OccupyDataLog_PosNo`" type="Int32" />
+    <property name="PhocllUseStatus" column="`OccupyDataLog_PhocllUseStatus`" type="Int32" />
+    <property name="FroProPotocell" column="`OccupyDataLog_FroProPotocell`" type="Boolean" />
+    <property name="FroPosPotocell" column="`OccupyDataLog_FroPosPotocell`" type="Boolean" />
+    <property name="FroSloPotocell" column="`OccupyDataLog_FroSloPotocell`" type="Boolean" />
+    <property name="AftProPotocell" column="`OccupyDataLog_AftProPotocell`" type="Boolean" />
+    <property name="AftPosPotocell" column="`OccupyDataLog_AftPosPotocell`" type="Boolean" />
+    <property name="AftSloPotocell" column="`OccupyDataLog_AftSloPotocell`" type="Boolean" />
+    <property name="UpPotocell" column="`OccupyDataLog_UpPotocell`" type="Boolean" />
+    <property name="DownPotocell" column="`OccupyDataLog_DownPotocell`" type="Boolean" />
+  </subclass>
+
+  <subclass name="TaskDataLog" discriminator-value="TaskDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="HandShake" column="`TaskDataLog_HandShake`" type="TaskNetTransferObjectHandShake" />
+    <property name="AssignmentID" column="`TaskDataLog_AssignmentID`" type="Int32" />
+    <property name="TU_ID" column="`TaskDataLog_TU_ID`" type="Int32" />
+    <property name="TU_Type" column="`TaskDataLog_TU_Type`" type="Int32" />
+    <property name="IO_Data" column="`TaskDataLog_IO_Data`" type="Int32" />
+    <property name="RotingNo" column="`TaskDataLog_RotingNo`" type="Int32" />
+    <property name="StartMotorNo" column="`TaskDataLog_StartMotorNo`" type="Int32" />
+    <property name="DestinationNo" column="`TaskDataLog_DestinationNo`" type="Int32" />
+    <property name="TaskStatus" column="`TaskDataLog_TaskStatus`" type="TaskNetTransferObjectStatus" />
+    <property name="ReadTask" column="`TaskDataLog_ReadTask`" type="Int32" />
+    <property name="Spare" column="`TaskDataLog_Spare`" type="Int32" />
+  </subclass>
+
+  <subclass name="LocationDataLog" discriminator-value="LocationDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="Status" column="`LocationDataLog_Status`" type="LocationNetTransferObjectStatus" />
+    <property name="PosNo" column="`LocationDataLog_PosNo`" type="Int32" />
+  </subclass>
+  
+  <subclass name="DismountingDiskMachineDataLog" discriminator-value="DismountingDiskMachineDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="PosNo" column="`DismountingDiskMachineNetTransferObject_PosNo`" type="Int32" />
+    <property name="Fork1OriginPotocell" column="`DismountingDiskMachineNetTransferObject_Fork1OriginPotocell`" type="Boolean" />
+    <property name="Fork1OutPotocell" column="`DismountingDiskMachineNetTransferObject_Fork1OutPotocell`" type="Boolean" />
+    <property name="Fork2OriginPotocell" column="`DismountingDiskMachineNetTransferObject_Fork2OriginPotocell`" type="Boolean" />
+    <property name="Fork2OutPotocell" column="`DismountingDiskMachineNetTransferObject_Fork2OutPotocell`" type="Boolean" />
+    <property name="LowPotocell" column="`DismountingDiskMachineNetTransferObject_LowPotocell`" type="Boolean" />
+    <property name="MiddlePotocell" column="`DismountingDiskMachineNetTransferObject_MiddlePotocell`" type="Boolean" />
+    <property name="TopPotocell" column="`DismountingDiskMachineNetTransferObject_TopPotocell`" type="Boolean" />
+    <property name="FullPotocell" column="`DismountingDiskMachineNetTransferObject_FullPotocell`" type="Boolean" />
+    <property name="HighOverPotocell" column="`DismountingDiskMachineNetTransferObject_HighOverPotocell`" type="Boolean" />
+    <property name="ForkCheckPotocell" column="`DismountingDiskMachineNetTransferObject_ForkCheckPotocell`" type="Boolean" />
+    <property name="ForkSecondCheckPotocell" column="`DismountingDiskMachineNetTransferObject_ForkSecondCheckPotocell`" type="Boolean" />
+    <property name="ConveyorPotocell" column="`DismountingDiskMachineNetTransferObject_ConveyorPotocell`" type="Boolean" />
+    <property name="Full" column="`DismountingDiskMachineNetTransferObject_Full`" type="Boolean" />
+    <property name="TakeDown" column="`DismountingDiskMachineNetTransferObject_TakeDown`" type="Boolean" />
+    <property name="TakeUp" column="`DismountingDiskMachineNetTransferObject_TakeUp`" type="Boolean" />
+  </subclass>
+</hibernate-mapping>

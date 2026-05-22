@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="DefaultImplementCollection.RailGuidedVehicle" namespace="Wcs.Framework" auto-import="false">
+   <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.RailGuidedVehicle.RailGuidedVehicleStepByStepMovement" discriminator-value="FRK_RailGuidedVehicleStepByStepMovement" extends="Wcs.Framework.LogicMovement, Wcs.Framework"  dynamic-update="true">
+  </subclass>
+  
+   <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.RailGuidedVehicle.RailGuidedVehicleStepByStepAction" discriminator-value="FRK_RailGuidedVehicleStepByStepAction" extends="Wcs.Framework.EquipmentAction, Wcs.Framework" dynamic-update="true">
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="LoadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`RailGuidedVehicleStepByStepAction_LoadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`RailGuidedVehicleStepByStepAction_LoadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`RailGuidedVehicleStepByStepAction_LoadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="UnloadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`RailGuidedVehicleStepByStepAction_UnloadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`RailGuidedVehicleStepByStepAction_UnloadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`RailGuidedVehicleStepByStepAction_UnloadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+  </subclass>
+</hibernate-mapping>

@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wcs</name>
+    </assembly>
+    <members>
+        <member name="T:Wcs.ArrayExtentions">
+            <summary>
+            Array 类型扩展
+            </summary>
+        </member>
+        <!-- 对于成员“M:Wcs.ArrayExtentions.FindIndex``1(``0[],System.Predicate{``0})”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Wcs.ArrayExtentions.FindLastIndex``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wcs.ArrayExtentions.IndexOf``1(``0[],``0)">
+            <summary>
+            搜索指定的对象，并返回 sources 中第一个匹配项的从零开始的索引。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sources"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.EnumExtentions">
+            <summary>
+            Enum 扩展
+            </summary>
+        </member>
+        <member name="M:Wcs.EnumExtentions.GetDescription``1(``0)">
+            <summary>
+            获取指定枚举类型的描述信息<br />
+            描述信息包括 DisplayNameAttribute 和 DescriptionAttribute 属性
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="source">源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.EnumExtentions.ToKeyValueList``1">
+            <summary>
+            将指定的枚举类型转换为 键/值 列表
+            </summary>
+            <typeparam name="T">指定的枚举类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.PropertyInfoExtentions">
+            <summary>
+            PropertyInfo 扩展
+            </summary>
+        </member>
+        <member name="M:Wcs.PropertyInfoExtentions.GetDisplayName(System.Reflection.PropertyInfo)">
+            <summary>
+            获取当前属性类型定义的显示名，优先从 DisplayNameAttribute 找，如果没有定义，则找 DescriptionAttribute。否则直接返回 Name
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.SocketExtentions">
+            <summary>
+            Socket 扩展
+            </summary>
+        </member>
+        <member name="M:Wcs.SocketExtentions.KeepAlive(System.Net.Sockets.Socket,System.Int32)">
+            <summary>
+            开启 TCP keep-alive 选项，并将检查时间修改为指定的时长（毫秒数）<br />
+            通常此操作应该在 socket 建立连接后立即调用
+            </summary>
+            <param name="socket">           连接对象. </param>
+            <param name="checkInterval">    keep-alive 检查间隔毫秒数. </param>
+        </member>
+        <member name="T:Wcs.StringExtentions">
+            <summary>
+            String 扩展
+            </summary>
+        </member>
+        <member name="M:Wcs.StringExtentions.GetASCIILength(System.String)">
+            <summary>
+            获取当前字符串的ASCII长度，按汉字算两个字符
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.StringExtentions.GetWideCharacterCount(System.String)">
+            <summary>
+            获取指定字符串中宽字符的数量
+            </summary>
+            <param name="source">源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.StringExtentions.ASSICPadRight(System.String,System.Int32,System.Char)">
+            <summary>
+            将指定的字符串用字 ASSIC 字符在右边填充到指定长度
+            </summary>
+            <param name="source">源</param>
+            <param name="totalWidth">字符串总长度</param>
+            <param name="paddingChar">要填充的 ASSIC 字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.StringExtentions.ASSICPadLeft(System.String,System.Int32,System.Char)">
+            <summary>
+            将指定的字符串用字 ASSIC 字符在左边填充到指定长度
+            </summary>
+            <param name="source">源</param>
+            <param name="totalWidth">字符串总长度</param>
+            <param name="paddingChar">要填充的 ASSIC 字符</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.TcpClientExtentions">
+            <summary>
+            TclClient 扩展
+            </summary>
+        </member>
+        <member name="M:Wcs.TcpClientExtentions.Connect(System.Net.Sockets.TcpClient,System.String,System.Int32,System.Int32)">
+            <summary>
+            立即连接到指定的主机端口
+            </summary>
+            <param name="tcpClient">客户端对象</param>
+            <param name="ip">主机地址</param>
+            <param name="port">主机端口</param>
+            <param name="timeoutMilliseconds">连接超时时长（毫秒）</param>
+        </member>
+        <member name="M:Wcs.TcpClientExtentions.Connect(System.Net.Sockets.TcpClient,System.Net.IPEndPoint,System.Int32)">
+            <summary>
+            立即连接到指定的主机端口
+            </summary>
+            <param name="tcpClient">客户端对象</param>
+            <param name="ipEndPoint">您打算连接到的 System.Net.IPEndPoint</param>
+            <param name="timeoutMilliseconds">连接超时时长（毫秒）</param>
+        </member>
+        <member name="T:Wcs.TypeExtentions">
+            <summary>
+            Type 扩展
+            </summary>
+        </member>
+        <member name="M:Wcs.TypeExtentions.GetDisplayName(System.Type)">
+            <summary>
+            获取当前类型定义的显示名，优先从 DisplayNameAttribute 找，如果没有定义，则找 DescriptionAttribute。否则直接返回 Name
+            </summary>
+            <param name="source">源</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.TypeExtentions.CreateInstance``1(System.Type,System.Object[])">
+            <summary>
+            创建指定的类型名称的实例，并转换为指定的类型
+            </summary>
+            <typeparam name="T">泛型参数，要返回的实例类型。</typeparam>
+            <param name="typeName">类型名称。</param>
+            <param name="args">构造函数参数集合。</param>
+            <returns>指定类型名称的实例</returns>
+            <example>在未找到 typeName 中指定的类型时，将引发此异常.</example>
+        </member>
+        <member name="M:Wcs.TypeExtentions.IsType(System.Type,System.String)">
+            <summary>
+            判断类型是否是指定的类型或子类
+            </summary>
+            <param name="type">要判断类型</param>
+            <param name="typeName">目标类型完整名称（Type.FullName），忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.XmlNodeExtentions.GetXPath(System.Xml.XmlNode)">
+            <summary>
+            Gets the X-Path to a given Node
+            </summary>
+            <param name="node">The Node to get the X-Path from</param>
+            <returns>The X-Path of the Node</returns>
+        </member>
+        <member name="T:Wcs.NhLogger">
+            <summary>
+            NHibernate 默认使用 log4net，NhLogger 为通过 NLog 实现的 NHibernate 日志类。
+            </summary>
+        </member>
+        <member name="M:Wcs.NhLogger.#ctor(NLog.Logger)">
+            <summary>
+            初始化此类的新实例。
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Debug(System.Object,System.Exception)">
+            <summary>
+            输出 debug 级别的消息
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Debug(System.Object)">
+            <summary>
+            输出 debug 级别的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.DebugFormat(System.String,System.Object[])">
+            <summary>
+            输出 debug 级别的消息
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Error(System.Object,System.Exception)">
+            <summary>
+            输出 Error 级别的消息
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Error(System.Object)">
+            <summary>
+            输出 Error 级别的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.ErrorFormat(System.String,System.Object[])">
+            <summary>
+            输出 Error 级别的消息
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Fatal(System.Object,System.Exception)">
+            <summary>
+            输出 Fatal 级别的消息
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Fatal(System.Object)">
+            <summary>
+            输出 Fatal 级别的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Info(System.Object,System.Exception)">
+            <summary>
+            输出 Info 级别的消息
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Info(System.Object)">
+            <summary>
+            输出 Info 级别的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.InfoFormat(System.String,System.Object[])">
+            <summary>
+            输出 Info 级别的消息
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Warn(System.Object,System.Exception)">
+            <summary>
+            输出 Warn 级别的消息
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.Warn(System.Object)">
+            <summary>
+            输出 Warn 级别的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wcs.NhLogger.WarnFormat(System.String,System.Object[])">
+            <summary>
+            输出 Warn 级别的消息
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="P:Wcs.NhLogger.IsDebugEnabled">
+            <summary>
+            获取一个值，指示 Debug 级别是否已启用。
+            </summary>
+        </member>
+        <member name="P:Wcs.NhLogger.IsErrorEnabled">
+            <summary>
+            获取一个值，指示 Error 级别是否已启用。
+            </summary>
+        </member>
+        <member name="P:Wcs.NhLogger.IsFatalEnabled">
+            <summary>
+            获取一个值，指示 Fatal 级别是否已启用。
+            </summary>
+        </member>
+        <member name="P:Wcs.NhLogger.IsInfoEnabled">
+            <summary>
+            获取一个值，指示 Info 级别是否已启用。
+            </summary>
+        </member>
+        <member name="P:Wcs.NhLogger.IsWarnEnabled">
+            <summary>
+            获取一个值，指示 Warn 级别是否已启用。
+            </summary>
+        </member>
+        <member name="T:Wcs.NhLoggerFactory">
+            <summary>
+            生产 NhLogger 的工厂。
+            </summary>
+        </member>
+        <member name="M:Wcs.NhLoggerFactory.#ctor">
+            <summary>
+            初始化此类的新实例。
+            </summary>
+        </member>
+        <member name="M:Wcs.NhLoggerFactory.LoggerFor(System.Type)">
+            <summary>
+            指定 type 返回 logger。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.NhLoggerFactory.LoggerFor(System.String)">
+            <summary>
+            指定 keyName 返回 logger。
+            </summary>
+            <param name="keyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.INHUnitOfWork">
+            <summary>
+            NHibernate 执久化上下文
+            </summary>
+        </member>
+        <member name="M:Wcs.INHUnitOfWork.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:Wcs.INHUnitOfWork.Rollback">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:Wcs.INHUnitOfWork.Dispose">
+            <summary>
+            销毁对象
+            </summary>
+        </member>
+        <member name="P:Wcs.INHUnitOfWork.session">
+            <summary>
+            获取上下文会话对象
+            </summary>
+        </member>
+        <member name="M:Wcs.ReflectionHelper.CreateInstance``1(System.Type,System.Object[])">
+            <summary>
+            创建指定的类型名称的实例，并转换为指定的类型
+            </summary>
+            <typeparam name="T">泛型参数，要返回的实例类型。</typeparam>
+            <param name="typeName">类型。</param>
+            <param name="args">构造函数参数集合。</param>
+            <returns>指定类型名称的实例</returns>
+            <example>在未找到 typeName 中指定的类型时，将引发此异常.</example>
+        </member>
+        <member name="M:Wcs.ReflectionHelper.CreateInstance``1(System.String,System.Object[])">
+            <summary>
+            创建指定的类型名称的实例，并转换为指定的类型
+            </summary>
+            <typeparam name="T">泛型参数，要返回的实例类型。</typeparam>
+            <param name="typeName">类型名称。</param>
+            <param name="args">构造函数参数集合。</param>
+            <returns>指定类型名称的实例</returns>
+            <example>在未找到 typeName 中指定的类型时，将引发此异常.</example>
+        </member>
+        <member name="T:Wcs.Security.WcsIdentity">
+            <summary>
+            表示一个用户标志
+            </summary>
+        </member>
+        <member name="F:Wcs.Security.WcsIdentity.Empty">
+            <summary>
+            表示一个空的用户标志
+            </summary>
+        </member>
+        <member name="M:Wcs.Security.WcsIdentity.#ctor(System.String,System.String,System.String[],System.String[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="realName">真实姓名</param>
+            <param name="roleNames">角色名</param>
+            <param name="operations">用户拥有的操作权限</param>
+        </member>
+        <member name="P:Wcs.Security.WcsIdentity.AuthenticationType">
+            <summary>
+            获取所使用的身份验证的类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsIdentity.IsAuthenticated">
+            <summary>
+            获取一个值，该值指示是否验证了用户
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsIdentity.Name">
+            <summary>
+            获取当前用户的名称。
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsIdentity.RealName">
+            <summary>
+            获取当前用户的真实名称。
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsIdentity.Operations">
+            <summary>
+            允许的操作
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsIdentity.RoleNames">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsPermission.IsAdministratorMode">
+            <summary>
+            获取一个值，指示当前是否处于管理员模式。
+            管理员模式下将不再检查用户权限。
+            </summary>
+        </member>
+        <member name="T:Wcs.Security.WcsPermissionAttribute">
+            <summary>
+            为Wcs相关操作指定安全操作的特性类
+            </summary>
+        </member>
+        <member name="M:Wcs.Security.WcsPermissionAttribute.GetPath">
+            <summary>
+            获取当前操作所在的完整路径。
+            </summary>
+            <returns>返回一个字符串数组，层级按数组内的元素随顺排列。最后一级为操作名称</returns>
+        </member>
+        <member name="M:Wcs.Security.WcsPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="action">指定安全执行的安全操作</param>
+        </member>
+        <member name="M:Wcs.Security.WcsPermissionAttribute.CreatePermission">
+            <summary>
+            在派生类中重写时，将创建一个权限对象，该对象随后可序列化为二进制格式并与 System.Security.Permissions.SecurityAction 一起永久地存储在程序集的元数据中。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Security.WcsPermissionAttribute.OperationName">
+            <summary>
+            操作名称（可用"\"来进行分组显示，如：任务管理\任务管理器\暂停任务）
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsPermissionAttribute.UserName">
+            <summary>
+            授权指定的用户
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsPermissionAttribute.RoleName">
+            <summary>
+            授权指定的角色
+            </summary>
+        </member>
+        <member name="T:Wcs.Security.WcsPrincipal">
+            <summary>
+            表示一个Wcs用户凭证
+            </summary>
+        </member>
+        <member name="F:Wcs.Security.WcsPrincipal.Empty">
+            <summary>
+            表示一个空的用户凭证
+            </summary>
+        </member>
+        <member name="M:Wcs.Security.WcsPrincipal.#ctor(Wcs.Security.WcsIdentity)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="identity">用户标识</param>
+        </member>
+        <member name="M:Wcs.Security.WcsPrincipal.IsInRole(System.String)">
+            <summary>
+            确定当前用户是否属于指定的角色
+            </summary>
+            <param name="role">要检查其成员资格的角色的名称</param>
+            <returns>如果当前用户是指定角色的成员，则为 true；否则为 false。</returns>
+        </member>
+        <member name="P:Wcs.Security.WcsPrincipal.Identity">
+            <summary>
+            获取当前用户的标识
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsPrincipal.IsEmpty">
+            <summary>
+            指示当前对象是否是一个空的用户凭证
+            </summary>
+        </member>
+        <member name="P:Wcs.Security.WcsPrincipal.CurrentPrincipal">
+            <summary>
+            获取或设置当前用户凭证
+            </summary>
+        </member>
+        <member name="T:Wcs.IWcsApplication">
+            <summary>
+            Wcs主应用程序接口
+            </summary>
+        </member>
+        <member name="P:Wcs.IWcsApplication.Logger">
+            <summary>
+            日志对象
+            </summary>
+        </member>
+        <member name="P:Wcs.IWcsApplication.Menu">
+            <summary>
+            主菜单对象
+            </summary>
+        </member>
+        <member name="P:Wcs.IWcsApplication.MainForm">
+            <summary>
+            主窗体对象
+            </summary>
+        </member>
+        <member name="M:Wcs.NHUnitOfWork.PushCurrentSession(NHibernate.ISession)">
+            <summary>
+            在当前调用上下文当压入一个活动的session对象
+            </summary>
+            <param name="callContext">当前调用上下文</param>
+            <param name="session"></param>
+        </member>
+        <member name="M:Wcs.NHUnitOfWork.PopCurrentSession">
+            <summary>
+            从当前调用上下文存在的session栈中弹出一个
+            </summary>
+            <param name="callContext"></param>
+        </member>
+        <member name="P:Wcs.NHUnitOfWork.CurrentSession">
+            <summary>
+            获取当前调用上下文当中的session对象
+            </summary>
+            <param name="callContext">当前调用上下文</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Utils">
+            <summary>
+            辅助函数库，提供一些日常经常性用到的函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Utils.ConvertTo``1(System.Object)">
+            <summary>
+            将指定的数据转为指定类型
+            </summary>
+            <typeparam name="T">    泛型类型参数. </typeparam>
+            <param name="value">    要转换的数据. </param>
+        </member>
+        <member name="T:Wcs.WcsApplicationMenuType">
+            <summary>
+            Wms应用程序菜单类型
+            </summary>
+        </member>
+        <member name="F:Wcs.WcsApplicationMenuType.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="F:Wcs.WcsApplicationMenuType.Edit">
+            <summary>
+            编辑
+            </summary>
+        </member>
+        <member name="F:Wcs.WcsApplicationMenuType.View">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="F:Wcs.WcsApplicationMenuType.Tools">
+            <summary>
+            工具
+            </summary>
+        </member>
+        <member name="F:Wcs.WcsApplicationMenuType.Help">
+            <summary>
+            帮助
+            </summary>
+        </member>
+        <member name="T:Wcs.WcsContext">
+            <summary>
+            Wcs上下文对象
+            </summary>
+        </member>
+        <member name="M:Wcs.WcsContext.#ctor(Wcs.IWcsApplication)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="application">Wcs主应用程序</param>
+        </member>
+        <member name="M:Wcs.WcsContext.FindPlugins(System.String)">
+            <summary>
+            在指定的目录及其子目录中查找所有插件
+            </summary>
+            <param name="dir">指定的目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.WcsContext.LoadPlugin(System.String)">
+            <summary>
+            加载指定的动态链接库或应用程序中的插件对象
+            </summary>
+            <param name="path">指定的包含插件对象的动态链接库或应用程序</param>
+        </member>
+        <member name="M:Wcs.WcsContext.LoadPlugin(System.Type)">
+            <summary>
+            加载指定类型的插件对象
+            </summary>
+            <param name="wcsPluginType">插件类型</param>
+        </member>
+        <member name="M:Wcs.WcsContext.UnloadPlugin(System.Type)">
+            <summary>
+            卸载指定类型的插件
+            </summary>
+            <param name="pluginType">指定的插件类型</param>
+        </member>
+        <member name="P:Wcs.WcsContext.Application">
+            <summary>
+            Wcs主应用程序
+            </summary>
+        </member>
+        <member name="E:Wcs.WcsContext.PluginEvent">
+            <summary>
+            在插件触发了事件并向外派发后由上下文转发该事件
+            </summary>
+        </member>
+        <member name="E:Wcs.WcsContext.Error">
+            <summary>
+            上下文本身操作发生了错误时引发
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsContext.LoadedPlugins">
+            <summary>
+            获取已加载的插件列表
+            </summary>
+        </member>
+        <member name="T:Wcs.WcsPlugin">
+            <summary>
+            Wcs插件对象
+            </summary>
+        </member>
+        <member name="F:Wcs.WcsPlugin.m_PluginInfo">
+            <summary>
+            插件信息
+            </summary>
+        </member>
+        <member name="M:Wcs.WcsPlugin.Initialization(Wcs.WcsContext)">
+            <summary>
+            初始化插件，通常在插件被加载时进行的第一个操作
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.WcsPlugin.Dispose">
+            <summary>
+            销毁插件
+            </summary>
+        </member>
+        <member name="M:Wcs.WcsPlugin.FireEvent(System.String,System.Object[])">
+            <summary>
+            引发一个事件
+            </summary>
+            <param name="eventId"></param>
+            <param name="params"></param>
+        </member>
+        <member name="P:Wcs.WcsPlugin.Context">
+            <summary>
+            上下文对象
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPlugin.Priority">
+            <summary>
+            被加载的优先级
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPlugin.Id">
+            <summary>
+            获取插件Id，默认为实现类的全路径名
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPlugin.PluginInfo">
+            <summary>
+            获取插件的信息
+            </summary>
+        </member>
+        <member name="E:Wcs.WcsPlugin.PluginEvent">
+            <summary>
+            插件发生的操作事件
+            </summary>
+        </member>
+        <member name="T:Wcs.WcsPluginEventHandler">
+            <summary>
+            表示要处理的 <see cref="T:Wcs.WcsPlugin"/> 类型的 <see cref="E:Wcs.WcsPlugin.PluginEvent"/> 事件
+            </summary>
+            <param name="sender">事件源</param>
+            <param name="eventId">事件 id</param>
+            <param name="args">参数集合</param>
+        </member>
+        <member name="T:Wcs.WcsPluginInfoAttribute">
+            <summary>
+            插件信息
+            </summary>
+        </member>
+        <member name="M:Wcs.WcsPluginInfoAttribute.#ctor(System.Type,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pluginType">插件类型</param>
+            <param name="name">插件名称</param>
+            <param name="cratedBy">创建人</param>
+            <param name="createAt">创建时间</param>
+            <param name="description">描述信息</param>
+            <param name="isCore">是否是核心插件</param>
+        </member>
+        <member name="M:Wcs.WcsPluginInfoAttribute.#ctor(System.Type,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pluginType">插件类型</param>
+            <param name="name">插件名称</param>
+            <param name="cratedBy">创建人</param>
+            <param name="createAt">创建时间</param>
+            <param name="description">描述信息</param>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.Name">
+            <summary>
+            插件名称
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.CreatedBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.Description">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.Path">
+            <summary>
+            插件所在的完整路径
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.PluginId">
+            <summary>
+            获取插件 Id
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.Priority">
+            <summary>
+            获取插件的加载优先级
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.PluginType">
+            <summary>
+            所属插件对象类型
+            </summary>
+        </member>
+        <member name="P:Wcs.WcsPluginInfoAttribute.IsCore">
+            <summary>
+            指示是否为系统核心插件（核心插件无法被卸载）
+            </summary>
+        </member>
+        <member name="T:Wcs.Role">
+            <summary>
+            角色。
+            </summary>
+        </member>
+        <member name="M:Wcs.Role.#ctor">
+            <summary>
+            初始化此类的新实例。
+            </summary>
+        </member>
+        <member name="M:Wcs.Role.ToString">
+            <summary>
+            返回表示此实例的字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Role.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Wcs.Role.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Role.RoleName">
+            <summary>
+            角色名称。自然键。
+            </summary>
+        </member>
+        <member name="P:Wcs.Role.IsBuiltIn">
+            <summary>
+            是否内置角色
+            </summary>
+        </member>
+        <member name="P:Wcs.Role.Comments">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Wcs.Role.Operations">
+            <summary>
+            此角色可以执行的操作。
+            </summary>
+        </member>
+        <member name="T:Wcs.User">
+            <summary>
+            用户。
+            </summary>
+        </member>
+        <member name="M:Wcs.User.#ctor">
+            <summary>
+            初始化 User 类的新实例。
+            </summary>
+        </member>
+        <member name="M:Wcs.User.AddToRole(Wcs.Role)">
+            <summary>
+            将此实例添加到角色。
+            </summary>
+            <param name="role"></param>
+        </member>
+        <member name="M:Wcs.User.RemoveFromRole(Wcs.Role)">
+            <summary>
+            将此实例从角色移除。
+            </summary>
+            <param name="role"></param>
+        </member>
+        <member name="M:Wcs.User.AddToRoles(Wcs.Role[])">
+            <summary>
+            将此实例添加到角色。
+            </summary>
+            <param name="roles"></param>
+        </member>
+        <member name="M:Wcs.User.RemoveFromRoles(Wcs.Role[])">
+            <summary>
+            将此实例从角色移除。
+            </summary>
+            <param name="roles"></param>
+        </member>
+        <member name="M:Wcs.User.IsInRole(System.String)">
+            <summary>
+            用户是否在指定的角色中
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.User.ToString">
+            <summary>
+            返回表示此 User 的字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.User.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Wcs.User.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.User.UserName">
+            <summary>
+            用户名。自然键。
+            </summary>
+        </member>
+        <member name="P:Wcs.User.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Wcs.User.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Wcs.User.PasswordSalt">
+            <summary>
+            密码盐度
+            </summary>
+        </member>
+        <member name="P:Wcs.User.IsBuiltIn">
+            <summary>
+            是否内置用户
+            </summary>
+        </member>
+        <member name="P:Wcs.User.Comments">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Wcs.User.Email">
+            <summary>
+            电子邮件
+            </summary>
+        </member>
+        <member name="P:Wcs.User.Roles">
+            <summary>
+            此用户具有的角色。
+            </summary>
+        </member>
+        <member name="P:Wcs.User.Profile">
+            <summary>
+            用户资料
+            </summary>
+        </member>
+    </members>
+</doc>

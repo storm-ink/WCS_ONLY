@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F8EA115-4B91-4CB3-AD1F-4C1C2EE5F9C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager</RootNamespace>
+    <AssemblyName>Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2">
+      <HintPath>..\..\packages\NHibernate.Caches.SysCache2.3.2.0.4000\lib\Net35\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\DefaultSingleLocationDoubleVehicleSubSystemDataReceiverElement.cs" />
+    <Compile Include="Configuration\SingleLocationDoubleVehicleSubSystemCollection.cs" />
+    <Compile Include="Configuration\SingleLocationDoubleVehicleSubSystemElement.cs" />
+    <Compile Include="Configuration\SingleLocationDoubleVehicleSubSystemLocationCollection.cs" />
+    <Compile Include="Configuration\SingleLocationDoubleVehicleSubSystemLocationElement.cs" />
+    <Compile Include="Form\AddNewStationGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddNewStationGroup.Designer.cs">
+      <DependentUpon>AddNewStationGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmStationTaskFilterSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmStationTaskFilterSetting.Designer.cs">
+      <DependentUpon>frmStationTaskFilterSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTaskFilterSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\frmTaskFilterSetting.Designer.cs">
+      <DependentUpon>frmTaskFilterSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmVehicleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\frmVehicleControl.Designer.cs">
+      <DependentUpon>frmVehicleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SingleLocationDoubleVehicleLocationPrioritySettiing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SingleLocationDoubleVehicleLocationPrioritySettiing.Designer.cs">
+      <DependentUpon>SingleLocationDoubleVehicleLocationPrioritySettiing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SingleLocationDoubleVehicleLocationSettiing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SingleLocationDoubleVehicleLocationSettiing.Designer.cs">
+      <DependentUpon>SingleLocationDoubleVehicleLocationSettiing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleLocationDoubleVehicleHelper.cs" />
+    <Compile Include="SingleLocationDoubleVehicleSubSystem.cs" />
+    <Compile Include="SingleLocationDoubleVehicleSubSystemConfig.cs" />
+    <Compile Include="SingleLocationDoubleVehicleSubSystemDeviceUserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingleLocationDoubleVehicleSubSystemDeviceUserInterface.designer.cs">
+      <DependentUpon>SingleLocationDoubleVehicleSubSystemDeviceUserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleLocationDoubleVehicleSubSystemLocation.cs" />
+    <Compile Include="SingleLocationDoubleVehicleSubSystemLocationWildcard.cs" />
+    <Compile Include="Task\DefaultLogicMovementSelector.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern2\AbstractState2.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern2\NotArriveToDestinationLocationState2.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern2\NotPickingState2.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern2\NotUnloadingState2.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern\AbstractState.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern\NotArriveToDestinationLocationState.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern\NotPickingState.cs" />
+    <Compile Include="Task\EquipmentStateActionPattern\NotUnloadingState.cs" />
+    <Compile Include="Task\SingleLocationDoubleVehicleSubSystemEquipmentActionScheduler.cs" />
+    <Compile Include="Task\SingleLocationDoubleVehicleSubSystemEquipmentActionScheduler2.cs" />
+    <Compile Include="Task\SingleLocationDoubleVehicleSubSystemTransferAction.cs" />
+    <Compile Include="Task\SingleLocationDoubleVehicleSubSystemTransferMovement.cs" />
+    <Compile Include="Task\WriteEquipmentSchedulerLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\AddNewStationGroup.resx">
+      <DependentUpon>AddNewStationGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmStationTaskFilterSetting.resx">
+      <DependentUpon>frmStationTaskFilterSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTaskFilterSetting.resx">
+      <DependentUpon>frmTaskFilterSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmVehicleControl.resx">
+      <DependentUpon>frmVehicleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SingleLocationDoubleVehicleLocationPrioritySettiing.resx">
+      <DependentUpon>SingleLocationDoubleVehicleLocationPrioritySettiing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SingleLocationDoubleVehicleLocationSettiing.resx">
+      <DependentUpon>SingleLocationDoubleVehicleLocationSettiing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleLocationDoubleVehicleSubSystemDeviceUserInterface.resx">
+      <DependentUpon>SingleLocationDoubleVehicleSubSystemDeviceUserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Task\extensions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wcs.Framework\Wcs.Framework.csproj">
+      <Project>{2c6225cc-6960-4964-9dcd-048b4b607bd1}</Project>
+      <Name>Wcs.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wcs\Wcs.csproj">
+      <Project>{45794acc-1755-4d65-9120-73e532d27053}</Project>
+      <Name>Wcs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wcs.DefaultImplementCollection.RailGuidedVehicle\Wcs.DefaultImplementCollection.RailGuidedVehicle.csproj">
+      <Project>{5fd7e0a9-2a71-41b6-b35f-1462c7be3a4c}</Project>
+      <Name>Wcs.DefaultImplementCollection.RailGuidedVehicle</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+  <route id="1"  no="1"  path="1005,1006" direction="In" adjoins="20000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="2"  no="2"  path="1011,1006，1005" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="3"  no="3"  path="1008,1012" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="4"  no="4"  path="1013,1014,1015" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="5"  no="5"  path="1015,1014,1013" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="6"  no="6"  path="1109,1009" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="7"  no="7"  path="1009,1109" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="8"  no="8"  path="1110,1010" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="9"  no="9"  path="1010,1110" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="10" no="10" path="1017,1117" direction="In" adjoins="1003" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="11" no="11" path="1118,1018" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="12" no="12" path="1119,1019" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="13" no="13" path="1020,1120" direction="In" adjoins="1002" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="14" no="14" path="1121,1021" direction="In" adjoins="10000" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="15" no="15" path="1022,1122" direction="In" adjoins="1001" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="16" no="16" path="1023,1024,2001" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="17" no="17" path="1023,1024,3001" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="18" no="18" path="2001,1024,3001" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="19" no="19" path="2001,1024,3001" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="20" no="20" path="3001,1024,1023" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+  <route id="21" no="21" path="3001,1024,1023" direction="In" adjoins="" type="Normal,Counting" device="输送线" logicMovement="Wcs.DefaultImplementCollection.Conveyor.ConveyorTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+ 
+
+  <!--库内移动-->
+  <route id="1001" path="*@C001,*@C001" direction="Out" adjoins="" type="Normal,Counting" device="C001" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImplementCollection.Crane" />
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneMoveMovement, Wcs.DefaultImplementCollection.Crane" />
+    <logicMovementSelector type="Wcs.DefaultImplementCollection.Crane.DefaultLogicMovementSelector, Wcs.DefaultImplementCollection.Crane" />
+  </route>
+  <route id="1002" path="*@C002,*@C002" direction="Out" adjoins="" type="Normal,Counting" device="C002" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImplementCollection.Crane" />
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneMoveMovement, Wcs.DefaultImplementCollection.Crane" />
+    <logicMovementSelector type="Wcs.DefaultImplementCollection.Crane.DefaultLogicMovementSelector, Wcs.DefaultImplementCollection.Crane" />
+  </route>
+  <route id="1003" path="*@C003,*@C003" direction="Out" adjoins="" type="Normal,Counting" device="C003" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImplementCollection.Crane" />
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneMoveMovement, Wcs.DefaultImplementCollection.Crane" />
+    <logicMovementSelector type="Wcs.DefaultImplementCollection.Crane.DefaultLogicMovementSelector, Wcs.DefaultImplementCollection.Crane" />
+  </route>
+  <!--<route id="1004" path="*@C004,*@C004" direction="Out" adjoins="" type="Normal,Counting" device="C004" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneMoveMovement, Wcs.DefaultImplementCollection.Conveyor" />
+    <logicMovementSelector type="Wcs.DefaultImplementCollection.Crane.DefaultLogicMovementSelector, Wcs.DefaultImplementCollection.Conveyor" />
+  </route>
+  <route id="1005" path="*@C005,*@C005" direction="Out" adjoins="" type="Normal,Counting" device="C005" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneMoveMovement, Wcs.DefaultImplementCollection.Conveyor" />
+    <logicMovementSelector type="Wcs.DefaultImplementCollection.Crane.DefaultLogicMovementSelector, Wcs.DefaultImplementCollection.Conveyor" />
+  </route>
+  <route id="1006" path="*@C006,*@C006" direction="Out" adjoins="" type="Normal,Counting" device="C006" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImplementCollection.Conveyor" />
+    <logicMovement type="Wcs.DefaultImplementCollection.Crane.CraneMoveMovement, Wcs.DefaultImplementCollection.Conveyor" />
+    <logicMovementSelector type="Wcs.DefaultImplementCollection.Crane.DefaultLogicMovementSelector, Wcs.DefaultImplementCollection.Conveyor" />
+  </route>-->
+
+ 
+</routes>
+
+
+
+
+
+
+
+
+

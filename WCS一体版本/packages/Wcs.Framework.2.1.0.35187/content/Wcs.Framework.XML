@@ -1,0 +1,4390 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wcs.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Wcs.Framework.ApplicationStartup">
+            <summary>
+            应用程序启动时要加载并执行的对象，此对象会在 Configuration 初始化完成之后运行。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApplicationStartup.#ctor(Wcs.Framework.Cfg.StartupElement)">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApplicationStartup.Run(Wcs.IWcsApplication)">
+            <summary>
+            运行此自加载项
+            </summary>
+            <param name="application">应用程序对象</param>
+        </member>
+        <member name="T:Wcs.Framework.IApplicationStartup">
+            <summary>
+            表示继续此接口的对象是一个启动程序。此对象会在 Configuration 初始化完成之后运行。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IApplicationStartup.Initialize(Wcs.Framework.Cfg.StartupElement)">
+            <summary>
+            初始化启动对象
+            </summary>
+            <param name="element">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.IApplicationStartup.Run(Wcs.IWcsApplication)">
+            <summary>
+            运行此自加载项
+            </summary>
+            <param name="application">应用程序对象</param>
+        </member>
+        <member name="T:Wcs.Framework.IEditableTaskOwner">
+            <summary>
+            表示实现此接口的对象是一个可编辑任务的父对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IEditableTaskOwner.Resume(Wcs.Framework.EquipmentAction,System.Boolean@)">
+            <summary>
+            继续执行任务
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:Wcs.Framework.IEditableTaskOwner.Suspend(Wcs.Framework.EquipmentAction,System.Boolean@)">
+            <summary>
+            暂停任务
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:Wcs.Framework.IEditableTaskOwner.Cancel(Wcs.Framework.EquipmentAction,System.Boolean@)">
+            <summary>
+            取消任务
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="T:Wcs.Framework.LockerExtentions">
+            <summary>
+            一个用于获取对象【锁对象】的扩展集合。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.LockerExtentions.EnterLock(Wcs.Framework.Task)">
+            <summary>
+            尝试创建指定任务的锁信息。该操作不会执行LOCK操作，只会创建一个Lock对象。
+            </summary>
+            <param name="tsk">要创建锁信息的任务</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.LockerExtentions.EnterLock(Wcs.Framework.EquipmentAction,System.Boolean)">
+            <summary>
+            尝试创建指定物理动作的锁信息。该操作不会执行LOCK操作，只会创建一个Lock对象。
+            </summary>
+            <param name="act">要创建锁信息的物理动作</param>
+            <param name="tryLockAggregateRoot">是否深度创建聚合根锁信号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.LockerExtentions.ExitLock(Wcs.Framework.Task)">
+            <summary>
+            清除指定任务的锁信息
+            </summary>
+            <param name="tsk">要清除锁信号的任务</param>
+        </member>
+        <member name="M:Wcs.Framework.LockerExtentions.ExitLock(Wcs.Framework.EquipmentAction,System.Boolean)">
+            <summary>
+            清除指定物理动作的锁信息
+            </summary>
+            <param name="act">要清除锁信号的物理动作</param>
+            <param name="tryExitAggregateRoot">是否尝试清除聚合根锁信息</param>
+        </member>
+        <member name="M:Wcs.Framework.LockerExtentions.EnterLock(System.String,System.Object)">
+            <summary>
+            尝试创建指定key的锁信息。该操作不会执行LOCK操作，只会创建一个Lock对象。
+            </summary>
+            <param name="key">要创建锁信息的key</param>
+            <param name="args">上下文参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.LockerExtentions.ExitLock(System.String,System.Object)">
+            <summary>
+            清除指定key的锁信息
+            </summary>
+            <param name="key">要清除锁信号的key</param>
+            <param name="args">上下文参数</param>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.AbstractMessageBoardTask">
+            <summary>
+            表示该类的子类型是一个消息看板任务
+            </summary>
+            <remarks>任务是一个同期性的工作</remarks>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoardTask.Interval">
+            <summary>
+            任务执行周期（毫秒）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoardTask.MessageBoard">
+            <summary>
+            所属消息看板
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.AbstractMessageBoardTask.FetchMessages">
+            <summary>
+            取出所有消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.Id">
+            <summary>
+            消息 Id
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.IsOverdued">
+            <summary>
+            是否已过期
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.Level">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.Source">
+            <summary>
+            消息来源
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessage.OccurringTime">
+            <summary>
+            发生时间
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.AbstractMessage.IsSynonym(Wcs.Framework.MessageBoard.AbstractMessage,Wcs.Framework.MessageBoard.AbstractMessage)">
+            <summary>
+            判断指定的两个消息是否同义（消息内容完全一样）
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.AbstractMessageBoard">
+            <summary>
+            表示一个抽象的消息看板
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoard.Listeners">
+            <summary>
+            获取当前看板中的所有消息侦听者
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoard.Tasks">
+            <summary>
+            获取当前看板中的所有任务
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.MessageBoard.AbstractMessageBoard.Added">
+            <summary>
+            当消息被添加时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.MessageBoard.AbstractMessageBoard.Removed">
+            <summary>
+            当消息被移除时发生
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.AbstractMessageBoard.Add(Wcs.Framework.MessageBoard.AbstractMessage)">
+            <summary>
+            添加一个新的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.AbstractMessageBoard.Remove(Wcs.Framework.MessageBoard.AbstractMessage)">
+            <summary>
+            添加一个新的消息
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoard.Messages">
+            <summary>
+            返回当前所有消息
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.AbstractMessageBoardListener">
+            <summary>
+            表示一个消息看板的侦听者
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoardListener.Enabled">
+            <summary>
+            是否处于启用状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.AbstractMessageBoardListener.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.AbstractMessageBoardListener.#ctor(System.String,System.Boolean,System.Boolean,System.Xml.XmlNode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">名称</param>
+            <param name="enabled">是否启用</param>
+            <param name="cfg">配置信息</param>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.AbstractMessageBoardListener.Write(Wcs.Framework.MessageBoard.AbstractMessageBoard,Wcs.Framework.MessageBoard.AbstractMessage)">
+            <summary>
+            写入一个消息
+            </summary>
+            <param name="messageBoard">消息看板</param>
+            <param name="message">要写入的消息</param>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.Messages.LockedMessage">
+            <summary>
+            表示一个设备被锁定的消息，在设备被解锁后消息将过期
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.Messages.LockedMessage.IsOverdued">
+            <summary>
+            在设备被解锁后消息将过期。
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.Messages.ProduceMessage">
+            <summary>
+            表示一个根据指定判断条件失效的消息。根据传入的判断要件判断是否已过期
+            </summary>
+            <typeparam name="TDevice">泛型参数，设备类型</typeparam>
+        </member>
+        <member name="M:Wcs.Framework.MessageBoard.Messages.ProduceMessage.#ctor(Wcs.Framework.MessageBoard.MessageLevel,System.String,System.String,System.String,System.Func{System.Boolean})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="isOverdued">消息是否过期判定函数</param>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.Messages.DisconnectedMessage">
+            <summary>
+            表示一个设备已断开的消息，当设备再次连接成功后，它将已经失效。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.MessageBoard.Messages.DisconnectedMessage.IsOverdued">
+            <summary>
+            当设备再次连接成功后，它将已经失效。
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.MessageBoard.Messages.TipMessage">
+            <summary>
+            表示一个提示性的消息，自消息产生的时刻起，它就已经失效。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TaskExtentions.SetManuallyCompleteInfo(Wcs.Framework.Task)">
+            <summary>
+            为任务设置强制完成信息。该方法应该在强制完成任务的同时调用。
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:Wcs.Framework.TaskExtentions.SetCreateReasonInfo(Wcs.Framework.Task,System.String)">
+            <summary>
+            为任务设置创建原因。该方法应在任务被创建时就调用。
+            </summary>
+            <param name="task">指定的任务</param>
+            <param name="reason">创建原因</param>
+        </member>
+        <member name="T:Wcs.Framework.CompareResult`1">
+            <summary>
+            两个对象的比较结果
+            </summary>
+            <typeparam name="T">    Generic type parameter. </typeparam>
+        </member>
+        <member name="M:Wcs.Framework.CompareResult`1.IsTypeOf(System.Type)">
+            <summary>
+            指示该对比结果参与对比的对象类型是否是指定的类型
+            </summary>
+            <param name="type">指定的类型</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.CompareResult`1.differences">
+            <summary>
+            获取或设置对象差异集合
+            </summary>
+            <value>
+            差异集合
+            </value>
+        </member>
+        <member name="P:Wcs.Framework.CompareResult`1.oldObject">
+            <summary>
+            获取或设置旧数据对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.CompareResult`1.newObject">
+            <summary>
+            获取或设置新数据对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.CompareResult`1.ToString">
+            <summary>
+            返回表示当前 <see cref="T:System.Object" /> 的 <see cref="T:System.String" />。.<br />
+            形式如下：<br />
+                propertyName1/Description/DisplayName:propertyValue.ToString()<br />
+                propertyName2/Description/DisplayName:propertyValue.ToString()<br />
+                propertyName3/Description/DisplayName:propertyValue.ToString()<br />
+                .....<br />
+                propertyNameN/Description/DisplayName:propertyValue.ToString()<br />
+            即:<br />
+                默认为属性名称：属性值<br />
+                但是，当属性包含 <see cref="T:System.ComponentModel.DescriptionAttribute"/> 时，将显示 <see cref="T:System.ComponentModel.DescriptionAttribute.Description"/> :属性值<br />
+                或者，当属性包含 <see cref="T:System.ComponentModel.DisplayNameAttribute"/> 时，将显示 <see cref="T:System.ComponentModel.DisplayNameAttribute.Description"/> :属性值<br />
+            </summary>
+            <returns>
+            <see cref="T:System.String" />，表示当前的 <see cref="T:System.Object" />。.
+            </returns>
+        </member>
+        <member name="M:Wcs.Framework.CompareResult`1.GetDataType">
+            <summary>
+            获取数据类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.CompareResult`1.getValueDescription(System.Type,System.Object)">
+            <summary>
+            一个辅助性函数，用于获取指定类型的值描述信息的表现形式
+            </summary>
+            <param name="valueType">    值的类型. </param>
+            <param name="value">        值. </param>
+            <returns>
+            值的描述性形式。由 DescriptionAttribute.Description 或 DisplayNameAttribute.DisplayName 决定
+            </returns>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.ApplicationElement">
+            <summary>
+            主应用程序配置节点
+            </summary>
+            <remarks>
+            <b>属性</b><br />
+            logTarget：字符串，日志输出目标名称。引用自 <see cref="T:Wcs.Framework.Cfg.LogTargetsSelection"/> 节点内的 <see cref="T:Wcs.Framework.Cfg.LogTargetElement"/> 配置。<br />
+            <b>子节点</b><br />
+            <see cref="T:Wcs.Framework.Cfg.StartupSelection"/>
+            </remarks>
+            <example>
+            <code lang="xml">
+            <wcs-configuration><application></application></wcs-configuration>
+            </code>
+            </example>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ApplicationElement.StartupSelection">
+            <summary>
+            应用程序启动时加载对象节点
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ApplicationElement.LocationConverterSelection">
+            <summary>
+            位置转换器节点
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ApplicationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点对象</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ApplicationElement.Deserialize">
+            <summary>
+            解析配置
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.StartupElement">
+            <summary>
+            应用程序启动时自加载对象配置节点集合
+            </summary>
+            <remarks>
+            <b>属性</b><br />
+            type:字符串，必填。指示该配置映射到的应用程序启动时自加载类型。必须为继承 <see cref="T:Wcs.Framework.ApplicationStartup"/> 的子类。
+            </remarks>
+            <example>
+            <code lang="xml">
+            <application><startups><startup type="Wcs.Framework.ClassXX, Wcs.Framework" /></startups></application>
+            </code>
+            </example>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.StartupElement.ApplicationStartup">
+            <summary>
+            获取该配置映射到的应用程序启动时自加载实例
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.StartupElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.StartupElement.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.StartupCollection">
+            <summary>
+            应用程序启动时自加载对象集合配置节点
+            </summary>
+            <example>
+            <code lang="xml">
+            <application><startups></startups></application>
+            </code>
+            </example>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.StartupCollection.StartupElements">
+            <summary>
+            获取所有应用程序启动时自加载对象配置节点集合
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.StartupCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.StartupCollection.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.LocationConverterElement">
+            <summary>
+            位置转换器节点
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationConverterElement.Converter">
+            <summary>
+            获取该配置映射到的位置转换器实例
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationConverterElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationConverterElement.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.LocationConverterCollection">
+            <summary>
+            位置转换器集合节点
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationConverterCollection.ConverterElements">
+            <summary>
+            获取所有位置转换器节点
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationConverterCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationConverterCollection.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.ConfigurationElement">
+            <summary>
+            配置节点，配置文件中所有需要解析的节点都必须继承此类。
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.Cfg.ConfigurationElement.XmlFileAttributeName">
+            <summary>
+            XmlFile 属性的属性名
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ConfigurationElement.Node">
+            <summary>
+            获取配置节点
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ConfigurationElement.XmlFile">
+            <summary>
+            获取配置文件完整路径<br />
+            配置文件节点允许将节点映射到另一个独立的配置文件中<br />
+            如果配置了该属性，将直接从属性中指定的文件中读取配置内容
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+            <param name="deserialize">是否立即解析</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.Deserialize">
+            <summary>
+            执行解析。该方法将在构造函数完成后被调用。
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.GetNodeOrLoadXmlFile(System.Xml.XmlNode)">
+            <summary>
+            分析指定的节点是否需要重新从外部文件加载，并返回加载后的节点对象
+            </summary>
+            <param name="node">
+            指定的节点<br />
+            如果 node 节点存在 xmlFile 属性，并且不为空，则将使用属性值指向的文件加载新的XmlDocument，并返回其 DocumentNode 对象。<br />
+            路径说明：如果是绝对路径将直接读取其指向的文件；否则，读取应用程序所在目录的相对路径指向的文件。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.GetAttribute``1(System.String,System.Xml.XmlNode)">
+            <summary>
+            从配置节点中获取指定名称的属性,不存在时将引发异常
+            </summary>
+            <param name="name">属性名称</param>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">指定名称的属性不存在或属性值无法转换为 T 类型</exception>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.GetAttribute``1(System.String)">
+            <summary>
+            从配置节点中获取指定名称的属性,不存在时将引发异常
+            </summary>
+            <param name="name">属性名称</param>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">指定名称的属性不存在或属性值无法转换为 T 类型</exception>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.GetAttributeOrDefault``1(System.String,``0)">
+            <summary>
+            从配置节点中获取指定名称的属性,不存在时将返回指定的默认值
+            </summary>
+            <typeparam name="T">属性名称</typeparam>
+            <param name="attrName"></param>
+            <param name="defaultValue">属性不存在时返回的默认值</param>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">属性值无法转换为 T 类型</exception>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.GetAttributeOrDefault``1(System.String,System.Xml.XmlNode,``0)">
+            <summary>
+            从配置节点中获取指定名称的属性,不存在时将返回指定的默认值
+            </summary>
+            <typeparam name="T">属性名称</typeparam>
+            <param name="attrName"></param>
+            <param name="defaultValue">属性不存在时返回的默认值</param>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">属性值无法转换为 T 类型</exception>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ConfigurationElement.ConvertTo``1(System.Object)">
+            <summary>
+            将指定的数据转为指定类型
+            </summary>
+            <typeparam name="T">    泛型类型参数. </typeparam>
+            <param name="value">    要转换的数据. </param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ConfigurationElement.ConfigurationFileName">
+            <summary>
+            获取当前节点所属的配置文件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DataReceiverCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DataReceiverElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DataReceiverElement.CreateDataReceiver">
+            <summary>
+            创建一个新的数据接收器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DeviceWarningEventHandlersElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.DeviceElement">
+            <summary>
+            设备配置节点。
+            </summary>
+            <remarks>
+            <para>
+            表示一个具体的设备的配置节点对象。
+            </para>
+            <para>
+            属性：<br />
+            deviceName：字符串，在 Devices 节点范围内必须唯一。必填项。<br />
+            deviceNo:数字，指定设备的编号。同类型的设备中必须唯一。必填项。<br />
+            ip:ip地址。必填项。<br />
+            port:数字，网络端口。一般用于配置 ip 地址一起使用。必填项。<br />
+            allowConcurrency:布尔值，指示设备是否允许并行任务，默认 false。true 时表示设备可以同时接收多个任务(比如输送线);false 表示设备同时只能执行一条任务(比如堆垛机)。<br />
+            connectTimeout:数字，连接超时时长，默认 3000。单位：ms。<br />
+            sendTimeout:数字，发送超时时长，默认 2000。单位：ms。用于在给设备发送数据时，如果在指定的时间内还未接收到设备的回应，表示超时。<br />
+            receiveTimeout：数字，接收超时时长，默认 2000。单位：ms。Wcs 在连接到设备后，如果在指定的时间内未收到设备发回的数据，表示超时。<br />
+            logTarget：字符串，日志输出目标名称。引用自 <see cref="T:Wcs.Framework.Cfg.LogTargetsSelection"/> 节点内的 <see cref="T:Wcs.Framework.Cfg.LogTargetElement"/> 配置。
+            </para>
+            <para>
+            子节点：<see cref="T:Wcs.Framework.Cfg.SequenceSelection"/>.
+            </para>
+            </remarks>
+            <example>
+            <code lang="xml">
+            <xxDevice name="某类型设备" no="1" allowConcurrency="true" ip="127.0.0.1" port="8000" senderDecoder="netPackageDecoder2" receiverDecoder="netPackageDecoder1" receiveTimeout="2000" connectTimeout="10000" sendTimeout="3000" logTarget="设备状态" />
+            </code>
+            </example>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.Name">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.No">
+            <summary>
+            设备号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.ReceiveTimeout">
+            <summary>
+            接收超时时长
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.ConnectTimeout">
+            <summary>
+            连接超时时长
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.UnableToConnectErrorTimeout">
+            <summary>
+            指示无法连接到设备的异常应该在连接失败多少秒后引发
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.DeviceWarningFactory">
+            <summary>
+            报警工厂
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceElement.Device">
+            <summary>
+            该节点生成的设备对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DeviceElement.CreateDevice">
+            <summary>
+            创建设备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.DeviceCollection">
+            <summary>
+            设备集合配置节点。
+            </summary>
+            <example>
+            <code lang="xml">
+            <configuration><devices></devices></configuration>
+            </code>
+            </example>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.DeviceCollection.ParticularDeviceCollection">
+            <summary>
+            获取所有具体设备集合的配置节点
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.DeviceCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.ParticularDeviceCollection">
+             <summary>
+             表示一个具体的设备集合节点，所有的设备集合节点必须继承此类。
+             </summary>
+             <example>
+             <h1>此处仅演示如何添加一个新的设备集合节点类型</h1>
+             <ul>
+             <li>1、添加一个新类，必继承 <see cref="T:Wcs.Framework.Cfg.ParticularDeviceSelection"/>.
+             <code>
+            public class SampleDeviceSelection : Wcs.Framework.Cfg.ParticularDeviceSelection
+            {
+                public override Type DeviceElementType
+                {
+                    get { return typeof(SampleDeviceElement); }
+                }
+            }
+            SampleDeviceElement 是设备节点，点击 <see cref="T:Wcs.Framework.Cfg.DeviceElement"/> 查看如何定义新的设备节点.
+             </code>
+             </li>
+             <li>2、在 wcs.config 文件的 devices 节点中添加一个子节点，名称随意。并指定 selectionType 属性为我们新添加的类名 SampleDeviceSelection.
+             <code lang="xml">
+             <devices>
+             <sampleDevices selectionType="SampleLib.SampleDeviceSelection, SampleLib">
+             </sampleDevices>
+             </devices>
+             </code>
+             </li>
+             </ul>
+             </example>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ParticularDeviceCollection.DeviceElements">
+            <summary>
+            获取设备配置节点集合
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularDeviceCollection.CreateDeviceElement(System.Xml.XmlNode)">
+            <summary>
+            设备配置节点类型
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularDeviceCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularDeviceCollection.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TaskableDeviceElement.AllowConcurrency">
+            <summary>
+            是否允许并发任务（同时接受多个任务）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TaskableDeviceElement.SendTimeout">
+            <summary>
+            任务发送超时时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TaskableDeviceElement.EquipmentActionSchedulerElement">
+            <summary>
+            任务执行器配置
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TaskableDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TaskableDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolTaskableDeviceElement.IPEndPoint">
+            <summary>
+            表示网络端点的IP 地址和端口号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolTaskableDeviceElement.BindEndPoint">
+            <summary>
+            表示通讯要绑定到的IP 地址和端口号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolTaskableDeviceElement.DataReceiver">
+            <summary>
+            TCP协议数据接收器
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TcpProtocolTaskableDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TcpProtocolTaskableDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolDeviceElement.IPEndPoint">
+            <summary>
+            表示网络端点的IP 地址和端口号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolDeviceElement.BindEndPoint">
+            <summary>
+            表示通讯要绑定到的IP 地址和端口号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolDeviceElement.DataReceiver">
+            <summary>
+            TCP协议数据接收器
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.TcpProtocolDeviceElement.SendTimeout">
+            <summary>
+            发送超时时长
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TcpProtocolDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TcpProtocolDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationCollection.ParticularLocationCollection">
+            <summary>
+            位置节点集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationCollection.Locations">
+            <summary>
+            获取所有位置对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationCollection.AsDictionary">
+            <summary>
+            将所有货位转换为 Key 为系统可识别（可二次转换的）编码值，Value 为 Location 的字典对像，以供快速访问。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+            <param name="deserialize">是否立即解析</param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.UserCode">
+            <summary>
+            用户编码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.DeviceCode">
+            <summary>
+            该位置在设备中的编码形式
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.Synonymous">
+            <summary>
+            同义位置对象集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.DeviceName">
+            <summary>
+            所属设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.Location">
+            <summary>
+            位置对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.IsWildcard">
+            <summary>
+            是否是通配符
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.LocationType">
+            <summary>
+            位置类型。
+            有可能为 null，在某些特殊的位置上有可能需要指定类型并在 CreateLocation() 中使用它。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.LocationElement.ParticularLocationCollection">
+            <summary>
+            所属的位置集合节点对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationElement.CreateLocation">
+            <summary>
+            创建位置对象。<br />
+            需要注意的是，此处应该将创建的位置对象加入到相关联的设备当中。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.LocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+            <param name="deserialize">是否立即解析</param>
+        </member>
+        <member name="F:Wcs.Framework.Cfg.ParticularLocationCollection.locationsDict">
+            <summary>
+            字典，用于检查配置内的货位是否重复
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularLocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularLocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+            <param name="deserialize">是否立即解析</param>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ParticularLocationCollection.DeviceName">
+            <summary>
+            默认的所属设备名称(有可能为 null)
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ParticularLocationCollection.LocationElements">
+            <summary>
+            获取设备配置节点集合
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularLocationCollection.CreateLocationElement(System.Xml.XmlNode)">
+            <summary>
+            设备配置节点类型
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ParticularLocationCollection.GetDeviceElement">
+            <summary>
+            默认的所属设备（如果指定了默认的所属设备名称）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ParticularLocationCollection.Locations">
+            <summary>
+            获取当前位置集合节点包含的所有位置对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.ServiceElement.WcfServiceCollection">
+            <summary>
+            Wcf服务集合配置节点
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ServiceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点对象</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.ServiceElement.Deserialize">
+            <summary>
+            解析配置
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.WcfServiceCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.WcfServiceCollection.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.WcfServiceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.WcfServiceElement.Deserialize">
+            <summary>
+            执行解析
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.SettingCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="F:Wcs.Framework.Cfg.SettingCollection.settingsCahce">
+            <summary>
+            通过 <see cref="T:Wcs.Framework.Cfg.Configuration.GetSetting"/> 方法获取配置数据缓存，用于减少 IO 读取.<br />
+            缓存内数据值在 <see cref="T:Wcs.Framework.Cfg.Configuration.SetSetting"/> 时将被更新.
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.SettingCollection.GetSetting``1(System.String,``0)">
+            <summary>
+            从 settings 节获取指定名称节点的 InnerText 值
+            </summary>
+            <param name="settingName">  节点名. </param>
+            <param name="defaultValue"> 在节点为 null 时，指定返回的默认值. </param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.SettingCollection.SetSetting``1(System.String,``0)">
+            <summary>
+            设置 settings 指定名称节点的 InnerText 值
+            </summary>
+            <param name="settingName">  节点名. </param>
+            <param name="value">        值(String 表现形式). </param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.TaskEventHandlersElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.RequestProcessesElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="E:Wcs.Framework.Cfg.WcsConfiguration.Loaded">
+            <summary>
+            在配置文件加载结束后发生
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.WcsConfiguration.Area">
+            <summary>
+            获取当前应用程序所管理的区域（只有在进行分区设计时才应设置该值）。
+            在 appSettings["wcs-framework-area"]
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.WcsConfiguration.IsLoaded">
+            <summary>
+            指示配置文件是否已加载结束
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.WcsConfiguration.IsSimulationApplication">
+            <summary>
+            指示当前运行的主应用程序是否是模拟器
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.WcsConfiguration.TryParseLocation(System.String)">
+            <summary>
+            将系统可识别（可二次转换的）编码值转换为位置对象
+            </summary>
+            <param name="convertibleCode">系统可识别（可二次转换的）编码值</param>
+            <returns>转换失败将返回 null。</returns>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.WcsConfiguration.TryParseLocation(System.String,System.String)">
+            <summary>
+            将指定设备名称及位置设备编码值转换为位置对象
+            </summary>
+            <param name="deviceName">设备名称</param>
+            <param name="deviceCode">位置设备编码</param>
+            <returns>转换失败将返回 null。</returns>
+        </member>
+        <member name="T:Wcs.Framework.Cfg.EquipmentFailureEventHandlersElement">
+            <summary>
+            设备故障处理程序
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.EquipmentFailureEventHandlersElement.AddedEventHandlerProxy">
+            <summary>
+            故障被添加（新产生）的事件处理程序
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Cfg.EquipmentFailureEventHandlersElement.RemovedEventHandlerProxy">
+            <summary>
+            故障被删除（已恢复）的事件处理程序
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Cfg.EquipmentFailureEventHandlersElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.Framework.DefaultRouteStrategy">
+            <summary>
+            系统提示的默认的路径策略<br />
+            以路径的总长度为衡量标准，返回计算数据的分数。路径超长分数越低。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DefaultRouteStrategy.GetRate(Wcs.Framework.Net,Wcs.Framework.Route,Wcs.Framework.Task,Wcs.Framework.Location,Wcs.Framework.Location)">
+            <summary>
+            获取一个 route 在指定 net 内的积分
+            </summary>
+            <param name="net">指定的 net</param>
+            <param name="route">要计算分数的 route 对象</param>
+            <param name="endLocation">任务要起点位置</param>
+            <param name="endLocation">任务要到的终点位置</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.DefaultApplicationStartup">
+            <summary>
+            默认的自启动程序<br />
+            1、保持设备和系统的联机模式。设备脱机后自动尝试连接到设备。
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DefaultApplicationStartup.ConnectionRetries">
+            <summary>
+            记录设备连续断开的次数，用于管理重试连接的等待时间（单位：毫秒）。<br />
+            interval = 5000 * num（最大 60000）
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DefaultApplicationStartup.startTaskDispatcher">
+            <summary>
+            任务派发器主函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DeviceConverter.ToDevice``1(System.String)">
+            <summary>
+            将指定的名称转换为 TDevice 类型的设备对象
+            </summary>
+            <param name="deviceName">要转换的设备名称</param>
+            <typeparam name="TDevice">返回的设备类型</typeparam>
+            <exception cref="T:System.ArgumentNullException">deviceName 为 null、空或是仅由空白字符组成</exception>
+            <exception cref="T:System.InvalidOperationException">
+                <param>1、未找到名称与 deviceName 值匹配的设备</param>
+                <param>2、名称与 deviceName 值匹配的设备无法转换为 TDevice 类型</param>
+            </exception>"
+            <returns>名称为 deviceName 值的设备对象</returns>
+        </member>
+        <member name="T:Wcs.Framework.Different">
+            <summary>
+            差异对象.即两个相当类型的对象进行比较之后的属性差异数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Different.valueType">
+            <summary>
+            属性的值类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Different.propertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Different.oldValue">
+            <summary>
+            原对象的值，a.compare(b) 通常指的是 a 的值.
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Different.newValue">
+            <summary>
+            原对象的值，a.compare(b) 通常指的是 b 的值.
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Different.propertyInfo">
+            <summary>
+            属性对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Different.ToString">
+            <summary>
+            返回表示当前 <see cref="T:System.Object" /> 的 <see cref="T:System.String" />。.
+            </summary>
+            <returns>
+            <see cref="T:System.String" />，表示当前的 <see cref="T:System.Object" />。.
+            </returns>
+        </member>
+        <member name="M:Wcs.Framework.Different.ToReadableDescription">
+            <summary>
+            将当前对象转换为可读的描述性信息
+            </summary>
+            <returns>
+            描述性文本
+            </returns>
+        </member>
+        <member name="T:Wcs.Framework.EventBus.ActionDelegatedEventHandler`1">
+            <summary>
+            表示代理给定的领域事件处理委托的领域事件处理器。
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.ActionDelegatedEventHandler`1.#ctor(System.Action{`0},System.Boolean)">
+            <summary>
+            初始化一个新的<c>ActionDelegatedDomainEventHandler{TEvent}</c>实例。
+            </summary>
+            <param name="eventHandlerDelegate">用于当前领域事件处理器所代理的事件处理委托。</param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.ActionDelegatedEventHandler`1.Handle(`0)">
+            <summary>
+            处理给定的事件。
+            </summary>
+            <param name="evnt">需要处理的事件。</param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.ActionDelegatedEventHandler`1.Equals(System.Object)">
+            <summary>
+            获取一个<see cref="T:System.Boolean"/>值，该值表示当前对象是否与给定的类型相同的另一对象相等。
+            </summary>
+            <param name="other">需要比较的与当前对象类型相同的另一对象。</param>
+            <returns>如果两者相等，则返回true，否则返回false。</returns>
+        </member>
+        <member name="T:Wcs.Framework.EventBus.EventBus">
+            <summary>
+            事件总线
+            发布与订阅处理逻辑
+            核心功能代码
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EventBus.EventBus.eventHandlers">
+            <summary>
+            对于事件数据的存储，目前采用内存字典
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EventBus.EventBus.Instance">
+            <summary>
+            初始化空的事件总件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBus.Subscribe``1(Wcs.Framework.EventBus.IEventHandler{``0})">
+            <summary>
+            订阅事件列表
+            </summary>
+            <param name="type"></param>
+            <param name="subTypeList"></param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBus.Unsubscribe``1(Wcs.Framework.EventBus.IEventHandler{``0})">
+            <summary>
+            取消订阅事件
+            </summary>
+            <param name="type"></param>
+            <param name="subType"></param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBus.Publish``1(``0)">
+            <summary>
+            发布事件，支持异步事件
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+            <param name="evnt"></param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBus.Publish(Wcs.Framework.EventBus.IEvent[])">
+            <summary>
+            发布事件，支持异步事件
+            </summary>
+            <param name="events"></param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBusEventPublisher.Preserve``1(``0)">
+            <summary>
+            将失败的事件进行持久货操作
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+            <param name="evnt"></param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBusEventPublisher.UnPreserve``1(``0)">
+            <summary>
+            将成功的事件从持久化集合中移除
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+            <param name="evnt"></param>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.EventBusEventPublisher.Pop(Wcs.Framework.EventBus.IEvent)">
+            <summary>
+            从延迟事件队列中移除指定的事件
+            </summary>
+            <param name="evnt"></param>
+        </member>
+        <member name="T:Wcs.Framework.EventBus.HandlesAsynchronouslyAttribute">
+            <summary>
+            Represents that the event handlers applied with this attribute
+            will handle the events in a asynchronous process.
+            </summary>
+            <remarks>This attribute is only applicable to the message handlers and will only
+            be used by the message buses or message dispatchers. Applying this attribute to
+            other types of classes will take no effect.</remarks>
+        </member>
+        <member name="T:Wcs.Framework.EventBus.IEvent">
+            <summary>
+            事件接口，实际上是事件数据上的概念
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EventBus.IEvent.EventKey">
+            <summary>
+            事件标志键值（可识别事件对象的键值，唯一键）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EventBus.IEvent.Preservable">
+            <summary>
+            指示该数据是否支持持久化
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EventBus.IEvent.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.IEvent.ToDescription">
+            <summary>
+            转换为描述信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EventBus.IEventHandler`1.Hold">
+            <summary>
+            指示该处理程序在发生错误（未正常完成）时，是否需要保持并尝试重新通知，直到成功。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EventBus.IEventHandler`1.Handle(`0)">
+            <summary>
+            执行该方法
+            </summary>
+            <param name="evt"></param>
+        </member>
+        <member name="T:Wcs.Framework.EventBus.NotSupportedPreservableException`1">
+            <summary>
+            不支持操作化异常
+            </summary>
+            <typeparam name="TEvent">事件泛型参数</typeparam>
+        </member>
+        <member name="M:Wcs.Framework.LocationConverter.ToLocationInfo(Wcs.Framework.Location)">
+            <summary>
+            将指定的位置对象转换为位置描述信息
+            </summary>
+            <param name="location">要转换的位置对象</param>
+            <exception cref="T:System.ArgumentNullException">location 为 null</exception>
+            <returns>位置描述信息</returns>
+        </member>
+        <member name="M:Wcs.Framework.LocationConverter.ToLocation(Wcs.Framework.LocationInfo)">
+            <summary>
+            将指定的位置描述信息转换为位置对象
+            </summary>
+            <param name="locationInfo">要转换的位置描述信息</param>
+            <exception cref="T:System.ArgumentNullException">locationInfo 为 null</exception>
+            <exception cref="T:System.InvalidOperationException">未找到与 locationInfo 值匹配的位置</exception>
+            <returns>位置描述信息所表示的位置对象。</returns>
+        </member>
+        <member name="M:Wcs.Framework.LocationConverter.ToLocation(System.String,System.String)">
+            <summary>
+            将指定的位置设备编码转换为指定的设备中的位置对象
+            </summary>
+            <param name="deviceName">要匹配的位置所属的设备的名称</param>
+            <param name="locationDeviceCode">要转换的位置设备编码值</param>
+            <exception cref="T:System.ArgumentNullException">deviceName 或 locationDeviceCode 为 null、空或是仅由空白字符组成</exception>
+            <exception cref="T:System.InvalidOperationException">未找到与 deviceName、locationDeviceCode 值匹配的位置</exception>
+            <returns>位置设备编码值所表示的位置对象</returns>
+        </member>
+        <member name="M:Wcs.Framework.LocationConverter.ConvertibleCodeToLcation(System.String)">
+            <summary>
+            将指定的位置转换信息转换为位置对象
+            </summary>
+            <param name="locationInfo">要转换的位置转换信息</param>
+            <exception cref="T:System.ArgumentNullException">convertibleCode 为 null、空或是仅由空白字符组成</exception>
+            <exception cref="T:System.InvalidOperationException">未找到与 convertibleCode 值匹配的位置</exception>
+            <returns>位置转换信息所表示的位置对象。在找不到匹配的位置对象时返回 null</returns>
+        </member>
+        <member name="M:Wcs.Framework.LocationConverter.UserCodeToLcation(System.String)">
+            <summary>
+            将指定的位置用户编码转换为位置对象
+            </summary>
+            <param name="locationInfo">要转换的位置用户编码</param>
+            <exception cref="T:System.ArgumentNullException">locationUserCode 为 null、空或是仅由空白字符组成</exception>
+            <exception cref="T:System.InvalidOperationException">未找到用户编码和 locationUserCode 值匹配的位置</exception>
+            <exception cref="T:System.InvalidOperationException">找到 1 个以上用户编码和 locationUserCode 值匹配的位置对象</exception>
+            <returns>位置用户编码所表示的位置对象。在找不到匹配的位置对象时返回 null</returns>
+        </member>
+        <member name="T:Wcs.Framework.AbstractState">
+            <summary>
+            表示一个具体的状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractState.Context">
+            <summary>
+            获取此状态关联的上下文
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractState.Name">
+            <summary>
+            状态名称
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractState.CanPerform">
+            <summary>
+            指示当前的状态是否可以执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.AbstractState.IsCompleted">
+            <summary>
+            指示当前的状态是否已完成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.AbstractState.Perform">
+            <summary>
+            立即执行该状态操作
+            </summary>
+            <param name="context">状态上下文</param>
+        </member>
+        <member name="T:Wcs.Framework.AbstractStateManager">
+             <summary>
+             状态上下文
+             <para>1、恢复：在实例被创建后，将从尝试恢复已持久货的信息。</para>
+             <para>2、保存：在 CurrentState 被赋值时将会被持久化。由于在创建实例时总是会对 CurrentState 进行赋值，所以在创建实例时总能被保存。</para>
+             <para>3、删除：在上下文执行完成，并引发了 TaskCompleted 事件后，对象自动调用 Remove 方法彻底删除整个对象。</para>
+             <para>4、加载(恢复所有已持久化的恢复信息)：需要开发人员编写针对性的代码。<br />
+            可以将加载代码放在专门的启动程序当中，在其中加载所有需要恢复的状态对象。<br />
+            这样的启动程序应该放在 Wcs 的程序程序之前，否则可能会导致在启动后某些对象已经恢复，此恢复代码又尝试重复恢复它而引发异常。
+            </para>
+             </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.#ctor(Wcs.Framework.EquipmentAction,Wcs.Framework.TaskableDevice)">
+            <summary>
+            初始化 <seealso cref="T:AbsoluteStateManager"/> 类的新实例。
+            </summary>
+            <param name="equipmentAction">物理动作</param>
+            <param name="device">关联设备</param>
+        </member>
+        <member name="E:Wcs.Framework.AbstractStateManager.StateFinished">
+            <summary>
+            在状态结束时发生
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractStateManager.CurrentState">
+            <summary>
+            当前所处状态（执行进度）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractStateManager.Device">
+            <summary>
+            获取当前上下文所属设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractStateManager.EquipmentAction">
+            <summary>
+            物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractStateManager.StateLink">
+            <summary>
+            状态链
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.AbstractStateManager._logger">
+            <summary>
+            获取日志对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.CreateOrGetContext``1(Wcs.Framework.EquipmentAction,Wcs.Framework.TaskableDevice)">
+            <summary>
+            获取(如果已存在)或创建一个物理动作的状态上下文
+            </summary>
+            <typeparam name="T">泛型参数，上下文类型</typeparam>
+            <param name="equipmentAction">物理动作</param>
+            <param name="device">设备</param>
+            <returns>状态上下文</returns>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.GetContext(Wcs.Framework.EquipmentAction)">
+            <summary>
+            获取指定物理动作的状态上下文
+            </summary>
+            <param name="equipmentAction">物理动作</param>
+            <returns>如果不存在将返回 null.</returns>
+        </member>
+        <member name="P:Wcs.Framework.AbstractStateManager.Contexts">
+            <summary>
+            获取所有状态上下文对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.Dispose">
+            <summary>
+            销毁对象。该操作只会清理内存对象，不涉及已持久货的恢复信息。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.BuildStateLink">
+            <summary>
+            创建状态链
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.FireTaskCompleteEvent">
+            <summary>
+            引发任务完成事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.GetNextState">
+            <summary>
+            获取下一个状态
+            </summary>
+            <returns>
+            <para>如果当前状态未完成，将直接返回当前状态。</para>
+            <para>如果当前状态已完成，并且是状态链的末位，将返回NULL</para>
+            </returns>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.Proc">
+            <summary>
+            状态上下文的执行器处理过程
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.Remove">
+            <summary>
+            移除当前上下文信息（包括恢复信息）。该方法的实现当中应在最后调用 Dispose 方法，已清理内存中对象引用。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.Restore">
+            <summary>
+            从恢复信息(如果存在)中恢复当前上下文
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.Save">
+            <summary>
+            保存当前上下文的恢复信息
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.FireStateFinishedEvent">
+            <summary>
+            引发当前状态结束事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.OnEquipmentActionStatusChanged(Wcs.Framework.Events.EquipmentActionStatusChangedEvent)">
+            <summary>
+            侦听物理动作状态变化事件，并将变化后的状态同步到当前上下文的动作对象中
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Wcs.Framework.AbstractStateManager.StateLineVaild">
+            <summary>
+            验证当前状态链的有效性
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.StateManagerRestoreInfo">
+            <summary>
+            状态上下文保存的恢复信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.StateManagerRestoreInfo.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.StateManagerRestoreInfo.CurrentStateName">
+            <summary>
+            当前状态名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.StateManagerRestoreInfo.EquipmentActionId">
+            <summary>
+            关联的物理动作Id（约束）
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.NhAbstractStateManager">
+            <summary>
+            使用数据库保存恢复信息的状态上下文
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.NhAbstractStateManager.#ctor(Wcs.Framework.EquipmentAction,Wcs.Framework.TaskableDevice)">
+            <summary>
+            初始化 <seealso cref="T:NhAbstractStateManager"/> 类的新实例。
+            </summary>
+            <param name="equipmentAction">物理动作</param>
+            <param name="device">关联设备</param>
+        </member>
+        <member name="M:Wcs.Framework.NhAbstractStateManager.Restore">
+            <summary>
+            从数据库中已保存的恢复信息（如果存在）中恢复当前上下文
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.NhAbstractStateManager.Save">
+            <summary>
+            将当前上下文的恢复信息保存到数据库
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.PathHelper">
+            <summary>
+            路径拆分助手类
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.PathHelper.FindNextPath(Wcs.Framework.Task,Wcs.Framework.Location,Wcs.Framework.Location,Wcs.Framework.Location,System.Nullable{System.Int32},Wcs.Framework.RouteType)">
+            <summary>
+            查找指定起点到终点的所有连通路径
+            </summary>
+            <param name="task">任务</param>
+            <param name="from">起点</param>
+            <param name="to">终点</param>
+            <param name="currentLocation">当前位置,如果指定该值将从此位置开始搜索路径</param>
+            <param name="findOptions">搜索路径的类型选项</param>
+            <returns>返回经过排序的路径集合(按优先级降序)</returns>
+        </member>
+        <member name="M:Wcs.Framework.PathHelper.GetTrajectories(Wcs.Framework.Location,Wcs.Framework.Location,Wcs.Framework.RouteType)">
+            <summary>
+            获取从起点到终点的整个运行轨迹(经过的所有货位)
+            </summary>
+            <param name="fromLocation">起点位置</param>
+            <param name="toLocation">终点位置</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ReadOnlyDictionary`2">
+            <summary>
+            表示一个只读的字典类型。一旦创建将不可修改
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:Wcs.Framework.ReadOnlyDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
+            <summary>
+            初始化 <see cref="T:ReadOnlyDictionary"/> 类型
+            </summary>
+            <param name="sources">数据源</param>
+        </member>
+        <member name="F:Wcs.Framework.RequestProcessResultStatus.Unprocessed">
+            <summary>
+            未执行任何加工操作
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RequestProcessResultStatus.Processed">
+            <summary>
+            已加工，并正常结束
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RequestProcessResultStatus.Abort">
+            <summary>
+            请求调用方法取消对 Request 的操作。（中止调用）
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.RequestProcessResult">
+            <summary>
+            Request 对象包装结果
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.RequestProcessResult.Result">
+            <summary>
+            指示包装过程的结果
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.RequestProcessResult.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.IRequestProcess">
+            <summary>
+            Request 包装对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IRequestProcess.Process(Wcs.Framework.Request,NHibernate.ISession,Wcs.Framework.RequestProcessResult)">
+            <summary>
+            执行包装过程
+            </summary>
+            <param name="request">需要包装的 Request 对象</param>
+            <param name="sesson">执行化上下文</param>
+            <param name="result">包装结果</param>
+        </member>
+        <member name="T:Wcs.Framework.IEquipmentFailureEventHandler`1">
+            <summary>
+            表示继承此接口的类型是一个设备故障处理程序
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IEquipmentFailureEventHandler`1.Handle(Wcs.Framework.Device,`0)">
+            <summary>
+            处理设备故障被添加的事件
+            </summary>
+            <param name="device"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentFailureEventHandler`1">
+            <summary>
+            设备故障事件处理程序
+            </summary>
+            <remarks>
+            为了保证操作的一致性，将多个任务事件的处理程序加入到同一事务中进行提交，其中任意一个处理失败将导致整个事务失败。
+            </remarks>
+            <typeparam name="TArgs">事件参数类型</typeparam>
+        </member>
+        <member name="T:Wcs.Framework.UndefinedEndLocationTask">
+            <summary>
+            终点未明的任务。
+            说终点未明，其实不是很准备。该类型的任务终点是一个由业务系统限制的位置范围，而且在任务创建完成后应该在这个允许的位置范围内指定一个初始的 EndLocation
+            上位机在下发任务时，指定一个以上的可选位置当做任务终点。Wcs将货物按一定的策略送到这些位置中的任意一个即完成。
+            此类型的任务在每一步完成后都会重新规划一个新的结束点位置，直到已到达指定位置范围内。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.UndefinedEndLocationTask.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.UndefinedEndLocationTask.#ctor(System.String,Wcs.Framework.LocationInfo,Wcs.Framework.LocationInfo)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="taskCode">任务号</param>
+            <param name="startLocation">起始位置</param>
+            <param name="endLocation">终点位置</param>
+        </member>
+        <member name="M:Wcs.Framework.UndefinedEndLocationTask.AssignNewEndLocation">
+            <summary>
+            重新分配新的结束位置。
+            该方法应该在每一个逻辑动作完成后调用。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.UndefinedEndLocationTask.GetNewEndLocation">
+            <summary>
+            获取一个新的结束位置。
+            如果没有新的位置可以分配了，则应返回 null或原结束位置。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.UndefinedEndLocationTask.AvailableEndLocations">
+            <summary>
+            任务的可选结束位置集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentFailureEventArgs.EquipmentFailure">
+            <summary>
+            故障
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.IDeviceUserInterface">
+            <summary>
+            设备用户界面接口
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IDeviceUserInterface.Show(Wcs.Framework.Device)">
+            <summary>
+            向用户展示这个界面
+            </summary>
+            <param name="device">设备</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.Suspend(System.Int32)">
+            <summary>
+            暂停指定的任务
+            </summary>
+            <param name="taskId">任务 Id</param>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.Cancel(System.Int32)">
+            <summary>
+            取消指定的任务
+            </summary>
+            <param name="taskId">任务 Id</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.Complete(System.Int32)">
+            <summary>
+            强制完成指定的任务
+            </summary>
+            <param name="taskId">任务 Id</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.CompleteMovement(System.Int32)">
+            <summary>
+            强制完成指定的逻辑动作
+            </summary>
+            <param name="movementId">逻辑动作 Id</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.CompleteAction(System.Int32)">
+            <summary>
+            强制完成指定的物理动作
+            </summary>
+            <param name="actionId">物理动作 Id</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.Resume(System.Int32,Wcs.Framework.Location)">
+            <summary>
+            强制完成指定的任务
+            </summary>
+            <param name="taskId">任务 Id</param>
+            <param name="currentLocation">当前位置。为 null 时将直接使用 Task.CurrentLocation 的值</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.Archive(System.Int32)">
+            <summary>
+            归档指定的任务
+            </summary>
+            <param name="taskId">任务 Id</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.ChangePriority(System.Int32,System.Int32[])">
+            <summary>
+            调整指定任务集合的优先级
+            </summary>
+            <param name="newPriority">新的优先级</param>
+            <param name="taskIds">任务 id 列表</param>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.GetTaskResumeAtRoute(System.Int32)">
+            <summary>
+            获取指定任务继续执行时需要使用的 Route
+            </summary>
+            <param name="taskId">任务 Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.TaskHelper.GetTaskResumeAtRoute(System.Int32,Wcs.Framework.EquipmentAction@)">
+            <summary>
+            获取指定任务继续执行时需要使用的 Route
+            </summary>
+            <param name="taskId">任务 Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.Exceptions.TaskNotFoundException">
+            <summary>
+            未找到 <see cref="T:Wcs.Framework.Task"/> 时引发的异常
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.ISupportTransactionObject">
+            <summary>
+            表示继承此接口的对象是一个支持事务的对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.ISupportTransactionObject.SupportTransactionObjectStatus">
+            <summary>
+            对象在事务中的状态
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.SupportTransactionObjectStatus">
+            <summary>
+            支持事务的对象状态
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.SupportTransactionObjectStatus.Initialized">
+            <summary>
+            已初始化的
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.SupportTransactionObjectStatus.Prepared">
+            <summary>
+            已预处理的
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.SupportTransactionObjectStatus.Committed">
+            <summary>
+            已提交的
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.SupportTransactionObjectStatus.Rolledback">
+            <summary>
+            已回滚的
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.ActionSchedulerFilterResult">
+            <summary>
+            过滤器过滤结果
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.ActionSchedulerFilterResult.Defeated">
+            <summary>
+            是否被否决
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.ActionSchedulerFilterResult.Reason">
+            <summary>
+            被否决的原因
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ActionSchedulerFilterResult.#ctor(System.Boolean,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="defeated">是否被否决</param>
+            <param name="reason">否决原因</param>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionScheduler.CurrentAction">
+            <summary>
+            记录当前正在执行的物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionScheduler.IsRunning">
+            <summary>
+            指示调度线程是否处于运行状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionScheduler.Device">
+            <summary>
+            调度程序所属的设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionScheduler.ActionFilters">
+            <summary>
+            调度程序动作过滤器集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionScheduler.Actions">
+            <summary>
+            当前所有被调度的物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionScheduler._FixUnknowEquipmentTaskOnStatusChanged">
+            <summary>
+            获取或设置一个值，指示设备是否在动作状态改变时检测需要修复的动作序列当前正在执行的动作标识
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionScheduler.#ctor(Wcs.Framework.TaskableDevice,Wcs.Framework.EquipmentActionSchedulerFilter[])">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="device">所属设备</param>
+            <remarks>
+            将自动从数据库中读取状态为 <see cref="F:Wcs.Framework.EquipmentActionStatus.New"/> 的 <see cref="T:Wcs.Framework.EquipmentAction"/>
+            </remarks>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionScheduler.Add(Wcs.Framework.EquipmentAction)">
+            <summary>
+            将指定的物理动作添加到任务队列中
+            </summary>
+            <param name="action">物理动作</param>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionScheduler.Remove(Wcs.Framework.EquipmentAction)">
+            <summary>
+            将指定的物理动作从任务队列中移除
+            </summary>
+            <param name="_action">物理动作</param>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionScheduler.Start">
+            <summary>
+            启动调试线程
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionScheduler.GetAvailableActions">
+            <summary>
+            获取当前可以发送的动作集合（有可能返回 null）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentActionSchedulerFilter">
+            <summary>
+            调度程序动作过滤器<br />
+            用来在发送任务时对任务进行判断，显示是否可以发送
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionSchedulerFilter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionSchedulerFilter.Filter(Wcs.Framework.EquipmentActionScheduler,Wcs.Framework.EquipmentAction)">
+            <summary>
+            判断指定的动作是否可以发送
+            </summary>
+            <param name="equipmentActionScheduler">调度程序</param>
+            <param name="action">要发送的动作</param>
+            <returns>返回 true 表示动作可以发送；false 表示动作不可以发送。</returns>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentTaskIdSerialNumber">
+            <summary>
+            设备任务号流水
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.SerialNumberFactory.GenerateEquipmentTaskId">
+            <summary>
+            生成一个设备任务号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.SerialNumberFactory.GenerateManualTaskCode">
+            <summary>
+            生成一个手工任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.SerialNumberFactory.GenerateManualTaskCode(System.String)">
+            <summary>
+            生成一个手工任务
+            </summary>
+            <param name="prefix">前缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.SerialNumberFactory.GenerateRandomValue(System.Int32,System.Int32)">
+            <summary>
+            获取一个指定范围内的随机 int 值
+            </summary>
+            <param name="minValue">最小</param>
+            <param name="maxValue"></param>
+            <returns>一个大于等于 minValue 且小于 maxValue 的 32 位带符号整数，即：返回的值范围包括 minValue 但不包括 maxValue。
+            如果 minValue 等于 maxValue，则返回 minValue。
+            </returns>
+        </member>
+        <member name="T:Wcs.Framework.ManualTaskCodeSerialNumber">
+            <summary>
+            手工任务号
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DatabaseHelper.CreateDatabase">
+            <summary>
+            创建数据库
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.SupportTransactionMethodActionDelegate`1">
+            <summary>
+            表示 TransactionMethod 的准备和回滚方法
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.SupportTransactionMethod`1">
+             <summary>
+             表示一个支持事务的方法对象<br />
+             事务的执行过程先后顺序为：<br />
+             <para>1、Prepare</para>
+             <para>2、Rollback / Commit</para>
+             <para>在事务的所有分支都准备就绪后才会执行所有事务分支的 Commit 方法</para>
+             <remarks>
+            Commit	通知登记的对象事务正在提交。 
+            InDoubt	通知登记的对象事务的状态不确定。 
+            Prepare	通知登记的对象事务正在为提交做准备。 
+            Rollback	通知登记的对象事务正在回滚（中止）。 
+             </remarks>
+             </summary>
+        </member>
+        <member name="F:Wcs.Framework.SupportTransactionMethod`1._logger">
+            <summary>
+            日志对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.SupportTransactionMethod`1.State">
+            <summary>
+            状态数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.SupportTransactionMethod`1.PrepareAction">
+            <summary>
+            事务准备时要执行的方法
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.SupportTransactionMethod`1.RollbackAction">
+            <summary>
+            事务回滚时要执行的方法
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.SupportTransactionMethod`1.CommitAction">
+            <summary>
+            事务提交时要执行的方法
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.SupportTransactionMethod`1.#ctor(`0,Wcs.Framework.SupportTransactionMethodActionDelegate{`0},Wcs.Framework.SupportTransactionMethodActionDelegate{`0},Wcs.Framework.SupportTransactionMethodActionDelegate{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="state">状态对象</param>
+            <param name="prepareAction">事务准备时要执行的方法(必须)</param>
+            <param name="rollbackAction">事务回滚时要执行的方法(必须)</param>
+            <param name="commitAction">事务提交时要执行的方法(可为null)</param>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentAction">
+             <summary>
+             表示一个具体的设备动作
+             </summary>
+             <example>
+             <h1>该示例演示了如何创建一个新的物理动作类型</h1>
+             <ul>
+             <li>
+             1、创建一个新的类，并继承 <see cref="T:Wcs.Framework.EquipmentAction"/>.
+             <code>
+             public class SampleEquipmentAction : EquipmentAction
+            {
+                public override string ToReadableDescription()
+                {
+                    throw new NotImplementedException();
+                }
+            
+                public override object ToEquipmentTask()
+                {
+                    throw new NotImplementedException();
+                }
+            }
+             </code>
+             </li>
+             <li>
+             2、在 extensions.hbm.xml 文件中添加 <see cref="T:Wcs.Framework.EquipmentAction"/> 的子类映射。 
+             <code lang="xml">
+             <subclass name="Samples.SampleEquipmentAction" discriminator-value="SampleEquipmentAction" extends="EquipmentAction" />
+             </code>
+             </li>
+             <li>
+             如果该类型位于框架应用程序集以为，那么还应该在 hibernate.cfg.xml 的 session-factory 节点添加一个新的 mapping 节点，将此应用程序集加入其中。
+             <code lang="xml">
+             <session-factory name="wcs"><map assembly="Samples" /></session-factory>
+             </code>
+             </li>
+             </ul>
+             </example>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.SequenceOrdering">
+            <summary>
+            此动作在序列中的排序位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.ContainerCode">
+            <summary>
+            容器编码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.DeviceName">
+            <summary>
+            物理动作设备信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.Status">
+            <summary>
+            动作当前状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.Group">
+            <summary>
+            所属动作组
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.Movement">
+            <summary>
+            逻辑移动动作
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+            <value>
+            物理动作被创建的时间
+            </value>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.SentAt">
+            <summary>
+            发送时间.
+            </summary>
+            <value>
+            物理动作被成功发送给设备的时间.
+            </value>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.FinishedAt">
+            <summary>
+            结束时间
+            </summary>
+            <value>
+            接收到设备报的任务完成信号的时间.这个时间在极少数的情况下并不能体现真正的任务完成时间，比如在设备任务报完成期间程序被关闭。
+            </value>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentAction.Warnings">
+            <summary>
+            物理动作的报警信息
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentAction.ToReadableDescription">
+            <summary>
+            将对象转换为用户可读的描述信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentAction.ToAddCommand">
+            <summary>
+            转换为向设备发送任务的指令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentAction.ToCancelCommand">
+            <summary>
+            转换为向设备取消任务的指令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentAction.AddWarning(Wcs.Framework.EquipmentActionWarning)">
+            <summary>
+            添加一个警告信息
+            </summary>
+            <param name="warning">警告信息</param>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentAction.CanPerform(System.String@)">
+            <summary>
+            判断当前任务在逻辑动作范围内是否可以执行了
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentActionGroup">
+            <summary>
+            物理动作组
+            物理动作在被分成多个设备动作后，有些动作必须连接执行。
+            为了防止在排序时破坏原来的执行顺序，所以引入物理动作组的概念
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentActionStatus">
+            <summary>
+            设备动作状态
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EquipmentActionStatus.New">
+            <summary>
+            新动作，等待执行
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EquipmentActionStatus.Executing">
+            <summary>
+            正在执行中
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EquipmentActionStatus.Suspend">
+            <summary>
+            暂停中
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EquipmentActionStatus.Error">
+            <summary>
+            执行中发生错误
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EquipmentActionStatus.Cancelled">
+            <summary>
+            被取消
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.EquipmentActionStatus.Completed">
+            <summary>
+            已完成
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.LogicMovement">
+             <summary>
+             逻辑动作
+             表示一个任务的一个移动步骤，相当于原来的 子任务 概念
+             </summary>
+             <example>
+             <h1>该示例演示了如何创建一个新的逻辑动作类型</h1>
+             <ul>
+             <li>
+             1、创建一个新的类，并继承 <see cref="T:Wcs.Framework.LogicMovement"/>.
+             <code>
+            public class SampleLogicMovemnt : LogicMovement
+            {
+                protected override void InitializeEquipmentActions()
+                {
+                    
+                }
+            }
+             </code>
+             </li>
+             <li>
+             2、在 extensions.hbm.xml 文件中添加 <see cref="T:Wcs.Framework.LogicMovement"/> 的子类映射。 
+             <code lang="xml">
+             <subclass name="Samples.SampleLogicMovemnt" discriminator-value="SampleLogicMovemnt" extends="LogicMovement" />
+             </code>
+             </li>
+             <li>
+             如果该类型位于框架应用程序集以为，那么还应该在 hibernate.cfg.xml 的 session-factory 节点添加一个新的 mapping 节点，将此应用程序集加入其中。
+             <code lang="xml">
+             <session-factory name="wcs"><map assembly="Samples" /></session-factory>
+             </code>
+             </li>
+             </ul>
+             </example>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.Ordering">
+            <summary>
+            逻辑动作在任务中的排序位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.DeviceName">
+            <summary>
+            所属设备名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.RouteId">
+            <summary>
+            路径号(有可能为 null，不是所有逻辑动作都有路径)
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.Task">
+            <summary>
+            逻辑动作所属任务
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.FinishedAt">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.EquipmentActions">
+            <summary>
+            该逻辑动作依次需要执行的物理动作
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.LogicMovement.CreateEquipmentActions">
+            <summary>
+            对物理动作属性进行赋值
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.StartLocation">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.EndLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LogicMovement.Status">
+            <summary>
+            获取逻辑动作的状态
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.LogicMovementStatus">
+            <summary>
+            逻辑动作状态
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LogicMovementStatus.New">
+            <summary>
+            新动作，等待执行
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LogicMovementStatus.Executing">
+            <summary>
+            正在执行中
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LogicMovementStatus.Suspend">
+            <summary>
+            暂停中
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LogicMovementStatus.Error">
+            <summary>
+            执行中发生错误
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LogicMovementStatus.Cancelled">
+            <summary>
+            被取消
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LogicMovementStatus.Completed">
+            <summary>
+            已完成
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.Request">
+            <summary>
+            占位请求
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.Source">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.Status">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.InvalidAt">
+            <summary>
+            失效时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.ContainerCodes">
+            <summary>
+            容器集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.Comments">
+            <summary>
+            备注信息.
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Request.AdditionalInfo">
+            <summary>
+            附加属性集合
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.RequestStatus">
+            <summary>
+            请求状态
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RequestStatus.New">
+            <summary>
+            新请求
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RequestStatus.Processed">
+            <summary>
+            已处理的
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RequestStatus.Cancelled">
+            <summary>
+            被取消的
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.Task">
+            <summary>
+            Wcs 主任务，描述一个完整的作业
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.MasterTaskCode">
+            <summary>
+            关联的主控任务号（父任务号）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.TaskCode">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.FromRequest">
+            <summary>
+            该任务来自哪个请求(Wms在下任务时应将请求的主键传回给Wcs)
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Source">
+            <summary>
+            任务来源
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.StartLocation">
+            <summary>
+            任务起始位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.EndLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.CurrentLocation">
+            <summary>
+            当前位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Direction">
+            <summary>
+            任务方向
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Status">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.BizType">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.TaskType">
+            <summary>
+            任务类型
+            <para>此属性的值来源于业务系统，在与业务系统交互时可能需要用到。</para>
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.FinishedAt">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Description">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Priority">
+            <summary>
+            任务优先级（默认为 0），值越大，优先级越高。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Group">
+            <summary>
+            任务组(双货叉堆垛机中，同一个组的两个任务必须同时取放)。
+            获取或设置一个值，表示任务所属的组。
+            默认返回当前任务的任务号。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.PartnersCount">
+            <summary>
+            同一组内的任务数量（该值主要体现的下一步操作只配对任务数量，某些时候当前步骤中有多个，但到下一步骤只将会减少）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.Movements">
+            <summary>
+            已存在的动作
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.ContainerCodes">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Task.AdditionalInfo">
+            <summary>
+            附加属性集合
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Task.AddMovement(Wcs.Framework.LogicMovement)">
+            <summary>
+            添加一个新的逻辑动作
+            </summary>
+            <param name="movement">新逻辑动作</param>
+        </member>
+        <member name="M:Wcs.Framework.Task.GetNextMovement(Wcs.NHUnitOfWork,System.Boolean@)">
+            <summary>
+            获取下一个物理动作
+            </summary>
+            <remarks>
+            在当前任务中尝试获取下一个待执行的 LogicMovement，如果不存在，将尝试使用FindNextPath 函数搜索连通网络并拆分形成一个新的 LogicMovement对象返回。否则返回 null.
+            </remarks>
+            <param name="unitOfWork">数据库持久化上下文</param>
+            <param name="isNewMovement">指示返回的 LogicMovemenet 对象是否是新创建的</param>
+            <returns>当前可用的待执行的 LogicMovement 对象</returns>
+        </member>
+        <member name="T:Wcs.Framework.TaskBizType">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskBizType.Normal">
+            <summary>
+            正常出入库
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskBizType.Counting">
+            <summary>
+            盘点业务
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.TaskDirection">
+            <summary>
+            任务方向
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskDirection.Unknow">
+            <summary>
+            不明确的
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskDirection.In">
+            <summary>
+            入库
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskDirection.Out">
+            <summary>
+            出库
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.TaskSource">
+            <summary>
+            任务来源
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskSource.Unknow">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskSource.Wms">
+            <summary>
+            由 Wms 创建
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskSource.Wcs">
+            <summary>
+            由 Wcs 创建
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskSource.Master">
+            <summary>
+            由 Master 创建（通常指在分区设计后的主控Wcs系统）
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.New">
+            <summary>
+            新任务
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.Sent">
+            <summary>
+            已发送
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.Executing">
+            <summary>
+            正在运行
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.Suspend">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.Error">
+            <summary>
+            发生错误
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.Cancelled">
+            <summary>
+            被取消
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.TaskStatus.Completed">
+            <summary>
+            已完成
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentActionWarning">
+            <summary>
+            物理动作警告信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionWarning.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionWarning.Code">
+            <summary>
+            警告码（错误码）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionWarning.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionWarning.CreatedAt">
+            <summary>
+            发生时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionWarning.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentActionWarning.EquipmentAction">
+            <summary>
+            错误引发者
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionWarning.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentActionWarning.#ctor(Wcs.Framework.Device,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="device">设备</param>
+            <param name="code">警告码</param>
+            <param name="description">警告描述</param>
+        </member>
+        <member name="T:Wcs.Framework.Comparable`1">
+            <summary>
+            可对比的数据类型
+            </summary>
+            <typeparam name="T">    泛型参数. </typeparam>
+        </member>
+        <member name="M:Wcs.Framework.Comparable`1.Compare(`0)">
+            <summary>
+            将指定的对象和当前对象的所有属性进行比较，并返回两个对象的差异数据集合.
+            该操作会枚举对象的所的属性，逐一进行比较。如果属性类型实现了 <see cref="T:System.Collections.Generic.IComparer"/> 接口，将调用 <see cref="T:System.Collections.Generic.IComparer.Compare"/> 进行比较.否则使用 <see cref="T:System.Object"/>.<see cref="T:System.Object.Equals"/> 方法进行对比
+            </summary>
+            <exception cref="T:System.ArgumentNullException">newObj 为 null 时将抛出此异常.</exception>
+            <param name="newObj">要进行比较的对象 </param>
+            <returns>
+            当前对象和指定对象的差异属性集合
+            </returns>
+        </member>
+        <member name="T:Wcs.Framework.DataChangedEventHandler`1">
+            <summary>
+            表示 IDataComparer 的 DataChanged 事件处理程序
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.AdjacencyList`1">
+            <summary>
+            邻接列表.用于创建完整的连通网络
+            </summary>
+            <typeparam name="T">泛型参数</typeparam>
+        </member>
+        <member name="F:Wcs.Framework.AdjacencyList`1.items">
+            <summary>
+            图的顶点集合
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.AddVertex(`0)">
+            <summary>
+            添加一个顶点(不允许插入重复值)
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.AddEdge(`0,`0)">
+            <summary>
+            添加无向边
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.AddDirectedEdge(`0,`0)">
+            <summary>
+            添加有向边
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.Contains(`0)">
+            <summary>
+            查找图中是否包含某项
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.Find(`0)">
+            <summary>
+            查找指定项并返回
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.AddDirectedEdge(Wcs.Framework.AdjacencyList{`0}.Vertex{`0},Wcs.Framework.AdjacencyList{`0}.Vertex{`0})">
+            <summary>
+            添加有向边
+            </summary>
+            <param name="fromVer"></param>
+            <param name="toVer"></param>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.DirectedEdgeIsContains(`0,`0)">
+            <summary>
+            指示一条有向边是否已存在
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.AdjacencyList`1.ToString">
+            <summary>
+            仅用于测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.AdjacencyList`1.Nets">
+            <summary>
+            获取图内所有顶点最深可达的路径集合
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.AdjacencyList`1.Node">
+            <summary>
+            表示链表中的表节点
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.AdjacencyList`1.Vertex`1">
+            <summary>
+            表示存放于数组中的表头节点
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="T:Wcs.Framework.Route">
+            <summary>
+            路径（具体表现为一个 LogicMovement 对象）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.ReachedLocations">
+            <summary>
+            获取该路径可以经过的所有位置可转换编码集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Adjoins">
+            <summary>
+            邻接集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.AllowStartFromMidway">
+            <summary>
+            是否允许从路径的非起点位置开始执行
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Device">
+            <summary>
+            所属设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Direction">
+            <summary>
+            路径运行方向
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Enabled">
+            <summary>
+            是否启用（默认为启用）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.EndLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Id">
+            <summary>
+            路径 Id
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Locations">
+            <summary>
+            此路径经过的所有货位
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.LogicMovementSelector">
+            <summary>
+            设备路径转换为逻辑动作时使用的逻辑动作类型选择器
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.LogicMovementTypes">
+            <summary>
+            对应的动作逻辑动作类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.No">
+            <summary>
+            路径号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.RouteType">
+            <summary>
+            路径类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.StartLocation">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Route.Strategy">
+            <summary>
+            Route 的适用选择器
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Route.Intersect(Wcs.Framework.Route,Wcs.Framework.Route)">
+            <summary>
+            获取两个路径的交集
+            </summary>
+            <param name="route1">路径1</param>
+            <param name="route2">路径2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Route.Clone">
+            <summary>
+            创建一个当前对象的副本。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Route.CreateLogicMovement(Wcs.Framework.Task)">
+            <summary>
+            从本路径对象创建一个逻辑动作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Route.GetRate(Wcs.Framework.Net,Wcs.Framework.Task,Wcs.Framework.Location,Wcs.Framework.Location)">
+            <summary>
+            在指定的网络里，此路径的到达指点位置的积分数
+            </summary>
+            <param name="net">连通网络</param>
+            <param name="startLocation">业务开始位置</param>
+            <param name="endLocation">业务结束位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Route.LocationIndexOf(Wcs.Framework.Location)">
+            <summary>
+            获取指定的位置在当前路径中的索引位置
+            </summary>
+            <param name="loc">要查找的货位</param>
+            <returns>返回一个数组，原因是同一位置可能存在此路径的多个索引位置。这种情况大多发生在路径中包含通配符位置的时候。在未找到索引位置时将返回只包含 -1 一个元素的数组。</returns>
+        </member>
+        <member name="T:Wcs.Framework.RouteDirection">
+            <summary>
+            路径方向<br />
+            这个方向值只主要用来判断两个任务的交叉情况，具体所指含义由使用方解释
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RouteDirection.In">
+            <summary>
+            入
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RouteDirection.Out">
+            <summary>
+            出
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.RouteType">
+            <summary>
+            设备路径类型<br />
+            某些时候，不同的业务类型可能会需要不同的路径。比如盘点。<br />
+            盘点的时候出库和入库时使用的路径可能不允许使用正常出入库的路径，所以路径必须有一个标识指示它属于哪一种。<br />
+            任务在下发时会自动根据业务类型来处理哪些类型的连通路径是可用的。
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RouteType.Normal">
+            <summary>
+            常规路径
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.RouteType.Counting">
+            <summary>
+            盘点路径（仅用于盘点作业）
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.LogicMovementSelector">
+            <summary>
+            设备路径转换为逻辑动作时使用的逻辑动作类型选择器接口<br />
+            在一个设备对应多种逻辑动作时，将由该接口负责从多个逻辑动作中返回一个最合适的逻辑动作
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.LogicMovementSelector.ToLogicMovement(Wcs.Framework.Route,Wcs.Framework.Task)">
+            <summary>
+            将指定的路径转换为逻辑动作
+            </summary>
+            <param name="route">要转换的路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.Net">
+            <summary>
+            一个完整的连通路径
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Net.#ctor(Wcs.Framework.Route[],Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="routes">连通网络包含的有向的临接边集合</param>
+        </member>
+        <member name="P:Wcs.Framework.Net.EndLocation">
+            <summary>
+            获取连通路径的终点
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Net.Points">
+            <summary>
+            获取此连通网络经过的所有点（货位）
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Net.IsCallAt(Wcs.Framework.Location)">
+            <summary>
+            返回一个值，指示该连通是否经过或依靠指定的位置
+            </summary>
+            <param name="loc">指定的位置</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.Net.Routes">
+            <summary>
+            指示该连通路径所有要经过的 Route
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Net.StartLocation">
+            <summary>
+            路径连通路径的起点
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Net.CanReach(Wcs.Framework.Location,Wcs.Framework.Location,Wcs.Framework.Location,System.Nullable{System.Int32},Wcs.Framework.RouteType)">
+            <summary>
+            指示两个位置是否连通.
+            </summary>
+            <param name="startLocation">        起点位置. </param>
+            <param name="endLocation">          结束位置. </param>
+            <param name="currentLocation">      货物所在当前位置. </param>
+            <param name="lastMovementRouteId">  任务中最后一个逻辑动作的路径 id.通常用在判断一个任务的下任务能用的路径时使用 </param>
+            <param name="findOptions">          可用的搜索路径类型. </param>
+        </member>
+        <member name="T:Wcs.Framework.RouteStrategy">
+            <summary>
+            路径策略，计算一个路径在某个连通里返回的积分数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.RouteStrategy.GetRate(Wcs.Framework.Net,Wcs.Framework.Route,Wcs.Framework.Task,Wcs.Framework.Location,Wcs.Framework.Location)">
+            <summary>
+            获取一个 route 在指定 net 内的积分
+            </summary>
+            <param name="net">指定的 net</param>
+            <param name="route">要计算分数的 route 对象</param>
+            <param name="task">任务对象</param>
+            <param name="startLocation">业务结束位置</param>
+            <param name="endLocation">业务结束位置</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.IHoldableDevice">
+            <summary>
+            表示实现此接口的设备是一个可以被占用的设备类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.IHoldableDevice.Holder">
+            <summary>
+            当前持有者
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IHoldableDevice.Hold(Wcs.Framework.IDeviceHolder)">
+            <summary>
+            要求持有
+            </summary>
+            <param name="holder">持有对象</param>
+        </member>
+        <member name="M:Wcs.Framework.IHoldableDevice.Unhold(Wcs.Framework.IDeviceHolder)">
+            <summary>
+            释放持有
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.IDeviceHolder">
+            <summary>
+            表示实现此接口的类型是一个设备持有者
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolDevice.IPEndPoint">
+            <summary>
+            表示网络端点的IP 地址和端口号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolDevice.BindEndPoint">
+            <summary>
+            通讯绑定的地址
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolDevice.DataReceiver">
+            <summary>
+            TCP协议数据接收器
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolDevice.SendTimeout">
+            <summary>
+            网络数据发送超时时间
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolDevice.OnDataReceived(Wcs.Framework.NetPacket,Wcs.Framework.NetTransferObject)">
+            <summary>
+            当接收到新的数据时发生
+            </summary>
+            <param name="netPacket">接收到的数据包</param>
+            <param name="netTransferObject">接收到的数据包转换后的网络传输对象</param>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolDevice.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Net.IPEndPoint,System.Net.IPEndPoint,Wcs.Framework.IDataReceiver)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="name">设备名称</param>
+            <param name="ipEndPoint">表示网络端点的IP 地址和端口号</param>
+            <param name="receiveTimeout">接收超时时间（毫秒）</param>
+            <param name="connectTimeout">连接超时时间（毫秒）</param>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolDevice.ReceiveBufferSize">
+            <summary>
+            接收数据缓冲区大小
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolDevice.Receive">
+            <summary>
+            开始接收来自网络的数据<br />
+            此方法一般只在连接成功后调用。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolDevice.releaseTcpConnection">
+            <summary>
+            释放tcp连接资源
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolDevice.GetLastSentBytes">
+            <summary>
+            获取最后一次发出的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolDevice.Write(System.Byte[],System.Func{Wcs.Framework.TcpProtocolDevice,System.Byte[],System.Boolean})">
+            <summary>
+            向设备中同步写入数据
+            </summary>
+            <typeparam name="TData">泛型参数，要写入的数据类型</typeparam>
+            <param name="data">要写入的具体数据</param>
+            <param name="isSuccess">是否成功的判定表示式</param>
+            <remarks>如果失败，则抛出异常。</remarks>
+        </member>
+        <member name="T:Wcs.Framework.WarningPool">
+            <summary>
+            警告池<br />
+            负责将报警统计数据记录到数据库
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.WarningPool.AddWarning(System.String,System.String,Wcs.Framework.DeviceWarning)">
+            <summary>
+            添加一个警告
+            </summary>
+            <param name="deviceName">设备名称</param>
+            <param name="deviceType">设备类型</param>
+            <param name="warning"></param>
+        </member>
+        <member name="M:Wcs.Framework.WarningPool.EndingWarning(System.String,System.String)">
+            <summary>
+            结束一个警告
+            </summary>
+            <param name="deviceName">设备名称</param>
+            <param name="deviceType">设备类型</param>
+        </member>
+        <member name="T:Wcs.Framework.WarningRecord">
+            <summary>
+            设备报警记录
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.BeginingAt">
+            <summary>
+            发生时间：报警发生的时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Device">
+            <summary>
+            发生设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.EndingAt">
+            <summary>
+            消失时间：报警在设备上消失的时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.IsFault">
+            <summary>
+            是否属于故障
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.FinishedAt">
+            <summary>
+            结束时间：报警恢复正常的时间，由人工填写，默认使用 EndingAt 值。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Reason">
+            <summary>
+            原因
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Repaired">
+            <summary>
+            指示是否已彻底修复该故障
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.Result">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.UserName">
+            <summary>
+            处理人
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.WarningRecord.TotalMilliseconds">
+            <summary>
+            持续时长（毫秒）
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.DeviceCommandAttribute">
+            <summary>
+            指定设备命令的特性
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceCommandAttribute.IsEquipmentCommand">
+            <summary>
+            <para>指示包含止特性的类型是否是一个设备命令</para>
+            <para>注：设备命令才需要在 sendtask 方法中通过与设备的通讯接口转换成流发送给设备，否则不允许发送给物理设备。</para>
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.IDeviceCommandAdjudicator">
+            <summary>
+            表示继续此接口的对象是一个设备命令裁定者
+            </summary>
+            <remarks>命令可以继承此接口，在发送时通过接口方法识别诸如命令是否发送成功</remarks>
+        </member>
+        <member name="M:Wcs.Framework.IDeviceCommandAdjudicator.SendSuccess(Wcs.Framework.TaskableDevice,Wcs.Framework.DeviceCommand)">
+            <summary>
+            指示命令发送是否成功
+            </summary>
+            <param name="taskableDevice">设备</param>
+            <param name="command">命令</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.DeviceWarning">
+            <summary>
+            该对象表示设备的具体报警信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.Deivce">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.Source">
+            <summary>
+            报警源，通常报警指的是设备报警。但在某些情况下可能报警来自于设备中的某些位置或其它对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.Level">
+            <summary>
+            错误等级
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.Code">
+            <summary>
+            报警码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarning.IsFault">
+            <summary>
+            是否属于故障
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.ITaskEventHandler`1">
+            <summary>
+            表示继承此接口的对象是一个任务事件处理程序
+            </summary>
+            <typeparam name="TArgs">事件参数类型</typeparam>
+        </member>
+        <member name="P:Wcs.Framework.TaskCurrentLocationChangedEventArgs.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskCurrentLocationChangedEventArgs.CurrentLocation">
+            <summary>
+            当前位置
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.TaskEventHandler`1">
+            <summary>
+            任务事件处理程序
+            </summary>
+            <remarks>
+            为了保证操作的一致性，将多个任务事件的处理程序加入到同一事务中进行提交，其中任意一个处理失败将导致整个事务失败。
+            </remarks>
+            <typeparam name="TArgs">事件参数类型</typeparam>
+        </member>
+        <member name="P:Wcs.Framework.TaskRequestEventArgs.Location">
+            <summary>
+            任务请求的发生位置
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskRequestEventArgs.SourceData">
+            <summary>
+            请求源数据
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.DeviceLockerInformation">
+            <summary>
+            设备锁信息的持久化对象
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceLockerInformation.LockerInfo">
+            <summary>
+            锁信息.
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceLockerInformation.DeviceName">
+            <summary>
+            设备信息.
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.IDataComparer`2">
+            <summary>
+            数据对比接口
+            </summary>
+            <typeparam name="TResult">  比较结果的数据类型 </typeparam>
+            <typeparam name="TCompare"> 比较时使用的数据类型 </typeparam>
+        </member>
+        <member name="E:Wcs.Framework.IDataComparer`2.DataChanged">
+            <summary>
+            当发现传入的数据和旧的数据有变化时发生
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IDataComparer`2.Compare(`1,`1)">
+            <summary>
+            将指定数据和原来旧的数据进行比较
+            </summary>
+            <param name="oldData"> 旧数据 </param>
+            <param name="oldData"> 新数据 </param>
+            <returns>
+            当前对象和指定对象的差异属性集合
+            </returns>
+        </member>
+        <member name="T:Wcs.Framework.LocationInfo">
+            <summary>
+            位置描述信息
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LocationInfo.DeviceCode">
+            <summary>
+            位置设备可识别的编码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LocationInfo.UserCode">
+            <summary>
+            位置用户可识别的编码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LocationInfo.DeviceName">
+            <summary>
+            位置所属设备名称
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.InvalidNetPacketException">
+            <summary>
+            表示一个无效的网络数据包异常
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.InvalidNetPacketException.InvalidNetPacketBytes">
+            <summary>
+            无效的数据包数据
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.Location">
+            <summary>
+            设备位置<br />
+            系统内所有路径都是通过位置来进行连通
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Location.Device">
+            <summary>
+            位置所属的设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Location.UserCode">
+            <summary>
+            用户编码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Location.DeviceCode">
+            <summary>
+            该位置在设备中的编码形式
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Location.Synonymous">
+            <summary>
+            同义位置对象集合
+            和此对象表示的位置一样，但表述不一样的对象<br />
+            如00-101-001（输送线 1 号货位） 和 01-000-001（堆垛机 1 排 0 列 1层）<br />
+            该属性永远不会返回NULL
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Location.ToConvertibleCode">
+            <summary>
+            转换为系统可识别（可二次转换的）编码值
+            </summary>
+            <returns>字符串，格式为：位置在设备中的编码形式@设备名称，如：01001001@c001</returns>
+        </member>
+        <member name="M:Wcs.Framework.Location.ToTaskableLocation">
+            <summary>
+            将当前位置对象转换为参于任务路径拆分的位置，可视具体情况重写该方法。
+            <para>默认情况下，一个位置类型是可以直接参与任务中的路径查询和拆分的，但是在某些时候并不适用，
+            可能需要将一个不存在的位置对象转换为一个已存在的位置对象参于任务路径计算,如双伸叉堆垛机中的TwoForksCraneTaskLocation位置类型。
+            TwoForksCraneTaskLocation其实是一个虚拟的不存在于系统中的位置对象，它是由两个货格位置组合而来。如果直接使用它参于路径计算，将得不到任何想要的结果。</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.TaskableDevice">
+            <summary>
+            表示一个可以执行任务的设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskableDevice.AllowConcurrency">
+            <summary>
+            是否允许并发任务（同时接受多个任务）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskableDevice.SendTimeout">
+            <summary>
+            任务发送超时时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskableDevice.EquipmentActionScheduler">
+            <summary>
+            物理动作序列
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskableDevice.OccupiedEquipmentTasks">
+            <summary>
+            获取被占用的设备任务号集合
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.TaskableDevice.TaskRunning">
+            <summary>
+            当设备接收的任务开始运行时发生。
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.TaskableDevice.TaskError">
+            <summary>
+            当设备接收的任务发生错误时发生。
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.TaskableDevice.TaskCompleted">
+            <summary>
+            当设备接收的任务完成时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.TaskableDevice.TaskRequest">
+            <summary>
+            当设备接收的任务请求时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.TaskableDevice.TaskCurrentLocationChanged">
+            <summary>
+            当设备接收的任务当前位置改变时发生
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TaskableDevice.SendTask(Wcs.Framework.EquipmentAction)">
+            <summary>
+            向设备发送一个任务,失败时抛出异常
+            </summary>
+            <param name="action">要发送给设备的物理动作</param>
+            <remarks>失败时抛出异常</remarks>
+        </member>
+        <member name="M:Wcs.Framework.TaskableDevice.CancelTask(Wcs.Framework.EquipmentAction)">
+            <summary>
+            取消一个设备正在执行的任务
+            </summary>
+            <param name="action">要取消的物理动作</param>
+            <remarks>失败时抛出异常</remarks>
+        </member>
+        <member name="M:Wcs.Framework.TaskableDevice.Read``1">
+            <summary>
+            从设备中读取指定类型的状态数据
+            </summary>
+            <typeparam name="TState">状态数据类型</typeparam>
+            <returns>设备的状态数据</returns>
+        </member>
+        <member name="M:Wcs.Framework.TaskableDevice.Write``1(``0,System.Func{Wcs.Framework.TaskableDevice,``0,System.Boolean})">
+            <summary>
+            向设备中同步写入数据
+            </summary>
+            <typeparam name="TData">泛型参数，要写入的数据类型</typeparam>
+            <param name="data">要写入的具体数据</param>
+            <param name="isSuccess">是否成功的判定表示式</param>
+            <remarks>如果失败，则抛出异常。</remarks>
+        </member>
+        <member name="M:Wcs.Framework.TaskableDevice.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="name">设备名称</param>
+            <param name="ipEndPoint">表示网络端点的IP 地址和端口号</param>
+            <param name="receiveTimeout">接收超时时间（毫秒）</param>
+            <param name="connectTimeout">连接超时时间（毫秒）</param>
+            <param name="sendTimeout">发送超时时间（毫秒）</param>
+            <param name="allowConcurrency">是否允许并行任务</param>
+            <param name="dataReceiver">数据接收器</param>
+        </member>
+        <member name="T:Wcs.Framework.DeviceCommand">
+            <summary>
+            表示一个设备命令
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DeviceCommand.GetDeviceCommandAttribute">
+            <summary>
+            获取当前命令的 <see cref="T:DeviceCommandAttribute"/> 特性
+            </summary>
+            <returns>如果存在则返回定义，如果不存在将返回默认特性。</returns>
+        </member>
+        <member name="T:Wcs.Framework.NetPacket">
+            <summary>
+            网络数据包
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.NetPacket.StartOf">
+            <summary>
+            起始符数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.NetPacket.Data">
+            <summary>
+            数据部分
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.NetPacket.Checksum">
+            <summary>
+            校验码数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.NetPacket.EndOf">
+            <summary>
+            结束符数据
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.NetPacket.GetBytes">
+            <summary>
+            获取数据包的所有 byte 集合<br />
+            默认使用 头+数据+校验+尾 的拼接方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.NetPacket.Length">
+            <summary>
+            获取数据报的长度
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.NetPacket.ComputerChecksum(System.Byte[])">
+            <summary>
+            计算指定字节数据包的检验码
+            </summary>
+            <param name="datapart">要计算的数据部分字节</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.NetPacket.CreateNetPackage(System.Byte[])">
+            <summary>
+            创建一个完整的数据包
+            </summary>
+            <param name="dataPart">数据区字节集合</param>
+            <returns>完整的带验证码的数据包对象</returns>
+        </member>
+        <member name="M:Wcs.Framework.NetPacket.op_Equality(Wcs.Framework.NetPacket,Wcs.Framework.NetPacket)">
+            <summary>
+            判断两个 NetPacket 是否相等。<br />
+            该方法已被重写，并改变了最基本的判等含义。<br />
+            此处只判断两个参于对比的 NetPacket 的 Data 部分 byte 是否一致。
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.NetTransferObject">
+            <summary>
+            网络传输对象.所有用于网络传输的数据都可以继承此类
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.NetTransferObject.Item(System.String)">
+            <summary>
+            索引器.
+            加索引器的原因是因为在对网络数据进行解码时，大量的反射操作会花费更多的时间
+            </summary>
+            <param name="name">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.NetTransferObject.AtPacketIndex">
+            <summary>
+            本数据在数据包中的位置（数据包该数据区中的位置）
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.NetTransferObject.ToString">
+            <summary>
+            返回表示当前 <see cref="T:System.Object" /> 的 <see cref="T:System.String" />。.<br />
+            形式如下：<br />
+                propertyName1/Description/DisplayName:propertyValue.ToString()<br />
+                propertyName2/Description/DisplayName:propertyValue.ToString()<br />
+                propertyName3/Description/DisplayName:propertyValue.ToString()<br />
+                .....<br />
+                propertyNameN/Description/DisplayName:propertyValue.ToString()<br />
+            即:<br />
+                默认为属性名称：属性值<br />
+                但是，当属性包含 <see cref="T:System.ComponentModel.DescriptionAttribute"/> 时，将显示 <see cref="T:System.ComponentModel.DescriptionAttribute.Description"/> 属性值<br />
+                或者，当属性包含 <see cref="T:System.ComponentModel.DisplayNameAttribute"/> 时，将显示 <see cref="T:System.ComponentModel.DisplayNameAttribute.DisplayName"/> 属性值<br />
+            </summary>
+            <returns>
+            <see cref="T:System.String" />，表示当前的 <see cref="T:System.Object" />。.
+            </returns>
+        </member>
+        <member name="M:Wcs.Framework.NetTransferObject.ToLogData(Wcs.Framework.Device)">
+            <summary>
+            将传输对象转换为日志数据
+            </summary>
+            <param name="device">设备</param>
+            <returns>可返回null,返回null表示该数据不需要记录到运行数据库中。</returns>
+        </member>
+        <member name="T:Wcs.Framework.IDataReceiver">
+            <summary>
+            数据接收器接口
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.IDataReceiver.Name">
+            <summary>
+            接收器名称
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.IDataReceiver.ConvertToNetTransferObject``1(Wcs.Framework.NetPacket)">
+            <summary>
+            将数据包转换为网络传输对象（协议对象）
+            </summary>
+            <param name="netPacket">数据包</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.IDataReceiver.ConvertToNetPacket``1(``0)">
+            <summary>
+            将网络传输对象（协议对象）转换为数据包
+            </summary>
+            <param name="netTransferObject">网络传输对象（协议对象）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.IDataReceiver.AddBytes(System.Byte[])">
+            <summary>
+            向数据接收器添加接收到的数据
+            </summary>
+            <param name="bytes">接收到的数据</param>
+        </member>
+        <member name="M:Wcs.Framework.IDataReceiver.Clear">
+            <summary>
+            清空数据接收器
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.IDataReceiver.DataReceived">
+            <summary>
+            当接收到新的数据时发生
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DeviceEventQueue.Enqueue``2(Wcs.Framework.DeviceEventHandler{``0,``1},``0,``1)">
+            <summary>
+            向事件队列中添加一个新的元素
+            </summary>
+            <typeparam name="TDevice">泛型参数：事件源类型</typeparam>
+            <typeparam name="TEventArgs">泛型参数：事件数据</typeparam>
+            <param name="handler">处理程序</param>
+            <param name="sender">事件源</param>
+            <param name="args">事件数据</param>
+        </member>
+        <member name="M:Wcs.Framework.DeviceEventQueue.Enqueue(Wcs.Framework.DeviceEventInvocation)">
+            <summary>
+            向事件队列中添加一个新的元素
+            </summary>
+            <param name="item">要添加到队列中的新元素</param>
+        </member>
+        <member name="M:Wcs.Framework.DeviceEventQueue.DispatchEvent(System.Object)">
+            <summary>
+            事件队列处理主过程
+            </summary>
+            <param name="state">状态对象</param>
+        </member>
+        <member name="T:Wcs.Framework.DeviceEventInvocation">
+            <summary>
+            事件绑定的具体处理方法<br />
+            通常从按照调用顺序返回此多路广播委托的调用列表中取得
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DeviceEventInvocation.Delegate">
+            <summary>
+            事件绑定的处理方法<br />
+            通常从按照调用顺序返回此多路广播委托的调用列表中取得
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DeviceEventInvocation.#ctor(System.Delegate,Wcs.Framework.Device,Wcs.Framework.HandleableEventArgs)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="dgt">事件绑定的处理方法,通常从按照调用顺序返回此多路广播委托的调用列表中取得</param>
+            <param name="paramaters">参数</param>
+        </member>
+        <member name="M:Wcs.Framework.DeviceEventInvocation.Fire">
+            <summary>
+            引发事件
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.DataReceiverReceivedEventArgs">
+            <summary>
+            数据接收器的接收事件上下文数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DataReceiverReceivedEventArgs.NetPacket">
+            <summary>
+            接收到的数据包
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DataReceiverReceivedEventArgs.NetTransferObject">
+            <summary>
+            接收到的数据包转换后的网络传输对象
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DataReceiverReceivedEventArgs.#ctor(Wcs.Framework.NetPacket,Wcs.Framework.NetTransferObject)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="netPacket">接收到的数据包</param>
+            <param name="netTransferObject">接收到的数据包转换后的网络传输对象</param>
+        </member>
+        <member name="T:Wcs.Framework.LockerInfo">
+            <summary>
+            锁信息
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LockerInfo.Empty">
+            <summary>
+            表示一个空锁.
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.LockerInfo.Adminstrator">
+            <summary>
+            表示一个管理员持有的锁.
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LockerInfo.UserName">
+            <summary>
+            持有者
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LockerInfo.IPAddress">
+            <summary>
+            终端ip
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.LockerInfo.IsEmpty">
+            <summary>
+            指示该对象是否为空
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.LockerInfo.#ctor">
+            <summary>
+            默认构造函数.
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.LockerInfo.#ctor(System.String,System.String)">
+            <summary>
+            构造函数.
+            </summary>
+            <param name="userName"> 持有者. </param>
+            <param name="ip">       终端 ip 地址. </param>
+        </member>
+        <member name="M:Wcs.Framework.LockerInfo.GetIpAddress">
+            <summary>
+            获取本机IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.DeviceWarningEventArgs.Warning">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.HandleableEventArgs">
+            <summary>
+            表示一个可以接受处理的事件的事件数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.HandleableEventArgs.Handled">
+            <summary>
+            是否已处理
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.HandleableEventArgs.LazyEvents">
+            <summary>
+            获取本次处理过程中被延迟发布的事件（准备在本次事件处理成功后发布的事件）
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.HandleableEventArgs.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.HandleableEventArgs.AddLazyEvent(Wcs.Framework.EventBus.IEvent)">
+            <summary>
+            添加一个俗延迟发布（准备在本次事件处理成功后发布的事件）
+            </summary>
+            <param name="lazyEvent"></param>
+        </member>
+        <member name="M:Wcs.Framework.HandleableEventArgs.AddLazyEvents(System.Collections.Generic.IEnumerable{Wcs.Framework.EventBus.IEvent})">
+            <summary>
+            添加多个俗延迟发布（准备在本次事件处理成功后发布的事件）
+            </summary>
+            <param name="lazyEvents"></param>
+        </member>
+        <member name="M:Wcs.Framework.HandleableEventArgs.Reset">
+            <summary>
+            重置本对象。
+            1、恢复Handled标志为 false
+            2、清空LazyEvents中的延迟事件列表
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskErrorEventArgs.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskErrorEventArgs.ErrorCode">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskErrorEventArgs.ErrorDescription">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskRunningEventArgs.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TaskCompletedEventArgs.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.Device">
+            <summary>
+            表示一个设备
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.Device._logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.ConnectTimeout">
+            <summary>
+            连接设备时的超时时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.DeviceEventQueue">
+            <summary>
+            接收到的事件<br />
+            包含 HandleableEventArgs 事件数据的事件，可托管到事件队列中。
+            支持在处理方处理失败时重新触发。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.DeviceWarningFactory">
+            <summary>
+            错误工厂
+            <para>用于解析来自不同设备的报警，并将其转换为带人等级描述的设备错误对象</para>
+            <para><see cref="T:Wcs.Framework.Device"/>在创建实例时会给提供一个默认的工厂，可通过配置或代码修改该值</para>
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.EquipmentFailures">
+            <summary>
+            获取当前设备的故障集合
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.IsConnected">
+            <summary>
+            指示当前设备是否已连机
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.IsIdle">
+            <summary>
+            指示设备当前是否处于空闲状态，即:能接受新的任务
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.Locker">
+            <summary>
+            锁信息，一般在设备被锁定的情况下，将不再允许发送联机任务（可根据各情况情况自行处理锁信息）
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.Name">
+            <summary>
+            设备名称，即设备在系统内的标识
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.No">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.ReceiveTimeout">
+            <summary>
+            网络数据接收超时时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.UnableToConnectErrorTimeout">
+            <summary>
+            指示无法连接到设备的异常应该在连接失败多少秒后引发
+            <para>默认 600 秒。如果需要立即引发，可设置值为小于等于 0</para>
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.Warnings">
+            <summary>
+            当前设备的警告信息
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.Device.Connected">
+            <summary>
+            当设备被连接上时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.Device.DataReceived">
+            <summary>
+            当接收到数据时发生。此处的数据指的是一个完整的数据报。
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.Device.DeviceWarning">
+            <summary>
+            当设备发生报警时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.Device.Disconnected">
+            <summary>
+            当设备被断开连接时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.Device.EquipmentFailureAdded">
+            <summary>
+            在新的设备故障被创建后发生。
+            </summary>
+        </member>
+        <member name="E:Wcs.Framework.Device.EquipmentFailureRemoved">
+            <summary>
+            在一个设备故障被删除后发生。
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.Device.EquipmentFailureChecker">
+            <summary>
+            设备故障状态检查器。如有必要，应重写该属性
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="name">设备名称</param>
+            <param name="receiveTimeout">接收超时时间（毫秒）</param>
+            <param name="connectTimeout">连接超时时间（毫秒）</param>
+        </member>
+        <member name="M:Wcs.Framework.Device.Connect">
+            <summary>
+            立即连接到设备
+            </summary>
+            <returns>成功后返回 true，失败 返回 false</returns>
+        </member>
+        <member name="M:Wcs.Framework.Device.CreateUserInterface">
+            <summary>
+            创建设备用户界面并返回
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.Device.Disconnect">
+            <summary>
+            断开与设备的连接
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireUnableToConnectError">
+            <summary>
+            手动引发无法连接的设备故障事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.Lock(Wcs.Framework.LockerInfo)">
+             <summary>
+             锁定此设备
+             </summary>
+             <param name="newLocker">
+              新的目标锁信息.<br />
+              通常由用户创建建，该信息包含有用户信息和一个能识别锁的唯一标识.<br />
+              不能为 <see cref="T:Wcs.Framework.Devices.LockerInfo.Empty"/>.<br />
+            </param>
+        </member>
+        <member name="M:Wcs.Framework.Device.Unlock(Wcs.Framework.LockerInfo)">
+            <summary>
+            解除锁定<br />
+            设备在被用户锁定后（Locker 不为 <see cref="T:Wcs.Framework.Devices.LockerInfo.Empty"/>）<br />
+            如果需要再次联机执行任务，用户必须调用此方法清除设备上的锁信息
+            </summary>
+            <param name="userLocker">
+              要解除的锁任务<br />
+              事实上这是一个包含有调用户用户数据的对对象，用于核对该用户是否有权限清除此设备上已存在的锁信息.
+            </param>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireConnectedEvent">
+            <summary>
+            引发 <see cref="E:Wcs.Framework.Device.Connected"/> 事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireDataReceivedEvent(Wcs.Framework.DataReceivedEventArgs)">
+            <summary>
+            引发 <see cref="E:Wcs.Framework.Device.ReceiveData"/> 事件
+            </summary>
+            <param name="args">事件数据</param>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireDeviceErrorEvent(Wcs.Framework.DeviceWarningEventArgs)">
+            <summary>
+            引发 <see cref="E:Wcs.Framework.Device.DeviceError"/> 事件
+            </summary>
+            <param name="args">事件数据</param>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireDisconnectedEvent(Wcs.Framework.DisconnectEventArgs)">
+            <summary>
+            引发 <see cref="E:Wcs.Framework.Device.Disconnected"/> 事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireEquipmentFailureAddedEvent(Wcs.Framework.EquipmentFailureAddedEventArgs)">
+            <summary>
+            引发 <see cref="E:Wcs.Framework.Device.EquipmentFailureAdded"/> 事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.FireEquipmentFailureRemovedEvent(Wcs.Framework.EquipmentFailureRemovedEventArgs)">
+            <summary>
+            引发 <see cref="E:Wcs.Framework.Device.EquipmentFailureAdded"/> 事件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.Device.AddWarning(Wcs.Framework.DeviceWarning)">
+            <summary>
+            添加一个警告
+            </summary>
+            <param name="warning"></param>
+        </member>
+        <member name="M:Wcs.Framework.Device.EndingWarning">
+            <summary>
+            结束一个警告
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Wcs.Framework.Device.AddFailure(Wcs.Framework.EquipmentFailure)">
+            <summary>
+            添加一个设备故障
+            </summary>
+            <param name="failure">设备故障</param>
+        </member>
+        <member name="M:Wcs.Framework.Device.RemoveFailure(Wcs.Framework.EquipmentFailure)">
+            <summary>
+            移除一个设备故障
+            </summary>
+            <param name="failure">设备故障</param>
+        </member>
+        <member name="M:Wcs.Framework.Device.GetDeviceType">
+            <summary>
+            获取当前设备类型名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.DisconnectReason">
+            <summary>
+            设备断开连接的原因
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DisconnectReason.ConnectFailed">
+            <summary>
+            连接失败
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DisconnectReason.Error">
+            <summary>
+            发生错误
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DisconnectReason.User">
+            <summary>
+            用户强制断开
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.DisconnectEventArgs">
+            <summary>
+            设备断开连接的事件数据
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DisconnectEventArgs.Reason">
+            <summary>
+            断开连接的原因
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DisconnectEventArgs.Exception">
+            <summary>
+            引起设备断开的异常
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DisconnectEventArgs.#ctor(Wcs.Framework.DisconnectReason)">
+            <summary>
+            构造函数.
+            </summary>
+            <param name="reason">   断开连接的原因. </param>
+        </member>
+        <member name="M:Wcs.Framework.DisconnectEventArgs.#ctor(Wcs.Framework.DisconnectReason,System.Exception)">
+            <summary>
+            构造函数.
+            </summary>
+            <param name="reason">   断开连接的原因. </param>
+            <param name="ex">异常信息</param>
+        </member>
+        <member name="T:Wcs.Framework.DataReceivedEventArgs">
+            <summary>
+            包含 <see cref="E:Wcs.Framework.Devices.Device.DataReceived"/> 事件数据的类型
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.DataReceivedEventArgs.Data">
+            <summary>
+            数据包
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.TcpProtocolTaskableDevice">
+            <summary>
+            表示一个以 Tcp 协议通信的可以执行任务的设备
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolTaskableDevice.IPEndPoint">
+            <summary>
+            表示网络端点的IP 地址和端口号
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolTaskableDevice.BindEndPoint">
+            <summary>
+            通讯绑定的地址
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolTaskableDevice.DataReceiver">
+            <summary>
+            TCP协议数据接收器
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Net.IPEndPoint,System.Net.IPEndPoint,Wcs.Framework.IDataReceiver)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="name">设备名称</param>
+            <param name="ipEndPoint">表示网络端点的IP 地址和端口号</param>
+            <param name="receiveTimeout">接收超时时间（毫秒）</param>
+            <param name="connectTimeout">连接超时时间（毫秒）</param>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.OnDataReceived(Wcs.Framework.NetPacket,Wcs.Framework.NetTransferObject)">
+            <summary>
+            当接收到新的数据时发生
+            </summary>
+            <param name="netPacket">接收到的数据包</param>
+            <param name="netTransferObject">接收到的数据包转换后的网络传输对象</param>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.Write(System.Byte[])">
+            <summary>
+            向网络流中写入指定的 bytes
+            </summary>
+            <param name="data">要写入的 bytes</param>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.GetLastSentBytes">
+            <summary>
+            获取最后一次发出的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.Framework.TcpProtocolTaskableDevice.ReceiveBufferSize">
+            <summary>
+            接收数据缓冲区大小
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.Receive">
+            <summary>
+            开始接收来自网络的数据<br />
+            此方法一般只在连接成功后调用。
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.releaseTcpConnection">
+            <summary>
+            释放tcp连接资源
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.TcpProtocolTaskableDevice.Write``1(``0,System.Func{Wcs.Framework.TaskableDevice,``0,System.Boolean})">
+            <summary>
+            向设备中同步写入数据
+            </summary>
+            <typeparam name="TData">泛型参数，要写入的数据类型</typeparam>
+            <param name="data">要写入的具体数据</param>
+            <param name="isSuccess">是否成功的判定表示式</param>
+            <remarks>如果失败，则抛出异常。</remarks>
+        </member>
+        <member name="T:Wcs.Framework.ILocationWildcard">
+            <summary>
+            表示实现此接口的类型是一个位置通配符
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ILocationWildcard.GetMatchedLocations">
+            <summary>
+            获取该通配符匹配的所有位置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.DefaultDeviceWarningFactory">
+            <summary>
+            设备报警工厂类
+            <para>用于解析来自不同设备的报警，并将其转换为带有等级描述的设备错误对象</para>
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DefaultDeviceWarningFactory.UNABLE_TO_CONNECT_ERROR_CODE">
+            <summary>
+            无法连接错误码
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DefaultDeviceWarningFactory.UNABLE_TO_CONNECT_ERROR_DESCRIPTION">
+            <summary>
+            无法连接错误描述
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.DefaultDeviceWarningFactory.CreateUnableToConnectError(Wcs.Framework.Device)">
+            <summary>
+            创建一个无法连接的报警
+            </summary>
+            <param name="device">设备</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.DefaultDeviceWarningFactory.Create(Wcs.Framework.Device,System.String,System.Object)">
+            <summary>
+            创建一个错误
+            </summary>
+            <param name="device">设备</param>
+            <param name="code">错误码</param>
+            <param name="source">错误源</param>
+            <returns></returns>
+        </member>
+        <member name="F:Wcs.Framework.DeviceWarningLevel.Warning">
+            <summary>
+            警告
+            在不需要人工介入或较短的介入时间可以解决的问题，可快速重新运行的报警
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.DeviceWarningLevel.Fault">
+            <summary>
+            故障
+            在需要人工介入并且需要较长的时间，会影响到正常工作的报警
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.EquipmentFailure">
+            <summary>
+            设备故障
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentFailure.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentFailure.Device">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentFailure.FinishedAt">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentFailure.IsOverdued">
+            <summary>
+            指示当前故障是否已处于过期状态
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.EquipmentFailure.Name">
+            <summary>
+            故障名称
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.EquipmentFailure.GetUnserviceableLocations">
+            <summary>
+            获取该故障引起的所有不能使用的位置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.UnableToConnectEquipmentFailure">
+            <summary>
+            表示一个无法连接的设备故障
+            </summary>
+            <remarks>此故障将导致目标设备所有位置不可用</remarks>
+        </member>
+        <member name="M:Wcs.Framework.UnableToConnectEquipmentFailure.GetUnserviceableLocations">
+            <summary>
+            获取该故障引起的所有不能使用的位置
+            </summary>
+            <returns>设备的所有位置</returns>
+        </member>
+        <member name="T:Wcs.Framework.ReceivedDataLog">
+            <summary>
+            接收到的数据日志条目
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.ReceivedDataLog.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.ReceivedDataLog.CreatedAt">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Wcs.Framework.ReceivedDataLog.DataLevel">
+            <summary>
+            数据级别
+            </summary>
+        </member>
+        <member name="T:Wcs.Framework.ReceivedDataLogLevel">
+            <summary>
+            数据级别
+            </summary>
+            <remarks>
+            用于标识数据的级别，方便对数据进行分类查询。
+            </remarks>
+        </member>
+        <member name="F:Wcs.Framework.ReceivedDataLogLevel.Normal">
+            <summary>
+            默认。表示数据处于正常状态
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.ReceivedDataLogLevel.Warn">
+            <summary>
+            警告。表示设备回报了一个警告信息，但设备仍处于正常动作、状态可控的范围内
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.ReceivedDataLogLevel.Error">
+            <summary>
+            错误。表示设备回报了一个严重的错误信息，设备已停机或任务都已无法下发，需要人工干预。
+            </summary>
+        </member>
+    </members>
+</doc>

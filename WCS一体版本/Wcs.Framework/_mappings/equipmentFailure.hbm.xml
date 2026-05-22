@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+  <!--<class name="EquipmentFailure" table="`EquipmentFailure`" dynamic-update="true"  batch-size="500">
+    <composite-id>
+      <key-property column="`DeviceName`" name="DeviceName" length="50" type="String" />
+      <key-property column="`Name`" name="Name" length="50" type="String" />
+    </composite-id>
+    <discriminator column="`discriminator`" type="String" not-null="true"/>
+    <property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+  </class>
+
+  <subclass name="Wcs.Framework.UnableToConnectEquipmentFailure" discriminator-value="UnableToConnectEquipmentFailure" extends="Wcs.Framework.EquipmentFailure">
+  </subclass>-->
+</hibernate-mapping>

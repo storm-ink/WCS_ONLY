@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<receiverEncoding>
+  <collection type="Wcs.DefaultImpls.Conveyor.TaskNetTransferObject, Wcs.DefaultImpls" blockBytes="28" itemCount="70">
+    <property name="HandShake" index="0" size="2" type="UInt16" />
+    <property name="AssignmentID" index="2" size="4" type="UInt32" />
+    <property name="TU_ID" index="6" size="2" type="UInt16" />
+    <property name="TU_Type" index="8" size="2" type="UInt16" />
+    <property name="IO_Data" index="10" size="2" type="UInt16" />
+    <property name="RotingNo" index="12" size="2" type="UInt16" />
+    <property name="StartMotorNo" index="14" size="2" type="UInt16" />
+    <property name="DestinationNo" index="16" size="2" type="UInt16" />
+    <property name="TaskStatus" index="18" size="2" type="UInt16" />
+    <property name="ReadTask" index="20" size="4" type="UInt32" />
+    <property name="Spare" index="24" size="4" type="UInt32" />
+  </collection>
+  <collection type="Wcs.DefaultImpls.Conveyor.LocationTaskNetTransferObject, Wcs.DefaultImpls" blockBytes="10" itemCount="70">
+    <property name="PosNo" index="0" size="2" type="UInt16" />
+    <property name="TaskNo" index="2" size="4" type="UInt32" />
+    <property name="TUID" index="6" size="2" type="UInt16" />
+    <property name="Str_Rcv_X" index="8.0" size="1" type="Boolean" />
+    <property name="Fnh_Rcv_X" index="8.1" size="1" type="Boolean" />
+    <property name="Rqs_Snt" index="8.2" size="1" type="Boolean" />
+    <property name="Rcv_Rdy" index="8.3" size="1" type="Boolean" />
+    <property name="Str_Rcv_Y" index="8.4" size="1" type="Boolean" />
+    <property name="Fnh_Rcv_Y" index="8.5" size="1" type="Boolean" />
+  </collection>
+  <collection type="Wcs.DefaultImpls.Conveyor.LocationNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="70">
+    <property name="PosNo" index="0" size="2" type="UInt16" />
+    <property name="Status" index="2" size="2" type="UInt16" />
+  </collection>
+  <collection type="Wcs.DefaultImpls.Conveyor.AlarmNetTransferObject, Wcs.DefaultImpls" blockBytes="6" itemCount="70">
+    <property name="PosNo" index="0" size="2" type="UInt16" />
+    <property name="Manual" index="2" size="1" type="Boolean" />
+    <property name="Isolator" index="2.1" size="1" type="Boolean" />
+    <property name="Breaker" index="2.2" size="1" type="Boolean" />
+    <property name="Photocell" index="2.3" size="1" type="Boolean" />
+    <property name="RunOvertime" index="2.4" size="1" type="Boolean" />
+    <property name="OccupyOvertime" index="2.5" size="1" type="Boolean" />
+    <property name="TaskNoGoods" index="2.6" size="1" type="Boolean" />
+    <property name="MotorUseStatus" index="3" size="1" type="Byte" />
+    <property name="X_MotorVAF" index="4" size="1" type="Boolean" />
+    <property name="Y_MotorVAF" index="4.1" size="1" type="Boolean" />
+    <property name="X_MotorContactor" index="4.2" size="1" type="Boolean" />
+    <property name="X_MotorBraker" index="4.3" size="1" type="Boolean" />
+    <property name="Y_MotorContactor" index="4.4" size="1" type="Boolean" />
+    <property name="Y_MotorBraker" index="4.5" size="1" type="Boolean" />
+    <property name="Lift_MotorContactor" index="4.6" size="1" type="Boolean" />
+    <property name="Lift_MotorBraker" index="4.7" size="1" type="Boolean" />
+    <property name="Spare" index="5" size="1" type="Byte" />
+  </collection>
+  <collection type="Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="70">
+    <property name="PosNo" index="0" size="2" type="UInt16" />
+    <property name="PhocllUseStatus" index="2" size="1" type="Byte" />
+    <property name="FroProPotocell" index="3" size="1" type="Boolean" />
+    <property name="FroPosPotocell" index="3.1" size="1" type="Boolean" />
+    <property name="FroSloPotocell" index="3.2" size="1" type="Boolean" />
+    <property name="AftProPotocell" index="3.3" size="1" type="Boolean" />
+    <property name="AftPosPotocell" index="3.4" size="1" type="Boolean" />
+    <property name="AftSloPotocell" index="3.5" size="1" type="Boolean" />
+    <property name="UpPotocell" index="3.6" size="1" type="Boolean" />
+    <property name="DownPotocell" index="3.7" size="1" type="Boolean" />
+  </collection>
+  <collection type="Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject, Wcs.DefaultImpls" blockBytes="14" itemCount="20">
+    <property name="PosNo" index="0" size="2" type="UInt16" />
+    <property name="HandShake" index="2" size="2" type="UInt16" />
+    <property name="AssignmentID" index="4" size="4" type="UInt32" />
+    <property name="TU_ID" index="8" size="2" type="UInt16" />
+    <property name="TU_Type" index="10" size="2" type="UInt16" />
+    <property name="IO_Data" index="12" size="2" type="UInt16" />
+  </collection>
+</receiverEncoding>

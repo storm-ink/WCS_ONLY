@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ZHQXC" namespace="ZHQXC.WebAPI.Entity">
+	<class name="BatchNumRecords" table="`BatchNumRecords`" dynamic-update="true"  batch-size="500">
+		<id name="Id" column="`Id`" type="Int32"/>
+		<property name="Location" column="`Location`" type="String"  not-null="true"/>
+		<property name="BatchNo" column="`BatchNo`" type="String" not-null="true"/>
+		<property name="CreateTime" column="CreateTime" type="DateTime" not-null="true" />
+	</class>
+</hibernate-mapping>

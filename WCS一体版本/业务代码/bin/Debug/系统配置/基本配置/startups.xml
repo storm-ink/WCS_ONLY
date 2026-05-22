@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<startups>
+  <!--处理列表-->
+  <startup type="Wcs.Framework.DefaultApplicationStartup, Wcs.Framework" />
+	<startup type="Wcs.DefaultImplementCollection.Conveyor.ConveyorTaskCompletedEventHandlerStartUp, Wcs.DefaultImplementCollection.Conveyor"/>
+	<startup type="ZHQXC.WEBAPIStartUp, ZHQXC"/>
+	<startup type="Wcs.DefaultImplementCollection.Crane.RestoreCraneStateManagerApplicationStartup, Wcs.DefaultImplementCollection.Crane"  interval="3000000"/>
+  <startup type="Wcs.FrameworkExtend.PreTaskHandStartup, Wcs.FrameworkExtend"/>
+  <startup type="Wcs.DefaultImplementCollection.Business.BusinessAboutStartUp, Wcs.DefaultImplementCollection.Business"/>
+  <startup type="ZHQXC.TaskStateChangeReprotStartUp, ZHQXC"/>
+  <startup type="ZHQXC.ConveyorTaskCompletedEventHandlerStartUp, ZHQXC"/>
+
+  <startup type="ZHQXC.SinevaRobotTaskCompletedEventHandlerStartUp, ZHQXC"/>
+  <startup type="ZHQXC.AGVTaskHandlStartUp, ZHQXC"/>
+
+  
+
+
+  <!--复杂占位-->
+  <!--<startup type="ZHQXC.AutoClearHoldSingleRequestTaskStartUp_1001, ZHQXC" interval="3000" requestLoc="1001@立库CV" start="1001@立库CV" end="1003@立库CV" />
+	<startup type="ZHQXC.AutoClearHoldSingleRequestTaskStartUp_1002, ZHQXC" interval="3000" requestLoc="1002@立库CV" start="1002@立库CV" end="1003@立库CV" />-->
+
+  <startup type="ZHQXC.AutoClearHoldSingleRequestTaskStartUp_1501, ZHQXC" interval="3000" requestLoc="1501@立库CV" start="1501@立库CV" end="1502@立库CV" />
+</startups>
+

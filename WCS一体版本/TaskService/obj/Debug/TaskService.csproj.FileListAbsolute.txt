@@ -1,0 +1,1 @@
+E:\svn\Wcs2\Wcs\branches\005\TaskService\obj\Debug\TaskService.csprojResolveAssemblyReference.cache

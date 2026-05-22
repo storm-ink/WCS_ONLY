@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<receiverEncoding>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.TaskBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="14" itemCount="30">
+		<property name="HandShake" index="0" size="2" type="UInt16" />
+		<property name="TaskNo" index="2" size="4" type="UInt32" />
+		<property name="RotingNo" index="6" size="2" type="UInt16" />
+		<property name="From" index="8" size="2" type="UInt16" />
+		<property name="To" index="10" size="2" type="UInt16" />
+		<property name="TaskState" index="12" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.LocationInfoBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="24" itemCount="30">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="TaskNo" index="2" size="4" type="UInt32" />
+		<property name="ControlState" index="6" size="2" type="Byte[]" xmlFile="系统配置\输送线\ControlStateMappings.xml"/>
+		<property name="DeviceType" index="8" size="2" type="UInt16" />
+		<property name="MotorState" index="10" size="2" type="Byte[]" xmlFile="系统配置\输送线\MotorStateMappings.xml" />
+		<property name="Sensor" index="12" size="4" type="Byte[]" xmlFile="系统配置\输送线\SensorMappings.xml"/>
+		<property name="HaveGoods" index="16" size="2" type="UInt16" />
+		<property name="Alarms" index="18" size="2" type="Byte[]" xmlFile="系统配置\输送线\AlarmMappings.xml"/>
+		<property name="State" index="20" size="2" type="UInt16" />
+		<property name="OwerArea" index="22" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.RequestBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="20"> 
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HandShake" index="2" size="2" type="UInt16" />
+		<property name="IOData" index="4" size="2" type="UInt16" />
+		<property name="RequestID" index="6" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.HoldSingleBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="4" itemCount="30">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HandShake" index="2" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.ElectricCabinetBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="1">
+		<property name="AreaNo" index="0" size="2" type="UInt16" />
+		<property name="State" index="2" size="4" type="UInt16" />
+		<property name="LightIO" index="4" size="2" type="Byte[]" xmlFile="系统配置\输送线\LightIOMappings.xml"/>
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.ShapeCheckBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="10" itemCount="5">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="ShapeState" index="2" size="2" type="UInt16" />
+		<property name="ShapeType" index="4" size="2" type="UInt16" />
+		<property name="ShapeResult" index="6" size="4" type="Byte[]" xmlFile="系统配置\输送线\ShapeResultMappings.xml"/>
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.BarcodeBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="44" itemCount="10">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="Barcode" index="2" size="20" type="String" />
+		<property name="TrayBarcode" index="22" size="20" type="String" />
+		<property name="IsContainer" index="42" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.WeightBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="6" itemCount="5">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="Weight" index="2" size="4" type="Decimal" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.RemoteCMDBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="6" itemCount="1">
+		<property name="AreaNo" index="0" size="2" type="UInt16" />
+		<property name="Emergency" index="2.0" size="1" type="Boolean" />
+		<property name="Mute" index="2.1" size="1" type="Boolean" />
+		<property name="Stop" index="2.2" size="1" type="Boolean" />
+		<property name="Reset" index="2.3" size="1" type="Boolean" />
+		<property name="Start" index="2.4" size="1" type="Boolean" />
+		<property name="DataID" index="4" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.SafeBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="6" itemCount="10">
+		<property name="SafeNo" index="0" size="2" type="UInt16" />
+		<property name="SafeType" index="2" size="2" type="UInt16" />
+		<property name="SafeStatus" index="4" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.DefaultLocationBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="5">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="DeviceType" index="2" size="2" type="UInt16" />
+		<property name="HomePos" index="4" size="2" type="UInt16" />
+    <property name="Request" index="6" size="2" type="UInt16" />
+
+
+  </collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.ReportResultInfoBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="Result" index="2" size="2" type="UInt16" />
+		<property name="Description" index="4" size="2" type="UInt16" />
+		<property name="DataID" index="6" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.DateTimeBlock, Wcs.DefaultImplementCollection.Conveyor" blockBytes="12" itemCount="1">
+		<property name="Year" index="0" size="2" type="UInt16" />
+		<property name="Month" index="2" size="2" type="UInt16" />
+		<property name="Day" index="4" size="2" type="UInt16" />
+		<property name="Hour" index="6" size="2" type="UInt16" />
+		<property name="Minuter" index="8" size="2" type="UInt16" />
+		<property name="Second" index="10" size="2" type="UInt16" />
+	</collection>
+</receiverEncoding>

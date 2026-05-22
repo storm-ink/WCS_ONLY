@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Plugins.LogTrace</id>
+    <version>2.1.0.21920</version>
+    <title>日志跟踪插件</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>用于在Wcs运行时，提供一个日志输出的控制台，方便调试或操作人员跟踪系统的运行过程及错误。</description>
+    <dependencies>
+      <dependency id="Wcs" version="2.1.0.21908" />
+    </dependencies>
+  </metadata>
+</package>

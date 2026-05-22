@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+  <class name="Wcs.Framework.EventBus.IEvent" table="Events" batch-size="500">
+    <id name="EventKey" column="`EventKey`" type="String">
+      <generator class="assigned" />
+    </id>
+    <discriminator column="`discriminator`" type="String" not-null="true"/>
+    <property name="Preservable" column="`Preservable`" type="Boolean" not-null="true" />
+    <property name="CreatedAt" column="`CreatedAt`" type="DateTime" not-null="true" />
+  </class>
+
+  <subclass name="Wcs.Framework.Events.EquipmentActionStatusChangedEvent" discriminator-value="EquipmentActionStatusChangedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="TaskId" column="EquipmentActionStatusChangedEvent_TaskId" type="Int32"  />
+    <property name="MovementId" column="EquipmentActionStatusChangedEvent_MovementId" type="Int32"  />
+    <property name="Id" column="EquipmentActionStatusChangedEvent_Id" type="Int32"  />
+    <property name="Status" column="EquipmentActionStatusChangedEvent_Status" type="EquipmentActionStatus"  />
+  </subclass>
+
+  <subclass name="Wcs.Framework.Events.LogicMovementStatusChangedEvent" discriminator-value="LogicMovementStatusChangedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="LogicMovementStatusChangedEvent_Id" type="Int32"  />
+    <property name="TaskId" column="LogicMovementStatusChangedEvent_TaskId" type="Int32"  />
+    <property name="Status" column="LogicMovementStatusChangedEvent_Status" type="LogicMovementStatus" />
+  </subclass>
+
+  <subclass name="Wcs.Framework.Events.TaskArchivedEvent" discriminator-value="TaskArchivedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="TaskArchivedEvent_Id" type="Int32"  />
+    <property name="TaskCode" column="TaskArchivedEvent_TaskCode" type="String" length="50"  />
+  </subclass>
+
+  <subclass name="Wcs.Framework.Events.TaskCurrentLocationChangedEvent" discriminator-value="TaskCurrentLocationChangedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="TaskArchivedEvent_Id" type="Int32"  />
+    <property name="TaskCode" column="TaskArchivedEvent_TaskCode" type="String" length="50"  />
+    <component class="LocationInfo" name="CurrentLocation">
+	  <property column="`TaskCurrentLocationChangedEventCurrentLocation_UnifiedCode`" name="UnifiedCode" type="String"/>
+      <property column="`TaskCurrentLocationChangedEventCurrentLocation_DeviceCode`" name="DeviceCode" type="String"/>
+      <property column="`TaskCurrentLocationChangedEventCurrentLocation_UserCode`" name="UserCode" type="String"/>
+      <property column="`TaskCurrentLocationChangedEventCurrentLocation_DeviceName`" name="DeviceName" type="String"/>
+    </component>
+  </subclass>
+
+  <subclass name="Wcs.Framework.Events.TaskPriorityChangedEvent" discriminator-value="TaskPriorityChangedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="TaskPriorityChangedEvent_Id" type="Int32"  />
+    <property name="TaskCode" column="TaskPriorityChangedEvent_TaskCode" type="String" length="50"  />
+    <property name="Priority" column="TaskPriorityChangedEvent_Priority" type="Int32"  />
+  </subclass>
+
+  <subclass name="Wcs.Framework.Events.TaskStatusChangedEvent" discriminator-value="TaskStatusChangedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="TaskStatusChangedEvent_Id" type="Int32"  />
+    <property name="TaskCode" column="TaskPriorityChangedEvent_TaskCode" type="String" length="50"  />
+    <property name="Status" column="TaskStatusChangedEvent_Status" type="TaskStatus"  />
+    <property name="TaskType" column="TaskStatusChangedEvent_TaskType" type="String" length="25"  />
+    <property name="BizType" column="TaskStatusChangedEvent_BizType" type="Wcs.Framework.TaskBizType, Wcs.Framework" />
+    <property name="Source" column="`TaskStatusChangedEvent_Source`" type="Wcs.Framework.TaskSource, Wcs.Framework"/>
+  </subclass>
+  
+  <subclass name="Wcs.Framework.Events.TaskFinishedEvent" discriminator-value="TaskFinishedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="TaskFinishedEvent_Id" type="Int32"  />
+    <property name="TaskCode" column="TaskFinishedEvent_TaskCode" type="String" length="50"  />
+    <property name="Status" column="TaskFinishedEvent_Status" type="TaskStatus"  />
+    <property name="FinishedAt" column="`FinishedAt`" type="DateTime" />
+    <property name="TaskType" column="TaskFinishedEvent_TaskType" type="String" length="25"  />
+    <property name="BizType" column="TaskFinishedEvent_BizType" type="Wcs.Framework.TaskBizType, Wcs.Framework" />
+    <property name="Source" column="`TaskFinishedEvent_Source`" type="Wcs.Framework.TaskSource, Wcs.Framework"/>
+  </subclass>
+  
+  <subclass name="Wcs.Framework.Events.RequestAddedEvent" discriminator-value="RequestAddedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <many-to-one class="Request" name="Request" column="`ReqeustId`" not-found="ignore" not-null="false" lazy="false"/>
+  </subclass>
+  
+  <subclass name="Wcs.Framework.Events.RequestArchivedEvent" discriminator-value="RequestArchivedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="RequestArchivedEvent_Id" type="Int32"  />
+    <property name="Status" column="RequestArchivedEvent_Status" type="RequestStatus"  />
+    <component class="LocationInfo" name="Source">
+      <property column="`RequestArchivedEventSource_UnifiedCode`" name="UnifiedCode" type="String"/>
+      <property column="`RequestArchivedEventSource_DeviceCode`" name="DeviceCode" type="String"/>
+      <property column="`RequestArchivedEventSource_UserCode`" name="UserCode" type="String"/>
+      <property column="`RequestArchivedEventSource_DeviceName`" name="DeviceName" type="String"/>
+    </component>
+  </subclass>
+  
+  <subclass name="Wcs.Framework.Events.RequestStatusChangedEvent" discriminator-value="RequestStatusChangedEvent" extends="Wcs.Framework.EventBus.IEvent">
+    <property name="Id" column="RequestStatusChangedEvent_Id" type="Int32"  />
+    <property name="Status" column="RequestStatusChangedEvent_Status" type="RequestStatus"  />
+  </subclass>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<senderEncoding>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.TaskCommand, Wcs.DefaultImplementCollection.Conveyor" blockBytes="56" itemCount="1">
+		<property name="HandShake" index="0" size="2" type="UInt16" />
+		<property name="TaskNo" index="2" size="4" type="UInt32" />
+		<property name="TUID" index="6" size="20" type="String" />
+		<property name="IODatas" index="26" size="20" type="UInt16[]"/>
+		<property name="RotingNo" index="46" size="2" type="UInt16" />
+		<property name="From" index="48" size="2" type="UInt16" />
+		<property name="To" index="50" size="2" type="UInt16" />
+		<property name="DBIndex" index="52" size="2" type="UInt16" />
+		<property name="DataID" index="54" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.ClearLocationTaskCommand, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="TaskNo" index="2" size="4" type="UInt32" />
+		<property name="DataID" index="6" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.ClearRequestCommand, Wcs.DefaultImplementCollection.Conveyor" blockBytes="6" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HandShake" index="2" size="2" type="UInt16" />
+		<property name="DataID" index="4" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.ResultInfoCommand, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="Result" index="2" size="2" type="UInt16" />
+		<property name="Description" index="4" size="2" type="UInt16" />
+		<property name="DataID" index="6" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImplementCollection.Conveyor.SetDefaultLocationCommand, Wcs.DefaultImplementCollection.Conveyor" blockBytes="8" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="DeviceType" index="2" size="2" type="UInt16" />
+		<property name="HomePos" index="4" size="2" type="UInt16" />
+		<property name="DataID" index="6" size="2" type="UInt16" />
+	</collection>
+  <collection type="Wcs.DefaultImplementCollection.Conveyor.RemoteCMDCommand, Wcs.DefaultImplementCollection.Conveyor" blockBytes="6" itemCount="1">
+    <property name="AreaNo" index="0" size="2" type="UInt16" />
+    <property name="Emergency" index="2.0" size="1" type="Boolean" />
+    <property name="Mute" index="2.1" size="1" type="Boolean" />
+    <property name="Stop" index="2.2" size="1" type="Boolean" />
+    <property name="Reset" index="2.3" size="1" type="Boolean" />
+    <property name="Start" index="2.4" size="1" type="Boolean" />
+    <property name="DataID" index="4" size="2" type="UInt16" />
+  </collection>
+</senderEncoding>

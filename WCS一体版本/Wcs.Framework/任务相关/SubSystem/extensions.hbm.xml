@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+  <class name="Wcs.Framework.TaskActionBindingDevice" table="TaskBindingDevices" batch-size="50">
+    <id name="EquipmentActionId" column="`EquipmentActionId`" type="Int32">
+      <generator class="assigned" />
+    </id>
+    <property name="DeviceName" column="`DeviceName`" type="String" length="255" not-null="false"/>
+    <property name="DeviceType" column="`DeviceType`" type="String" length="255" not-null="false" />
+    <property name="CreatedAt" column="`CreatedAt`" type="DateTime" not-null="true" />
+  </class>
+</hibernate-mapping>

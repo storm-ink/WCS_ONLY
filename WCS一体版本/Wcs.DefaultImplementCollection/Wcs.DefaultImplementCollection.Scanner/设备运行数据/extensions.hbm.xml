@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImpls" namespace="Wcs.DefaultImpls">
+  <!--<subclass name="ShengLong.ShapeCheckTransferObjectLogData" discriminator-value="ShapeCheckTransferObjectLogData" extends="Wcs.Framework.ReceivedDataLog, Wcs.Framework">
+    <property name="ShapeCheckNO" column="`ShapeCheckTransferObjectLogData_PosNo`" type="Int32" />
+    <property name="ShapeStatus" column="`ShapeCheckTransferObjectLogData_Result`" type="Int32" />
+    <property name="Left_Over" column="`ShapeCheckTransferObjectLogData_LeftOver`" type="Boolean" />
+    <property name="Right_Over" column="`ShapeCheckTransferObjectLogData_RightOver`" type="Boolean" />
+    <property name="Too_High" column="`ShapeCheckTransferObjectLogData_SupereLevation`" type="Boolean" />
+    <property name="Back_Over" column="`ShapeCheckTransferObjectLogData_BackOver`" type="Boolean" />
+    <property name="Front_Over" column="`ShapeCheckTransferObjectLogData_FrontOver`" type="Boolean" />    
+  </subclass>-->
+
+  <subclass name="Wcs.DefaultImplementCollection.Scanner.ScanerDeviceTelexTransferObjectLogData" discriminator-value="ScanerDeviceTelexTransferObjectLogData" extends="Wcs.Framework.ReceivedDataLog, Wcs.Framework">
+    <property name="Barcode" column="`ScanerDeviceTelexTransferObjectLogData_Barcode`" type="String" length="50" />
+  </subclass>
+</hibernate-mapping>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<senderEncoding>
+	<collection type="Wcs.DefaultImpls.Conveyor.TaskCommand, Wcs.DefaultImpls" blockBytes="20" itemCount="1">
+		<property name="HandShake" index="0" size="2" type="UInt16" />
+		<property name="AssignmentID" index="2" size="4" type="UInt32" />
+		<property name="TUID" index="6" size="2" type="UInt16" />
+		<property name="IO_Data" index="8" size="2" type="UInt16" />
+		<property name="RotingNo" index="10" size="2" type="UInt16" />
+		<property name="StartMotorNo" index="12" size="2" type="UInt16" />
+		<property name="DestinationNo" index="14" size="2" type="UInt16" />
+		<property name="DB1000_Index" index="16" size="2" type="UInt16" />
+		<property name="Data_Id" index="18" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand, Wcs.DefaultImpls" blockBytes="12" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="TaskNo" index="2" size="4" type="UInt32" />
+		<property name="TUID" index="6" size="2" type="UInt16" />
+		<property name="DB1002_Index" index="8" size="2" type="UInt16" />
+		<property name="Data_Id" index="10" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImpls.Conveyor.HoldSignalCommand, Wcs.DefaultImpls" blockBytes="10" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HandShake" index="2" size="2" type="UInt16" />
+		<property name="IO_Data" index="4" size="2" type="UInt16" />
+		<property name="DB1023_Index" index="6" size="2" type="UInt16" />
+		<property name="Data_Id" index="8" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImpls.Conveyor.ScanAndWeighCommand, Wcs.DefaultImpls" blockBytes="6" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="ScanningStatus" index="2" size="1" type="Byte" />
+		<property name="WeighingStatus" index="3" size="1" type="Byte" />
+		<property name="Data_ID" index="4" size="2" type="UInt16" />
+	</collection>
+	<collection type="Wcs.DefaultImpls.Conveyor.RemoteControlCommand, Wcs.DefaultImpls" blockBytes="6" itemCount="1">
+		<property name="AreaNo" index="0" size="2" type="UInt16" />
+		<property name="DateID" index="2" size="2" type="UInt16" />
+		<property name="Start" index="4.0" size="1" type="Boolean" />
+		<property name="Stop" index="4.1" size="1" type="Boolean" />
+		<property name="Reset" index="4.2" size="1" type="Boolean" />
+	</collection>
+	<collection type="Wcs.DefaultImpls.Conveyor.AlivePlatformCommand, Wcs.DefaultImpls" blockBytes="6" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HomePos" index="2" size="2" type="UInt16" />
+		<property name="DataID" index="4" size="2" type="UInt16" />
+	</collection>
+	<!--<collection type="Wcs.DefaultImpls.Conveyor.WriteBarCodeAndWeightCommand, Wcs.DefaultImpls" blockBytes="44" itemCount="1">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="DB_Index" index="2" size="2" type="UInt16" />
+		<property name="BarCode" index="4" size="20" type="String" />
+		<property name="Weight" index="24" size="20" type="String" />
+	</collection>-->
+</senderEncoding>
+

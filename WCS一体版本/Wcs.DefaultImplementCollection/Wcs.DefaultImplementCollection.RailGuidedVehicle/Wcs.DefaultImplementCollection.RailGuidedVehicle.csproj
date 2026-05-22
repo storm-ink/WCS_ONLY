@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FD7E0A9-2A71-41B6-B35F-1462C7BE3A4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wcs.DefaultImplementCollection.RailGuidedVehicle</RootNamespace>
+    <AssemblyName>Wcs.DefaultImplementCollection.RailGuidedVehicle</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2">
+      <HintPath>..\..\packages\NHibernate.Caches.SysCache2.3.2.0.4000\lib\Net35\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChainAction.cs" />
+    <Compile Include="Commands\AutoCommand.cs" />
+    <Compile Include="Commands\ClearClearCacheCommand.cs" />
+    <Compile Include="Commands\ClearEmergencyStopCommand.cs" />
+    <Compile Include="Commands\ClearTaskCommand.cs" />
+    <Compile Include="Commands\EmergencyStopCommand.cs" />
+    <Compile Include="Commands\NormalWalkCommand.cs" />
+    <Compile Include="Commands\PickingCommand.cs" />
+    <Compile Include="Commands\PutingCommand.cs" />
+    <Compile Include="Commands\WalkCommand.cs" />
+    <Compile Include="Commands\WalkWithGoodsCommand.cs" />
+    <Compile Include="Configuration\AlarmCollection.cs" />
+    <Compile Include="Configuration\AlarmElement.cs" />
+    <Compile Include="Configuration\DefaultRailGuidedDataReceiverElement.cs" />
+    <Compile Include="Configuration\RailGuidedVehicleCollection.cs" />
+    <Compile Include="Configuration\RailGuidedVehicleElement.cs" />
+    <Compile Include="Configuration\RailGuidedVehicleStationCollection.cs" />
+    <Compile Include="Configuration\RailGuidedVehicleStationElement.cs" />
+    <Compile Include="DefaultTcpRailGuidedVehicleDataReceiver.cs" />
+    <Compile Include="EquipmentStateActionPattern\NotArriveToPickingLocationState.cs" />
+    <Compile Include="EquipmentStateActionPattern\NotArriveToUnloadingLocationState.cs" />
+    <Compile Include="EquipmentStateActionPattern\NotPickingState.cs" />
+    <Compile Include="EquipmentStateActionPattern\NotUnloadingState.cs" />
+    <Compile Include="EquipmentStateActionPattern\PickingAndUnloadingWithStepByStepStateManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RailGuidedVehicleDevice.cs" />
+    <Compile Include="RailGuidedVehicleDeviceUserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RailGuidedVehicleDeviceUserInterface.designer.cs">
+      <DependentUpon>RailGuidedVehicleDeviceUserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RailGuidedVehicleEquipmentActionScheduler.cs" />
+    <Compile Include="RailGuidedVehicleEvent.cs" />
+    <Compile Include="RailGuidedVehicleNetPacket.cs" />
+    <Compile Include="RailGuidedVehicleStation.cs" />
+    <Compile Include="RailGuidedVehicleStationWildcard.cs" />
+    <Compile Include="RailGuidedVehicleStatus.cs" />
+    <Compile Include="RailGuidedVehicleTaskCompletedHandler.cs" />
+    <Compile Include="RailGuidedVehicleTaskMode.cs" />
+    <Compile Include="RailGuidedVehicleWarningFactory.cs" />
+    <Compile Include="RailGuidedVehicleWrokMode.cs" />
+    <Compile Include="RailGuidVehicleTaskCompletedEventHandlerStartUp.cs" />
+    <Compile Include="RestoreRailGuidedVehicleStateManagerApplicationStartup.cs" />
+    <Compile Include="Task\CancelRailGuidedVehicleStepByStepActionCommand.cs" />
+    <Compile Include="Task\RailGuidedVehicleStepByStepAction.cs" />
+    <Compile Include="Task\RailGuidedVehicleStepByStepMovement.cs" />
+    <Compile Include="TransferObjects\RailGuidedVehicleTelexTransferObject.cs" />
+    <Compile Include="TransferObjects\StateTelexTransferObject.cs" />
+    <Compile Include="运行数据\StateTelexTransferObjectDataLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Task\extensions.hbm.xml" />
+    <EmbeddedResource Include="运行数据\extensions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="RailGuidedVehicle.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RailGuidedVehicleDeviceUserInterface.resx">
+      <DependentUpon>RailGuidedVehicleDeviceUserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wcs.Framework\Wcs.Framework.csproj">
+      <Project>{2c6225cc-6960-4964-9dcd-048b4b607bd1}</Project>
+      <Name>Wcs.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wcs\Wcs.csproj">
+      <Project>{45794acc-1755-4d65-9120-73e532d27053}</Project>
+      <Name>Wcs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

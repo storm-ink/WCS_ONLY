@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImplementCollection.Crane_yc" namespace="Wcs.Framework">
+  <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.Crane_yc.CraneAutomaticTransferWithStepByStepMovement" discriminator-value="CraneAutomaticTransferWithStepByStepMovement" extends="Wcs.Framework.LogicMovement, Wcs.Framework" dynamic-update="true">
+  </subclass>
+  
+  <subclass name="Wcs.DefaultImplementCollection.Crane_yc.CraneAutomaticTransferMovement" discriminator-value="CraneAutomaticTransferMovement" extends="Wcs.Framework.LogicMovement, Wcs.Framework" dynamic-update="true">
+  </subclass>
+  
+  <subclass name="Wcs.DefaultImplementCollection.Crane_yc.CraneMoveMovement" discriminator-value="CraneMoveMovement" extends="LogicMovement" dynamic-update="true">
+  </subclass>
+
+  <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.Crane_yc.CraneAutomaticTransferWithStepByStepAction" discriminator-value="CraneAutomaticTransferWithStepByStepAction" extends="Wcs.Framework.EquipmentAction" dynamic-update="true">
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="LoadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`LoadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`LoadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`LoadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="UnloadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`UnloadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`UnloadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`UnloadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+  </subclass>
+  
+  <subclass name="Wcs.DefaultImplementCollection.Crane_yc.CraneAutomaticTransferAction" discriminator-value="CraneAutomaticTransferAction" extends="EquipmentAction" dynamic-update="true">
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="LoadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`LoadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`LoadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`LoadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="UnloadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`UnloadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`UnloadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`UnloadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+  </subclass>
+
+  <subclass name="Wcs.DefaultImplementCollection.Crane_yc.CraneMoveAction" discriminator-value="CraneMoveAction" extends="EquipmentAction" dynamic-update="true">
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="ToLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`CraneMoveAction_ToLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`CraneMoveAction_ToLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`CraneMoveAction_ToLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+  </subclass>
+</hibernate-mapping>

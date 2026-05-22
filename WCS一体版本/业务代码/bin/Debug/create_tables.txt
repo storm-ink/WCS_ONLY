@@ -1,0 +1,741 @@
+
+    IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[hilo_values]') AND type in (N'U'))
+DROP TABLE [dbo].[hilo_values]
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKC87FA836664324E]') AND parent_object_id = OBJECT_ID('ROLE_OPERATIONS'))
+alter table ROLE_OPERATIONS  drop constraint FKC87FA836664324E
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKF3E55C73664324E]') AND parent_object_id = OBJECT_ID('[USER_ROLES]'))
+alter table [USER_ROLES]  drop constraint FKF3E55C73664324E
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKF3E55C73536044F0]') AND parent_object_id = OBJECT_ID('[USER_ROLES]'))
+alter table [USER_ROLES]  drop constraint FKF3E55C73536044F0
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKEA19C4F536044F0]') AND parent_object_id = OBJECT_ID('[UserProfiles]'))
+alter table [UserProfiles]  drop constraint FKEA19C4F536044F0
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK9B63C0CC2A80D93A]') AND parent_object_id = OBJECT_ID('TaskContainerCodes'))
+alter table TaskContainerCodes  drop constraint FK9B63C0CC2A80D93A
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK4531067B2A80DD7A]') AND parent_object_id = OBJECT_ID('TaskAdditionalInfo'))
+alter table TaskAdditionalInfo  drop constraint FK4531067B2A80DD7A
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKA619B4192A80DD7A]') AND parent_object_id = OBJECT_ID('TaskPredictRoutes'))
+alter table TaskPredictRoutes  drop constraint FKA619B4192A80DD7A
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK4AC5DB39EF64F193]') AND parent_object_id = OBJECT_ID('RequestContainerCodes'))
+alter table RequestContainerCodes  drop constraint FK4AC5DB39EF64F193
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK1048F9445C8316B3]') AND parent_object_id = OBJECT_ID('RequestAdditionalInfo'))
+alter table RequestAdditionalInfo  drop constraint FK1048F9445C8316B3
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK357CD352A80D93A]') AND parent_object_id = OBJECT_ID('LogicMovements'))
+alter table LogicMovements  drop constraint FK357CD352A80D93A
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK1608E74298AD18BA]') AND parent_object_id = OBJECT_ID('EquipmentActions'))
+alter table EquipmentActions  drop constraint FK1608E74298AD18BA
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK1CE8BBD3F6885C56]') AND parent_object_id = OBJECT_ID('EquipmentActionWarnings'))
+alter table EquipmentActionWarnings  drop constraint FK1CE8BBD3F6885C56
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKCC5F2A52B27EB11]') AND parent_object_id = OBJECT_ID('UndefinedEndLocationTask_AvailableEndLocations'))
+alter table UndefinedEndLocationTask_AvailableEndLocations  drop constraint FKCC5F2A52B27EB11
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK1BE394CD7466B173]') AND parent_object_id = OBJECT_ID('RouteDetail'))
+alter table RouteDetail  drop constraint FK1BE394CD7466B173
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FK997B37467466B173]') AND parent_object_id = OBJECT_ID('RouteRelation'))
+alter table RouteRelation  drop constraint FK997B37467466B173
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKFCB58731F743960]') AND parent_object_id = OBJECT_ID('RouteLock'))
+alter table RouteLock  drop constraint FKFCB58731F743960
+
+
+    if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKF78293207C462E2D]') AND parent_object_id = OBJECT_ID('KeepingContainerCodes'))
+alter table KeepingContainerCodes  drop constraint FKF78293207C462E2D
+
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[Roles]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [Roles]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'ROLE_OPERATIONS') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table ROLE_OPERATIONS
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[Users]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [Users]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[USER_ROLES]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [USER_ROLES]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[UserProfiles]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [UserProfiles]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[Tasks]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [Tasks]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'TaskContainerCodes') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table TaskContainerCodes
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'TaskAdditionalInfo') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table TaskAdditionalInfo
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'TaskPredictRoutes') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table TaskPredictRoutes
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[Requests]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [Requests]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'RequestContainerCodes') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table RequestContainerCodes
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'RequestAdditionalInfo') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table RequestAdditionalInfo
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'LogicMovements') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table LogicMovements
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'EquipmentActions') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table EquipmentActions
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'EquipmentActionWarnings') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table EquipmentActionWarnings
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'EquipmentActionSchedulers') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table EquipmentActionSchedulers
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[ManualTaskCodeSerialNumber]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [ManualTaskCodeSerialNumber]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[EquipmentTaskIdSerialNumber]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [EquipmentTaskIdSerialNumber]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'DeviceLockerInformations') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table DeviceLockerInformations
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'StateManagerRestoreInfos') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table StateManagerRestoreInfos
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'ReceivedDataLogs') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table ReceivedDataLogs
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'UndefinedEndLocationTask_AvailableEndLocations') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table UndefinedEndLocationTask_AvailableEndLocations
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'Events') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Events
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[RouteHead]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [RouteHead]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'RouteDetail') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table RouteDetail
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'RouteRelation') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table RouteRelation
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'RouteLock') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table RouteLock
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'RegionLock') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table RegionLock
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'Keeping') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table Keeping
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'KeepingContainerCodes') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table KeepingContainerCodes
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'DeviceErrorType') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table DeviceErrorType
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'DeviceState') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table DeviceState
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'SubSystemEquipmentActionId') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table SubSystemEquipmentActionId
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'TaskBindingDevices') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table TaskBindingDevices
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[WCSLocks]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [WCSLocks]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[PreTasks]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [PreTasks]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[BatchNumRecords]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [BatchNumRecords]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[HJHandShakeRecordes]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [HJHandShakeRecordes]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'[AlarmRecords]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [AlarmRecords]
+
+    if exists (select * from dbo.sysobjects where id = object_id(N'hilo_values') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table hilo_values
+
+    create table [Roles] (
+        [Id] INT not null,
+       [RoleName] NVARCHAR(50) not null unique,
+       [CreatedAt] DATETIME not null,
+       [IsBuiltIn] BIT not null,
+       [Comments] NVARCHAR(255) null,
+       primary key ([Id])
+    )
+
+    create table ROLE_OPERATIONS (
+        [RoleId] INT not null,
+       [Value] NVARCHAR(50) not null,
+       primary key ([RoleId], [Value])
+    )
+
+    create table [Users] (
+        [Id] INT not null,
+       [UserName] NVARCHAR(50) not null unique,
+       [CreatedAt] DATETIME not null,
+       [Password] NVARCHAR(50) not null,
+       [RealName] NVARCHAR(50) not null,
+       [PasswordSalt] NVARCHAR(50) not null,
+       [IsBuiltIn] BIT not null,
+       [Comments] NVARCHAR(255) null,
+       [Email] NVARCHAR(255) null,
+       primary key ([Id])
+    )
+
+    create table [USER_ROLES] (
+        [UserId] INT not null,
+       [RoleId] INT not null,
+       primary key ([UserId], [RoleId])
+    )
+
+    create table [UserProfiles] (
+        [UserId] INT not null,
+       [Value] NVARCHAR(255) null,
+       [Key] NVARCHAR(255) not null,
+       primary key ([UserId], [Key])
+    )
+
+    create table [Tasks] (
+        [Id] INT not null,
+       [discriminator] NVARCHAR(255) null,
+       [TaskCode] NVARCHAR(50) null unique,
+       [MasterTaskCode] NVARCHAR(50) null,
+       [ReqeustId] INT null,
+       [Source] INT not null,
+       [StartLocation_UnifiedCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceCode] NVARCHAR(255) not null,
+       [StartLocation_UserCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceName] NVARCHAR(255) not null,
+       [EndLocation_UnifiedCode] NVARCHAR(255) not null,
+       [EndLocation_DeviceCode] NVARCHAR(255) not null,
+       [EndLocation_UserCode] NVARCHAR(255) not null,
+       [EndLocation_DeviceName] NVARCHAR(255) not null,
+       [CurrentLocation_UnifiedCode] NVARCHAR(255) not null,
+       [CurrentLocation_DeviceCode] NVARCHAR(255) not null,
+       [CurrentLocation_UserCode] NVARCHAR(255) not null,
+       [CurrentLocation_DeviceName] NVARCHAR(255) not null,
+       Direction INT not null,
+       [Status] INT not null,
+       BizType INT not null,
+       [CreatedAt] DATETIME not null,
+       [FinishedAt] DATETIME null,
+       [Description] NVARCHAR(500) null,
+       [Priority] INT not null,
+       [WcsPriority] INT not null,
+       [ManualPriority] BIT not null,
+       [TaskType] NVARCHAR(25) null,
+       [Group] NVARCHAR(50) null,
+       [PartnersCount] INT default 1  not null,
+       primary key ([Id])
+    )
+
+    create table TaskContainerCodes (
+        [TaskId] INT not null,
+       [Value] NVARCHAR(50) not null,
+       primary key ([TaskId], [Value])
+    )
+
+    create table TaskAdditionalInfo (
+        TaskId INT not null,
+       [Value] NVARCHAR(MAX) null,
+       [Key] NVARCHAR(255) not null,
+       primary key (TaskId, [Key])
+    )
+
+    create table TaskPredictRoutes (
+        TaskId INT not null,
+       [Value] INT null,
+       [Key] INT not null,
+       primary key (TaskId, [Key])
+    )
+
+    create table [Requests] (
+        [Id] INT not null,
+       [StartLocation_UnifiedCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceCode] NVARCHAR(255) not null,
+       [StartLocation_UserCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceName] NVARCHAR(255) not null,
+       [Status] INT not null,
+       [CreatedAt] DATETIME not null,
+       [InvalidAt] DATETIME null,
+       [Comments] NVARCHAR(255) null,
+       primary key ([Id])
+    )
+
+    create table RequestContainerCodes (
+        [RequestId] INT not null,
+       [Value] NVARCHAR(50) not null,
+       primary key ([RequestId], [Value])
+    )
+
+    create table RequestAdditionalInfo (
+        RequestId INT not null,
+       [Value] NVARCHAR(2000) null,
+       [Key] NVARCHAR(255) not null,
+       primary key (RequestId, [Key])
+    )
+
+    create table LogicMovements (
+        [Id] INT not null,
+       [discriminator] NVARCHAR(255) not null,
+       [Ordering] INT not null,
+       [RouteId] INT null,
+       [Status] INT not null,
+       [DeviceName] NVARCHAR(255) not null,
+       [TaskId] INT not null,
+       [StartLocation_UnifiedCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceCode] NVARCHAR(255) not null,
+       [StartLocation_UserCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceName] NVARCHAR(255) not null,
+       [EndLocation_UnifiedCode] NVARCHAR(255) not null,
+       [EndLocation_DeviceCode] NVARCHAR(255) not null,
+       [EndLocation_UserCode] NVARCHAR(255) not null,
+       [EndLocation_DeviceName] NVARCHAR(255) not null,
+       [CreatedAt] DATETIME not null,
+       [FinishedAt] DATETIME null,
+       primary key ([Id])
+    )
+
+    create table EquipmentActions (
+        [Id] INT not null,
+       [discriminator] NVARCHAR(255) not null,
+       [Ordering] INT not null,
+       [SequenceOrdering] INT null,
+       [Group_Id] UNIQUEIDENTIFIER not null,
+       EquipmentTaskId INT not null,
+       ContainerCode SMALLINT not null,
+       [DeviceName] NVARCHAR(255) not null,
+       [ActuatingDeviceName] NVARCHAR(255) not null,
+       Status INT not null,
+       [LogicMovementId] INT null,
+       [CreatedAt] DATETIME not null,
+       [FinishedAt] DATETIME null,
+       [SentAt] DATETIME null,
+       [StartLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [StartLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [StartLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [EndLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [EndLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [EndLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [RouteId] INT default -1  not null,
+       [AtPlcDBIndex] INT null,
+       [LoadLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [LoadLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [LoadLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [UnloadLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [UnloadLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [UnloadLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [CraneMoveAction_ToLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [CraneMoveAction_ToLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [CraneMoveAction_ToLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [StartLocation_DeviceCode_RobotTransferAction] NVARCHAR(255) default -1  not null,
+       [StartLocation_UserCode_RobotTransferAction] NVARCHAR(255) default -1  not null,
+       [StartLocation_DeviceName_RobotTransferAction] NVARCHAR(255) default -1  not null,
+       [EndLocation_DeviceCode_RobotTransferAction] NVARCHAR(255) default -1  not null,
+       [EndLocation_UserCode_RobotTransferAction] NVARCHAR(255) default -1  not null,
+       [EndLocation_DeviceName_RobotTransferAction] NVARCHAR(255) default -1  not null,
+       [StartLocation_DeviceCode_RobotTransferByStepAction] NVARCHAR(255) default -1  not null,
+       [StartLocation_UserCode_RobotTransferByStepAction] NVARCHAR(255) default -1  not null,
+       [StartLocation_DeviceName_RobotTransferByStepAction] NVARCHAR(255) default -1  not null,
+       [EndLocation_DeviceCode_RobotTransferByStepAction] NVARCHAR(255) default -1  not null,
+       [EndLocation_UserCode_RobotTransferByStepAction] NVARCHAR(255) default -1  not null,
+       [EndLocation_DeviceName_RobotTransferByStepAction] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_LoadLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_LoadLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_LoadLocation_UnifiedCode] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_LoadLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_UnloadLocation_DeviceCode] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_UnloadLocation_UserCode] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_UnloadLocation_UnifiedCode] NVARCHAR(255) default -1  not null,
+       [SinevaAGVSubSystemAction_UnloadLocation_DeviceName] NVARCHAR(255) default -1  not null,
+       [SendAGVTaskId_SinevaAGV] NVARCHAR(40) null,
+       primary key ([Id])
+    )
+
+    create table EquipmentActionWarnings (
+        [Id] INT not null,
+       [EquipmentActionId] INT not null,
+       Code NVARCHAR(255) null,
+       Description NVARCHAR(500) null,
+       [CreatedAt] DATETIME not null,
+       DeviceName NVARCHAR(255) null,
+       primary key ([Id])
+    )
+
+    create table EquipmentActionSchedulers (
+        [DeviceName] NVARCHAR(50) not null,
+       [discriminator] NVARCHAR(255) not null,
+       [EquipmentActionId] INT null,
+       primary key ([DeviceName])
+    )
+
+    create table [ManualTaskCodeSerialNumber] (
+        DateValue DATETIME not null,
+       NextSn INT not null,
+       primary key (DateValue)
+    )
+
+    create table [EquipmentTaskIdSerialNumber] (
+        DateValue DATETIME not null,
+       NextSn INT not null,
+       primary key (DateValue)
+    )
+
+    create table DeviceLockerInformations (
+        DeviceName NVARCHAR(255) not null,
+       [LockerInfo_UserName] NVARCHAR(255) not null,
+       [LockerInfo_IpAddress] NVARCHAR(255) not null,
+       primary key (DeviceName)
+    )
+
+    create table StateManagerRestoreInfos (
+        [EquipmentActionId] INT not null,
+       [CurrentStateName] NVARCHAR(255) not null,
+       [OwnDeviceName] NVARCHAR(255) not null,
+       [ActuatingDeviceName] NVARCHAR(255) not null,
+       [CreatedAt] DATETIME not null,
+       [LastUpdateAt] DATETIME not null,
+       primary key ([EquipmentActionId])
+    )
+
+    create table ReceivedDataLogs (
+        [Id] INT not null,
+       discriminator NVARCHAR(255) not null,
+       [DeviceName] NVARCHAR(50) not null,
+       [CreatedAt] DATETIME not null,
+       [ReceivedDataLogLevel] INT not null,
+       primary key ([Id])
+    )
+
+    create table UndefinedEndLocationTask_AvailableEndLocations (
+        [TaskId] INT not null,
+       [UnifiedCode] NVARCHAR(255) not null,
+       [DeviceCode] NVARCHAR(255) not null,
+       [UserCode] NVARCHAR(255) not null,
+       [DeviceName] NVARCHAR(255) not null,
+       primary key ([TaskId], [UnifiedCode], [DeviceCode], [UserCode], [DeviceName])
+    )
+
+    create table Events (
+        [EventKey] NVARCHAR(255) not null,
+       [discriminator] NVARCHAR(255) not null,
+       [Preservable] BIT not null,
+       [CreatedAt] DATETIME not null,
+       EquipmentActionStatusChangedEvent_TaskId INT null,
+       EquipmentActionStatusChangedEvent_MovementId INT null,
+       EquipmentActionStatusChangedEvent_Id INT null,
+       EquipmentActionStatusChangedEvent_Status INT null,
+       LogicMovementStatusChangedEvent_Id INT null,
+       LogicMovementStatusChangedEvent_TaskId INT null,
+       LogicMovementStatusChangedEvent_Status INT null,
+       TaskArchivedEvent_Id INT null,
+       TaskArchivedEvent_TaskCode NVARCHAR(50) null,
+       [TaskCurrentLocationChangedEventCurrentLocation_UnifiedCode] NVARCHAR(255) null,
+       [TaskCurrentLocationChangedEventCurrentLocation_DeviceCode] NVARCHAR(255) null,
+       [TaskCurrentLocationChangedEventCurrentLocation_UserCode] NVARCHAR(255) null,
+       [TaskCurrentLocationChangedEventCurrentLocation_DeviceName] NVARCHAR(255) null,
+       TaskPriorityChangedEvent_Id INT null,
+       TaskPriorityChangedEvent_TaskCode NVARCHAR(50) null,
+       TaskPriorityChangedEvent_Priority INT null,
+       TaskStatusChangedEvent_Id INT null,
+       TaskStatusChangedEvent_Status INT null,
+       TaskStatusChangedEvent_TaskType NVARCHAR(25) null,
+       TaskStatusChangedEvent_BizType INT null,
+       [TaskStatusChangedEvent_Source] INT null,
+       TaskFinishedEvent_Id INT null,
+       TaskFinishedEvent_TaskCode NVARCHAR(50) null,
+       TaskFinishedEvent_Status INT null,
+       [FinishedAt] DATETIME null,
+       TaskFinishedEvent_TaskType NVARCHAR(25) null,
+       TaskFinishedEvent_BizType INT null,
+       [TaskFinishedEvent_Source] INT null,
+       [ReqeustId] INT null,
+       RequestArchivedEvent_Id INT null,
+       RequestArchivedEvent_Status INT null,
+       [RequestArchivedEventSource_UnifiedCode] NVARCHAR(255) null,
+       [RequestArchivedEventSource_DeviceCode] NVARCHAR(255) null,
+       [RequestArchivedEventSource_UserCode] NVARCHAR(255) null,
+       [RequestArchivedEventSource_DeviceName] NVARCHAR(255) null,
+       RequestStatusChangedEvent_Id INT null,
+       RequestStatusChangedEvent_Status INT null,
+       primary key ([EventKey])
+    )
+
+    create table [RouteHead] (
+        [HeadID] INT not null,
+       [ProjectCode] NVARCHAR(100) not null,
+       [ProjectName] NVARCHAR(100) not null,
+       [Id] INT not null,
+       [No] INT not null,
+       [Direction] NVARCHAR(100) not null,
+       [Device] NVARCHAR(100) not null,
+       [RouteVsActionRelation] INT not null,
+       [AllowStartFromMidway] BIT not null,
+       [Group] NVARCHAR(100) not null,
+       [PathOnlyStarts] NVARCHAR(500) not null,
+       [PathOnlyEnds] NVARCHAR(500) not null,
+       primary key ([HeadID])
+    )
+
+    create table RouteDetail (
+        [DetailID] INT not null,
+       [Id] INT null,
+       [Path] NVARCHAR(255) not null,
+       [Device] NVARCHAR(255) not null,
+       primary key ([DetailID])
+    )
+
+    create table RouteRelation (
+        [RelationID] INT not null,
+       [Id] INT not null,
+       [Adjoins] INT not null,
+       primary key ([RelationID])
+    )
+
+    create table RouteLock (
+        [Id] INT not null,
+       [ActionId] INT not null,
+       [RouteHeadId] INT not null,
+       primary key ([Id])
+    )
+
+    create table RegionLock (
+        [Id] INT not null,
+       [RegionName] NVARCHAR(50) not null,
+       [TaskCode] NVARCHAR(50) not null,
+       [CheckDeviceCode] NVARCHAR(50) not null,
+       [CheckDeviceCodeType] NVARCHAR(50) not null,
+       primary key ([Id])
+    )
+
+    create table Keeping (
+        [UserCode] NVARCHAR(255) not null,
+       [IsEmpty] BIT not null,
+       [TaskId] INT null,
+       primary key ([UserCode])
+    )
+
+    create table KeepingContainerCodes (
+        [UserCode] NVARCHAR(255) not null,
+       [ContainerCode] NVARCHAR(50) not null,
+       primary key ([UserCode], [ContainerCode])
+    )
+
+    create table DeviceErrorType (
+        [Id] INT not null,
+       [AlarmCategory] INT not null,
+       [DeviceType] NVARCHAR(255) not null,
+       [DeviceErrorCode] NVARCHAR(10) not null,
+       [ErrorName] NVARCHAR(255) not null,
+       [Description] NVARCHAR(255) not null,
+       [Levle] SMALLINT not null,
+       [Solution] NVARCHAR(1000) null,
+       [IsFault] BIT null,
+       primary key ([Id])
+    )
+
+    create table DeviceState (
+        [Id] INT not null,
+       [DeviceName] NVARCHAR(10) not null,
+       [Device] NVARCHAR(20) not null,
+       [State] INT not null,
+       [Description] NVARCHAR(1000) not null,
+       [TaskLock] INT not null,
+       primary key ([Id])
+    )
+
+    create table SubSystemEquipmentActionId (
+        [ActionTaskId] NVARCHAR(18) not null,
+       primary key ([ActionTaskId])
+    )
+
+    create table TaskBindingDevices (
+        [EquipmentActionId] INT not null,
+       [DeviceName] NVARCHAR(255) null,
+       [DeviceType] NVARCHAR(255) null,
+       [CreatedAt] DATETIME not null,
+       primary key ([EquipmentActionId])
+    )
+
+    create table [WCSLocks] (
+        [LockId] INT not null,
+       [TaskId] INT not null,
+       [TaskCode] NVARCHAR(255) not null,
+       [TaskStartLocation] NVARCHAR(255) not null,
+       [TaskEndLocation] NVARCHAR(255) not null,
+       [LogicMovementId] INT not null,
+       [LogicMovementTaskCode] INT not null,
+       [LogicMovementStartLocation] NVARCHAR(255) not null,
+       [LogicMovementLocation] NVARCHAR(255) not null,
+       [ActionId] INT not null,
+       [ActionTaskCode] INT not null,
+       [ActionStartLocation] NVARCHAR(255) not null,
+       [ActionEndLocation] NVARCHAR(255) not null,
+       [ActionDeviceName] NVARCHAR(255) not null,
+       [ParentLockTypes] INT not null,
+       [ChildLockTypes] INT not null,
+       [LockDescription] NVARCHAR(500) null,
+       primary key ([LockId])
+    )
+
+    create table [PreTasks] (
+        [Id] INT not null,
+       [discriminator] NVARCHAR(255) null,
+       [TaskCode] NVARCHAR(50) null unique,
+       [MasterTaskCode] NVARCHAR(50) null,
+       [Source] INT not null,
+       [StartLocation_UnifiedCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceCode] NVARCHAR(255) not null,
+       [StartLocation_UserCode] NVARCHAR(255) not null,
+       [StartLocation_DeviceName] NVARCHAR(255) not null,
+       [EndLocation_UnifiedCode] NVARCHAR(255) not null,
+       [EndLocation_DeviceCode] NVARCHAR(255) not null,
+       [EndLocation_UserCode] NVARCHAR(255) not null,
+       [EndLocation_DeviceName] NVARCHAR(255) not null,
+       [Status] INT not null,
+       BizType INT not null,
+       [CreatedAt] DATETIME not null,
+       [StartedAt] DATETIME null,
+       [FinishedAt] DATETIME null,
+       [Description] NVARCHAR(255) null,
+       [Priority] INT not null,
+       [WcsPriority] INT not null,
+       [ManualPriority] BIT not null,
+       [TaskType] NVARCHAR(25) null,
+       [ContainerCodes] NVARCHAR(255) null,
+       [AdditionalInfo] NVARCHAR(MAX) null,
+       primary key ([Id])
+    )
+
+    create table [BatchNumRecords] (
+        [Id] INT not null,
+       [Location] NVARCHAR(255) not null,
+       [BatchNo] NVARCHAR(255) not null,
+       CreateTime DATETIME not null,
+       primary key ([Id])
+    )
+
+    create table [HJHandShakeRecordes] (
+        Id INT not null,
+       Location NVARCHAR(50) not null,
+       IOData INT not null,
+       RequestID INT not null,
+       CreateTime DATETIME not null,
+       primary key (Id)
+    )
+
+    create table [AlarmRecords] (
+        [Id] BIGINT not null,
+       [WcsAlarmCode] NVARCHAR(50) not null,
+       [AlarmCategory] INT not null,
+       [AlarmLevel] INT not null,
+       [AlarmName] NVARCHAR(50) not null,
+       [DeviceErrorCode] NVARCHAR(25) not null,
+       [Device] NVARCHAR(25) not null,
+       [OwnerDevice] NVARCHAR(25) not null,
+       [DeviceType] NVARCHAR(50) null,
+       [BeginingAt] DATETIME null,
+       [EndingAt] DATETIME null,
+       [TotalMilliseconds] BIGINT not null,
+       [Remarks] NVARCHAR(MAX) null,
+       primary key ([Id])
+    )
+
+    alter table ROLE_OPERATIONS 
+        add constraint FKC87FA836664324E 
+        foreign key ([RoleId]) 
+        references [Roles]
+
+    alter table [USER_ROLES] 
+        add constraint FKF3E55C73664324E 
+        foreign key ([RoleId]) 
+        references [Roles]
+
+    alter table [USER_ROLES] 
+        add constraint FKF3E55C73536044F0 
+        foreign key ([UserId]) 
+        references [Users]
+
+    alter table [UserProfiles] 
+        add constraint FKEA19C4F536044F0 
+        foreign key ([UserId]) 
+        references [Users]
+
+    alter table TaskContainerCodes 
+        add constraint FK9B63C0CC2A80D93A 
+        foreign key ([TaskId]) 
+        references [Tasks]
+
+    alter table TaskAdditionalInfo 
+        add constraint FK4531067B2A80DD7A 
+        foreign key (TaskId) 
+        references [Tasks]
+
+    alter table TaskPredictRoutes 
+        add constraint FKA619B4192A80DD7A 
+        foreign key (TaskId) 
+        references [Tasks]
+
+    alter table RequestContainerCodes 
+        add constraint FK4AC5DB39EF64F193 
+        foreign key ([RequestId]) 
+        references [Requests]
+
+    alter table RequestAdditionalInfo 
+        add constraint FK1048F9445C8316B3 
+        foreign key (RequestId) 
+        references [Requests]
+
+    alter table LogicMovements 
+        add constraint FK357CD352A80D93A 
+        foreign key ([TaskId]) 
+        references [Tasks]
+
+    alter table EquipmentActions 
+        add constraint FK1608E74298AD18BA 
+        foreign key ([LogicMovementId]) 
+        references LogicMovements
+
+    alter table EquipmentActionWarnings 
+        add constraint FK1CE8BBD3F6885C56 
+        foreign key ([EquipmentActionId]) 
+        references EquipmentActions
+
+    alter table UndefinedEndLocationTask_AvailableEndLocations 
+        add constraint FKCC5F2A52B27EB11 
+        foreign key ([TaskId]) 
+        references [Tasks]
+
+    alter table RouteDetail 
+        add constraint FK1BE394CD7466B173 
+        foreign key ([Id]) 
+        references [RouteHead]
+
+    alter table RouteRelation 
+        add constraint FK997B37467466B173 
+        foreign key ([Id]) 
+        references [RouteHead]
+
+    alter table RouteLock 
+        add constraint FKFCB58731F743960 
+        foreign key ([Id]) 
+        references EquipmentActions
+
+    alter table KeepingContainerCodes 
+        add constraint FKF78293207C462E2D 
+        foreign key ([UserCode]) 
+        references Keeping
+
+    create table hilo_values (
+         next_hi INT 
+    )
+
+    insert into hilo_values values ( 1 )
+
+    IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[hilo_values]') AND type in (N'U'))
+DROP TABLE [dbo].[hilo_values]
+go
+CREATE TABLE [dbo].[hilo_values](
+	[next_hi] [int] NOT NULL,
+	[clazz] [nvarchar](255) NOT NULL,
+ CONSTRAINT [PK_hilo_values] PRIMARY KEY CLUSTERED 
+(
+	[clazz] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]

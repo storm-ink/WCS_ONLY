@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c001 type="Wcs.DefaultImpls.Crane.RackLocationCollection, Wcs.DefaultImpls" device="C001">
+  <location isWildcard="true"/>
+  <!--<location userCode="原点" column="0" level="1"  userColumn="0" userLevel="0" isOriginPoint="true"/>-->
+  
+  <!--输送线对应的货架货位-->
+  <!--<location userCode="02-000-001" column="0" level="1" userColumn="0" userLevel="1" forkDirection="Right" synonymous="100@输送线1"/>-->
+  
+  <!--货格-->
+  <!--<location userCode="01-001-001" column="1" level="1"  userColumn="1" userLevel="1" forkDirection="Left"/>-->
+  
+</c001>

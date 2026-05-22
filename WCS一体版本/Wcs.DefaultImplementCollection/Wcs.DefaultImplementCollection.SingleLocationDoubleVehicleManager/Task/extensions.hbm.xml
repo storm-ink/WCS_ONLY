@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager" namespace="Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager">
+   <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager.SingleLocationDoubleVehicleSubSystemTransferMovement" discriminator-value="SingleLocationDoubleVehicleSubSystemTransferMovement" extends="Wcs.Framework.LogicMovement, Wcs.Framework" dynamic-update="true">
+  
+  </subclass>
+  
+   <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager.SingleLocationDoubleVehicleSubSystemTransferAction" discriminator-value="SingleLocationDoubleVehicleSubSystemTransferAction" extends="Wcs.Framework.EquipmentAction, Wcs.Framework" dynamic-update="true">
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="StartLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`StartLocation_DeviceCode_SingleLocationDoubleVehicleSubSystem`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`StartLocation_UserCode_SingleLocationDoubleVehicleSubSystem`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`StartLocation_DeviceName_SingleLocationDoubleVehicleSubSystem`" not-null="true" default="-1" />
+      </property>
+    </component>
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="EndLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`EndLocation_DeviceCode_SingleLocationDoubleVehicleSubSystem`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`EndLocation_UserCode_SingleLocationDoubleVehicleSubSystem`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`EndLocation_DeviceName_SingleLocationDoubleVehicleSubSystem`" not-null="true" default="-1" />
+      </property>
+    </component>
+  </subclass>
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+  <class name="SubSystemEquipmentActionId" table="SubSystemEquipmentActionId" batch-size="500" dynamic-update="true">
+    <cache usage="read-write"/>
+    <id name="ActionTaskId" column="`ActionTaskId`" type="String" length="18"/>
+  </class>
+</hibernate-mapping>

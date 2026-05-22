@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+  <!--<route id="1001" no="1" path="100,*@C001" direction="In" adjoins="" type="Normal" device="输送线1" logicMovement="Wcs.DefaultImpls.Conveyor.ConveyorTransferMovement, Wcs.DefaultImpls" />-->
+
+  <!--<route id="1002" path="*@C001,*@C001" direction="Out" adjoins="" type="Normal,Counting" device="C001" allowStartFromMidway="false">
+    <logicMovement type="Wcs.DefaultImpls.Crane.CraneAutomaticTransferMovement, Wcs.DefaultImpls" />
+    <logicMovement type="Wcs.DefaultImpls.Crane.CraneMoveMovement, Wcs.DefaultImpls" />
+    <logicMovementSelector type="Wcs.DefaultImpls.Crane.DefaultLogicMovementSelector, Wcs.DefaultImpls" />
+  </route>-->
+</routes>
+
+
+
+
+
+
+
+
+

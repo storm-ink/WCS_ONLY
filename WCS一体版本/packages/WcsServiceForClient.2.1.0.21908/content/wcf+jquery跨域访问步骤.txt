@@ -1,0 +1,33 @@
+﻿1、添加 System.ServiceModel.Web 引用
+
+2、添加服务接口，为接口里的每个方法添加如下属性(不要添加 OperationContract 属性)
+[WebGet(ResponseFormat = WebMessageFormat.Json)] 
+
+3、为 system.serviceModel 添加如下子节点配置
+<standardEndpoints>
+    <webHttpEndpoint>
+    <standardEndpoint crossDomainScriptAccessEnabled="true"/>
+    </webHttpEndpoint>
+</standardEndpoints>
+
+4、为 system.serviceModel/bindings 添加如下子节点配置
+<webHttpBinding>
+        <binding crossDomainScriptAccessEnabled="true" />
+</webHttpBinding>
+
+5、添加一个服务节点，如下示例
+ <service name="WcsServiceForClient.CraneServiceForClient">
+        <endpoint kind="webHttpEndpoint"
+                  address="http://localhost:9991/服务名称"
+                  contract="WcsServiceForClient.ICraneServiceForClient"/>
+</service>
+
+6、客户端 js 如下调用(如果配置正确，浏览器中应该可以直接打开)：
+$.ajax({
+    type: "get",
+    dataType: "jsonp",//一定要使用此类型，否则无法跨域 
+    url: 'http://localhost:9991/服务名称/方法名?jsoncallback=?', //如果有参数，此处的jsoncallback=?必须加上，否则一样会报错。但如果没有参数，jsoncallback=?必须移除
+    success: function (returndata) {
+        alert(returndata);
+    }
+});

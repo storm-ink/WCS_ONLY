@@ -1,0 +1,55 @@
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\bin\Debug\TaskManager.exe.config
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\bin\Debug\TaskManager.exe
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\bin\Debug\TaskManager.pdb
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager.csprojResolveAssemblyReference.cache
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\MainWindow.baml
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\MainWindow.g.cs
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\App.g.cs
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager_MarkupCompile.cache
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager.g.resources
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.Cache
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager.exe
+E:\svn\Wcs2\Wcs\branches\005\TaskManager\obj\Debug\TaskManager.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\bin\Debug\TaskManager.exe.config
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\bin\Debug\TaskManager.exe
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\bin\Debug\TaskManager.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.csproj.AssemblyReference.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\MainWindow.baml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\MainWindow.g.cs
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\App.g.cs
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager_MarkupCompile.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.g.resources
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.exe
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskManager\obj\Debug\TaskManager.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\bin\Debug\TaskManager.exe.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\bin\Debug\TaskManager.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\bin\Debug\TaskManager.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\MainWindow.baml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\MainWindow.g.cs
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\App.g.cs
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager_MarkupCompile.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.g.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\TaskManager\obj\Debug\TaskManager.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\bin\Debug\TaskManager.exe.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\bin\Debug\TaskManager.exe
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\bin\Debug\TaskManager.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.csproj.AssemblyReference.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\MainWindow.baml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\MainWindow.g.cs
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\App.g.cs
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager_MarkupCompile.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.g.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.exe
+C:\Users\Sineva_CL\Desktop\WCS一体版本\TaskManager\obj\Debug\TaskManager.pdb

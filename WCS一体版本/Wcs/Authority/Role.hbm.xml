@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs" namespace="Wcs">
+  <class name="Role" table="`Roles`" dynamic-update="true"  batch-size="500">
+    <id name="Id" column="`Id`" type="Int32">
+      <generator class="hilo">
+        <param name="table">hilo_values</param>
+        <param name="where">clazz='Roles'</param>
+        <param name="column">next_hi</param>
+        <param name="max_lo">5</param>
+      </generator>
+    </id>
+    <property name="RoleName" column="`RoleName`" type="String" length="50" not-null="true" unique="true" />
+    <property name="CreatedAt" column="`CreatedAt`" type="DateTime" not-null="true" />
+    <property name="IsBuiltIn" column="`IsBuiltIn`" type="Boolean" not-null="true" />
+    <property name="Comments" column="`Comments`" type="String" length="255"/>
+    
+    <set name="Operations" table="ROLE_OPERATIONS" lazy="false" cascade="all-delete-orphan" batch-size="500" >
+      <key column="`RoleId`" not-null="true"/>
+      <element column="`Value`" length="50" not-null="true" type="String" />
+    </set>
+  </class>
+</hibernate-mapping>

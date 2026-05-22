@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Wcs</id>
+    <version>2.1.0.32810</version>
+    <title>Wcs支持库</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <licenseUrl>http://www.gen-song.net/</licenseUrl>
+    <projectUrl>http://www.gen-song.net/Wcs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wcs项目基础模块</description>
+    <releaseNotes />
+    <dependencies>
+      <dependency id="NHibernate.Caches.SysCache2" version="3.2.0.4000" />
+      <dependency id="NLog" version="2.1.0" />
+    </dependencies>
+  </metadata>
+</package>

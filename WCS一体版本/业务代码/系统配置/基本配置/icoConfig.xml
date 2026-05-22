@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<icoConfig>
+	<ico name="欢迎页" showText="欢迎页" path="./Ico/home_32.svg"/>
+	<ico name="项目概况" showText="项目概况" path="./Ico/home_32.svg"/>
+	<ico name="用户登录" showText="用户登录" path="./Ico/login_32.svg"/>
+	<ico name="注销登录" showText="注销登录" path="./Ico/logout_32.svg"/>
+	<ico name="修改密码" showText="修改密码" path="./Ico/password_32.svg"/>
+	<ico name="系统退出" showText="系统退出" path="./Ico/power_32.svg"/>
+	<ico name="任务管理" showText="任务管理" path="./Ico/taskManager_32.svg"/>
+	<ico name="计划任务" showText="计划任务" path="./Ico/pretask.svg"/>
+	<ico name="历史计划" showText="历史计划" path="./Ico/history_pretask.svg"/>
+	<ico name="当前任务" showText="当前任务" path="./Ico/tasklist_32.svg"/>
+	<ico name="历史任务" showText="历史任务" path="./Ico/historyTaskList_32.svg"/>
+	<ico name="手工任务" showText="手工任务" path="./Ico/manual_32.svg"/>
+	<ico name="设备管理" showText="设备管理" path="./Ico/devices_32.svg"/>
+	<ico name="设备管理" showText="设备管理" path="./Ico/devices_32.svg"/>
+	<ico name="动作序列管理" showText="动作序列管理" path="./Ico/equalizer_32.svg"/>
+	<ico name="工具箱" showText="工具箱" path="./Ico/toolkit_32.svg"/>
+	<ico name="路径工具" showText="路径工具" path="./Ico/routeLine_32.svg"/>
+	<ico name="任务归档工具" showText="归档任务工具" path="./Ico/historying_32.svg"/>
+	<ico name="堆垛机测试" showText="堆垛机测试" path="./Ico/craneTest_32.svg"/>
+	<ico name="权限管理" showText="权限管理" path="./Ico/users_32.svg"/>
+	<ico name="添加新角色" showText="添加新角色" path="./Ico/permissionsAdd_32.svg"/>
+	<ico name="角色管理" showText="角色管理" path="./Ico/permissionsManager_32.svg"/>
+	<ico name="添加新用户" showText="添加新用户" path="./Ico/addUser_32.svg"/>
+	<ico name="用户管理" showText="用户管理" path="./Ico/usersManager_32.svg"/>
+	<ico name="日志管理" showText="日志管理" path="./Ico/logManager_32.svg"/>
+	<ico name="业务消息" showText="业务消息" path="./Ico/messagePull_32.svg"/>
+	<ico name="日志跟踪" showText="日志跟踪" path="./Ico/logNow_32.svg"/>
+	<ico name="日志查询" showText="日志查询" path="./Ico/logSearch_32.svg"/>
+    <ico name="文件日志" showText="日志查询" path="./Ico/folder-open.svg"/>
+    <ico name="文件实时日志" showText="日志查询" path="./Ico/view-list.svg"/>
+    <ico name="输送线测试" showText="输送线测试" path="./Ico/conveyor-test_32.svg"/>
+	<ico name="报警记录" showText="报警记录" path="./Ico/warning_32.svg"/>
+	<ico name="当前报警" showText="当前报警" path="./Ico/currentAlarm.svg"/>
+	<ico name="历史报警" showText="历史报警" path="./Ico/historyAlarm.svg"/>
+</icoConfig>

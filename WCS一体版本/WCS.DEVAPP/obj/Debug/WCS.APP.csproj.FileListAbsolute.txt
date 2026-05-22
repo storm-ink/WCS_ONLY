@@ -1,0 +1,651 @@
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\icoConfig.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\devices_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\equalizer_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\help_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\historyTaskList_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\home_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\power_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\setting-config_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\system_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\taskManager_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\tasklist_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Ico\users_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.App.exe.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\输送线\输送线位置.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\输送线\db2.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\输送线\db1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\基本配置\taskEventHandlers.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\基本配置\startups.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\基本配置\settings.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\基本配置\routes.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\C001.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\alarms.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\sineva.png
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\WCS.APP.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\WCS.APP.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.BonusSkins.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.CodeParser.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Tutorials.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\HibernatingRhinos.Profiler.Appender.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Images.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.frmCloseReasonDialog.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.frmMain.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.frmStarting.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.Properties.Resources.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.CopyComplete
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2\WCS.DEVAPP\obj\Debug\WCS.APP.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\icoConfig.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\devices_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\equalizer_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\help_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\historyTaskList_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\home_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\power_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\setting-config_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\system_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\taskManager_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\tasklist_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Ico\users_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.App.exe.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\输送线\输送线位置.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\输送线\db2.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\输送线\db1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\taskEventHandlers.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\startups.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\settings.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\routes.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\C001.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\alarms.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\sineva.png
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\WCS.APP.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\WCS.APP.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.BonusSkins.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.CodeParser.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Tutorials.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\HibernatingRhinos.Profiler.Appender.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Images.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.frmCloseReasonDialog.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.frmMain.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.frmStarting.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.Properties.Resources.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.CopyComplete
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\WCS.DEVAPP\bin\Debug\NLog.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\NLog.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\icoConfig.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\devices_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\equalizer_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\help_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\historyTaskList_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\home_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\power_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\setting-config_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\system_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\taskManager_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\tasklist_32.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Ico\users_24.svg
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.App.exe.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\输送线\输送线位置.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\输送线\db2.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\输送线\db1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\taskEventHandlers.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\startups.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\settings.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\routes.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\C001.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\alarms.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\sineva.png
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\WCS.APP.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\WCS.APP.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.BonusSkins.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.CodeParser.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Tutorials.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\HibernatingRhinos.Profiler.Appender.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Images.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraNavBar.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraRichEdit.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraGrid.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.frmCloseReasonDialog.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.frmMain.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.frmStarting.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.Properties.Resources.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.exe
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.Up2Date
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\install.ps1
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.nuspec
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\NLog.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.XML
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\icoConfig.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\devices_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\equalizer_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\help_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\historyTaskList_32.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\home_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\power_32.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\setting-config_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\system_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\taskManager_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\tasklist_32.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Ico\users_24.svg
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.App.exe.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\输送线\输送线位置.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\输送线\db2.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\输送线\db1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\taskEventHandlers.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\startups.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\settings.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\基本配置\routes.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\C001.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\系统配置\堆垛机\alarms.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\sineva.png
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\WCS.APP.exe
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\WCS.APP.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.BonusSkins.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.CodeParser.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Tutorials.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\HibernatingRhinos.Profiler.Appender.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\NLog.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\StackExchange.Redis.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\NHibernate.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Iesi.Collections.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\EPPlus.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.DemoData.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Images.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.Framework.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.Framework.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.Framework.dll.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Wcs.dll.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Data.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Office.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Utils.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraBars.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraLayout.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraNavBar.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraRichEdit.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\NLog.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\StackExchange.Redis.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\NHibernate.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Iesi.Collections.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\EPPlus.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\DevExpress.XtraGrid.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraNavBar.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraNavBar.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraNavBar.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraNavBar.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraRichEdit.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraRichEdit.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraRichEdit.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraRichEdit.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\de\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\es\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ja\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\bin\Debug\ru\DevExpress.XtraGrid.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.AssemblyReference.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.frmCloseReasonDialog.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.frmMain.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.frmStarting.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.Properties.Resources.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.GenerateResource.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.CoreCompileInputs.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.csproj.Up2Date
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.exe
+C:\Users\Sineva_CL\Desktop\WCS一体版本\WCS.DEVAPP\obj\Debug\WCS.APP.pdb

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework.Lock">
+  <class name="WCSLock" table="`WCSLocks`" dynamic-update="true"  batch-size="500">
+    <cache usage="read-write"/>
+	  <id name="LockId" column="`LockId`" type="Int32">
+		  <generator class="hilo">
+			  <param name="table">hilo_values</param>
+			  <param name="where">clazz='WCSLock'</param>
+			  <param name="column">next_hi</param>
+			  <param name="max_lo">5</param>
+		  </generator>
+	  </id>
+	  <component class="ActionInfo" name="ActionInfo">
+		  <property column="`TaskId`" name="TaskId" type="Int32"  not-null="true"/>
+		  <property column="`TaskCode`" name="TaskCode" type="String" not-null="true"/>
+		  <property column="`TaskStartLocation`" name="TaskStartLocation" type="String" not-null="true"/>
+		  <property column="`TaskEndLocation`" name="TaskEndLocation" type="String" not-null="true"/>
+		  <property column="`LogicMovementId`" name="LogicMovementId" type="Int32"  not-null="true"/>
+		  <property column="`LogicMovementTaskCode`" name="LogicMovementTaskCode" type="Int32" not-null="true"/>
+		  <property column="`LogicMovementStartLocation`" name="LogicMovementStartLocation" type="String" not-null="true"/>
+		  <property column="`LogicMovementLocation`" name="LogicMovementLocation" type="String" not-null="true"/>
+		  <property column="`ActionId`" name="ActionId" type="Int32"  not-null="true"/>
+		  <property column="`ActionTaskCode`" name="ActionTaskCode" type="Int32" not-null="true"/>
+		  <property column="`ActionStartLocation`" name="ActionStartLocation" type="String" not-null="true"/>
+		  <property column="`ActionEndLocation`" name="ActionEndLocation" type="String" not-null="true"/>
+		  <property column="`ActionDeviceName`" name="ActionDeviceName" type="String" not-null="true"/>
+	  </component>
+	  <component class="WCSLockInfo" name="LockInfo">
+		  <property column="`ParentLockTypes`" name="ParentLockType" type="ParentLockTypes"  not-null="true"/>
+		  <property column="`ChildLockTypes`" name="ChildLockType" type="ChildLockTypes" not-null="true"/>
+	  </component>
+	  <property name="LockDescription" type="String" column="`LockDescription`" length="500" />
+  </class>
+</hibernate-mapping>

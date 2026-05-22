@@ -1,0 +1,339 @@
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll.config
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.Caches.SysCache2.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.App.config
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.CraneDeviceUserInterface.resources
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.frmResumeCraneTask.resources
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc._CraneTaskTaskTypeFilterSettingsPluginWindow.resources
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.CopyComplete
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.Caches.SysCache2.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.App.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.CraneDeviceUserInterface.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.frmResumeCraneTask.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc._CraneTaskTaskTypeFilterSettingsPluginWindow.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.CopyComplete
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.Caches.SysCache2.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.App.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.CraneDeviceUserInterface.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.frmResumeCraneTask.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc._CraneTaskTaskTypeFilterSettingsPluginWindow.resources
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.GenerateResource.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本 - 副本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.Defa.9A23FE44.Up2Date
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\install.ps1
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.nuspec
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.XML
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.Caches.SysCache2.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.pdb
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.Framework.dll.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Wcs.dll.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Iesi.Collections.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NHibernate.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\NLog.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Runtime.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\System.Threading.Tasks.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\StackExchange.Redis.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\EPPlus.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraBars.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Utils.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Data.v18.1.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.App.config
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.AssemblyReference.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.CraneDeviceUserInterface.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.frmResumeCraneTask.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc._CraneTaskTaskTypeFilterSettingsPluginWindow.resources
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.GenerateResource.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.csproj.CoreCompileInputs.cache
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.Defa.9A23FE44.Up2Date
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.dll
+C:\Users\Sineva_CL\Desktop\WCS一体版本\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.Crane_yc\obj\Debug\Wcs.DefaultImplementCollection.Crane_yc.pdb

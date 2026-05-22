@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<输送线2位置 type="Wcs.DefaultImplementCollection.Conveyor.ConveyorLocationCollection, Wcs.DefaultImplementCollection.Conveyor" device="立库CV">
+	<location deviceCode="1501"  userCode="00-001-1501" region="立库CV"/>
+	<location deviceCode="1502"  userCode="00-001-1502" region="立库CV"/>
+	<location deviceCode="1503"  userCode="00-001-1503" region="立库CV"/>
+	<location deviceCode="1504"  userCode="00-001-1504" region="立库CV"/>
+	<location deviceCode="1505"  userCode="00-001-1505" region="立库CV"/>
+	<location deviceCode="1506"  userCode="00-001-1506" region="立库CV"/>
+	<location deviceCode="1508"  userCode="00-001-1508" region="立库CV"/>
+	<location deviceCode="1509"  userCode="00-001-1509" region="立库CV"/>
+	<location deviceCode="1510"  userCode="00-001-1510" region="立库CV"/>
+	<location deviceCode="1511"  userCode="00-001-1511" region="立库CV"/>
+	<location deviceCode="1512"  userCode="00-001-1512" region="立库CV"/>
+	<location deviceCode="1513"  userCode="00-001-1513" region="立库CV"/>
+	<location deviceCode="1514"  userCode="00-001-1514" region="立库CV"/>
+	
+</输送线2位置>

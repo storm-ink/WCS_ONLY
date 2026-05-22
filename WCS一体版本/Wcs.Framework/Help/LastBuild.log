@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.7.0" projectFile="I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Wcs.Framework.shfbproj" started="2013/7/27 17:25:08">
+<buildStep step="Initializing">
+Finding tools...
+Found Sandcastle tools in &#39;C:\Program Files\Sandcastle\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files\HTML Help Workshop\&#39;
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.dll
+    Found assembly &#39;I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.dll&#39;
+Source: I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.Framework.dll
+    Found assembly &#39;I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.Framework.dll&#39;
+Source: I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.Framework.XML
+Source: I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.xml
+
+Copying XML comments files
+    I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.Framework.XML -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Wcs.Framework.XML
+    I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\bin\Release\Wcs.xml -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Wcs.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (zh-CN, 中文(简体，中国))...
+SHFB: Warning BE0003: Sandcastle shared content for the &#39;zh-CN, 中文(简体，中国)&#39; language could not be found.  Using &#39;en-US, English (US)&#39; defaults.
+    Last step completed in 00:00:00.1570
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0120
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  MRefBuilder (v2.7.3.0)
+  Copyright ? 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Loaded 2 assemblies for reflection and 0 dependency assemblies.
+  Info: Wrote information on 8 namespaces, 203 types, and 1263 members
+  XslTransform (v2.7.3.0)
+  Copyright ? 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Applying XSL transformation &#39;C:\Program Files\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
+    Last step completed in 00:00:02.5221
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0120
+</buildStep>
+<buildStep step="ApplyVisibilityProperties">
+Applying visibility properties to reflection information file
+    9 attribute nodes removed
+    0 explicit interface implementations removed
+    4 local and base class EII elements removed
+    Last step completed in 00:00:00.1310
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  XslTransform (v2.7.3.0)
+  Copyright ? 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Applying XSL transformation &#39;C:\Program Files\Sandcastle\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Info: Applying XSL transformation &#39;C:\Program Files\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl&#39;.
+  XslTransform (v2.7.3.0)
+  Copyright ? 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Applying XSL transformation &#39;C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+    Last step completed in 00:00:02.7562
+</buildStep>
+<buildStep step="ModifyHelpTopicFilenames">
+Modifying help topic filenames in reflection information file
+    No changes required
+    Last step completed in 00:00:00.1730
+</buildStep>
+<buildStep step="CopyStandardContent">
+Copying standard help content...
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\adm.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\adm.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\adm_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\adm_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\adm_dev.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\adm_dev.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\adm_dev_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\adm_dev_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\alert_caution.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\alert_caution.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\alert_note.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\alert_note.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\alert_security.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\alert_security.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\big_adm.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\big_adm.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\big_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\big_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\big_dev.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\big_dev.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\big_kw.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\big_kw.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\box.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\box.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\Caution.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\Caution.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\CFW.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\CFW.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\collall.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\collall.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\collapse.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\collapse.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\collapse_all.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\collapse_all.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\copycode.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\copycode.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\copycodeHighlight.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\copycodeHighlight.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\dev.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\dev.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\dev_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\dev_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\dropdown.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\dropdown.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\dropdownHover.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\dropdownHover.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\drpdown.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\drpdown.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\drpdown_orange.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\drpdown_orange.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\drpdown_orange_up.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\drpdown_orange_up.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\drpup.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\drpup.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\exp.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\exp.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\expall.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\expall.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\expand_all.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\expand_all.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\filter1a.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\filter1a.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\filter1c.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\filter1c.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\footer.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\footer.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\gradient.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\gradient.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\greencheck.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\greencheck.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\greychck.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\greychck.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\header_prev_next.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\header_prev_next.jpg
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\header_sql_tutorial_blank.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\header_sql_tutorial_blank.jpg
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\header_sql_tutorial_logo.GIF -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\header_sql_tutorial_logo.GIF
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_adm.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_adm.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_adm_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_adm_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_adm_dev.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_adm_dev.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_adm_dev_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_adm_dev_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_dev.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_dev.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\kw_dev_arch.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\kw_dev_arch.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\LastChild.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\LastChild.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\load.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\load.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\load_hover.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\load_hover.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\note.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\note.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pencil.GIF -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pencil.GIF
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privclass.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privclass.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privdelegate.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privenum.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privenum.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privenumeration.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privevent.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privevent.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privextension.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privextension.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privfield.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privfield.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privinterface.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privmethod.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privproperty.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\privstructure.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protclass.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protclass.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protdelegate.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protenum.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protenum.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protenumeration.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protevent.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protevent.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protextension.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protextension.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protfield.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protfield.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protinterface.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protmethod.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protoperator.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protproperty.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\protstructure.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubclass.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubdelegate.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubenum.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubenum.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubenumeration.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubevent.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubextension.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubfield.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubinterface.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubmethod.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\puboperator.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubproperty.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\pubstructure.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\requirements1a.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\requirements1a.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\requirements1c.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\requirements1c.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\save.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\save.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\save_hover.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\save_hover.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\security.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\security.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\seealso1a.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\seealso1a.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\seealso1c.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\seealso1c.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\slMobile.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\static.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\static.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\icons\xna.gif -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\icons\xna.gif
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\CheckboxMenu.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\CheckboxMenu.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\CommonUtilities.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\CommonUtilities.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\Dropdown.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\Dropdown.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\EventUtilities.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\EventUtilities.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\script_feedBack.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\script_feedBack.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\script_manifold.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\script_manifold.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\scripts\SplitScreen.js -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\scripts\SplitScreen.js
+C:\Program Files\Sandcastle\\Presentation\VS2005\styles\Presentation.css -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\styles\Presentation.css
+C:\Program Files\Sandcastle\\Presentation\VS2005\styles\Whidbey\Presentation.css -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\styles\Whidbey\Presentation.css
+    Last step completed in 00:00:01.6681
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\abc.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\abc.jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\db1.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\db1.jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\db2.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\db2.jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\主任务(db1000).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\主任务(db1000).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\光电状态(db1022).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\光电状态(db1022).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\写_主任务(db1000).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\写_主任务(db1000).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\写_占位信息(db901).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\写_占位信息(db901).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\写_条码扫描结果.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\写_条码扫描结果.jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\写_穿梭车任务.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\写_穿梭车任务.jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\占位信息(db901).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\占位信息(db901).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\条码扫描结果(db803).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\条码扫描结果(db803).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\设备报警(db1021).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\设备报警(db1021).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\货位任务(db1002).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\货位任务(db1002).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\货位状态(db1020).jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\货位状态(db1020).jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\跨设备路径示例.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\跨设备路径示例.jpg
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\helpDoc\images\路径表_点位点_货位.jpg -&gt; I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\helpDoc\images\路径表_点位点_货位.jpg
+    Last step completed in 00:00:02.1581
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0030
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  XslTransform (v2.7.3.0)
+  Copyright ? 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Applying XSL transformation &#39;C:\Program Files\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:01.9631
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00.2230
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\sandcastle.config
+    Last step completed in 00:00:00.2490
+</buildStep>
+<buildStep step="BuildReferenceTopics">
+Building reference help topics...
+[C:\windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  BuildAssembler (v2.7.3.0)
+  Copyright ? 2006-2013, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved.
+  Info: Loading configuration...
+  Info: Processing topics...
+  Warn: ResolveReferenceLinksComponent2: [E:Wcs.WcsContext.Error] Unknown reference link target &#39;T:System.IO.ErrorEventHandler&#39;.
+  Warn: ResolveReferenceLinksComponent2: [E:Wcs.WcsContext.Error] Unknown reference link target &#39;T:System.IO.ErrorEventHandler&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.CompareResult`1] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.CompareResult`1] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.CompareResult`1] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.CompareResult`1] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.CompareResult`1.ToString] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.CompareResult`1.ToString] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.EquipmentAction.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.EquipmentAction.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.EquipmentAction.Compare] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.EquipmentActionSequence.Actions] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.EquipmentActionSequence.Actions] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.INHUnitOfWork.session] Unknown reference link target &#39;T:NHibernate.ISession&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.INHUnitOfWork.session] Unknown reference link target &#39;T:NHibernate.ISession&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.IWmsProxy.CompleteTask(DC2.WcsTaskInfo)] Unknown reference link target &#39;T:DC2.WcsTaskInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.IWmsProxy.CompleteTask(DC2.WcsTaskInfo)] Unknown reference link target &#39;T:DC2.WcsTaskInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.IWmsProxy.Request(DC2.WcsRequestInfo)] Unknown reference link target &#39;T:DC2.WcsRequestInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.IWmsProxy.Request(DC2.WcsRequestInfo)] Unknown reference link target &#39;T:DC2.WcsRequestInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.LogicMovement.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.LogicMovement.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.LogicMovement.Compare] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.LogicMovement.EquipmentActions] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.LogicMovement.EquipmentActions] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [F:Wcs.Framework.NHBackupServerUnitOfWork._factory] Unknown reference link target &#39;T:NHibernate.ISessionFactory&#39;.
+  Warn: ResolveReferenceLinksComponent2: [F:Wcs.Framework.NHBackupServerUnitOfWork._factory] Unknown reference link target &#39;T:NHibernate.ISessionFactory&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.NHBackupServerUnitOfWork.session] Unknown reference link target &#39;T:NHibernate.ISession&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.NHBackupServerUnitOfWork.session] Unknown reference link target &#39;T:NHibernate.ISession&#39;.
+  Warn: ResolveReferenceLinksComponent2: [F:Wcs.Framework.NHUnitOfWork._factory] Unknown reference link target &#39;T:NHibernate.ISessionFactory&#39;.
+  Warn: ResolveReferenceLinksComponent2: [F:Wcs.Framework.NHUnitOfWork._factory] Unknown reference link target &#39;T:NHibernate.ISessionFactory&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.NHUnitOfWork.session] Unknown reference link target &#39;T:NHibernate.ISession&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.NHUnitOfWork.session] Unknown reference link target &#39;T:NHibernate.ISession&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.OccupiedSignalInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.OccupiedSignalInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.OccupiedSignalInfo] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.OccupiedSignalInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.OccupiedSignalInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.OccupiedSignalInfo] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.OccupiedSignalInfo.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.OccupiedSignalInfo.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.OccupiedSignalInfo.Compare] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Request] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Request] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Request] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Request] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Request] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Request] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Request.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Request.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Request.Compare] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Request.ContainerCodes] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Request.ContainerCodes] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Task] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Task] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Task] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Task] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Task] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Task] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Task.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Task.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Task.Compare] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Task.ContainerCodes] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Task.ContainerCodes] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Task.Movements] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Task.Movements] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Task.Warnings] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [P:Wcs.Framework.Task.Warnings] Unknown reference link target &#39;T:Iesi.Collections.Generic.ISet`1&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.ConveyorElement] Unknown reference link target &#39;T:Wcs.Framework.LocationElement&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.LogicMovementSelectorElement] Unknown reference link target &#39;T:Wcs.Framework.LogicMovements.DefaultDeviceRouteToLogicMovementSelector&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.LogicMovementTypeElement] Unknown reference link target &#39;T:Wcs.Framework.LogicMovements.LogicMovement&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.RequestSignalHandlersSelection] Unknown reference link target &#39;M:Wcs.Framework.RequestSignalHandler.BeforeSave&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.RequestSignalHandlersSelection] Unknown reference link target &#39;M:Wcs.Framework.RequestSignalHandler.BeforeCancel&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.RequestSignalHandlersSelection] Unknown reference link target &#39;M:Wcs.Framework.RequestSignalHandler.Processing&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.RouteElement] Unknown reference link target &#39;M:Wcs.Framework.Devices.GetConvertibleCode&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.RouteElement] Unknown reference link target &#39;T:Wcs.Framework.Cfg.RoutesSelection&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Cfg.RouteElement] Unknown reference link target &#39;M:Wcs.Framework.Devices.Device.GetConvertibleCode&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.Comparable`1] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.Comparable`1] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.Comparable`1] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.Comparable`1] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.Comparable`1] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.Comparable`1] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.Comparable`1.Compare(`0)] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.Comparable`1.Compare(`0)] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.Comparable`1.Compare(`0)] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.Conveyor] Unknown reference link target &#39;T:Wcs.Framework.Devices.LockerInfo.Empty&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.Conveyor] Unknown reference link target &#39;T:Wcs.Framework.Devices.LockerInfo.Empty&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.ConveyorLocationState] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.CraneStatusInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.CraneStatusInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.CraneStatusInfo] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.CraneStatusInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.CraneStatusInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.CraneStatusInfo] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.CraneStatusInfo.#ctor(Wcs.Framework.CraneControl.LA)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.LA&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.CraneStatusInfo.#ctor(Wcs.Framework.CraneControl.LA)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.LA&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.CraneWorkModeKeyInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.CraneWorkModeKeyInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.CraneWorkModeKeyInfo] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.CraneWorkModeKeyInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.CraneWorkModeKeyInfo] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.CraneWorkModeKeyInfo] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Devices.CraneWorkModeKeyInfo.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Devices.CraneWorkModeKeyInfo.Compare] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Overload:Wcs.Framework.Devices.CraneWorkModeKeyInfo.Compare] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.Devices.Comparable&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.IDataComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.Devices.Comparable&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.Devices.Comparable&#39;.
+  Warn: ResolveReferenceLinksComponent2: [T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.IDataComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.Devices.LockerInfo.Empty&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.Device] Unknown reference link target &#39;T:Wcs.Framework.Devices.LockerInfo.Empty&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.Device.Lock(Wcs.Framework.Devices.LockerInfo)] Unknown reference link target &#39;T:Wcs.Framework.Devices.LockerInfo.Empty&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.Device.Unlock(Wcs.Framework.Devices.LockerInfo)] Unknown reference link target &#39;T:Wcs.Framework.Devices.LockerInfo.Empty&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.Location.Equals(System.Object)] Unknown reference link target &#39;T:Wcs.Framework.Devices.Location.SameAs&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.LocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.LocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.LocationCurrentTask] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.LocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.LocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.LocationCurrentTask] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.MachineAlarms] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.NetTransferObject] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.NetTransferObject.ToString] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Devices.NetTransferObject.ToString] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.OccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.OccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.OccupiedSignal] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.OccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.OccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.OccupiedSignal] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.OccupyStatus] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.OccupyStatus] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.OccupyStatus] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.OccupyStatus] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.OccupyStatus] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.OccupyStatus] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendClearLocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendClearLocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendClearLocationCurrentTask] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendClearLocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendClearLocationCurrentTask] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendClearLocationCurrentTask] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendOccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendOccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendOccupiedSignal] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendOccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendOccupiedSignal] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendOccupiedSignal] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.ComponentModel.DescriptionAttribute.Description&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendRgvTaskBlock] Unknown reference link target &#39;T:System.ComponentModel.DisplayNameAttribute.DisplayName&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.SendTaskBlock] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendTaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.SendTaskBlock] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.TaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.TaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.Devices.TaskBlock] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.TaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.TaskBlock] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.Devices.TaskBlock] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.ConveyorTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.ConveyorTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.ConveyorTransferAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.ConveyorTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.ConveyorTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.ConveyorTransferAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneAutomaticTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneAutomaticTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneAutomaticTransferAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneAutomaticTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneAutomaticTransferAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneAutomaticTransferAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneLoadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneLoadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneLoadAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneLoadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneLoadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneLoadAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneLoadAction.#ctor(Wcs.Framework.Devices.Device,System.Int32,System.Int16,Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneLoadAction.#ctor(Wcs.Framework.Devices.Device,System.Int32,System.Int16,Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneLoadAction.GetLoadDirection] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneLoadAction.GetLoadDirection] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneLoadAction.SetLoadDirection(Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneLoadAction.SetLoadDirection(Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneMoveToAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneMoveToAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneMoveToAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneMoveToAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneMoveToAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneMoveToAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneUnloadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneUnloadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.EquipmentActions.CraneUnloadAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneUnloadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneUnloadAction] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.EquipmentActions.CraneUnloadAction] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneUnloadAction.#ctor(Wcs.Framework.Devices.Device,System.Int32,System.Int16,Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneUnloadAction.#ctor(Wcs.Framework.Devices.Device,System.Int32,System.Int16,Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneUnloadAction.GetUnloadDirection] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneUnloadAction.GetUnloadDirection] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneUnloadAction.SetUnloadDirection(Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.EquipmentActions.CraneUnloadAction.SetUnloadDirection(Wcs.Framework.CraneControl.EForkLR)] Unknown reference link target &#39;T:Wcs.Framework.CraneControl.EForkLR&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Impl.DefaultConveyorNetPackageDecoder.Decode``1(System.Byte[])] Unknown reference link target &#39;T:Exception&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Impl.DefaultConveyorNetPackageDecoder.Get``1(System.Byte[])] Unknown reference link target &#39;T:Exception&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Impl.DefaultWmsProxy.CompleteTask(DC2.WcsTaskInfo)] Unknown reference link target &#39;T:DC2.WcsTaskInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Impl.DefaultWmsProxy.CompleteTask(DC2.WcsTaskInfo)] Unknown reference link target &#39;T:DC2.WcsTaskInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Impl.DefaultWmsProxy.Request(DC2.WcsRequestInfo)] Unknown reference link target &#39;T:DC2.WcsRequestInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.Impl.DefaultWmsProxy.Request(DC2.WcsRequestInfo)] Unknown reference link target &#39;T:DC2.WcsRequestInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.ConveyorTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.ConveyorTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.ConveyorTransferMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.ConveyorTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.ConveyorTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.ConveyorTransferMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.CraneAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.CraneAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.CraneAutomaticTransferMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.CraneAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.CraneAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.CraneAutomaticTransferMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.CraneHalfAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.CraneHalfAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [AllMembers.T:Wcs.Framework.LogicMovements.CraneHalfAutomaticTransferMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.CraneHalfAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.CraneHalfAutomaticTransferMovement] Unknown reference link target &#39;T:System.Collections.Generic.IComparer.Compare&#39;.
+  Warn: ResolveReferenceLinksComponent2: [Methods.T:Wcs.Framework.LogicMovements.CraneHalfAutomaticTransferMovement] Unknown reference link target &#39;T:System.Object.Equals&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.WmsServiceForWcs.IWcfWmsServiceForWcs.CompleteTask(DC2.WcsTaskInfo)] Unknown reference link target &#39;T:DC2.WcsTaskInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.WmsServiceForWcs.IWcfWmsServiceForWcs.CompleteTask(DC2.WcsTaskInfo)] Unknown reference link target &#39;T:DC2.WcsTaskInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.WmsServiceForWcs.IWcfWmsServiceForWcs.Request(DC2.WcsRequestInfo)] Unknown reference link target &#39;T:DC2.WcsRequestInfo&#39;.
+  Warn: ResolveReferenceLinksComponent2: [M:Wcs.Framework.WmsServiceForWcs.IWcfWmsServiceForWcs.Request(DC2.WcsRequestInfo)] Unknown reference link target &#39;T:DC2.WcsRequestInfo&#39;.
+  Info: Processed 1898 topic(s)
+  Info: 280 warning(s)
+  Diagnostic: CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 15 of 15.
+  Diagnostic: CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 3 of 30.
+    Last step completed in 00:00:28.3666
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0160
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+Sandcastle Help File Builder, version 1.9.7.0
+Copyright ? 2006-2013, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;2052&#39;, code page &#39;936&#39;, encoding charset &#39;gb2312&#39;.
+
+Processing Help 1 files in I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1
+Processed 1898 HTML files
+Sorting keywords and generating See Also indices
+Saving HTML Help 1 keyword index to I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Wcs.Framework.hhk
+Saving HTML Help 1 table of contents to I:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Wcs.Framework.hhc
+    Last step completed in 00:00:04.1662
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating HTML Help 1 table of contents file...
+    Last step completed in 00:00:00.0020
+</buildStep>
+<buildStep step="GenerateHelpFileIndex">
+Generating HTML Help 1 index file...
+    Last step completed in 00:00:00.0050
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Generating HTML Help 1 project file...
+    Last step completed in 00:00:00.1900
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Compiling HTML Help 1 file...
+[C:\windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  Microsoft HTML Help Compiler 4.74.8702
+  
+  
+  
+  Compiling i:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\Wcs.Framework.chm
+  
+  
+  
+  
+  
+  Compile time: 0 minutes, 30 seconds
+  
+  1,900	Topics
+  
+  26,074	Local links
+  
+  6,661	Internet links
+  
+  0	Graphics
+  
+  
+  
+  
+  
+  Created i:\工作\项目\Wcs2\Wcs\branches\003\Wcs.Framework\Help\Working\Output\HtmlHelp1\Wcs.Framework.chm, 3,934,847 bytes
+  
+  Compression decreased file by 18,346,680 bytes.
+  
+    Last step completed in 00:00:34.3350
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:01.9141
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 07/27/2013 05:26 下午.  Total time: 00:01:21.2746
+
+</buildStep>
+</shfbBuild>

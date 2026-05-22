@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Wcs.Framework</id>
+    <version>2.1.0.21899</version>
+    <title>Wcs.Framework</title>
+    <authors>aben</authors>
+    <owners>aben</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Description</description>
+    <dependencies>
+      <dependency id="Wcs" version="2.1.0.21900" />
+    </dependencies>
+  </metadata>
+</package>

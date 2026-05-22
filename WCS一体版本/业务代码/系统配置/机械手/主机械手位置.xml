@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<机械手位置 type="Wcs.DefaultImplementCollection.Robot.RobotLocationCollection, Wcs.DefaultImplementCollection.Robot" device="主机械手">
+	<location isWildcard="true"/>
+	
+	<location deviceCode="11"  userCode="ROBOT-01-11" />
+	<location deviceCode="22"  userCode="ROBOT-01-22" />
+	<location deviceCode="33"  userCode="ROBOT-01-33" />
+	<location deviceCode="44"  userCode="ROBOT-01-44" />
+
+	
+</机械手位置>

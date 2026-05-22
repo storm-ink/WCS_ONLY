@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<输送线位置 type="Wcs.DefaultImpls.Conveyor.ConveyorLocationCollection, Wcs.DefaultImpls" device="输送线1">
+  <!--<location deviceCode="100"  userCode="00-001-100"/>-->
+</输送线位置>

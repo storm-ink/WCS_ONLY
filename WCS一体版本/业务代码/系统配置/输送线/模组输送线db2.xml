@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<receiverEncoding>
+  <!--主任务信息-->
+	<collection type="Wcs.DefaultImpls.Conveyor.TaskNetTransferObject, Wcs.DefaultImpls" blockBytes="22" itemCount="45">
+		<property name="HandShake" index="0" size="2" type="UInt16" />
+		<property name="AssignmentID" index="2" size="4" type="UInt32" />
+		<property name="TUID" index="6" size="2" type="UInt16" />
+		<property name="IO_Data" index="8" size="2" type="UInt16" />
+		<property name="RotingNo" index="10" size="2" type="UInt16" />
+		<property name="StartMotorNo" index="12" size="2" type="UInt16" />
+		<property name="DestinationNo" index="14" size="2" type="UInt16" />
+		<property name="TaskStatus" index="16" size="2" type="UInt16" />
+		<property name="Data_ID" index="18" size="4" type="UInt32" />
+	</collection>
+  <!--货位当前任务-->
+	<collection type="Wcs.DefaultImpls.Conveyor.LocationTaskNetTransferObject, Wcs.DefaultImpls" blockBytes="10" itemCount="45">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="TaskNo" index="2" size="4" type="UInt32" />
+		<property name="TUID" index="6" size="2" type="UInt16" />
+		<property name="Str_Rcv_X" index="8.0" size="1" type="Boolean" />
+		<property name="Fnh_Rcv_X" index="8.1" size="1" type="Boolean" />
+		<property name="Rqs_Snt" index="8.2" size="1" type="Boolean" />
+		<property name="Rcv_Rdy" index="8.3" size="1" type="Boolean" />
+		<property name="Str_Rcv_Y" index="8.4" size="1" type="Boolean" />
+		<property name="Fnh_Rcv_Y" index="8.5" size="1" type="Boolean" />
+	</collection>
+  <!--货位状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.LocationNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="45">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="Status" index="2" size="2" type="UInt16" />
+	</collection>
+  <!--报警状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.AlarmNetTransferObject, Wcs.DefaultImpls" blockBytes="6" itemCount="45">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="Manual" index="2.0" size="1" type="Boolean" />
+		<property name="Isolator" index="2.1" size="1" type="Boolean" />
+		<property name="Breaker" index="2.2" size="1" type="Boolean" />
+		<property name="Photocell" index="2.3" size="1" type="Boolean" />
+		<property name="RunOvertime" index="2.4" size="1" type="Boolean" />
+		<property name="OccupyOvertime" index="2.5" size="1" type="Boolean" />
+		<property name="TaskNoGoods" index="2.6" size="1" type="Boolean" />
+		<property name="MotorUseStatus" index="3" size="1" type="Byte" />
+		<property name="X_MotorVAF" index="4.0" size="1" type="Boolean" />
+		<property name="Y_MotorVAF" index="4.1" size="1" type="Boolean" />
+		<property name="X_MotorContactor" index="4.2" size="1" type="Boolean" />
+		<property name="X_MotorBraker" index="4.3" size="1" type="Boolean" />
+		<property name="Y_MotorContactor" index="4.4" size="1" type="Boolean" />
+		<property name="Y_MotorBraker" index="4.5" size="1" type="Boolean" />
+		<property name="Lift_MotorContactor" index="4.6" size="1" type="Boolean" />
+		<property name="Lift_MotorBraker" index="4.7" size="1" type="Boolean" />
+		<property name="Spare" index="5" size="1" type="Byte" />
+	</collection>
+  <!--光电状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject, Wcs.DefaultImpls" blockBytes="6" itemCount="45">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="PhocllUseStatus" index="2" size="2" type="UInt16" />
+		<property name="FroProPotocell" index="4.0" size="1" type="Boolean" />
+		<property name="FroPosPotocell" index="4.1" size="1" type="Boolean" />
+		<property name="FroSloPotocell" index="4.2" size="1" type="Boolean" />
+		<property name="AftProPotocell" index="4.3" size="1" type="Boolean" />
+		<property name="AftPosPotocell" index="4.4" size="1" type="Boolean" />
+		<property name="AftSloPotocell" index="4.5" size="1" type="Boolean" />
+		<property name="UpPotocell" index="4.6" size="1" type="Boolean" />
+		<property name="DownPotocell" index="4.7" size="1" type="Boolean" />
+		<property name="UpSloPotocell" index="5.0" size="1" type="Boolean" />
+		<property name="DownSloPotocell" index="5.1" size="1" type="Boolean" />
+		<property name="LoadPotocell" index="5.2" size="1" type="Boolean" />
+	</collection>
+  <!--占位状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject, Wcs.DefaultImpls" blockBytes="8" itemCount="4">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HandShake" index="2" size="2" type="UInt16" />
+		<property name="IO_Data" index="4" size="2" type="UInt16" />
+		<property name="Data_ID" index="6" size="2" type="UInt16" />
+	</collection>
+  <!--简单占位-->
+	<collection type="Wcs.DefaultImpls.Conveyor.SimpleHoldSignalNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="8">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HandShake" index="2" size="2" type="UInt16" />
+	</collection>
+  <!--外形检测结果-->
+	<collection type="Wcs.DefaultImpls.Conveyor.ShapeCheckTransferObject, Wcs.DefaultImpls" blockBytes="8" itemCount="3">
+		<property name="ShapeCheckNO" index="0" size="2" type="UInt16" />
+		<property name="ShapeStatus" index="2" size="2" type="UInt16" />
+		<property name="ShapeType" index="4" size="2" type="UInt16" />
+		<property name="Left_Over" index="6.0" size="1" type="Boolean" />
+		<property name="Right_Over" index="6.1" size="1" type="Boolean" />
+		<property name="Front_Over" index="6.2" size="1" type="Boolean" />
+		<property name="Back_Over"  index="6.3" size="1" type="Boolean" />
+		<property name="High_Over"  index="6.4" size="1" type="Boolean" />
+	</collection>
+  <!--叠盘机状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.StackerNetTransferObject, Wcs.DefaultImpls" blockBytes="10" itemCount="4">
+		<property name="StackerNo" index="0" size="2" type="UInt16" />
+		<property name="Stacker_Actual_Number" index="2" size="2" type="UInt16" />
+		<property name="High_Position_Phocll" index="4.0" size="1" type="Boolean" />
+		<property name="Mid_Position_Phocll" index="4.1" size="1" type="Boolean" />
+		<property name="Low_Position_Phocll" index="4.2" size="1" type="Boolean" />
+		<property name="Pallet_Full_Phocll" index="4.3" size="1" type="Boolean" />
+		<property name="Fork_Extend_Phocll_L" index="4.4" size="1" type="Boolean" />
+		<property name="Fork_Extend_Phocll_R" index="4.5" size="1" type="Boolean" />
+		<property name="Fork_Retract_Phocll_L" index="4.6" size="1" type="Boolean" />
+		<property name="Fork_Retract_Phocll_R" index="4.7" size="1" type="Boolean" />
+		<property name="Error_Configure" index="5.0" size="1" type="Boolean" />
+		<property name="LiftingMotor_Breaker" index="5.1" size="1" type="Boolean" />
+		<property name="LiftingMotor_VF_Alarm" index="5.2" size="1" type="Boolean" />
+		<property name="LiftingMotor_Contactor" index="5.3" size="1" type="Boolean" />
+		<property name="LiftingMotor_Braker" index="5.4" size="1" type="Boolean" />
+		<property name="ForkMotor_Breaker" index="5.5" size="1" type="Boolean" />
+		<property name="ForkMotor_Extend_Contactor" index="5.6" size="1" type="Boolean" />
+		<property name="ForkMotor_Retract_Contactor" index="5.7" size="1" type="Boolean" />
+		<property name="ForkMotor_Braker" index="6.0" size="1" type="Boolean" />
+		<property name="EStop" index="6.1" size="1" type="Boolean" />
+		<property name="SafeDoor" index="6.2" size="1" type="Boolean" />
+		<property name="RunOvertime_Low" index="6.3" size="1" type="Boolean" />
+		<property name="RunOvertime_Mid" index="6.4" size="1" type="Boolean" />
+		<property name="RunOvertime_High" index="6.5" size="1" type="Boolean" />
+		<property name="RunOvertime_Extend" index="6.6" size="1" type="Boolean" />
+		<property name="RunOvertime_Retract" index="6.7" size="1" type="Boolean" />
+		<property name="RunOvertime_Full" index="7.0" size="1" type="Boolean" />
+		<property name="Condition_OK" index="7.1" size="1" type="Boolean" />
+	</collection>
+  
+	<collection type="Wcs.DefaultImpls.Conveyor.ScanningAndWeighingTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="8">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="ScanningStatus" index="2" size="1" type="Byte" />
+		<property name="WeighingStatus" index="3" size="1" type="Byte" />
+	</collection>
+	<!--RGV和CV的交互任务 blockBytes="4" itemCount="5"-->
+	<collection type="Wcs.DefaultImpls.Conveyor.RGVSendCVMessageNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="5">
+		<property name="DeviceNo" index="0" size="2" type="UInt16" />
+		<property name="Error_Configuration" index="2.0" size="1" type="Boolean" />
+		<property name="Error_Communication" index="2.1" size="1" type="Boolean" />
+		<property name="Error_DataBlock" index="2.2" size="1" type="Boolean" />
+	</collection>
+	<!--堆垛机和CV的交互任务 blockBytes="4" itemCount="9"-->
+	<collection type="Wcs.DefaultImpls.Conveyor.CraneSendCVMessageNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="9">
+		<property name="DeviceNo" index="0" size="2" type="UInt16" />
+		<property name="Error_Configuration" index="2.0" size="1" type="Boolean" />
+		<property name="Error_Communication" index="2.1" size="1" type="Boolean" />
+		<property name="Error_DataBlock" index="2.2" size="1" type="Boolean" />
+	</collection>
+	<!--RGV和CV的交互信号 blockBytes="6" itemCount="38"-->
+	<collection type="Wcs.DefaultImpls.Conveyor.CVSendRGVMessageNetTransferObject, Wcs.DefaultImpls" blockBytes="6" itemCount="38">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="DeviceNo" index="2" size="2" type="UInt16" />
+		<property name="Alarm_Not_PosNo" index="4.0" size="1" type="Boolean" />
+		<property name="Alarm_Device_Req" index="4.1" size="1" type="Boolean" />
+		<property name="Alarm_Device_MotorRun" index="4.2" size="1" type="Boolean" />
+		<property name="Alarm_Device_Rcv" index="4.3" size="1" type="Boolean" />
+		<property name="Alarm_Device_Fnh" index="4.4" size="1" type="Boolean" />
+	</collection>
+	<!--堆垛机和CV的交互信号 blockBytes="6" itemCount="28"-->
+	<collection type="Wcs.DefaultImpls.Conveyor.CVSendCraneMessageNetTransferObject, Wcs.DefaultImpls" blockBytes="6" itemCount="28">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="DeviceNo" index="2" size="2" type="UInt16" />
+		<property name="Alarm_Not_PosNo" index="4.0" size="1" type="Boolean" />
+		<property name="Alarm_Device_Req" index="4.1" size="1" type="Boolean" />
+		<property name="Alarm_Device_MotorRun" index="4.2" size="1" type="Boolean" />
+		<property name="Alarm_Device_Rcv" index="4.3" size="1" type="Boolean" />
+		<property name="Alarm_Device_Fnh" index="4.4" size="1" type="Boolean" />
+	</collection>
+	<!--远程控制-->
+	<collection type="Wcs.DefaultImpls.Conveyor.RemoteControlNetTransferObject, Wcs.DefaultImpls" blockBytes="6" itemCount="6">
+		<property name="AreaNo" index="0" size="2" type="UInt16" />
+		<property name="DateID" index="2" size="2" type="UInt16" />
+		<property name="Start" index="4.0" size="1" type="Boolean" />
+		<property name="Stop" index="4.1" size="1" type="Boolean" />
+		<property name="Reset" index="4.2" size="1" type="Boolean" />
+	</collection>
+	<!--安全门状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.SafeDoorNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="3">
+		<property name="SafeDoorNo" index="0" size="2" type="UInt16" />
+		<property name="SafeDoorStatus" index="2.0" size="1" type="Boolean" />
+	</collection>
+	<!--旋转升降输送机状态-->
+	<collection type="Wcs.DefaultImpls.Conveyor.AlivePlatformNetTransferObject, Wcs.DefaultImpls" blockBytes="4" itemCount="3">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="HomePos" index="2" size="2" type="UInt16" />
+	</collection>
+
+  <!--扫码称重结果-->
+	<collection type="Wcs.DefaultImpls.Conveyor.ScannerAndWeightNetTransferObject, Wcs.DefaultImpls" blockBytes="42" itemCount="3">
+		<property name="PosNo" index="0" size="2" type="UInt16" />
+		<property name="BarCode" index="2" size="20" type="String" />
+		<property name="Weight" index="22" size="20" type="String" />
+	</collection>
+</receiverEncoding>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.FrameworkExtend" namespace="Wcs.FrameworkExtend">
+	<class name="PreTask" table="`PreTasks`" dynamic-update="true"  batch-size="500" discriminator-value="PreTask">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='PreTasks'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<discriminator column="`discriminator`" length="255" type="String" not-null="false" />
+		<property name="TaskCode" type="String" length="50" column="`TaskCode`" unique="true" />
+		<property name="MasterTaskCode" type="String" length="50" column="`MasterTaskCode`" />
+		<property name="Source" type="Wcs.Framework.TaskSource, Wcs.Framework" column="`Source`" not-null="true" />
+		<component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="StartLocation">
+			<property column="`StartLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`StartLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="EndLocation">
+			<property column="`EndLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`EndLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`EndLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`EndLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<property name="Status" column="`Status`" type="Wcs.Framework.TaskStatus, Wcs.Framework" not-null="true" />
+		<property name="BizType" column="BizType" type="Wcs.Framework.TaskBizType, Wcs.Framework" not-null="true" />
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="StartedAt" type="DateTime" column="`StartedAt`" />
+		<property name="FinishedAt" type="DateTime" column="`FinishedAt`" />
+		<property name="Description" type="String" column="`Description`"/>
+		<property name="Priority" type="Int32" column="`Priority`" not-null="true" />
+		<property name="WcsPriority" type="Int32" column="`WcsPriority`" not-null="true" />
+		<property name="ManualPriority" type="Boolean" column="`ManualPriority`" not-null="true" />
+		<property name="TaskType" type="String" column="`TaskType`" not-null="false" length="25" />
+		<property name="ContainerCodes" type="String" column="`ContainerCodes`"/>
+		<property name="AdditionalInfo" type="StringClob" column="`AdditionalInfo`"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata>
+    <id>Wcs.App</id>
+    <version>2.1.0.22071</version>
+    <title>Wcs主应用程序</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <licenseUrl>http://www.gen-song.net/license</licenseUrl>
+    <projectUrl>http://www.gen-song.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wcs主应用程序可执行文件</description>
+    <dependencies>
+      <dependency id="Wcs.Framework" version="2.1.0.21899" />
+    </dependencies>
+    <references>
+      <group targetFramework=".NETFramework4.0">
+        <reference file="HibernatingRhinos.Profiler.Appender.dll" />
+      </group>
+    </references>
+  </metadata>
+</package>

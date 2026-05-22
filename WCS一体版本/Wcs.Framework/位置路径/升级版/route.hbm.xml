@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+	<class name="RouteHead" table="`RouteHead`" dynamic-update="true"  batch-size="500" discriminator-value="Task">
+		<cache usage="read-write"/>
+		<id name="HeadID" column="`HeadID`" type="Int32"/>
+		<property name="ProjectCode" type="String" length="100" column="`ProjectCode`" not-null="true" />
+		<property name="ProjectName" type="String" length="100" column="`ProjectName`" not-null="true" />
+		<property name="Id" type="Int32" column="`Id`" not-null="true" />
+		<property name="No" type="Int32" column="`No`" not-null="true" />
+		<property name="Direction" type="String" length="100" column="`Direction`" not-null="true" />
+		<property name="Device" type="String" length="100" column="`Device`" not-null="true" />
+		<property name="RouteVsActionRelation" column="`RouteVsActionRelation`" type="RouteVsActionRelations" not-null="true" />
+		<property name="AllowStartFromMidway" type="Boolean" column="`AllowStartFromMidway`" not-null="true" />
+		<property name="Group" type="String" length="100" column="`Group`" not-null="true" />
+		<property name="PathOnlyStarts" type="String" length="500" column="`PathOnlyStarts`" not-null="true" />
+		<property name="PathOnlyEnds" type="String" length="500" column="`PathOnlyEnds`" not-null="true" />
+		<set name="Details" table="Details" inverse="true" lazy="false" cascade="all-delete-orphan" batch-size="500">
+			<key column="`Id`" not-null="true"/>
+			<one-to-many class="RouteDetail"/>
+		</set>
+		<set name="Relations" table="Relations" inverse="true" lazy="false" cascade="all-delete-orphan" batch-size="500">
+			<key column="`Id`" not-null="true"/>
+			<one-to-many class="RouteRelation"/>
+		</set>
+		<set name="Locks" table="Locks" inverse="true" lazy="false" cascade="all-delete-orphan" batch-size="500">
+			<key column="`Id`" not-null="true"/>
+			<one-to-many class="RouteLock"/>
+		</set>
+	</class>
+
+	<class name="RouteDetail" table="RouteDetail" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="DetailID" column="`DetailID`" type="Int32"/>
+		<property name="Id" column="`Id`" type="Int32" not-null="false" />
+		<property name="Path" column="`Path`" type="String" not-null="true" />
+		<property name="Device" column="`Device`" type="String" not-null="true" />
+	</class>
+
+	<class name="RouteRelation" table="RouteRelation" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="RelationID" column="`RelationID`" type="Int32"/>
+		<property name="Id" column="`Id`" type="Int32" not-null="true" />
+		<property name="Adjoins" column="`Adjoins`" type="Int32" not-null="true" />
+	</class>
+
+	<class name="RouteLock" table="RouteLock" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='RouteLock'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<property name="ActionId" column="`ActionId`" type="Int32" not-null="true" />
+		<property name="RouteHeadId" column="`RouteHeadId`" type="Int32" not-null="true" />
+	</class>
+
+	<class name="RegionLock" table="RegionLock" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='RouteLock'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<property name="RegionName" column="`RegionName`" type="String" length="50" not-null="true" />
+		<property name="TaskCode" column="`TaskCode`" type="String" length="50" not-null="true" />
+		<property name="CheckDeviceCode" column="`CheckDeviceCode`" type="String" length="50" not-null="true" />
+		<property name="CheckDeviceCodeType" column="`CheckDeviceCodeType`" type="String" length="50" not-null="true" />
+	</class>
+
+	<class name="Keeping" table="Keeping" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="UserCode" column="`UserCode`" type="String"/>
+		<property name="IsEmpty" column="`IsEmpty`" type="Boolean" not-null="true" />
+		<property name="TaskId" column="`TaskId`" type="Int32"/>
+		<set name="ContainerCodes" table="KeepingContainerCodes" lazy="false" cascade="all-delete-orphan" batch-size="500" >
+			<key column="`UserCode`" not-null="true"/>
+			<element column="`ContainerCode`" length="50" not-null="true" type="String" />
+		</set>
+	</class>
+</hibernate-mapping>

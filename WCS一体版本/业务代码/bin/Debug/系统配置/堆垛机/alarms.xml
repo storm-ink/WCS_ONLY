@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<alarms>
+  <alarm type="货物尺寸错误" code="1030" name="货物左超差">
+    <description>
+      1) 检查货物尺寸;
+
+      2) 检查外形检测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 排除超差故障后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      4) 将地操切换到 'AUTO', 并点 回原点;
+
+      5) 堆垛机回到原点后, 点 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="货物尺寸错误" code="1031" name="货物右超差">
+    <description>
+      1) 检查货物尺寸;
+
+      2) 检查外形检测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 排除超差故障后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      4) 将地操切换到 'AUTO', 并点 回原点;
+
+      5) 堆垛机回到原点后, 点 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="货物尺寸错误" code="1032" name="货物前超差">
+    <description>
+      1) 检查货物尺寸;
+
+      2) 检查外形检测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 排除超差故障后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      4) 将地操切换到 'AUTO', 并点 回原点;
+
+      5) 堆垛机回到原点后, 点 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="货物尺寸错误" code="1033" name="货物后超差">
+    <description>
+      1) 检查货物尺寸;
+
+      2) 检查外形检测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 排除超差故障后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      4) 将地操切换到 'AUTO', 并点 回原点;
+
+      5) 堆垛机回到原点后, 点 重新开始;
+    </solution>
+  </alarm>
+  <!--<alarm type="货物尺寸错误" code="1034" name="货物高位超差">
+    <description>
+      1) 检查货物尺寸;
+
+      2) 检查外形检测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 排除超差故障后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      4) 将地操切换到 'AUTO', 并点 回原点;
+
+      5) 堆垛机回到原点后, 点 重新开始;
+    </solution>
+  </alarm>-->
+  <alarm type="货物尺寸错误" code="1035" name="货物高位超差">
+    <description>
+      1) 检查货物尺寸;
+
+      2) 检查外形检测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 排除超差故障后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      4) 将地操切换到 'AUTO', 并点 回原点;
+
+      5) 堆垛机回到原点后, 点 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="出入货错误" code="1050" name="取货时货叉上有货">
+    <description>
+      1) 检查载货台上货物位置是否正确;
+
+      2) 检查载货台上货物探测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 判断堆垛机位置是否正确;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+    </solution>
+  </alarm>
+  <alarm type="出入货错误" code="1051" name="入货时货叉上无货">
+    <description>
+      1) 检查载货台上货物位置是否正确;
+
+      2) 检查载货台上货物探测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 判断堆垛机位置是否正确;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+    </solution>
+  </alarm>
+
+  <alarm type="无货取货错误" code="1060" name="取货时左货格无货">
+    <description>
+      1) 检查货架上货物位置是否正确;
+
+      2) 检查货物探测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 判断堆垛机位置是否正确;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+    </solution>
+  </alarm>
+  <alarm type="无货取货错误" code="1061" name="取货时右货格无货">
+    <description>
+      1) 检查货架上货物位置是否正确;
+
+      2) 检查货物探测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 判断堆垛机位置是否正确;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+    </solution>
+  </alarm>
+
+  <alarm type="重复货格" code="1062" name="入货时左货格有货">
+    <description>
+      1) 检查货架上货物位置是否正确;
+
+      2) 检查货物探测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 判断堆垛机位置是否正确;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+    </solution>
+  </alarm>
+  <alarm type="重复货格" code="1063" name="入货时右货格有货">
+    <description>
+      1) 检查货架上货物位置是否正确;
+
+      2) 检查货物探测传感器是否正常;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 判断堆垛机位置是否正确;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+    </solution>
+  </alarm>
+
+  <alarm type="8BIT通讯错误" code="1070" name="8BIT互锁通讯失败">
+    <description>
+      1) 检查堆垛机 8bit 通讯器是否正确;
+
+      2) 检查输送机 8bit 通讯器是否正确;
+    </description>
+    <solution>
+      1) 按下地操紧急停止, 然后松开紧急停止按钮;
+
+      2) 将堆垛机运行至原点;
+    </solution>
+  </alarm>
+
+  <alarm type="紧急停止开关ON" code="1071" name="紧急开关被按下">
+    <description>
+      1) 检查各紧急停止开关是否正常;
+    </description>
+    <solution>
+      1) 将紧急停止开关松开;
+    </solution>
+  </alarm>
+  <alarm type="紧急停止开关ON" code="1072" name="紧急开关被按下">
+    <description>
+      1) Wcs终端发送急停;
+    </description>
+    <solution>
+      1) Wcs终端取消急停;
+    </solution>
+  </alarm>
+
+  <alarm type="行走极限保护" code="1200" name="行走前进极限">
+    <description>
+      1) 检查极限开关是否良好;
+    </description>
+    <solution>
+      1) 手动方式离开极限位置, 并到定位到某一列, 用地操(或者手动方式)将堆垛机运行至原点;
+    </solution>
+  </alarm>
+  <alarm type="行走极限保护" code="1201" name="行走后退极限">
+    <description>
+      1) 检查极限开关是否良好;
+    </description>
+    <solution>
+      1) 手动方式离开极限位置, 并到定位到某一列, 用地操(或者手动方式)将堆垛机运行至原点;
+    </solution>
+  </alarm>
+
+  <alarm type="软件极限保护" code="1203" name="接收列超">
+    <description>
+      1) 检查接受到列或层数超过最大列;
+    </description>
+    <solution>
+      1) 按下地操紧急停止, 然后松开紧急停止按钮, 将堆垛机运行至原点;
+    </solution>
+  </alarm>
+  <alarm type="软件极限保护" code="1204" name="接收层超">
+    <description>
+      1) 检查接受到列或层数超过最大列;
+    </description>
+    <solution>
+      1) 按下地操紧急停止, 然后松开紧急停止按钮, 将堆垛机运行至原点;
+    </solution>
+  </alarm>
+
+  <alarm type="行走错误" code="1270" name="行走停止位置错">
+    <description>
+      1) 检查认址光电开关是否在认址片位置;
+      2) 检查机械部分有无卡住, 变频器是否报警, 制动器是否完全放开;
+
+      3) 检查编码器及连线;
+
+      4) 检查激光测距是否被挡;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="行走错误" code="1290" name="行走超时">
+    <description>
+      1) 检查认址光电开关是否在认址片位置;
+
+      2) 检查机械部分有无卡住, 变频器是否报警, 制动器是否完全放开;
+
+      3) 检查编码器及连线;
+
+      4) 检查激光测距是否被挡;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="变频器故障" code="1320" name="行走变频器故障">
+    <description>
+      1) 检查堆垛机电源;
+
+      2) 检查堆垛机紧急停止按钮是否打开;
+    </description>
+    <solution>
+      1) 排除故障后, 给堆垛机供电;
+
+      2) 堆垛机左下方状态变成初始化后, 点击 回原点, 堆垛机低速自动回原点;
+
+      3) 堆垛机回原点后如果有任务点重新开始;
+    </solution>
+  </alarm>
+  <alarm type="变频器故障" code="1321" name="货叉变频器故障">
+    <description>
+      1) 检查堆垛机电源;
+
+      2) 检查堆垛机紧急停止按钮是否打开;
+    </description>
+    <solution>
+      1) 排除故障后, 给堆垛机供电;
+
+      2) 堆垛机左下方状态变成初始化后, 点击 回原点, 堆垛机低速自动回原点;
+
+      3) 堆垛机回原点后如果有任务点重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="行走错误" code="1340" name="激光测距被遮挡">
+    <description>
+      1) 检查认址光电开关是否在认址片位置;
+      2) 检查机械部分有无卡住, 变频器是否报警, 制动器是否完全放开;
+
+      3) 检查编码器及连线;
+
+      4) 检查激光测距是否被挡;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="升降极限保护" code="1400" name="升降上升极限">
+    <description>
+      1) 检查极限开关是否良好;
+    </description>
+    <solution>
+      1) 手动方式离开极限位置, 用地操(或者手动方式)将堆垛机运行至原点;
+    </solution>
+  </alarm>
+  <alarm type="升降极限保护" code="1401" name="升降下降极限">
+    <description>
+      1) 检查极限开关是否良好;
+    </description>
+    <solution>
+      1) 手动方式离开极限位置, 用地操(或者手动方式)将堆垛机运行至原点;
+    </solution>
+  </alarm>
+
+  <alarm type="升降错误" code="1420" name="提升停止位置错误">
+    <description>
+      1) 检查认址光电开关是否在认址片位置;
+
+      2) 检查机械部分有无卡住, 变频器是否报警, 制动器是否完全放开, 货物是否超重;
+
+      3) 检查编码器及连线;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="升降错误" code="1490" name="提升超时">
+    <description>
+      1) 检查认址光电开关是否在认址片位置;
+
+      2) 检查机械部分有无卡住, 变频器是否报警, 制动器是否完全放开, 货物是否超重;
+
+      3) 检查编码器及连线;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="变频器故障" code="1520" name="提升变频器故障">
+    <description>
+      1) 检查堆垛机电源;
+
+      2) 检查堆垛机紧急停止按钮是否打开;
+    </description>
+    <solution>
+      1) 排除故障后, 给堆垛机供电;
+
+      2) 堆垛机左下方状态变成初始化后, 点击 回原点, 堆垛机低速自动回原点;
+
+      3) 堆垛机回原点后如果有任务点重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="升降错误" code="1540" name="提升编码器错误">
+    <description>
+      1) 检查认址光电开关是否在认址片位置;
+
+      2) 检查机械部分有无卡住, 变频器是否报警, 制动器是否完全放开, 货物是否超重;
+
+      3) 检查编码器及连线;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="升降极限保护" code="1550" name="松绳保护">
+    <description>
+      1) 检查极限开关是否良好;
+    </description>
+    <solution>
+      1) 手动方式离开极限位置, 用地操(或者手动方式)将堆垛机运行至原点;
+    </solution>
+  </alarm>
+
+  <alarm type="叉位置错误" code="1611" name="列运行货叉不在中位">
+    <description>
+      1) 检查货叉中位开关是否良好;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="叉位置错误" code="1612" name="层运行货叉不在中位">
+    <description>
+      1) 检查货叉中位开关是否良好;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="伸叉错误" code="1740" name="货叉编码器错误">
+    <description>
+      1) 检查货叉编码器及连线;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+  <alarm type="伸叉错误" code="1750" name="货叉运行超时">
+    <description>
+      1) 检查货叉编码器及连线;
+    </description>
+    <solution>
+      1) 将地操切换到 'MANUAL', 拔出钥匙;
+
+      2) 进入巷道将钥匙插入堆垛机控制面板, 切换到 'MANUAL';
+
+      3) 手动方式将货叉开到中位;
+
+      4) 确认堆垛机位置无误后将堆垛机上钥匙切换到 'AUTO', 拔出钥匙;
+
+      5) 手动开到中位, 重新开始;
+    </solution>
+  </alarm>
+
+  <alarm type="通信异常" code="1905" name="放货失败">
+    <description>
+      1) 放货后，货物未离开货叉;
+    </description>
+    <solution>
+      1) 检查顶升台是否顶起;
+
+      2)载货台是否在层站点位置;
+    </solution>
+  </alarm>
+
+  <alarm type="" code="1906" name="命令错误" />
+
+  <alarm type="通信异常" code="2010" name="通信无连接">
+    <description>
+      1) 检查通信连接或者激光测距是否有遮挡物;
+    </description>
+    <solution>
+      1) 移开遮挡物;
+    </solution>
+  </alarm>
+
+
+</alarms>

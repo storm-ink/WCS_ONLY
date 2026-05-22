@@ -1,0 +1,275 @@
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.pdb
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.XML
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\install.ps1
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.Framework.nuspec
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.nuspec
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\WcsTaskService.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\WcsTaskService.pdb
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Newtonsoft.Json.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\NHibernate.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\NLog.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.Framework.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Iesi.Collections.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.Framework.pdb
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Wcs.Framework.xml
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Newtonsoft.Json.xml
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\NHibernate.xml
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\NLog.xml
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\Iesi.Collections.xml
+E:\svn\Wcs2\Wcs\branches\005\TaskService\obj\Debug\WcsTaskService.csprojResolveAssemblyReference.cache
+E:\svn\Wcs2\Wcs\branches\005\TaskService\obj\Debug\WcsTaskService.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\obj\Debug\WcsTaskService.pdb
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\WcsTaskService.dll.config
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\EPPlus.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\EPPlus.xml
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\WCSValidityHelper.dll
+E:\svn\Wcs2\Wcs\branches\005\TaskService\bin\Debug\WCSValidityHelper.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.Framework.nuspec
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.XML
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\install.ps1
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.nuspec
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\WcsTaskService.dll.config
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\WcsTaskService.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\WcsTaskService.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Newtonsoft.Json.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\NHibernate.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\NLog.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.Framework.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Iesi.Collections.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\EPPlus.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\WCSValidityHelper.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.Framework.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.Framework.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Wcs.Framework.dll.config
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Newtonsoft.Json.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\NHibernate.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\NLog.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\Iesi.Collections.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\EPPlus.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\bin\Debug\WCSValidityHelper.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\obj\Debug\WcsTaskService.csproj.AssemblyReference.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\obj\Debug\WcsTaskService.csproj.CoreCompileInputs.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\obj\Debug\WcsTaskService.csproj.CopyComplete
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\obj\Debug\WcsTaskService.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0\TaskService\obj\Debug\WcsTaskService.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\install.ps1
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.nuspec
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.Framework.nuspec
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.XML
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\WcsTaskService.dll.config
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\WcsTaskService.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\WcsTaskService.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Newtonsoft.Json.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\NHibernate.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\NLog.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.Framework.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Iesi.Collections.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\EPPlus.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\WCSValidityHelper.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.XtraBars.v18.1.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Utils.v18.1.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Data.v18.1.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.Framework.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.Framework.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Wcs.Framework.dll.config
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Newtonsoft.Json.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\NHibernate.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\NLog.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\Iesi.Collections.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\EPPlus.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\WCSValidityHelper.pdb
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.XtraBars.v18.1.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Utils.v18.1.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Data.v18.1.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\obj\Debug\WcsTaskService.csproj.AssemblyReference.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\obj\Debug\WcsTaskService.csproj.CoreCompileInputs.cache
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\obj\Debug\WcsTaskService.csproj.CopyComplete
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\obj\Debug\WcsTaskService.dll
+F:\OfficeDocument\项目资料\艾芬达\框架整合\V0.0 - devexpress\TaskService\obj\Debug\WcsTaskService.pdb
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\install.ps1
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.pdb
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.XML
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.nuspec
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\WcsTaskService.dll.config
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\WcsTaskService.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\WcsTaskService.pdb
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Newtonsoft.Json.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\NHibernate.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\NLog.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.Framework.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Iesi.Collections.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\EPPlus.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\WCSValidityHelper.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.XtraBars.v18.1.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Utils.v18.1.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Data.v18.1.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.Framework.pdb
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.Framework.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Wcs.Framework.dll.config
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Newtonsoft.Json.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\NHibernate.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\NLog.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\Iesi.Collections.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\EPPlus.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\WCSValidityHelper.pdb
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.XtraBars.v18.1.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Utils.v18.1.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Data.v18.1.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\obj\Debug\WcsTaskService.csproj.AssemblyReference.cache
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\obj\Debug\WcsTaskService.csproj.CoreCompileInputs.cache
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\obj\Debug\WcsTaskService.csproj.CopyComplete
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\obj\Debug\WcsTaskService.dll
+F:\OfficeDocument\WCS-SVN\0.源代码\trunk\v1.0\TaskService\obj\Debug\WcsTaskService.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.XML
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\install.ps1
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.nuspec
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\NLog.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\WcsTaskService.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\WcsTaskService.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\WcsTaskService.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Newtonsoft.Json.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\NHibernate.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\NLog.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.Framework.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\StackExchange.Redis.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Iesi.Collections.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\EPPlus.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Utils.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.XtraEditors.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Data.v18.1.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Printing.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.Framework.pdb
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.Framework.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.Framework.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Wcs.dll.config
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Newtonsoft.Json.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\NHibernate.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\NLog.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\StackExchange.Redis.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Iesi.Collections.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\EPPlus.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Utils.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.XtraEditors.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Data.v18.1.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Printing.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\obj\Debug\WcsTaskService.csproj.AssemblyReference.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\obj\Debug\WcsTaskService.csproj.CoreCompileInputs.cache
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\obj\Debug\WcsTaskService.csproj.CopyComplete
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\obj\Debug\WcsTaskService.dll
+D:\李超\WCS_在手项目\艾芬达6&10库\v1.2 - 副本\TaskService\obj\Debug\WcsTaskService.pdb

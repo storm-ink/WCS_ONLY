@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ZHQXC" namespace="ZHQXC.AlarmPool">
+	<class name="AlarmRecord" table="`AlarmRecords`" dynamic-update="true"  batch-size="500">
+		<id name="Id" column="`Id`" type="Int64"/>
+		<property name="WcsAlarmCode" column="`WcsAlarmCode`" type="String" length="50"  not-null="true"/>
+		<property name="AlarmCategory" column="`AlarmCategory`" type="AlarmCategorys" not-null="true"/>
+		<property name="AlarmLevel" column="`AlarmLevel`" type="AlarmLevels" not-null="true"/>
+		<property name="AlarmName" column="`AlarmName`" type="String" length="50" not-null="true"/>
+		<property name="DeviceErrorCode" column="`DeviceErrorCode`" type="String" length="25" not-null="true" />
+		<property name="Device" column="`Device`" type="String" length="25" not-null="true" />
+		<property name="OwnerDevice" column="`OwnerDevice`" type="String" length="25" not-null="true" />
+		<property name="DeviceType" column="`DeviceType`" type="String" length="50" />
+		<property name="BeginingAt" column="`BeginingAt`" type="DateTime" />
+		<property name="EndingAt" column="`EndingAt`" type="DateTime" />
+		<property name="TotalMilliseconds" column="`TotalMilliseconds`" type="Int64" not-null="true" />
+		<property name="Remarks" column="`Remarks`" type="StringClob"/>
+	</class>
+</hibernate-mapping>

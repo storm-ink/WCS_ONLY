@@ -1,0 +1,46 @@
+采用插件式结构
+主体布局使用 TabControl 为主结构，插件以 TabPage 的形式展现
+数据持久化使用 NHibernate，方便
+
+取消原来的 SCADA 服务、OPC 读写服务，整合到 WCS 一个进程。提高稳定及可靠性
+输送线通讯接口采用 TCP 二进制数据包形式，原来的堆垛机通讯方式不变
+插件构架放弃了原来以事件驱动的方式，直接使用 WCS 底层代码提供的相关系统事件
+整个系统主要对象如下：
+WCS
+	WcsPlugin							插件基类，任何插件必须继承该类
+	WcsContext 							插件框架上下文，该对象包含了一个实现了 IWcsApplication 接口的插件主应用程序对象，为插件提供和其它对象互操作的能力
+	IWcsApplication						插件主应用程序对象接口
+	
+	Configuration						负责从 wcs.config.xml 配置文件读取配置内容
+	TaskManager							管理任务器。用于管理（任务、逻辑动作、物理动作）的与持久化有关的操作。如添加、删除、更新
+	DeviceManager						设备管理器。用于管理所有设备
+	TaskDispatcher						任务派发器。负责不断检查所有需要创建新的逻辑动作的任务，必创建他们，以便 EquipmentActionSequence 可以执行它们的物理动作
+	
+	Device								以于表示一个物理设备，这是一个抽象类，具体设备实现它
+		Conveyor						表示一个物理输送线设备
+		Crane							表示一个物理堆垛机设备
+	
+	NetPackageDecoder					网络数据解码器，一个抽象类。负责对与电气通讯接口的数据包进行解、编码操作。
+										其子类 DefaultConveyorNetPackageDecoder 提供了可以和以 TCP 通讯的输送线的解、编码能力
+		
+	LogicMovement						设备逻辑移动动作。此对象表示一个物体从一点到另一点的完全的移动过程，这个过程可能需要设备执行多个物理动作才能完成
+		ConveyorTransferMovement		表示输送线从A将B带到C点的逻辑动作
+		CraneAutomaticTransferMovement	表示堆垛机的一个全自动的取货放货任务。到 A 点取货然后卸到 B 点		
+		.....
+	EquipmentAction						设备物理动作
+		ConveyorTransferAction			表示一个输送线的输送的物理动作
+		CraneAutomaticTransferAction	表示一个堆垛机的全自动物理动作
+		......
+	EquipmentActionGroup				物理动作组。此对象的存在仅为解决有时一个 LogicMovement 包含的多个 EquipmentAction 中有需要在一个设备中连续执行的功能
+	EquipmentActionSequence				物理动作序列，表示设备要执行的所有动作组成的一个有一等顺序的动作集合。此对象负责管理什么时候执行这些物理动作
+										此对象还为用户提供了可在外部对内部动作进行排序的操作，让用户可以参与对设备动作的执行时间的调整
+										
+	Logger								日志对象。此对象提供了一个事件，可以由 UI 进程捕获以显示相关日志，其本身还负责对日志的保存对操作。
+										像 Device、TaskManager、EquipmentActionSequence 等对象都包含它，以便用户可以了解到这些对象的内容操作的详细过程
+
+	LogTarget							日志输出目标，用于为 Logger 提供输出能力。
+	
+配置说明
+	Configuration 提供了一个 GetSelection 方法，用于直接读取配置文件的配置结点。
+	各服务或对象如果需要比较复杂的自定义配置，可在对象内容方法 Configuration.GetSelection 方法获取配置并应用.
+	配置文件内的各节点都对应到相应的类，其中包含多个子对象的节点以 Selection 结尾，其它的以 Element 结尾

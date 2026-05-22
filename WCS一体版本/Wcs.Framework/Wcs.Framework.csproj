@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C6225CC-6960-4964-9DCD-048B4B607BD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wcs.Framework</RootNamespace>
+    <AssemblyName>Wcs.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Debug\Wcs.Framework.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Wcs.Framework.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2">
+      <HintPath>..\packages\NHibernate.Caches.SysCache2.3.2.0.4000\lib\Net35\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="StackExchange.Redis, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.2.1\lib\net40\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractLocationConverter.cs" />
+    <Compile Include="ApplicationStartup.cs" />
+    <Compile Include="Configuration\RouteSelector\RouteSelectorsElement.cs" />
+    <Compile Include="Configuration\EquipmentActionSendPreHandlers\EquipmentActionSendPreHandlersElement.cs" />
+    <Compile Include="Configuration\TaskRequestHandlers\TaskRequestHandlersElement.cs" />
+    <Compile Include="Configuration\TaskSourceIsUnKnownCompeletedHandles\TaskSourceIsUnKnownCompeletedHandlersElement.cs" />
+    <Compile Include="Configuration\RouteStategy\RouteStrategysElement.cs" />
+    <Compile Include="Configuration\TaskChooseEndLocation\TaskChouseEndLocationHandlersElement.cs" />
+    <Compile Include="Configuration\WMSTaskCompeletedExternalHandlers\WMSTaskCompeletedExternalHandlersElement.cs" />
+    <Compile Include="EquipmentStateActionPattern\AbstractStateManager.cs" />
+    <Compile Include="EquipmentStateActionPattern\CanPerformResult.cs" />
+    <Compile Include="EquipmentStateActionPattern\IsCompeltedResult.cs" />
+    <Compile Include="ThreadRunningLog.cs" />
+    <Compile Include="Redis\RedisHelperFacotry.cs" />
+    <Compile Include="任务相关\EquipmentActionScheduler\SystemEquipmentActionScheduler.cs" />
+    <Compile Include="任务相关\Events\TaskEndLocationChangedEvent.cs" />
+    <Compile Include="任务相关\LogicMovement\PreLogicMovement.cs" />
+    <Compile Include="任务相关\SubSystem\TaskActionBindingDevice.cs" />
+    <Compile Include="ExecutiveState.cs" />
+    <Compile Include="IApplicationStartup.cs" />
+    <Compile Include="IEditableTask.cs" />
+    <Compile Include="LockerExtentions.cs" />
+    <Compile Include="MessageBoard\Cfg\MessageBoardTaskElement.cs" />
+    <Compile Include="MessageBoard\AbstractMessageBoardTask.cs" />
+    <Compile Include="MessageBoard\Tasks\DeviceConnectionCheckTask.cs" />
+    <Compile Include="MessageBoard\Tasks\DeviceLockerCheckTask.cs" />
+    <Compile Include="TaskExtentions.cs" />
+    <Compile Include="CompareResult.cs" />
+    <Compile Include="Configuration\Application\ApplicationElement.cs" />
+    <Compile Include="Configuration\Application\StartupElement.cs" />
+    <Compile Include="Configuration\Application\StartupCollection.cs" />
+    <Compile Include="Configuration\Application\LocationConverterElement.cs" />
+    <Compile Include="Configuration\Application\LocationConverterCollection.cs" />
+    <Compile Include="Configuration\ConfigurationElement.cs" />
+    <Compile Include="Configuration\DataReceives\DataReceiverCollection.cs" />
+    <Compile Include="Configuration\DataReceives\DataReceiverElement.cs" />
+    <Compile Include="Configuration\DeviceWarningEventHandlers\DeviceWarningEventHandlersElement.cs" />
+    <Compile Include="Configuration\Devices\DeviceElement.cs" />
+    <Compile Include="Configuration\Devices\DeviceCollection.cs" />
+    <Compile Include="Configuration\Devices\EquipmentActionSchedulerElement.cs" />
+    <Compile Include="Configuration\Devices\EquipmentActionSchedulerFilterElement.cs" />
+    <Compile Include="Configuration\Devices\ParticularDeviceCollection.cs" />
+    <Compile Include="Configuration\Devices\TaskableDeviceElement.cs" />
+    <Compile Include="Configuration\Devices\TcpProtocolTaskableDeviceElement.cs" />
+    <Compile Include="Configuration\Devices\TcpProtocolDeviceElement.cs" />
+    <Compile Include="Configuration\Location\DefaultRouteStrategy.cs" />
+    <Compile Include="Configuration\Location\LocationCollection.cs" />
+    <Compile Include="Configuration\Location\LocationElement.cs" />
+    <Compile Include="Configuration\Location\LogicMovementElement.cs" />
+    <Compile Include="Configuration\Location\LogicMovementSelectorElement.cs" />
+    <Compile Include="Configuration\Location\ParticularLocationCollection.cs" />
+    <Compile Include="Configuration\Location\RouteCollection.cs" />
+    <Compile Include="Configuration\Location\RouteElement.cs" />
+    <Compile Include="Configuration\Location\RouteStrategyElement.cs" />
+    <Compile Include="Configuration\Services\ServiceElement.cs" />
+    <Compile Include="Configuration\Services\WcfServiceCollection.cs" />
+    <Compile Include="Configuration\Services\WcfServiceElement.cs" />
+    <Compile Include="Configuration\Settings\SettingCollection.cs" />
+    <Compile Include="Configuration\TaskEventHandlers\TaskEventHandlersElement.cs" />
+    <Compile Include="Configuration\TaskRequestProcess\RequestProcessesElement.cs" />
+    <Compile Include="Configuration\WcsConfiguration.cs" />
+    <Compile Include="Configuration\EquipmentFailureEventHandlers\EquipmentFailureEventHandlersElement.cs" />
+    <Compile Include="DefaultApplicationStartup.cs" />
+    <Compile Include="Configuration\WcsConfigurationSectionHandler.cs" />
+    <Compile Include="DefaultDeviceWarningEventHandler.cs" />
+    <Compile Include="DeviceConverter.cs" />
+    <Compile Include="DeviceErrorEventHandler.cs" />
+    <Compile Include="Different.cs" />
+    <Compile Include="EventBus\ActionDelegatedEventHandler.cs" />
+    <Compile Include="EventBus\EventBus.cs" />
+    <Compile Include="EventBus\EventBusEventPublisher.cs" />
+    <Compile Include="EventBus\HandlesAsynchronouslyAttribute.cs" />
+    <Compile Include="EventBus\IEvent.cs" />
+    <Compile Include="EventBus\IEventHandler.cs" />
+    <Compile Include="EventBus\NotSupportedPreservableException.cs" />
+    <Compile Include="IDeviceErrorEventHandler.cs" />
+    <Compile Include="LocationConverter.cs" />
+    <Compile Include="EquipmentStateActionPattern\AbstractState.cs" />
+    <Compile Include="EquipmentStateActionPattern\StateFinishedEventHandler.cs" />
+    <Compile Include="EquipmentStateActionPattern\StateManagerRestoreInfo.cs" />
+    <Compile Include="EquipmentStateActionPattern\NhAbstractStateManager.cs" />
+    <Compile Include="MessageBoard\AbstractMessage.cs" />
+    <Compile Include="MessageBoard\AbstractMessageBoard.cs" />
+    <Compile Include="MessageBoard\AbstractMessageBoardListener.cs" />
+    <Compile Include="MessageBoard\Board\MemoryMessageBoard.cs" />
+    <Compile Include="MessageBoard\Cfg\MessageBoardElement.cs" />
+    <Compile Include="MessageBoard\Cfg\MessageBoardListenerElement.cs" />
+    <Compile Include="MessageBoard\Listeners\TcpListener.cs" />
+    <Compile Include="MessageBoard\MessageAddedEventHandler.cs" />
+    <Compile Include="MessageBoard\MessageLevel.cs" />
+    <Compile Include="MessageBoard\MessageRemovedEventHandler.cs" />
+    <Compile Include="MessageBoard\Messages\LockedMessage.cs" />
+    <Compile Include="MessageBoard\Messages\ProduceMessage.cs" />
+    <Compile Include="MessageBoard\Messages\DisconnectedMessage.cs" />
+    <Compile Include="MessageBoard\Messages\TipMessage.cs" />
+    <Compile Include="PathHelper.cs" />
+    <Compile Include="ReadOnlyDictionary.cs" />
+    <Compile Include="任务相关\Events\RequestAddedEvent.cs" />
+    <Compile Include="任务相关\Events\SchedulerActionAddedEvent.cs" />
+    <Compile Include="任务相关\Events\SchedulerActionRemovedEvent.cs" />
+    <Compile Include="任务相关\Events\SchedulerCurrentActionChangedEvent.cs" />
+    <Compile Include="任务相关\Events\RequestArchivedEvent.cs" />
+    <Compile Include="任务相关\Events\RequestStatusChangedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskUpdateEvent.cs" />
+    <Compile Include="任务相关\IRequestProcess.cs" />
+    <Compile Include="IEquipmentFailureEventHandler.cs" />
+    <Compile Include="EquipmentFailureEventHandler.cs" />
+    <Compile Include="任务相关\LogicMovement\LogicMovement2.cs" />
+    <Compile Include="任务相关\Task\TaskListHelper.cs" />
+    <Compile Include="任务相关\Task\TaskChooseEndLocationHandler.cs" />
+    <Compile Include="任务相关\Task\TaskManager.cs" />
+    <Compile Include="任务相关\Task\UndefinedEndLocationTask.cs" />
+    <Compile Include="任务相关\升级\BaseTaskRequestHandler.cs" />
+    <Compile Include="任务相关\升级\SubSystemEquipmentActionId.cs" />
+    <Compile Include="任务相关\升级\TaskSourceIsUnKnownCompeletedHandler.cs" />
+    <Compile Include="任务相关\升级\WMSTaskCompeletedExternalHandler.cs" />
+    <Compile Include="位置路径\升级版\RegionLock.cs" />
+    <Compile Include="位置路径\升级版\RegionRouteLockerHelper.cs" />
+    <Compile Include="位置路径\升级版\路径选择和路径拆分策略\MinimumPassingDeviceRouteSelector.cs" />
+    <Compile Include="位置路径\升级版\路径选择和路径拆分策略\RouteSelector.cs" />
+    <Compile Include="位置路径\升级版\Keeping.cs" />
+    <Compile Include="位置路径\升级版\RouteDetail.cs" />
+    <Compile Include="位置路径\升级版\RouteHead.cs" />
+    <Compile Include="位置路径\升级版\RouteHelper.cs" />
+    <Compile Include="位置路径\升级版\RouteLock.cs" />
+    <Compile Include="位置路径\升级版\RouteRelation.cs" />
+    <Compile Include="位置路径\升级版\RouteVsActionRelations.cs" />
+    <Compile Include="位置路径\升级版\输入文件名称.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="位置路径\升级版\输入文件名称.Designer.cs">
+      <DependentUpon>输入文件名称.cs</DependentUpon>
+    </Compile>
+    <Compile Include="位置路径\升级版\锁\ActionInfo.cs" />
+    <Compile Include="位置路径\升级版\锁\ChildLockTypes.cs" />
+    <Compile Include="位置路径\升级版\锁\ParentLockTypes.cs" />
+    <Compile Include="位置路径\升级版\锁\WCSLock.cs" />
+    <Compile Include="位置路径\升级版\锁\WCSLockHelper.cs" />
+    <Compile Include="位置路径\升级版\锁\WCSLockInfo.cs" />
+    <Compile Include="设备相关\BaseEquipmentActionSendPreHandler.cs" />
+    <Compile Include="设备相关\EquipmentFailureEventArgs.cs" />
+    <Compile Include="设备相关\General\GeneralMappings.cs" />
+    <Compile Include="设备相关\IDeviceUserInterface.cs" />
+    <Compile Include="TaskHelper.cs" />
+    <Compile Include="Exceptions\TaskNotFoundException.cs" />
+    <Compile Include="事务支持\ISupportTransactionObject.cs" />
+    <Compile Include="任务相关\DefaultTaskCompletedEventHandler.cs" />
+    <Compile Include="任务相关\DefaultTaskRunningEventHandler.cs" />
+    <Compile Include="任务相关\EquipmentActionScheduler\ActionSchedulerFilterResult.cs" />
+    <Compile Include="任务相关\EquipmentActionScheduler\BasicEquipmentActionSchedulerFilter.cs" />
+    <Compile Include="任务相关\EquipmentActionScheduler\EquipmentActionScheduler.cs" />
+    <Compile Include="任务相关\EquipmentActionScheduler\EquipmentActionSchedulerFilter.cs" />
+    <Compile Include="任务相关\EquipmentAction\EquipmentTaskIdSerialNumber.cs" />
+    <Compile Include="任务相关\Events\EquipmentActionStatusChangedEvent.cs" />
+    <Compile Include="任务相关\Events\EquipmentActionWarningAddedEvent.cs" />
+    <Compile Include="任务相关\Events\LogicMovementStatusChangedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskAddedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskArchivedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskStatusChangedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskCurrentLocationChangedEvent.cs" />
+    <Compile Include="任务相关\Events\LogicMovementAddedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskPriorityChangedEvent.cs" />
+    <Compile Include="任务相关\Events\TaskFinishedEvent.cs" />
+    <Compile Include="任务相关\SerialNumberFactory.cs" />
+    <Compile Include="任务相关\Task\ManualTaskCodeSerialNumber.cs" />
+    <Compile Include="任务相关\DefaultTaskErrorEventHandler.cs" />
+    <Compile Include="任务相关\DefaultTaskRequestEventHandler.cs" />
+    <Compile Include="任务相关\DefaultTaskCurrentLocationChangedEventHandler.cs" />
+    <Compile Include="位置路径\DefaultLogicMovementSelector.cs" />
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="事务支持\SupportTransactionMethod.cs" />
+    <Compile Include="任务相关\EquipmentAction\EquipmentAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="任务相关\EquipmentAction\EquipmentActionGroup.cs" />
+    <Compile Include="任务相关\EquipmentAction\EquipmentActionStatus.cs" />
+    <Compile Include="任务相关\LogicMovement\LogicMovement.cs" />
+    <Compile Include="任务相关\LogicMovement\LogicMovementStatus.cs" />
+    <Compile Include="任务相关\Task\Request.cs" />
+    <Compile Include="任务相关\Task\RequestStatus.cs" />
+    <Compile Include="任务相关\Task\Task.cs" />
+    <Compile Include="任务相关\Task\TaskBizType.cs" />
+    <Compile Include="任务相关\Task\TaskDirection.cs" />
+    <Compile Include="任务相关\Task\TaskSource.cs" />
+    <Compile Include="任务相关\Task\TaskStatus.cs" />
+    <Compile Include="任务相关\EquipmentAction\EquipmentActionWarning.cs" />
+    <Compile Include="Comparable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataChangedEventHandler.cs" />
+    <Compile Include="位置路径\AdjacencyList.cs" />
+    <Compile Include="位置路径\Route.cs" />
+    <Compile Include="位置路径\RouteDirection.cs" />
+    <Compile Include="位置路径\RouteType.cs" />
+    <Compile Include="位置路径\LogicMovementSelector.cs" />
+    <Compile Include="位置路径\Net.cs" />
+    <Compile Include="位置路径\升级版\路径选择和路径拆分策略\RouteStrategy.cs" />
+    <Compile Include="设备相关\IHoldableDevice.cs" />
+    <Compile Include="设备相关\IDeviceHolder.cs" />
+    <Compile Include="设备相关\IsIdleResult.cs" />
+    <Compile Include="设备相关\TcpProtocolDevice.cs" />
+    <Compile Include="设备相关\事件\EquipmentFailureAddedEventArgs.cs" />
+    <Compile Include="设备相关\事件\EquipmentFailureAddedEventHandler.cs" />
+    <Compile Include="设备相关\事件\EquipmentFailureRemovedEventArgs.cs" />
+    <Compile Include="设备相关\事件\EquipmentFailureRemovedEventHandler.cs" />
+    <Compile Include="设备相关\升级\DeviceErrorHelper.cs" />
+    <Compile Include="设备相关\升级\DeviceStatus.cs" />
+    <Compile Include="设备相关\升级\DeviceErrorType.cs" />
+    <Compile Include="设备相关\升级\DeviceState.cs" />
+    <Compile Include="设备相关\升级\WarningRecordView.cs" />
+    <Compile Include="设备相关\故障统计\WarningPool.cs" />
+    <Compile Include="设备相关\故障统计\WarningRecord.cs" />
+    <Compile Include="设备相关\数据\DeviceCommandAttribute.cs" />
+    <Compile Include="设备相关\数据\IDeviceCommandAdjudicator.cs" />
+    <Compile Include="设备相关\设备报警\DeviceWarning.cs" />
+    <Compile Include="设备相关\事件\ITaskEventHandler.cs" />
+    <Compile Include="设备相关\事件\TaskCompletedEventHandler.cs" />
+    <Compile Include="设备相关\事件\TaskCurrentLocationChangedEventArgs.cs" />
+    <Compile Include="设备相关\事件\TaskEventHandler.cs" />
+    <Compile Include="设备相关\事件\TaskRunningEventHandler.cs" />
+    <Compile Include="设备相关\事件\TaskErrorEventHandler.cs" />
+    <Compile Include="设备相关\事件\TaskRequestEventArgs.cs" />
+    <Compile Include="设备相关\事件\TaskRequestEventHandler.cs" />
+    <Compile Include="设备相关\事件\TaskCurrentLocationChangedEventHandler.cs" />
+    <Compile Include="设备相关\持久化数据类型\DeviceLockerInformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDataComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="设备相关\持久化数据类型\LocationInfo.cs" />
+    <Compile Include="设备相关\InvalidNetPacketException.cs" />
+    <Compile Include="位置路径\Location.cs" />
+    <Compile Include="设备相关\TaskableDevice.cs" />
+    <Compile Include="设备相关\事件\ConnectedEventArgs.cs" />
+    <Compile Include="设备相关\事件\DeviceEventHandler.cs" />
+    <Compile Include="设备相关\数据\DeviceCommand.cs" />
+    <Compile Include="设备相关\数据\NetPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="设备相关\数据\NetTransferObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="设备相关\数据\IDataReceiver.cs" />
+    <Compile Include="设备相关\DeviceEventQueue.cs" />
+    <Compile Include="设备相关\事件\DataReceiverReceivedEventArgs.cs" />
+    <Compile Include="设备相关\LockerInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="设备相关\事件\DeviceWarningEventArgs.cs" />
+    <Compile Include="设备相关\事件\ProcessableEventArgs.cs" />
+    <Compile Include="设备相关\事件\TaskErrorEventArgs.cs" />
+    <Compile Include="设备相关\事件\TaskRunningEventArgs.cs" />
+    <Compile Include="设备相关\事件\TaskCompletedEventArgs.cs" />
+    <Compile Include="设备相关\Device.cs" />
+    <Compile Include="设备相关\事件\DeviceDisconnectEventArgs.cs" />
+    <Compile Include="设备相关\事件\DataReceivedEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="设备相关\TcpProtocolTaskableDevice.cs" />
+    <Compile Include="位置路径\ILocationWildcard.cs" />
+    <Compile Include="设备相关\设备报警\DeviceWarningFactory.cs" />
+    <Compile Include="设备相关\设备报警\DeviceWarningLevel.cs" />
+    <Compile Include="设备相关\设备故障\EquipmentFailure.cs" />
+    <Compile Include="设备相关\设备故障\EquipmentFailureChecker.cs" />
+    <Compile Include="设备相关\设备故障\UnableToConnectEquipmentFailure.cs" />
+    <Compile Include="设备运行数据\ReceivedDataLog.cs" />
+    <Compile Include="设备运行数据\ReceivedDataLogHelper.cs" />
+    <Compile Include="设备运行数据\ReceivedDataLogLevel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="install.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\AssemblyInfo.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--<None Include="hibernate_模板.cfg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>-->
+    <EmbeddedResource Include="_mappings\mappings.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_mappings\events.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_mappings\equipmentFailure.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Wcs.Framework.nuspec" />
+    <None Include="Wcs.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Wcs.XML">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="位置路径\升级版\route.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="位置路径\升级版\输入文件名称.resx">
+      <DependentUpon>输入文件名称.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设备相关\升级\DeviceInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="任务相关\升级\SubSystemTaskId.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wcs\Wcs.csproj">
+      <Project>{45794acc-1755-4d65-9120-73e532d27053}</Project>
+      <Name>Wcs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="任务相关\SubSystem\extensions.hbm.xml" />
+    <EmbeddedResource Include="位置路径\升级版\锁\Lock.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_mappings\warningRecords.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="任务相关\EquipmentActionFilter\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

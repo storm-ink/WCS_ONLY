@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+	<class name="WarningRecord" table="`WarningRecords`" dynamic-update="true"  batch-size="500">
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='WarningRecords'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<property name="Code" column="`Code`" type="String" length="25" not-null="true" />
+		<property name="Name" column="`Name`" type="String" length="25"/>
+		<property name="Category" column="`Category`" type="String" length="25"/>
+		<property name="Device" column="`Device`" type="String" length="25" not-null="true" />
+		<property name="DeviceType" column="`DeviceType`" type="String" length="25" />
+		<property name="TaskCode" column="`TaskCode`" type="String" length="25" />
+		<property name="CurrentAt" column="`CurrentAt`" type="String" length="25" />
+		<property name="BeginingAt" column="`BeginingAt`" type="DateTime" />
+		<property name="EndingAt" column="`EndingAt`" type="DateTime" />
+		<property name="FinishedAt" column="`FinishedAt`" type="DateTime" />
+		<property name="UserName" column="`UserName`" type="String" length="50" />
+		<property name="Repaired" column="`Repaired`" type="Boolean" not-null="true" />
+		<property name="IsFault" column="`IsFault`" type="Boolean" not-null="true" />
+		<property name="Description" column="`Description`" type="String" length="4000" />
+		<property name="Result" column="`Result`" type="String" length="4000" />
+		<property name="Reason" column="`Reason`" type="String" length="4000" />
+		<property name="TotalMilliseconds" column="`TotalMilliseconds`" type="Int64" not-null="true" />
+	</class>
+</hibernate-mapping>

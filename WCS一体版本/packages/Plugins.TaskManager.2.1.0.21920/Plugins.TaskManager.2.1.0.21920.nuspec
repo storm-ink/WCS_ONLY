@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Plugins.TaskManager</id>
+    <version>2.1.0.21920</version>
+    <title>任务管理器</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>提供一个可视化界面用于管理任务，包括常用的删除、暂停、继续执行等操作。同时界面内还提供了一个跟踪任务状态变化日志显示的功能</description>
+    <dependencies>
+      <dependency id="NHibernate" version="3.3.3.4001" />
+      <dependency id="NLog" version="2.1.0" />
+    </dependencies>
+  </metadata>
+</package>

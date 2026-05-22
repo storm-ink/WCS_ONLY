@@ -1,0 +1,2 @@
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager\obj\Debug\Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager.csproj.App.config
+D:\李超\WCS_在手项目\江西艾芬达\v1.2\Wcs.DefaultImplementCollection\Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager\obj\Debug\Wcs.DefaultImplementCollection.SingleLocationDoubleVehicleManager.csproj.AssemblyReference.cache

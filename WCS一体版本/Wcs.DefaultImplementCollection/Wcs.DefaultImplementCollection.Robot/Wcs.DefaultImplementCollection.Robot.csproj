@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{695AD921-EBC8-42B1-9FD8-11475893120B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wcs.DefaultImplementCollection.Robot</RootNamespace>
+    <AssemblyName>Wcs.DefaultImplementCollection.Robot</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.2.1.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wcs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Wcs\bin\Debug\Wcs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\AddAutomaticTransferWithStepByStepCommand.cs" />
+    <Compile Include="Commands\RobotTaskClearCommand.cs" />
+    <Compile Include="Commands\RobotTaskCommand.cs" />
+    <Compile Include="Configuration\DefaultRobotDeviceDataReceiverElement.cs" />
+    <Compile Include="Configuration\EquipmentActionToAddCommandPluginElement.cs" />
+    <Compile Include="Configuration\RobotCollection.cs" />
+    <Compile Include="Configuration\RobotElement.cs" />
+    <Compile Include="Configuration\RobotLocationCollection.cs" />
+    <Compile Include="Configuration\RobotLocationElement.cs" />
+    <Compile Include="DefaultTcpRobotDataReceiver.cs" />
+    <Compile Include="EquipmentStateActionPattern\RestoreRobotStateManagerApplicationStartup.cs" />
+    <Compile Include="EquipmentStateActionPattern\RobotByStepStateManager.cs" />
+    <Compile Include="EquipmentStateActionPattern\RobotWorkState.cs" />
+    <Compile Include="ManualTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualTest.Designer.cs">
+      <DependentUpon>ManualTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RobotDevice.cs" />
+    <Compile Include="RobotDeviceNetPacket.cs" />
+    <Compile Include="RobotDeviceUserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RobotDeviceUserInterface.Designer.cs">
+      <DependentUpon>RobotDeviceUserInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RobotLocation.cs" />
+    <Compile Include="RobotLocationWildcard.cs" />
+    <Compile Include="RobotTaskCompletedEventHandler.cs" />
+    <Compile Include="Task\RobotEquipmentActionToAddCommandPlugin.cs" />
+    <Compile Include="Task\RobotTransferAction.cs" />
+    <Compile Include="Task\RobotTransferByStepAction.cs" />
+    <Compile Include="Task\RobotTransferByStepMovement.cs" />
+    <Compile Include="Task\RobotTransferMovement.cs" />
+    <Compile Include="TransferObjects\HandShake.cs" />
+    <Compile Include="TransferObjects\RobotBasicMessage.cs" />
+    <Compile Include="TransferObjects\RobotModes.cs" />
+    <Compile Include="TransferObjects\RobotStatusTelexTransferObject.cs" />
+    <Compile Include="TransferObjects\RobotTaskTransferObject.cs" />
+    <Compile Include="TransferObjects\TelexTransferObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RobotDeviceUserInterface.resx">
+      <DependentUpon>RobotDeviceUserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task\extensions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wcs.Framework\Wcs.Framework.csproj">
+      <Project>{2c6225cc-6960-4964-9dcd-048b4b607bd1}</Project>
+      <Name>Wcs.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

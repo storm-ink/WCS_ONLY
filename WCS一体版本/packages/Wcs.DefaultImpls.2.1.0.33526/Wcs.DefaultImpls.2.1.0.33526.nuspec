@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Wcs.DefaultImpls</id>
+    <version>2.1.0.33526</version>
+    <title>Wcs设备默认实现</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <licenseUrl>http://www.gen-song.net/</licenseUrl>
+    <projectUrl>http://www.gen-song.net/Wcs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>提供一组设备的默认实现。这包括堆垛机、输送线</description>
+    <releaseNotes />
+    <dependencies>
+      <dependency id="Wcs.Framework" version="2.1.0.33470" />
+    </dependencies>
+  </metadata>
+</package>

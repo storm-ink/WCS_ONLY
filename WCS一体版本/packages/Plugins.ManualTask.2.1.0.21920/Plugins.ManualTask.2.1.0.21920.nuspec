@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Plugins.ManualTask</id>
+    <version>2.1.0.21920</version>
+    <title>Wcs手工任务</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>提供一个手工任务菜单，允许用户在Wcs中直接创建手工任务进行相关作业</description>
+    <dependencies>
+      <dependency id="Wcs.Framework" version="2.1.0.21908" />
+    </dependencies>
+  </metadata>
+</package>

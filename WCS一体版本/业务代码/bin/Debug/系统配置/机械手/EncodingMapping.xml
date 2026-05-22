@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--每个Mapping都是一个整体结构，无论发送接收都是整体编码解码，多余部分以默认值代替，如果多个独立的报文则需要配置多个不同的Mapping-->
+<!--二进制编码类型->Binary，Ascii编码类型->Ascii，二进制相对来说报文长度可能更短一点，Ascii编码相对来说更简单一点，二进制最小单位是bit，Ascii最小单位是byte-->
+<!--size=0表示变长（暂未实现）size=n（n表示具体的正整数，已实现）-->
+<encoding name="craneEncoding" size="0" encodingType="Binary">
+	<!--二进制是B，八进制是O，十进制是D，十六进制是H-->
+	<header name="Header" size="8" type="H">ffffffffffffffff</header>
+	<length name="Length" size="2" type="UInt16"></length>
+	<body>
+		<collections>
+			<!--enable="false" 表示结构启用但是字段不启用，如果结构不启用则直接不配置该条或者defaultValue="Null"即可-->
+			<!--defaultValue 字段用于表示默认值，单个报文中未赋值的部分给默认值，整体报文结构中未赋值的块给默认值-->
+			<flag name="Flag" size="2" type="String" enable="false" defaultValue="Null"/>
+			<collection name="RobotState" blockBytes="44" itemCount="1">
+ 
+			</collection>
+		</collections>
+	</body>
+	<!--enable="false" 表示结构启用但是字段不启用-->
+	<checker name="Checker" type="UInt32" size="4" enable="false" defaultValue="0"/>
+	<!--二进制是B，八进制是O，十进制是D，十六进制是H-->
+	<ender name="Ender" type="H" size="8">eeeeeeeeeeeeeeee</ender>
+</encoding>

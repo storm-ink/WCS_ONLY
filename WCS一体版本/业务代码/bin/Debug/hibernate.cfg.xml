@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+This template was written to work with NHibernate.Test.
+Copy the template to your NHibernate.Test project folder and rename it in hibernate.cfg.xml and change it 
+for your own use before compile tests in VisualStudio.
+-->
+<!-- This is the System.Data.dll provider for SQL Server -->
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+	<session-factory name="wms">
+		<property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+		<property name="connection.connection_string">Data Source=.;Initial Catalog=wms_meide;User Id=sa;Password=123456;</property>
+		<property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+    <property name="adonet.batch_size">50</property>
+    <property name="query.substitutions">true 1, false 0</property>
+    <property name="prepare_sql">true</property>
+    <property name="cache.use_second_level_cache">false</property>
+    <property name="cache.use_query_cache">false</property>
+    <!--<property name="cache.provider_class">NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2</property>-->
+    <property name="show_sql">false</property>
+    <property name="generate_statistics">true</property>
+    <property name="default_schema">`wms`</property>
+    <mapping assembly="Wms" />
+
+  </session-factory>
+</hibernate-configuration>

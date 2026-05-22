@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c001 type="Wcs.DefaultImplementCollection.Crane.RackLocationCollection, Wcs.DefaultImplementCollection.Crane" device="c001">
+	<location isWildcard="true"/>
+	
+	<location userCode="02-000-001-1503" column="0" level="1" userLine="02" userColumn="00" userLevel="1" forkDirection="Right"  forkAction="PickAndPut" synonymous="1503@立库CV" unifiedCode="1503"/>
+
+  <location userCode="02-000-001-1508" column="0" level="1" userLine="03" userColumn="00" userLevel="1" forkDirection="Left"  forkAction="PickAndPut" synonymous="1508@立库CV" unifiedCode="1508"/>
+
+
+
+
+	<!--货格-->
+  <!--1是左1 2是右1  3是左2 4是右2   总共4排14列5层-->
+	<location userCode="01-001-001" column="1" level="1"  userLine="01" userColumn="1" userLevel="1" forkDirection="Left" Height="0"/>
+	<location userCode="01-001-002" column="1" level="2"  userLine="01" userColumn="1" userLevel="2" forkDirection="Left" Height="0"/>
+	<location userCode="01-001-003" column="1" level="3"  userLine="01" userColumn="1" userLevel="3" forkDirection="Left" Height="0"/>
+  <location userCode="01-001-004" column="1" level="4"  userLine="01" userColumn="1" userLevel="4" forkDirection="Left" Height="0"/>
+  <location userCode="01-001-005" column="1" level="5"  userLine="01" userColumn="1" userLevel="5" forkDirection="Left" Height="0"/>
+
+  <location userCode="02-001-001" column="1" level="1"  userLine="02" userColumn="1" userLevel="1" forkDirection="Right" Height="0"/>
+  <location userCode="02-001-002" column="1" level="2"  userLine="02" userColumn="1" userLevel="2" forkDirection="Right" Height="0"/>
+  <location userCode="02-001-003" column="1" level="3"  userLine="02" userColumn="1" userLevel="3" forkDirection="Right" Height="0"/>
+  <location userCode="02-001-004" column="1" level="4"  userLine="02" userColumn="1" userLevel="4" forkDirection="Right" Height="0"/>
+  <location userCode="02-001-005" column="1" level="5"  userLine="02" userColumn="1" userLevel="5" forkDirection="Right" Height="0"/>
+
+
+
+  <location userCode="01-003-001" column="3" level="1"  userLine="01" userColumn="3" userLevel="1" forkDirection="Left" Height="0"/>
+  <location userCode="01-004-001" column="4" level="1"  userLine="01" userColumn="4" userLevel="1" forkDirection="Left" Height="0"/>
+
+
+  <location userCode="01-003-005" column="3" level="5"  userLine="01" userColumn="3" userLevel="5" forkDirection="Left" Height="0"/>
+
+
+  <location userCode="01-002-001" column="2" level="1"  userLine="01" userColumn="2" userLevel="1" forkDirection="Left" Height="0"/>
+	<location userCode="01-002-002" column="2" level="2"  userLine="01" userColumn="2" userLevel="2" forkDirection="Left" Height="0"/>
+	<location userCode="01-002-003" column="2" level="3"  userLine="01" userColumn="2" userLevel="3" forkDirection="Left" Height="0"/>
+  <location userCode="01-002-004" column="2" level="4"  userLine="01" userColumn="2" userLevel="4" forkDirection="Left" Height="0"/>
+  <location userCode="01-002-005" column="2" level="5"  userLine="01" userColumn="2" userLevel="5" forkDirection="Left" Height="0"/>
+
+
+  <location userCode="01-012-001" column="12" level="1"  userLine="01" userColumn="12" userLevel="1" forkDirection="Left" Height="0"/>
+  <location userCode="01-012-002" column="12" level="2"  userLine="01" userColumn="12" userLevel="2" forkDirection="Left" Height="0"/>
+  <location userCode="01-012-003" column="12" level="3"  userLine="01" userColumn="12" userLevel="3" forkDirection="Left" Height="0"/>
+  <location userCode="01-012-004" column="12" level="4"  userLine="01" userColumn="12" userLevel="4" forkDirection="Left" Height="0"/>
+  <location userCode="01-012-005" column="12" level="5"  userLine="01" userColumn="12" userLevel="5" forkDirection="Left" Height="0"/>
+
+
+  <location userCode="01-015-001" column="15" level="1"  userLine="01" userColumn="15" userLevel="1" forkDirection="Left" Height="0"/>
+  <location userCode="01-015-002" column="15" level="2"  userLine="01" userColumn="15" userLevel="2" forkDirection="Left" Height="0"/>
+  <location userCode="01-015-003" column="15" level="3"  userLine="01" userColumn="15" userLevel="3" forkDirection="Left" Height="0"/>
+  <location userCode="01-015-004" column="15" level="4"  userLine="01" userColumn="15" userLevel="4" forkDirection="Left" Height="0"/>
+  <location userCode="01-015-005" column="15" level="5"  userLine="01" userColumn="15" userLevel="5" forkDirection="Left" Height="0"/>
+
+
+
+
+
+</c001>

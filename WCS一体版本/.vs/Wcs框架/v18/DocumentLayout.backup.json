@@ -1,0 +1,332 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|c:\\users\\sineva_cl\\desktop\\wcs\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|solutionrelative:\u4E1A\u52A1\u4EE3\u7801\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|c:\\users\\sineva_cl\\desktop\\wcs\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\webapi\\base\\userresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|solutionrelative:\u4E1A\u52A1\u4EE3\u7801\\webapi\\base\\userresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|c:\\users\\sineva_cl\\desktop\\wcs\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\webapi\\controller\\wcscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|solutionrelative:\u4E1A\u52A1\u4EE3\u7801\\webapi\\controller\\wcscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ZHQXC||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A56A176C-60C5-4616-9E0E-310CC58E9DCC}|WCS.DEVAPP\\WCS.APP.csproj|c:\\users\\sineva_cl\\desktop\\wcs\u4E00\u4F53\u7248\u672C\\wcs.devapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A56A176C-60C5-4616-9E0E-310CC58E9DCC}|WCS.DEVAPP\\WCS.APP.csproj|solutionrelative:wcs.devapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\equipmentactionscheduler\\equipmentactionscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\equipmentactionscheduler\\equipmentactionscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sineva_CL\\AppData\\Local\\Temp\\.vsdbgsrc\\7997389adf38c80bae7b3a9802eb6b9911247d178b5539656e45516c3f4dbfd8\\PreTaskHandHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u674E\u8D85\\WCS_\u5728\u624B\u9879\u76EE\\\u827E\u82AC\u8FBE6\u002610\u5E93\\\u4E1A\u52A1\u4EE3\u7801 - \u526F\u672C\\ZHQXC\\WebAPI\\Base\\WebApiSelfHostHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\threadrunninglog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\threadrunninglog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\equipmentaction\\equipmentaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\equipmentaction\\equipmentaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03C1063-8918-48FF-B691-E1E40F406168}|Wcs.FrameworkExtend\\Wcs.FrameworkExtend.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.frameworkextend\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A03C1063-8918-48FF-B691-E1E40F406168}|Wcs.FrameworkExtend\\Wcs.FrameworkExtend.csproj|solutionrelative:wcs.frameworkextend\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\subsystem\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\subsystem\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C69BCA4E-C889-4E68-853F-980C1D55A734}|Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Crane\\Wcs.DefaultImplementCollection.Crane.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.defaultimplementcollection\\wcs.defaultimplementcollection.crane\\task\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C69BCA4E-C889-4E68-853F-980C1D55A734}|Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Crane\\Wcs.DefaultImplementCollection.Crane.csproj|solutionrelative:wcs.defaultimplementcollection\\wcs.defaultimplementcollection.crane\\task\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCFC92B3-4E99-47CB-A6DD-396844E8B545}|Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Conveyor\\Wcs.DefaultImplementCollection.Conveyor.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.defaultimplementcollection\\wcs.defaultimplementcollection.conveyor\\task\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FCFC92B3-4E99-47CB-A6DD-396844E8B545}|Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Conveyor\\Wcs.DefaultImplementCollection.Conveyor.csproj|solutionrelative:wcs.defaultimplementcollection\\wcs.defaultimplementcollection.conveyor\\task\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\logicmovement\\logicmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\\u4EFB\u52A1\u76F8\u5173\\logicmovement\\logicmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\configuration\\location\\logicmovementelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\configuration\\location\\logicmovementelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\wcs.framework\\_mappings\\mappings.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2C6225CC-6960-4964-9DCD-048B4B607BD1}|Wcs.Framework\\Wcs.Framework.csproj|solutionrelative:wcs.framework\\_mappings\\mappings.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u674E\u8D85\\WCS_\u5728\u624B\u9879\u76EE\\\u827E\u82AC\u8FBE6\u002610\u5E93\\v1.2 - \u526F\u672C\\Wcs.DefaultImplementCollection.Robot\\Task\\extensions.hbm.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D530F1E-25B2-4A08-8EE3-069500903CC7}|\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj|c:\\users\\sineva_cl\\desktop\\wcs\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|6185191f-1008-4fb2-a715-3a4e4f27e610"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EquipmentActionScheduler.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentActionScheduler\\EquipmentActionScheduler.cs",
+              "RelativeDocumentMoniker": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentActionScheduler\\EquipmentActionScheduler.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentActionScheduler\\EquipmentActionScheduler.cs",
+              "RelativeToolTip": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentActionScheduler\\EquipmentActionScheduler.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAcwKMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:40:32.42Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\app.config",
+              "RelativeDocumentMoniker": "\u4E1A\u52A1\u4EE3\u7801\\app.config",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\app.config",
+              "RelativeToolTip": "\u4E1A\u52A1\u4EE3\u7801\\app.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-22T09:26:06.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserResolver.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Base\\UserResolver.cs",
+              "RelativeDocumentMoniker": "\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Base\\UserResolver.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Base\\UserResolver.cs",
+              "RelativeToolTip": "\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Base\\UserResolver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T09:23:19.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WCSController.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Controller\\WCSController.cs",
+              "RelativeDocumentMoniker": "\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Controller\\WCSController.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Controller\\WCSController.cs",
+              "RelativeToolTip": "\u4E1A\u52A1\u4EE3\u7801\\WebAPI\\Controller\\WCSController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAD4vzsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T09:23:16.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ZHQXC",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj",
+              "RelativeDocumentMoniker": "\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj \u2B24",
+              "RelativeToolTip": "\u4E1A\u52A1\u4EE3\u7801\\ZHQXC.csproj \u2B24",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-22T09:21:29.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\WCS.DEVAPP\\frmMain.cs",
+              "RelativeDocumentMoniker": "WCS.DEVAPP\\frmMain.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\WCS.DEVAPP\\frmMain.cs",
+              "RelativeToolTip": "WCS.DEVAPP\\frmMain.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T08:49:04.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\packages.config",
+              "RelativeDocumentMoniker": "Wcs.Framework\\packages.config",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\packages.config",
+              "RelativeToolTip": "Wcs.Framework\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-21T05:49:23.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WebApiSelfHostHelper.cs",
+              "DocumentMoniker": "D:\\\u674E\u8D85\\WCS_\u5728\u624B\u9879\u76EE\\\u827E\u82AC\u8FBE6\u002610\u5E93\\\u4E1A\u52A1\u4EE3\u7801 - \u526F\u672C\\ZHQXC\\WebAPI\\Base\\WebApiSelfHostHelper.cs",
+              "ToolTip": "D:\\\u674E\u8D85\\WCS_\u5728\u624B\u9879\u76EE\\\u827E\u82AC\u8FBE6\u002610\u5E93\\\u4E1A\u52A1\u4EE3\u7801 - \u526F\u672C\\ZHQXC\\WebAPI\\Base\\WebApiSelfHostHelper.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T05:17:41.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "extensions.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.FrameworkExtend\\extensions.hbm.xml",
+              "RelativeDocumentMoniker": "Wcs.FrameworkExtend\\extensions.hbm.xml",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.FrameworkExtend\\extensions.hbm.xml",
+              "RelativeToolTip": "Wcs.FrameworkExtend\\extensions.hbm.xml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABEAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-21T02:30:33.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "extensions.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\SubSystem\\extensions.hbm.xml",
+              "RelativeDocumentMoniker": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\SubSystem\\extensions.hbm.xml",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\SubSystem\\extensions.hbm.xml",
+              "RelativeToolTip": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\SubSystem\\extensions.hbm.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-21T02:30:21.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "extensions.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Crane\\Task\\extensions.hbm.xml",
+              "RelativeDocumentMoniker": "Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Crane\\Task\\extensions.hbm.xml",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Crane\\Task\\extensions.hbm.xml",
+              "RelativeToolTip": "Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Crane\\Task\\extensions.hbm.xml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-21T02:29:51.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "extensions.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Conveyor\\Task\\extensions.hbm.xml",
+              "RelativeDocumentMoniker": "Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Conveyor\\Task\\extensions.hbm.xml",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Conveyor\\Task\\extensions.hbm.xml",
+              "RelativeToolTip": "Wcs.DefaultImplementCollection\\Wcs.DefaultImplementCollection.Conveyor\\Task\\extensions.hbm.xml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-21T02:23:31.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LogicMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\LogicMovement\\LogicMovement.cs",
+              "RelativeDocumentMoniker": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\LogicMovement\\LogicMovement.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\LogicMovement\\LogicMovement.cs",
+              "RelativeToolTip": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\LogicMovement\\LogicMovement.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T02:23:02.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ThreadRunningLog.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\ThreadRunningLog.cs",
+              "RelativeDocumentMoniker": "Wcs.Framework\\ThreadRunningLog.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\ThreadRunningLog.cs",
+              "RelativeToolTip": "Wcs.Framework\\ThreadRunningLog.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA2wCIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T02:07:10.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "mappings.hbm.xml",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\_mappings\\mappings.hbm.xml",
+              "RelativeDocumentMoniker": "Wcs.Framework\\_mappings\\mappings.hbm.xml",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\_mappings\\mappings.hbm.xml",
+              "RelativeToolTip": "Wcs.Framework\\_mappings\\mappings.hbm.xml",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAANUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-20T06:49:01.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PreTaskHandHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\AppData\\Local\\Temp\\.vsdbgsrc\\7997389adf38c80bae7b3a9802eb6b9911247d178b5539656e45516c3f4dbfd8\\PreTaskHandHelper.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\7997389adf38c80bae7b3a9802eb6b9911247d178b5539656e45516c3f4dbfd8\\PreTaskHandHelper.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\AppData\\Local\\Temp\\.vsdbgsrc\\7997389adf38c80bae7b3a9802eb6b9911247d178b5539656e45516c3f4dbfd8\\PreTaskHandHelper.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\7997389adf38c80bae7b3a9802eb6b9911247d178b5539656e45516c3f4dbfd8\\PreTaskHandHelper.cs",
+              "ViewState": "AgIAAPMBAAAAAAAAAAAewCICAAAHAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:42:22.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "extensions.hbm.xml",
+              "DocumentMoniker": "D:\\\u674E\u8D85\\WCS_\u5728\u624B\u9879\u76EE\\\u827E\u82AC\u8FBE6\u002610\u5E93\\v1.2 - \u526F\u672C\\Wcs.DefaultImplementCollection.Robot\\Task\\extensions.hbm.xml",
+              "ToolTip": "D:\\\u674E\u8D85\\WCS_\u5728\u624B\u9879\u76EE\\\u827E\u82AC\u8FBE6\u002610\u5E93\\v1.2 - \u526F\u672C\\Wcs.DefaultImplementCollection.Robot\\Task\\extensions.hbm.xml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-05-21T02:31:04.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EquipmentAction.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentAction\\EquipmentAction.cs",
+              "RelativeDocumentMoniker": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentAction\\EquipmentAction.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentAction\\EquipmentAction.cs",
+              "RelativeToolTip": "Wcs.Framework\\\u4EFB\u52A1\u76F8\u5173\\EquipmentAction\\EquipmentAction.cs",
+              "ViewState": "AgIAANoAAAAAAAAAAAAxwOMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T03:47:57.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LogicMovementElement.cs",
+              "DocumentMoniker": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\Configuration\\Location\\LogicMovementElement.cs",
+              "RelativeDocumentMoniker": "Wcs.Framework\\Configuration\\Location\\LogicMovementElement.cs",
+              "ToolTip": "C:\\Users\\Sineva_CL\\Desktop\\WCS\u4E00\u4F53\u7248\u672C\\Wcs.Framework\\Configuration\\Location\\LogicMovementElement.cs",
+              "RelativeToolTip": "Wcs.Framework\\Configuration\\Location\\LogicMovementElement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:48:53.524Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

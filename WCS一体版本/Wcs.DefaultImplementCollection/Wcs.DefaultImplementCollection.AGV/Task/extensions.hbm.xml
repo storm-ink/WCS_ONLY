@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImplementCollection.AGV" namespace="Wcs.Framework">
+
+  <!--项目中使用到的逻辑动作在继承了 LogicMovement 后，为了将其进行持久化，必须在此处将其定义为 LogicMovement 的子类-->
+  <subclass name="Wcs.DefaultImplementCollection.AGV.SinevaAGVSubSystemLogicMovement" discriminator-value="SinevaAGVSubSystemLogicMovement" extends="LogicMovement" dynamic-update="true">
+  </subclass>
+
+  <subclass name="Wcs.DefaultImplementCollection.AGV.SinevaAGVSubSystemAction" discriminator-value="SinevaAGVSubSystemAction" extends="Wcs.Framework.EquipmentAction" dynamic-update="true">
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="LoadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`SinevaAGVSubSystemAction_LoadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`SinevaAGVSubSystemAction_LoadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UnifiedCode" type="String">
+        <column name="`SinevaAGVSubSystemAction_LoadLocation_UnifiedCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`SinevaAGVSubSystemAction_LoadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+    </component>
+    <component class="Wcs.Framework.LocationInfo, Wcs.Framework" name="UnloadLocation">
+      <property name="DeviceCode" type="String">
+        <column name="`SinevaAGVSubSystemAction_UnloadLocation_DeviceCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UserCode" type="String">
+        <column name="`SinevaAGVSubSystemAction_UnloadLocation_UserCode`" not-null="true" default="-1" />
+      </property>
+      <property name="UnifiedCode" type="String">
+        <column name="`SinevaAGVSubSystemAction_UnloadLocation_UnifiedCode`" not-null="true" default="-1" />
+      </property>
+      <property name="DeviceName" type="String">
+        <column name="`SinevaAGVSubSystemAction_UnloadLocation_DeviceName`" not-null="true" default="-1" />
+      </property>
+
+    </component>
+    <property column="`SendAGVTaskId_SinevaAGV`" name="SendAGVTaskId" type="String" length="40"/>
+  </subclass>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Wcs</id>
+    <version>2.1.0.21947</version>
+    <title>Wcs支持库</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wcs项目基础模块</description>
+    <dependencies>
+      <dependency id="NHibernate" version="3.3.3.4001" />
+      <dependency id="NLog" version="2.1.0" />
+    </dependencies>
+  </metadata>
+</package>

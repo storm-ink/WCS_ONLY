@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<alarms>
+
+  <alarm type="紧急停止开关ON" code="01" name="紧急开关被按下">
+    <description>
+      1) 检查各紧急停止开关是否正常;
+    </description>
+    <solution>
+      1) 将紧急停止开关松开;
+    </solution>
+  </alarm>
+  <alarm type="前进软极限" code="02" name="前进软极限">
+    <description>
+      1) 检查AGV小车是否过极限站点位置
+    </description>
+    <solution>
+      2) 检查AGV小车是否过极限站点位置
+    </solution>
+  </alarm>
+  <alarm type="断路器" code="03" name="行走断路器故障">
+    <description>
+      1)检查行走断路器是否跳闸
+    </description>
+    <solution>
+      2）检查行走断路器是否跳闸
+    </solution>
+  </alarm>
+  <alarm type="断路器" code="04" name="输送线断路器">
+    <description>
+      1)检查行走断路器是否跳闸
+    </description>
+    <solution>
+      2）检查行走断路器是否跳闸
+    </solution>
+  </alarm>
+  <alarm type="断路器" code="05" name="行走变频器故障">
+    <description>
+      1)检查行走断路器是否跳闸
+    </description>
+    <solution>
+      2）检查行走断路器是否跳闸
+    </solution>
+  </alarm>
+
+  <alarm type="断路器" code="06" name="输送变频器故障">
+    <description>
+      1)检查输变频器是否报警
+    </description>
+    <solution>
+      2）检查输变频器是否报警
+    </solution>
+  </alarm>
+
+  <alarm type="条码" code="07" name="条码读零">
+    <description>
+      1)检查条码扫描是否可以准确读数
+    </description>
+    <solution>
+      2）检查条码扫描是否可以准确读数
+    </solution>
+  </alarm>
+
+
+  <alarm type="超限" code="08" name="右超限故障">
+    <description>
+      1)检查右超限光电是否被遮挡
+    </description>
+    <solution>
+      2）检查右超限光电是否被遮挡
+    </solution>
+  </alarm>
+  <alarm type="超限" code="09" name="左超限故障">
+    <description>
+      1)检查左超限光电是否被遮挡
+    </description>
+    <solution>
+      2）检查左超限光电是否被遮挡
+    </solution>
+  </alarm>
+
+  <alarm type="后退软极限" code="10" name="后退软极限">
+    <description>
+      1)检查AGV小车是否过极限站点位置
+    </description>
+    <solution>
+      2）检查AGV小车是否过极限站点位置
+    </solution>
+  </alarm>
+
+  <alarm type="输送线超时" code="11" name="输送线超时">
+    <description>
+      1)检查输送运行是否正常
+    </description>
+    <solution>
+      2）检查输送运行是否正常
+    </solution>
+  </alarm>
+
+  <alarm type="行走超时" code="12" name="行走超时">
+    <description>
+      1)检查输送运行是否正常
+    </description>
+    <solution>
+      2）检查输送运行是否正常
+    </solution>
+  </alarm>
+
+  <alarm type="光通讯被遮挡" code="13" name="光通讯被遮挡">
+    <description>
+      1)检查光通讯是否被遮挡
+    </description>
+    <solution>
+      2）检查光通讯是否被遮挡
+    </solution>
+  </alarm>
+  <alarm type="条码故障" code="14" name="条码故障">
+    <description>
+      1)检查条码扫描是否正常工作
+    </description>
+    <solution>
+      2）检查条码扫描是否正常工作
+    </solution>
+  </alarm>
+  <alarm type="目的站送货无货" code="15" name="目的站送货无货">
+    <description>
+      1)检查送货是否完成
+    </description>
+    <solution>
+      2）检查送货是否完成
+    </solution>
+  </alarm>
+  <alarm type="超过最大站" code="16" name="超过最大站">
+    <description>
+      1)检查发送站号是否正确
+    </description>
+    <solution>
+      2）检查发送站号是否正确
+    </solution>
+  </alarm>
+  <alarm type="与输送系统交接信号故障" code="17" name="与输送系统交接信号故障">
+    <description>
+      1)检查与输送交接信号是否正常
+    </description>
+    <solution>
+      2）检查与输送交接信号是否正常
+    </solution>
+  </alarm>
+  <alarm type="与输送系统交接信号故障" code="18" name="与输送系统交接信号故障">
+    <description>
+      1)检查输送传递是否正确
+    </description>
+    <solution>
+      2）检查输送传递是否正确
+    </solution>
+  </alarm>
+  <alarm type="行走前极限" code="19" name="行走前极限">
+    <description>
+      1)检查极限开关是否触发
+    </description>
+    <solution>
+      2）检查极限开关是否触发
+    </solution>
+  </alarm>
+  <alarm type="行走后极限" code="20" name="行走后极限">
+    <description>
+      1)检查极限开关是否触发
+    </description>
+    <solution>
+      2）检查极限开关是否触发
+    </solution>
+  </alarm>
+  <alarm type="任务格式错误" code="21" name="任务格式错误">
+    <description>
+      1)检查发送任务格式是否正确
+    </description>
+    <solution>
+      2）检查发送任务格式是否正确
+    </solution>
+  </alarm>
+  <alarm type="任务命令错误" code="22" name="任务命令错误">
+    <description>
+      1)检查发送任务命令是否正确
+    </description>
+    <solution>
+      2）检查发送任务命令是否正确
+    </solution>
+  </alarm>
+  <alarm type="主接触器故障" code="23" name="主接触器故障">
+    <description>
+      1)检查主接触器是否正常工作
+    </description>
+    <solution>
+      2）检查主接触器是否正常工作
+    </solution>
+  </alarm>
+  <alarm type="变频器DP总线掉线" code="24" name="变频器DP总线掉线">
+    <description>
+      1)检查变频器DP是否正常
+    </description>
+    <solution>
+      2）检查变频器DP是否正常
+    </solution>
+  </alarm>
+  <alarm type="条码扫描DP总线掉线" code="25" name="条码扫描DP总线掉线">
+    <description>
+      1)检查条码扫描DP是否正常
+    </description>
+    <solution>
+      2)检查条码扫描DP是否正常
+    </solution>
+  </alarm>
+  <alarm type="激光测距DP总线掉线" code="26" name="激光测距DP总线掉线线">
+    <description>
+      1)检查条码扫描DP是否正常
+    </description>
+    <solution>
+      2)检查条码扫描DP是否正常
+    </solution>
+  </alarm>
+  <alarm type="轨道状态" code="28" name="变轨1状态错误">
+    <description>
+      1)AGV小车到1号变轨时，变轨1不在弯轨状态。
+    </description>
+    <solution>
+      1)检查变轨1状态
+      2)手动排除变轨1错误状态
+      3)复位AGV小车报警
+    </solution>
+  </alarm>
+  <alarm type="轨道状态" code="29" name="变轨1状态错误">
+    <description>
+      1)AGV小车到2号变轨时，变轨1不在直轨状态。或者直行时不在直轨状态。
+    </description>
+    <solution>
+      1)检查变轨1状态
+      2)手动排除变轨1错误状态
+      3)复位AGV小车报警
+    </solution>
+  </alarm>
+  <alarm type="轨道状态" code="30" name="变轨2不在弯轨">
+    <description>
+      1)AGV小车到2号变轨时，变轨2不在弯轨状态。
+    </description>
+    <solution>
+      1)检查变轨1状态
+      2)手动排除变轨1错误状态
+      3)复位AGV小车报警
+    </solution>
+  </alarm>
+  <alarm type="轨道状态" code="31" name="变轨2不在直轨">
+    <description>
+      1)AGV小车直行时，变轨2不在直轨状态。
+    </description>
+    <solution>
+      1)检查变轨1状态
+      2)手动排除变轨1错误状态
+      3)复位AGV小车报警
+    </solution>
+  </alarm>
+  <alarm type="变轨故障" code="32" name="变轨1报警">
+    <description>
+      1)变轨1报警
+    </description>
+    <solution>
+      1)检查变轨1状态
+      2)手动排除变轨1错误状态
+      3)复位AGV小车报警
+    </solution>
+  </alarm>
+  <alarm type="变轨故障" code="33" name="变轨2报警。">
+    <description>
+      1)变轨2报警。
+    </description>
+    <solution>
+      1)检查变轨1状态
+      2)手动排除变轨1错误状态
+      3)复位AGV小车报警
+    </solution>
+  </alarm>
+  <alarm type="通讯故障" code="34" name="AGV小车与输送机通讯故障。">
+    <description>
+      1)AGV小车与输送机通讯故障。
+    </description>
+    <solution>
+      1)。。。
+    </solution>
+  </alarm>
+  <alarm type="轨道状态错误" code="35" name="变轨1和2需要是直轨状态">
+    <description>
+      1)直线返回时变轨1、2不在直轨状态。
+    </description>
+    <solution>
+      1)。。。
+    </solution>
+  </alarm>
+  <alarm type="门状态错误" code="36" name="变轨1门故障">
+    <description>
+      1)AGV小车到变轨1时自动门未打开到位。
+    </description>
+    <solution>
+      1)检查变轨1门状态
+    </solution>
+  </alarm>
+  <alarm type="门状态错误" code="37" name="变轨2门故障">
+    <description>
+      1)AGV小车到变轨2时自动门未打开到位。
+    </description>
+    <solution>
+      1)检查变轨2门状态
+    </solution>
+  </alarm>
+  <alarm type="起点位置错误" code="38" name="无法到达弯轨1和2">
+    <description>
+      1)AGV小车在此区间内无法到达弯轨1和弯轨2。
+    </description>
+    <solution>
+      1)...
+    </solution>
+  </alarm>
+  <alarm type="起点位置错误" code="39" name="无法到达弯轨1">
+    <description>
+      1)AGV小车在此区间内无法到达弯轨1。
+    </description>
+    <solution>
+      1)...
+    </solution>
+  </alarm>
+</alarms>
+

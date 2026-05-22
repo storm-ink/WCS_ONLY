@@ -1,0 +1,4517 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wcs.DefaultImpls</name>
+    </assembly>
+    <members>
+        <member name="T:Wcs.DefaultImpls.Conveyor.AddTaskCommand">
+            <summary>
+            表示一个添加新任务的命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.TaskCommand">
+            <summary>
+            表示一个对任务进行操作的命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.TaskCommand.#ctor">
+            <summary>
+            编码时不应该使用该构造函数
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.HandShake">
+            <summary>
+            握手协议（为0时说明为地址为空，可以使用）
+            </summary>
+            <remarks>子类应该重写该方法</remarks>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.AssignmentID">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.TU_ID">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.TU_Type">
+            <summary>
+            托盘类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.IO_Data">
+            <summary>
+            业务数据
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.RotingNo">
+            <summary>
+            路径号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.StartMotorNo">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.DestinationNo">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.Index">
+            <summary>
+            任务要存放的索引号(在db块中的位置，从1开始)
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.Spare">
+            <summary>
+            预留字段
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskCommand.DataId">
+            <summary>
+            有效数据识别序号
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ApplyDeleteHoldSignalCommand">
+            <summary>
+            表示一个申请删除占位的命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.HoldSignalCommand">
+            <summary>
+            表示一个与占位相关的命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.HoldSignalCommand.#ctor">
+            <summary>
+            编码时不应该使用该构造函数
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalCommand.HandShake">
+            <summary>
+            握手变量
+            </summary>
+            <remarks>子类应该重写该方法</remarks>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.InitializeHoldSignalCommand">
+            <summary>
+            表示一个初始化占位的命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ApplyDeleteTaskCommand">
+            <summary>
+            表示一个申请删除任务的命令<br />
+            被删除的任务可以是任意状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ApplyClearTaskCommand">
+            <summary>
+            表示一个申请清空任务的命令<br />
+            被清空的任务必须是已完成状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConfirmTaskCommand">
+            <summary>
+            表示一个确认任务的命令（二次握手）
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorDataReceiverElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorElement">
+            <summary>
+            输送线设备配置节点。
+            </summary>
+            <remarks>
+            <b>属性</b><br />
+            senderDecoder: 字符串，接收解码器名称，必填。引用自 /configuration/netPackageDecoders 配置。<br />
+            receiverDecoder: 字符串，发送编码器名称，必填。引用自 /configuration/netPackageDecoders 配置。<br />
+            <b>子节点</b><br />
+            任务序列：<see cref="T:Wcs.Framework.Cfg.SequenceSelection"/><br />
+            位置集合：<see cref="T:Wcs.Framework.Cfg.LocationsSelection"/><br />
+            状态更新时附加的额外动作集合：<see cref="T:Wcs.Framework.Cfg.UpdateStatusActionsSelection"/><br />
+            </remarks>
+            <example>
+            <code lang="xml">
+            <configuration><devices><conveyor name="输送线设备001" no="1" allowConcurrency="true" ip="127.0.0.1" port="8000" senderDecoder="netPackageDecoder2" receiverDecoder="netPackageDecoder1" receiveTimeout="2000" connectTimeout="10000" sendTimeout="3000" logTarget="设备状态" /></devices></configuration>
+            </code>
+            <h1>如何配置一个新的输送线设备</h1>
+            <ul>
+            <li>1、从项目电气负责人那里拿到该输送线的所有货位、路径、占位点信息。假设对方提供了如下信息：<br />
+            <img src="../helpDoc/images/路径表_点位点_货位.jpg" />
+            </li>
+            <li>2、添加一个 conveyor 节点，并配置相关属性，如：设备名、设备编号、ip地址、端口、接收解码器、发送编码器。关于设备具体节点说明请点击 <see cref="T:Wcs.Framework.Cfg.DeviceElement"/> 查看。
+            <para>以下为我们添加的 conveyor 配置详情</para>
+            <code lang="xml"><conveyor name="输送线设备001" no="1" allowConcurrency="true" ip="127.0.0.1" port="8000" senderDecoder="db1" receiverDecoder="db2" receiveTimeout="2000" connectTimeout="10000" sendTimeout="3000" logTarget="设备状态" /></code>
+            </li>
+            <li>3、根据电气人员提供的货位信息，配置 conveyor 节点内的 locations 子节点。点击 <see cref="T:Wcs.Framework.LocationElement"/> 查看格式。
+            <para>以下为我们添加了的 locations 配置的 conveyor 详情</para>
+            <code lang="xml">
+            <conveyor name="输送线设备001" no="1" allowConcurrency="true" ip="127.0.0.1" port="8000" senderDecoder="db1" receiverDecoder="db2" receiveTimeout="2000" connectTimeout="10000" sendTimeout="3000" logTarget="设备状态" >
+                <locations>
+                    <location id="1" userCode="00-001-001" />
+                    <location id="2" userCode="00-001-002" />
+                    <location id="3" userCode="00-001-003" />
+                    <location id="4" userCode="00-001-004" />
+                    <location id="5" userCode="00-001-005" />
+                    <location id="6" userCode="00-001-006" />
+                    <location id="7" userCode="00-001-007" />
+                    <location id="8" userCode="00-001-008" />
+                    <location id="9" userCode="00-001-009" />
+                    <location id="10" userCode="00-001-010" />
+                    <location id="11" userCode="00-001-011" />
+                    <location id="12" userCode="00-001-012" />
+                    <location id="13" userCode="00-001-013" />
+                    <location id="14" userCode="00-001-014" />
+                    <location id="15" userCode="00-001-015" />
+                </locations>
+            </conveyor>
+            </code>
+            </li>
+            <li>4、为了能让设备工作，我们必须为它添加一个任务序列 sequence 节点。关于 sequence 节点说明请点击 <see cref="T:Wcs.Framework.Cfg.SequenceSelection"/> 查看。
+            <para>以下是我们使用框架提供的默认任务序列 <see cref="T:Wcs.Framework.EquipmentActionSequence"/>，添加 sequence 配置的 conveyor 详情</para>
+            <code lang="xml">
+            <conveyor name="输送线设备001" no="1" allowConcurrency="true" ip="127.0.0.1" port="8000" senderDecoder="db1" receiverDecoder="db2" receiveTimeout="2000" connectTimeout="10000" sendTimeout="3000" logTarget="设备状态" >
+                <sequence type="Wcs.Framework.EquipmentActionSequence, Wcs.Framework" comparer="Wcs.Framework.Impl.DefaultEquipmentActionSortComparer, Wcs.Framework" logTarget="任务序列" />
+                <locations>
+                    <location id="1" userCode="00-001-001" />
+                    <location id="2" userCode="00-001-002" />
+                    <location id="3" userCode="00-001-003" />
+                    <location id="4" userCode="00-001-004" />
+                    <location id="5" userCode="00-001-005" />
+                    <location id="6" userCode="00-001-006" />
+                    <location id="7" userCode="00-001-007" />
+                    <location id="8" userCode="00-001-008" />
+                    <location id="9" userCode="00-001-009" />
+                    <location id="10" userCode="00-001-010" />
+                    <location id="11" userCode="00-001-011" />
+                    <location id="12" userCode="00-001-012" />
+                    <location id="13" userCode="00-001-013" />
+                    <location id="14" userCode="00-001-014" />
+                    <location id="15" userCode="00-001-015" />
+                </locations>
+            </conveyor>
+            </code>
+            </li>
+            <li>
+            5、输送线设备的货位输送动作，依靠于设备路径，所以我们为了高输送线能工作，必须配置对应的路径。关于如何配置输送线路径请点击 <see cref="T:Wcs.Framework.Cfg.RouteElement"/> 查看。
+            <para>以下为我们根据上面图中所示的路径列表，使用框架提供的默认输送线逻辑动作映射类型 <see cref="T:Wcs.Framework.LogicMovements.ConveyorTransferMovement"/> 添加的 route 配置详情</para>
+            <code lang="xml">
+            <routes>
+                <route id="1" path="1,2,3" direction="In" adjoins="2" type="Normal" device="输送线设备001" logicMovementType="Wcs.Framework.LogicMovements.ConveyorTransferMovement, Wcs.Framework"/>
+                <route id="2" path="3,4" direction="In" adjoins="" type="Normal" device="输送线设备001" logicMovementType="Wcs.Framework.LogicMovements.ConveyorTransferMovement, Wcs.Framework"/>
+                <route id="3" path="5,6,7" direction="In" adjoins="4" type="Normal" device="输送线设备001" logicMovementType="Wcs.Framework.LogicMovements.ConveyorTransferMovement, Wcs.Framework"/>
+                <route id="4" path="7,8" direction="In" adjoins="" type="Normal" device="输送线设备001" logicMovementType="Wcs.Framework.LogicMovements.ConveyorTransferMovement, Wcs.Framework"/>
+                <route id="5" path="11,10" direction="Out" adjoins="6" type="Normal" device="输送线设备001" logicMovementType="Wcs.Framework.LogicMovements.ConveyorTransferMovement, Wcs.Framework"/>
+                <route id="6" path="15,14,13" direction="Out" adjoins="" type="Normal" device="输送线设备001" logicMovementType="Wcs.Framework.LogicMovements.ConveyorTransferMovement, Wcs.Framework"/>
+            </routes>
+            </code>
+            </li>
+            <li>
+            6、至此，一个简单的输送线对象配置完成。设备管理器、序列管理器中对应的会出现此设备。你可以在手动任务中添加一个起始点为 1@输送线设备001，结束点为 4@输送线设备001 的手动任务验证并测试配置是否正确。
+            </li>
+            </ul>
+            </example>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorCollection">
+            <summary>
+            输送线设备集合配置节点的默认实现。
+            </summary>
+            <remarks>
+            该节点包含一个 selectionType 属性，必填。指示其使用哪个对象进行解析。<br />
+            </remarks>
+            <example>
+            <code lang="xml">
+            <configuration><devices><conveyors type="Wcs.Framework.Cfg.ConveyorsSelection, Wcs.Framework"></conveyors></devices></configuration>
+            </code>
+            <seealso cref="T:Wcs.Framework.Cfg.ConveyorElement"/>
+            </example>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorLocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorLocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorConfirmSignalBindApplicationStartup">
+            <summary>
+            输送线任务的二次握手信号处理绑定启动程序<br />
+            用于给输送线设备绑定 <seealso cref="E:Wcs.DefaultImpls.ConveyorDevice.TaskConfirm"/> 事件的处理程序
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorDevice.Read``1">
+            <summary>
+            ConveyorDevice 不再支持此方法，请使用 ReadStatus&lt;TState&gt;() 方法代替
+            </summary>
+            <typeparam name="TState"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorDevice.SetTaskBlockIndex``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            为指定的动作分配一个PLC任务存储索引地址（从1开始）
+            </summary>
+            <typeparam name="TEquipmentAction">泛型参数。物理动作类型</typeparam>
+            <param name="act">要分配任务存储索引地址的物理动作</param>
+            <param name="setValuesAct">因为不同的类型在数据库中存储任务索引地址的字段也不一样，所以这里需要手动设置一下</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorDevice.GetFreeTaskBlockIndex">
+            <summary>
+            从指定的输送线设备中获取一个空闲的可以存放任务的地址<br />
+            该方法返回的地址从 1 开始,与 PLC 中使用的索引地址相同。
+            该方法获取到的索引位置会被锁定，所以为了防止在编程时被错误的失败，将其密封在了输送线设备类中。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.LocationCurrentTasks">
+            <summary>
+            获取从设备状态数据缓存中读取到的货位当前任务列表
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.Tasks">
+            <summary>
+            获取从设备状态数据缓存中读取到的任务列表
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.MachineAlarms">
+            <summary>
+            获取从设备状态数据缓存中读取到的设备报警数据
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.OccupiedSignals">
+            <summary>   
+            获取从设备状态数据缓存中读取到的占位信号. 
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.OccupyStatus">
+            <summary>
+            获取从设备状态数据缓存中读取到的光电状态.
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.ConveyorLocationStates">
+            <summary>
+            获取从设备状态数据缓存中读取到的货位状态数据.
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.DataComparer">
+            <summary>
+            数据对比器<br />
+            该对象用于对接收到的数据进行对比。在外部可用处理该对象的关事件已达到跟踪数据变化的目的。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.AllowTaskBlockSpace">
+            <summary>
+            允许被WCS系统使用的任务块大小（从1到后xx的索引地址）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorDevice.CompareResultHandlers">
+            <summary>
+            缓冲区数据对比结果处理程序集合
+            </summary>
+        </member>
+        <member name="E:Wcs.DefaultImpls.Conveyor.ConveyorDevice.TaskConfirm">
+            <summary>
+            在任务需要二次握手时发生
+            </summary>
+        </member>
+        <member name="E:Wcs.DefaultImpls.Conveyor.ConveyorDevice.HoldSignal">
+            <summary>
+            当占位信号改变时发生
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorLocation">
+            <summary>
+            输送线位置
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorLocation.#ctor(System.Int32,System.String,Wcs.Framework.Device,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="deviceCode">           该位置在设备中的编码形式. </param>
+            <param name="userCode">             用户编码格式： 00-设备编号（不足三位时补0）-设备货位号（不足三位时补0）. </param>
+            <param name="acceptRequestSignal">  是否接受占位请求信号 如果为 false，底层的占位信号将被忽略（完全不处理）. </param>
+            <param name="device">               位置所属设备. </param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorLocation.UserCode">
+            <summary>
+            用户编码格式：
+            00-设备编号（不足三位时补0）-设备货位号（不足三位时补0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorLocation.AcceptRequestSignal">
+            <summary>
+            是否接受占位请求信号<br />
+            如果为 false，底层的占位信号将被忽略（完全不处理）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorLocation.IsEntrance">
+            <summary>
+            指示该位置是否是入库口<br />
+            用于明确指出该位置的一些特殊的作用
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorLocation.IsExit">
+            <summary>
+            指示该位置是否是出库口<br />
+            用于明确指出该位置的一些特殊的作用
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorLocationWildcard">
+            <summary>
+            输送线位置通配符，即表示一个输送线设备的所有位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorLocationWildcard.UserCode">
+            <summary>
+            用户编码格式： 00-设备编号（不足三位时补0）-设备货位号（不足三位时补0）.
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorLocationWildcard.DeviceCode">
+            <summary>
+            该位置在设备中的编码形式.
+            </summary>
+            <value>
+            字符 "*"
+            </value>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorNetPacket">
+            <summary>
+            输送线数据包
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorNetPacket.Length">
+            <summary>
+            获取数据报长度
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.DefaultUsedConveyorTaskBlockIndexGetter">
+            <summary>
+            默认的已使用的输送线设备任务地址索引获取器。
+            该类会获取设备中任务块中的占用索引和类型为 <see cref="T:Wcs.DefaultImpls.ConveyorTransferAction"/> 的物理动作所占用的任务地址索引集合。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.IUsedConveyorTaskBlockIndexGetter">
+            <summary>
+            已使用的输送线设备任务地址索引获取接口。
+            用于获取已使用的任务地址索引信息(为输送线分配任务时需要指定具体的任务索引地址)
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.IUsedConveyorTaskBlockIndexGetter.GetUsedIndexs(Wcs.DefaultImpls.Conveyor.ConveyorDevice)">
+            <summary>
+            获取指定的输送线设备已使用的任务地址索引集合
+            </summary>
+            <param name="conveyorDevice">输送线设备</param>
+            <returns>已使用的任务地址索引集合。该值与PLC中的索引地址相同。</returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorTaskCompletedEventHandler">
+            <summary>
+            输送线任务完成处理程序
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.DefaultTcpConveyorDataComparer">
+            <summary>
+            默认的输送线状态数据对比器
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.DefaultConveyorTcpProtocolDataReceiver.FetchPackage">
+            <summary>
+            尝试从当前已接收的数据区获取一个完整的数据包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.ConveyorDeviceUserInterface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorDeviceUserInterface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.ConveyorDeviceUserInterface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorTransferAction">
+            <summary>
+            表示一个输送线的输送的物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorTransferAction.StartLocation">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorTransferAction.EndLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorTransferAction.RouteId">
+            <summary>
+            路径号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ConveyorTransferAction.AtPlcDBIndex">
+            <summary>
+            此动作分配的在设备数据块中存放的索引位置（从1开始）
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorTransferMovement">
+            <summary>
+            表示输送线从 A 将货物带到 B 点的逻辑动作
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding._collectionSettings">
+            <summary>
+            db 块配置集合
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.#ctor(System.Xml.XmlNode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="configNode">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.Get``1(System.Byte[])">
+            <summary>
+            从指定的接收到的数据包中的数据部分中获取指定类型的状态数据
+            </summary>
+            <typeparam name="T">泛型参数，状态数据类型</typeparam>
+            <param name="receivedBytes">接收到的数据包中的数据部分</param>
+            <returns>
+            指定类型的状态数据集合 <br />
+            如果 T 类型不在配置集合中，将返回一个长度为 0 的 T 数组。
+            </returns>
+            <exception cref="T:Exception">_collectionSettings 为 null 时将引发此异常</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.Encode``1(``0)">
+            <summary>
+            将指定的对象进行编码处理
+            </summary>
+            <typeparam name="T">泛型参数.要编码的数据类型</typeparam>
+            <param name="obj">要编码的数据</param>
+            <returns>在底层设备中该对象的二进制表现形式,一个 byte 数组.</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.Decode``1(System.Byte[])">
+            <summary>
+            将底层 byte 数组尝试解码为指定类型的对象
+            </summary>
+            <typeparam name="T">泛型参数.要转换的目标类型</typeparam>
+            <param name="bytes">底层 byte 数组</param>
+            <returns>
+            指定类型的状态数据 <br />
+            转换失败将引发一个 Exception 异常。
+            </returns>
+            <exception cref="T:Exception">目标类型未配置时，将引发此异常。</exception>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.setMethodInfos">
+            <summary>
+            解码整个数据包的数据块部分
+            </summary>
+            <param name="receivedDataPart"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.BitArray2Byte(System.Collections.BitArray)">
+            <summary>
+            将BitArray转换为一个十进制整数
+            </summary>
+            <param name="bitArray">下表从低到高的顺序 与十进制整数的二进制形式从低到高的顺序一致</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor._DefaultConveyorTcpProtocolDataReceiverEncoding.TotalBytes">
+            <summary>
+            数据块的总大小(相当于DB1和DB2的数据区字节总数)
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.LocationNetTransferObject">
+            <summary>
+            输送线货位状态对象.
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.LocationNetTransferObject.PosNo">
+            <summary>
+            货位号.
+            </summary>
+            <value>
+            位置在设备中的编码形式.
+            </value>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.LocationNetTransferObject.Status">
+            <summary>
+            状态.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus">
+            <summary>
+            输送线位置状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus.Warning">
+            <summary>
+            报警
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus.Offline">
+            <summary>
+            离线
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus.Manual">
+            <summary>
+            手动
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus.Stopped">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.LocationNetTransferObjectStatus.Running">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake">
+            <summary>
+            握手状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake.Empty">
+            <summary>
+            初始化时数据
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake.New">
+            <summary>
+            新任务
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake.ApplyForDelete">
+            <summary>
+            删除请求
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake.Readed">
+            <summary>
+            PLC已请求
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake.SecondConfirm">
+            <summary>
+            WCS 二次确认
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectHandShake.ApplyForClear">
+            <summary>
+            请求清空
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.LocationTaskNetTransferObject">
+            <summary>
+            货位当前任务
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.AlarmNetTransferObject">
+            <summary>
+            报警状态.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Conveyor.AlarmNetTransferObject.ToAlarms">
+            <summary>
+            获取报警信息.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject">
+            <summary>
+            输送线占位信号
+            此信号通常是在容器到达或经过某些特定的输送线位置时，由电气控制生成。
+            一般用在入库时入库指令的生成上
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject.PosNo">
+            <summary>
+            获取或设置占位信号对应的货位号（信号源）
+            </summary>
+            <value>
+            货位对应的设备编码形式.即输送线位置对象 DeviceCode 值.
+            </value>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject.HandShake">
+            <summary>
+             获取或设置占位信号的握手变量值
+            </summary>
+            <value>
+            占位信号握手变量
+            </value>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject.AssignmentID">
+            <summary>
+            获取或设置占位信号对应的任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject.TU_ID">
+            <summary>
+            获取或设置占位信号对应的托盘号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject.TU_Type">
+            <summary>
+            获取或设置占位信号对应的托盘类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObject.IO_Data">
+            <summary>
+            获取或设置占位信号对应的业务数据
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObjectHandShake">
+            <summary>
+            占位信号握手变量
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObjectHandShake.Empty">
+            <summary>
+            没有占位
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObjectHandShake.New">
+            <summary>
+            有占位
+            容器到达某特定位置后，电气程序生成该位置的占位信号，并通过设备通迅缓冲区反应到上位机
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.HoldSignalNetTransferObjectHandShake.ApplyToDelete">
+            <summary>
+            申请清除
+            在读到电气生成的占位信号后，需要由上位机发送此握手到设备通迅缓冲区。电气程序在读到该信号后删除当前点位信息
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject">
+            <summary>
+            输送线光电状态，该对象包含有物理光电设备的实时工作状态信息
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.PosNo">
+            <summary>
+            获取或设置占位信号对应的货位号（信号源）
+            </summary>
+            <value>
+            货位对应的设备编码形式.即输送线位置对象 DeviceCode 值.
+            </value>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.PhocllUseStatus">
+            <summary>
+            光电的使用状态，即此组使用了哪些光电
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.FroProPotocell">
+            <summary>
+            指示前保护光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.FroPosPotocell">
+            <summary>
+            指示前到位光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.FroSloPotocell">
+            <summary>
+            指示前减速光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.AftProPotocell">
+            <summary>
+            指示后保护光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.AftPosPotocell">
+            <summary>
+            指示后到位光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.AftSloPotocell">
+            <summary>
+            指示后减速光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.UpPotocell">
+            <summary>
+            指示后高位光电是否被遮挡
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.OccupyNetTransferObject.DownPotocell">
+            <summary>
+            指示后低位光电是否被遮挡
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand">
+            <summary>
+            表示一个清除货位任务的命令
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand.PosNo">
+            <summary>
+            货位号.
+            </summary>
+            <value>
+            位置在设备中的编码形式.
+            </value>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand.TaskNo">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand.TUID">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand.Index">
+            <summary>
+            对象在设备数据块中的存储位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject">
+            <summary>
+            任务块
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.HandShake">
+            <summary>
+            握手协议（为0时说明为地址为空，可以使用）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.AssignmentID">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.TU_ID">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.TU_Type">
+            <summary>
+            托盘类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.IO_Data">
+            <summary>
+            业务数据
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.RotingNo">
+            <summary>
+            路径号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.StartMotorNo">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.DestinationNo">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.ReadTask">
+            <summary>
+            PLC读取任务后会填一下这个任务号，现在没用上好像
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Conveyor.TaskNetTransferObject.Spare">
+            <summary>
+            预留字段
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus.Empty">
+            <summary>
+            初始化时数据
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus.Finished">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus.Running">
+            <summary>
+            执行中
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus.Waiting">
+            <summary>
+            等待执行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus.Error">
+            <summary>
+            任务不能执行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Conveyor.TaskNetTransferObjectStatus.Other">
+            <summary>
+            其它 未完成（原因或状态定义）；
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor._DB1">
+            <summary>
+            一个特殊的传输对象。<br />
+            用于输送线设备的状态数据传输。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor._DB2">
+            <summary>
+            一个特殊的传输对象。<br />
+            用于输送线设备的状态数据传输。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorTaskErrorEventHandler">
+            <summary>
+            输送线任务报警处理程序
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ConveyorTaskRequestEventHandler">
+            <summary>
+            输送线任务请求事件处理程序
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.AlarmDataLog">
+            <summary>
+            报警状态.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.LocationDataLog">
+            <summary>
+            输送线货位状态对象.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.AddTaskCommand">
+            <summary>
+            表示一个新增任务命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.TelexTransferObject">
+            <summary>
+            表示一个报文传输对象
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.TelexTransferObject.Prefix">
+            <summary>
+            报文前缀
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.TelexTransferObject.Suffix">
+            <summary>
+            报文后缀
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.TelexTransferObject.ToTelex">
+            <summary>
+            转换为字符串形式的报文内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.TelexTransferObject.#ctor">
+            <summary>
+            默认无参构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.TelexTransferObject.ValidateType(System.String)">
+            <summary>
+            验证一个字符串形式的报文内容是否是与该类型一致
+            </summary>
+            <param name="telex">要进行比较的报文串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.TelexTransferObject.GetBytes">
+            <summary>
+            将对象转换为可以写入网络流的的 byte 数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.TelexTransferObject.TypeFlag">
+            <summary>
+            报文类型标识
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.TelexTransferObject.Length">
+            <summary>
+            报文的长度<br />
+            堆垛机的报文长度通常固定，为了增加安全性，强制编码固定该长度，并在接收后进行报文验证。
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.AddTaskCommand.#ctor(System.String,Wcs.DefaultImpls.Crane.AddTaskCommandType,Wcs.DefaultImpls.Crane.RackLocation,Wcs.DefaultImpls.Crane.RackLocation)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="taskId">任务号</param>
+            <param name="commandType">命令类型</param>
+            <param name="startLocation">任务起点位置</param>
+            <param name="endLocation">任务终点位置</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommand.CraneDevice">
+            <summary>
+            命令所属的堆垛机<br />
+            将命令实例限定到具体的设备，在发送前进行验证，防止命令中指定的位置与最终接收命令的设备位置系统不一致，增加安全性。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommand.StartLocation">
+            <summary>
+            任务起始位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommand.EndLocation">
+            <summary>
+            任务结束位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommand.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommand.TaskId">
+            <summary>
+            任务号<br />
+            为兼容旧系统中的 GOT 打头的任务，将此字段设为 <see cref="T:System.String"/> 类型。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.AddTaskCommandType">
+            <summary>
+            新增任务命令的类型
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.AddAutomaticTransferWithStepByStepCommand">
+            <summary>
+            表示一个添加堆垛机的一个单步执行全自动物理动作命令指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.EmergencyStopCommand">
+            <summary>
+            急停命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.LoadCommand">
+            <summary>
+            取货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.RequestStateCommand">
+            <summary>
+            请求设备报告当前状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.BackToTheOriginCommand">
+            <summary>
+            回原点命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CancelEmergencyStopCommand">
+            <summary>
+            取消急停命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CancelAutomaticTransferWithStepByStepCommand">
+            <summary>
+            表示一个取消堆垛机的一个单步执行全自动物理动作命令指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.ResetWarnCommand">
+            <summary>
+            表示一个报警复位命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.WalkCommand">
+            <summary>
+            行走命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.UnloadCommand">
+            <summary>
+            放货命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.AlarmCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.AlarmElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AlarmElement.Type">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AlarmElement.Code">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AlarmElement.Name">
+            <summary>
+            错误名称(显示给客户)
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AlarmElement.Description">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AlarmElement.Solution">
+            <summary>
+            解决方法
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AlarmElement.IsFault">
+            <summary>
+            是否是故障
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneForkDeepEquipmentActionSchedulerFilter">
+            <summary>
+            堆垛机货叉深度（必须先1、2，后3、4的顺序取）物理动作过滤器
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.Commands.ConfirmTaskFinishedCommand">
+            <summary>
+            表示一个归档任务的指令。该指令通常在Wcs收到子系统任务报完成处理结束后发送给子系统。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.Communication.IProxyCommand">
+            <summary>
+            表示一个代理命令对象
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.Communication.IProxyCommand.Execute">
+            <summary>
+            在服务器接收到该命令后应该如何执行（该方法只应在接收端调用）
+            </summary>
+            <returns>执行完成返回一个需要回复给客户端的对象</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.Communication.IProxyCommand.CreateFailedProxyTransferObject(System.Object)">
+            <summary>
+            创建一个执行失败时要返回给客户端的对象
+            </summary>
+            <param name="para">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.Communication.DefaultTcpProxyDataReceiver.FetchPackage">
+            <summary>
+            尝试从当前已接收的数据区获取一个完整的数据包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Proxy.Communication.ProxyNetPackage.Prefix">
+            <summary>
+            报文前缀
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Proxy.Communication.ProxyNetPackage.Suffix">
+            <summary>
+            报文后缀
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.Communication.ProxyNetPackage.Length">
+            <summary>
+            获取数据报长度
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.ClientCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.ClientElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.ClientLocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.ClientLocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.DefaultProxyDataReceiverElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.ServerCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.ServerElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Proxy.frmResumeChooseCurrentLocation.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.frmResumeChooseCurrentLocation.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.frmResumeChooseCurrentLocation.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Proxy.NativeMethods.AllocConsole">
+            <summary>
+            启动控制台
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.ProxyClientLocationWildcard">
+            <summary>
+            子系统客户端位置通配符，即表示一个输送线设备的所有位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.ProxyClientLocationWildcard.DeviceCode">
+            <summary>
+            该位置在设备中的编码形式.
+            </summary>
+            <value>
+            字符 "*"
+            </value>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.ProxyClientTaskCompletedEventHandler">
+            <summary>
+            该处理程序必须放在框架默认处理程序前面
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.ProxyTransferAction">
+            <summary>
+            表示一个子系统的输送物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.ProxyTransferAction.StartLocation">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.ProxyTransferAction.EndLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.ProxyTransferMovement">
+            <summary>
+            表示子系统从 A 将货物带到 B 点的逻辑动作
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.TcpServer">
+            <summary>
+            实现一个简单的 Tcp 服务器。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.TransferObjects.AddTaskCommandReplayTransferObject">
+            <summary>
+            表示一个<seealso cref="T:Wcs.DefaultImpls.Proxy.Commands.AddTaskCommand"/>命令的返回数据
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.AddTaskCommandReplayTransferObject.TaskCode">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.AddTaskCommandReplayTransferObject.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.AddTaskCommandReplayTransferObject.Message">
+            <summary>
+            参考消息
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.ConveyorSemaphoreTransferObject.IsVaild">
+            <summary>
+            获取或设置一个值，指示该信号量是否有效
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.ResumeTaskCommandReplayTransferObject.TaskCode">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.ResumeTaskCommandReplayTransferObject.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.ResumeTaskCommandReplayTransferObject.Message">
+            <summary>
+            参考消息
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.ResumeTaskCommandReplayTransferObject.CurrentLocationInfo">
+            <summary>
+            包含选择任务当前位置的信息，如果属性不为 null,则表明需要选择任务当前位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.TransferObjects.ChooseTaskCurrentLocationInfo">
+            <summary>
+            选择任务当前位置信息
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.TransferObjects.SuspendTaskCommandReplayTransferObject">
+            <summary>
+            表示一个<seealso cref="T:Wcs.DefaultImpls.Proxy.Commands.SuspendTaskCommand"/>命令的返回数据
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.SuspendTaskCommandReplayTransferObject.TaskCode">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.SuspendTaskCommandReplayTransferObject.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.SuspendTaskCommandReplayTransferObject.Message">
+            <summary>
+            参考消息
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Proxy.TransferObjects.CancellTaskCommandReplayTransferObject">
+            <summary>
+            表示一个<seealso cref="T:Wcs.DefaultImpls.Proxy.Commands.CancelTaskCommand"/>命令的返回数据
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.CancellTaskCommandReplayTransferObject.TaskCode">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.CancellTaskCommandReplayTransferObject.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Proxy.TransferObjects.CancellTaskCommandReplayTransferObject.Message">
+            <summary>
+            参考消息
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.ChainAction">
+            <summary>
+            穿梭车 到站后 动作
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.ChainAction.None">
+            <summary>
+            不动作
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.ChainAction.LeftPicking">
+            <summary>
+            左取货
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.ChainAction.LeftUnloading">
+            <summary>
+            左卸货
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.ChainAction.RightPicking">
+            <summary>
+            右取货
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.ChainAction.RightUnloading">
+            <summary>
+            右卸货
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.ClearTaskCommand">
+            <summary>
+            放货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject">
+            <summary>
+            穿梭车 报文
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.Prefix">
+            <summary>
+            报文前缀
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.Suffix">
+            <summary>
+            报文后缀
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.ToTelex">
+            <summary>
+            转换为字符串形式的报文内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.#ctor">
+            <summary>
+            默认无参构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.ValidateType(System.String)">
+            <summary>
+            验证一个字符串形式的报文内容是否是与该类型一致
+            </summary>
+            <param name="telex">要进行比较的报文串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.GetBytes">
+            <summary>
+            将对象转换为可以写入网络流的的 byte 数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.TypeFlag">
+            <summary>
+            报文类型标识
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTelexTransferObject.Length">
+            <summary>
+            报文的长度<br />
+            堆垛机的报文长度通常固定，为了增加安全性，强制编码固定该长度，并在接收后进行报文验证。
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.ClearTaskCommand.#ctor">
+            <summary>
+            初始化 ClearTaskCommand 类型
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.NormalWalkCommand">
+            <summary>
+            无货行走
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.WalkCommand.#ctor(System.String,System.UInt32,System.UInt16)">
+            <summary>
+            初始货 AddWalkCommand 类型
+            </summary>
+            <param name="taskId">设备任务号</param>
+            <param name="containerCode">托盘号</param>
+            <param name="endStation">结束站点</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.WalkCommand.ContainerCode">
+            <summary>
+            托盘号（4位）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.WalkCommand.EndStation">
+            <summary>
+            结束站
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.WalkCommand.TaskId">
+            <summary>
+            任务号（8位）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.WalkCommand.TaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.PickingCommand">
+            <summary>
+            取货命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.PickingCommand.#ctor(System.String,System.UInt32,System.UInt16,Wcs.DefaultImpls.RailGuidedVehicle.ChainAction)">
+            <summary>
+            初始货 PickingCommand 类型
+            </summary>
+            <param name="taskId">设备任务号</param>
+            <param name="containerCode">托盘号</param>
+            <param name="endStation">取货站点</param>
+            <param name="chainAction">取货站点链条动作</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PickingCommand.ChainAction">
+            <summary>
+            取货站链条动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PickingCommand.ContainerCode">
+            <summary>
+            托盘号（4位）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PickingCommand.PickingStation">
+            <summary>
+            取货站
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PickingCommand.TaskId">
+            <summary>
+            任务号（8位）
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.PuttingCommand">
+            <summary>
+            放货命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.PuttingCommand.#ctor(System.String,System.UInt32,System.UInt16,Wcs.DefaultImpls.RailGuidedVehicle.ChainAction)">
+            <summary>
+            初始化 PutingCommand 类型
+            </summary>
+            <param name="String">设备任务号</param>
+            <param name="containerCode">托盘号</param>
+            <param name="endStation">放货站点</param>
+            <param name="puttingStation">放货站点链条动作</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PuttingCommand.ChainAction">
+            <summary>
+            放货站链条动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PuttingCommand.ContainerCode">
+            <summary>
+            托盘号（4位）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PuttingCommand.PuttingStation">
+            <summary>
+            放货站
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.PuttingCommand.TaskId">
+            <summary>
+            任务号（8位）
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.WalkWithGoodsCommand">
+            <summary>
+            带货行走
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.AlarmCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.Type">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.Code">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.Name">
+            <summary>
+            错误名称(显示给客户)
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.Description">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.Solution">
+            <summary>
+            解决方法
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.AlarmElement.IsFault">
+            <summary>
+            是否是故障
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.DefaultRailGuidedDataReceiverElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStationElement.PickingChainAction">
+            <summary>
+            取货链条动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStationElement.PuttingChainAction">
+            <summary>
+            放货链条动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStationElement.StationNo">
+            <summary>
+            站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStationElement.Position">
+            <summary>
+            坐标
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStationElement.StockingLocations">
+            <summary>
+            存货位置集合
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.DefaultTcpRailGuidedVehicleDataReceiver.FetchTelexTransferObject">
+            <summary>
+            尝试从当前已接收的数据区获取一个完整的报文对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToPickingLocationState">
+            <summary>
+            未到达取货点，需要移动到取货点
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToPickingLocationState.CanPerform">
+            <summary>
+            指示当前是否可以发送向取货点移动的指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToPickingLocationState.IsCompleted">
+            <summary>
+            指示堆垛机是否已到达取货点
+            </summary>
+            <remarks>
+            <para>完成条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、设备已连接并且获取到了当前所处位置数据</para>
+            <para>3、设备的当前位置（站点）和逻辑动作的起始位置（站点）一致</para>
+            </remarks>
+            <returns>完成返回 true；未完成返回假 false</returns>
+            <exception cref="T:System.NotSupportedException">物理动作所属的逻辑动作起始位置不是穿梭车站点时引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToPickingLocationState.Perform">
+            <summary>
+            发送向取货点移动的指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToUnloadingLocationState">
+            <summary>
+            未到达放货点，需要移动到放货点
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToUnloadingLocationState.CanPerform">
+            <summary>
+            指示当前是否可以发送向放货点移动的指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToUnloadingLocationState.IsCompleted">
+            <summary>
+            指示堆垛机是否已到达放货点
+            </summary>
+            <remarks>
+            <para>完成条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、设备已连接并且获取到了当前所处站点数据</para>
+            <para>3、设备的当前位置（站点号）和逻辑动作的结束位置（站点号）一致</para>
+            </remarks>
+            <returns>完成返回 true；未完成返回假 false</returns>
+            <exception cref="T:System.NotSupportedException">物理动作所属的逻辑动作结束位置不是货架位置是引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotArriveToUnloadingLocationState.Perform">
+            <summary>
+            发送向放货点移动指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.NotPickingState">
+            <summary>
+            未取货，等待取货
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotPickingState.CanPerform">
+            <summary>
+            指示当前是否可以发送取货指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、设备的当前位置（站点号）和逻辑动作的起始位置（站点号）一致</para>
+            <para>4、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Wcs.DefaultImpls.RailGuidedVehicle.NotPickingState.IsCompleted”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotPickingState.Perform">
+            <summary>
+            发送取货指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.NotUnloadingState">
+            <summary>
+            未放货，等待放货
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotUnloadingState.CanPerform">
+            <summary>
+            指示当前是否可以发送放货动指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、设备的当前位置（站点号）和逻辑动作的终点位置（站点号）一致</para>
+            <para>4、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Wcs.DefaultImpls.RailGuidedVehicle.NotUnloadingState.IsCompleted”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.NotUnloadingState.Perform">
+            <summary>
+            发送放货指令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.PickingAndUnloadingWithStepByStepStateManager.#ctor(Wcs.Framework.EquipmentAction,Wcs.Framework.TaskableDevice)">
+            <summary>
+            初始化 <seealso cref="T:PickingAndUnloadingWithStepByStepStateManager"/> 类的新实例。
+            </summary>
+            <param name="equipmentAction">物理动作</param>
+            <param name="device">关联设备</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.PickingAndUnloadingWithStepByStepStateManager.BuildStateLink">
+            <summary>
+            创建状态链
+            </summary>
+            <remarks>
+            <para>1、<see cref="T:NotArriveToPickingLocationState"/>未到达取货点</para>
+            <para>2、<see cref="T:NotPickingState"/>未取货</para>
+            <para>3、<see cref="T:NotArriveToUnloadingLocationState"/>未到达放货点</para>
+            <para>4、<see cref="T:NotUnloadingState"/>未放货</para>
+            </remarks>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleDevice">
+            <summary>
+            穿梭车设备
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleDevice.IsIdle">
+            <summary>
+            只要返回的任务号为0都可以下任务。
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleDeviceUserInterface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleDeviceUserInterface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleDeviceUserInterface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.Initialized">
+            <summary>无货无任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.TaskedAndNotRunning">
+            <summary>接到任务未运行</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.Running">
+            <summary>行走运行</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.ArrivedStartStation">
+            <summary>到达起始点</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.ArrivedEndStation">
+            <summary>到达目的地</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.ClearedTheWay">
+            <summary>执行让道任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.AutomaticTaskCompletion">
+            <summary>
+            自动任务完成
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.TaskCompletionByManual">
+            <summary>
+            手动报完成
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleEvent.交接货超时">
+            <summary>
+            交接货超时
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleNetPacket">
+            <summary>
+            定义该对象只为套用系统结构
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleNetPacket.Length">
+            <summary>
+            获取数据报长度
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.GetDistance(Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation)">
+            <summary>
+            获取此站点于指定站点之前的距离
+            </summary>
+            <param name="station"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.GetDistance(Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation,Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation)">
+            <summary>
+            计算从此站点行走到取货站点，然后再从取货站点行走到放货站点的总距离
+            </summary>
+            <param name="loadStation">取货站点</param>
+            <param name="unloadStation">放货站点</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.PickingChainAction">
+            <summary>
+            取货链条动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.PuttingChainAction">
+            <summary>
+            放货链接动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.Position">
+            <summary>
+            所在位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.StockingLocations">
+            <summary>
+            存货位置（可转换编码集合）。这些位置如果都未空闲时将无法再向该站点输送货物。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStation.StationNo">
+            <summary>
+            站点位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.初始化">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.手动模式">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.无货待命">
+            <summary>
+            无货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.有货待命">
+            <summary>
+            有货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.无货运行">
+            <summary>
+            无货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.有货运行">
+            <summary>
+            有货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.输送线运行">
+            <summary>
+            输送线运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.停止">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.报警停机">
+            <summary>
+            报警停机
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStatus.有货">
+            <summary>
+            有货
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskCompletedHandler">
+            <summary>
+            穿梭车的完成处理程序<br />
+            该处理程序的目的是用于清除穿梭车的完成信号。根据于穿梭车的协议规则，当穿梭车的任务完成后，必须由上位机发送HP命令来清除当前所有状态，否则无法执行其它指令。<br />
+            该处理程序应该放在完成事件处理程序配置的最后面，原因是如果完成事件前面的处理未成功就发送了清除指令，那么在Wcs关闭后任务的完成信号将永久丢失。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode.Initialized">
+            <summary>无任务类型</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode.AutomaticTask">
+            <summary>表示HB任务
+            全自动任务
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode.Picking">
+            <summary>取货任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode.Putting">
+            <summary>放货任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode.WalkWithGoods">
+            <summary>有货行走</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleTaskMode.Walk">
+            <summary>无货行走</summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleWrokMode">
+            <summary>
+            穿梭车工作模式，该参数会影响穿梭车的任务执行顺序
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleWrokMode.Normal">
+            <summary>
+            默认。按照任务的创建时间升序执行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleWrokMode.Nearby">
+            <summary>
+            就近。选择离穿梭车位置最近的任务执行
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RestoreRailGuidedVehicleStateManagerApplicationStartup">
+            <summary>
+            穿梭车状态上下文恢复程序
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.CancelRailGuidedVehicleStepByStepActionCommand">
+            <summary>
+            表示一个取消穿梭车的一个单步执行全自动物理动作命令指令
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStepByStepAction.LoadLocation">
+            <summary>
+            取货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStepByStepAction.UnloadLocation">
+            <summary>
+            卸货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStepByStepAction.StateManager">
+            <summary>
+            状态上下文
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.RailGuidedVehicleStepByStepMovement">
+            <summary>
+            表示穿梭车的一个单步执行的全自动的取货放货任务
+            到 A 点取货然后卸到 B 点
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject">
+            <summary>
+             穿梭车状态报文 
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.Position">
+            <summary>
+            位置值
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.CurrentStation">
+            <summary>
+            当前站台号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.AtStation">
+            <summary>
+            指示穿梭车当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.State">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.Event">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.ContainerCode">
+            <summary>
+            托盘条码
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.FromStation">
+            <summary>
+            起点
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.ToStation">
+            <summary>
+            目的的
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObject.TaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog">
+            <summary>
+            表示一个穿梭车状态回报文 数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.Position">
+            <summary>
+            位置值
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.CurrentStation">
+            <summary>
+            当前站台号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.AtStation">
+            <summary>
+            指示穿梭车当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.State">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.Event">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.ContainerCode">
+            <summary>
+            不知道什么玩意 干什么用的
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.FromStation">
+            <summary>
+            起点
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.ToStation">
+            <summary>
+            目的的
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.TaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.RailGuidedVehicle.StateTelexTransferObjectDataLog.Telex">
+            <summary>
+            原始报文信息
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.DefaultSubSystemDataReceiverElement.CreateDataReceiver">
+            <summary>
+            返回一个 DefaultSubSystemDataReceiver 实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemLocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemLocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemLocationElement.StationNo">
+            <summary>
+            站点
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemDeviceElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.RackLocationCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.RackLocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.Column">
+            <summary>
+            列位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.Enabled">
+            <summary>
+            指示该位置是否启用
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.ForkAction">
+            <summary>
+            货叉允许的动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.ForkDirection">
+            <summary>
+            堆垛机执行任务时此位置的排相对于设备所在的左右位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.IsOriginPoint">
+            <summary>
+            是否是原点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.Level">
+            <summary>
+            层位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.UserColumn">
+            <summary>
+            用户列位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocationElement.UserLevel">
+            <summary>
+            用户层位置
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.DefaultCraneDataReceiverElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneDevice._requestStateCommandThreadIsRunning">
+            <summary>
+            指示当堆垛机请求状态回报线程是否处于工作状态
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.EmergencyStop">
+            <summary>
+            向堆垛机发送急停命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.CancelEmergencyStop(Wcs.Framework.LockerInfo)">
+            <summary>
+            向堆垛机发送取消急停命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.BackToTheOrigin(Wcs.Framework.LockerInfo)">
+            <summary>
+            向堆垛机发送回原点命令
+            </summary>
+            <param name="locker">锁</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.GetCurrentLocation">
+            <summary>
+            获取此堆垛机当前所在位置
+            </summary>
+            <returns>在设备未连接或取到的状态位置无法转换时将返回null</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.ResetWarn(Wcs.Framework.LockerInfo)">
+            <summary>
+            重置（复位）报警
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.NewRequestStateCommand">
+            <summary>
+            创建一个堆垛机状态查询命令实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDevice.ParseEquipmentTaskId(Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject)">
+            <summary>
+            从指定的状态中转换出正确的任务号
+            </summary>
+            <param name="state">状态</param>
+            <returns>如果是GOT任务将返回0</returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneDevice.WorkMode">
+            <summary>
+            获取当前堆垛机的工作模式
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneDevice.Laneways">
+            <summary>
+            获取堆垛机所在巷道。
+            <para>通常情况下，一个堆垛机只能在一个巷道中行走。某些情况下可能会存在多个（如：变轨堆垛机Wms业务层对可能对其巷道进行逻辑上的重新定义，出现多个）</para>
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneDevice.LastStatus">
+            <summary>
+            获取堆垛机最后回报的状态数据
+            </summary>
+        </member>
+        <member name="E:Wcs.DefaultImpls.Crane.CraneDevice.AddTaskCommandReplied">
+            <summary>
+            在发送的新任务命令被回复后发生
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneDeviceWorkMode.Auto">
+            <summary>
+            自动模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneDeviceWorkMode.Manual">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneDeviceOriginPointLocation">
+            <summary>
+            堆垛机原点位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.RackLocation">
+            <summary>
+            货架位置
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.RackLocation.#ctor(Wcs.DefaultImpls.Crane.CraneDevice,System.String,System.Nullable{Wcs.DefaultImpls.Crane.ForkDirection},Wcs.DefaultImpls.Crane.ForkAction,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="device">位置所属设备</param>
+            <param name="userCode">用户编码</param>
+            <param name="forkDirection">位置所在的排相对于设备所在的左右位置</param>
+            <param name="forkAction">货叉允许的动作</param>
+            <param name="column">列位置</param>
+            <param name="level">层位置</param>
+            <param name="userColumn">用户列位置</param>
+            <param name="userLevel">用户层位置</param>
+            <param name="enabled">是否启用该位置</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.RackLocation.IsForkActionAllowed(Wcs.DefaultImpls.Crane.ForkAction)">
+            <summary>
+            判断指定的叉货动作是否在当前货位被允许
+            </summary>
+            <param name="forkAction">叉货动作</param>
+            <returns>允许返回 true,不允许返回 false</returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.Column">
+            <summary>
+            列位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.Enabled">
+            <summary>
+            指示该位置是否启用
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.ForkAction">
+            <summary>
+            货叉允许的动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.ForkDirection">
+            <summary>
+            堆垛机执行任务时此位置的排相对于设备所在的左右位置
+            为空时表示不允许伸叉
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.Level">
+            <summary>
+            层位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.UserColumn">
+            <summary>
+            用户列位置(系统内不使用，只是用于配合手持地操的使用)
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RackLocation.UserLevel">
+            <summary>
+            用户层位置(系统内不使用，只是用于配合手持地操的使用)
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneDeviceUserInterface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDeviceUserInterface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.CraneDeviceUserInterface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneManulModeEquipmentFailure">
+            <summary>
+            表示堆垛机正处于手动模式的设备故障。严格的请，它应该是一个状态。
+            </summary>
+            <remarks>此故障将导致目标设备所有位置不可用</remarks>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.AddTaskCommandRepliedEventArgs">
+            <summary>
+            向设备发送新任务命令回复事件数据
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.AddTaskCommandRepliedEventArgs.#ctor(System.Int32,Wcs.DefaultImpls.Crane.AddTaskCommandReplyTelexTransferObjectResult)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="equipmentTaskId">设备任务号</param>
+            <param name="column">当前所在列</param>
+            <param name="level">当前所在层</param>
+            <param name="rackLocation">当前所在的货架位置（可为 null）</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommandRepliedEventArgs.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommandRepliedEventArgs.Result">
+            <summary>
+            设备对新任务命令的处理结果
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.NotArriveToPickingLocationState">
+            <summary>
+            未到达取货点，需要移动到取货点
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotArriveToPickingLocationState.CanPerform">
+            <summary>
+            指示当前是否可以发送向取货点移动的指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotArriveToPickingLocationState.IsCompleted">
+            <summary>
+            指示堆垛机是否已到达取货点
+            </summary>
+            <remarks>
+            <para>完成条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、设备已连接并且获取到了当前所处位置数据</para>
+            <para>3、设备的当前位置（层、列）和逻辑动作的起始位置（层、列）一致</para>
+            </remarks>
+            <returns>完成返回 true；未完成返回假 false</returns>
+            <exception cref="T:System.NotSupportedException">物理动作所属的逻辑动作起始位置不是货架位置是引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotArriveToPickingLocationState.Perform">
+            <summary>
+            发送向取货点移动的指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.NotArriveToUnloadingLocationState">
+            <summary>
+            未到达放货点，需要移动到放货点
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotArriveToUnloadingLocationState.CanPerform">
+            <summary>
+            指示当前是否可以发送向放货点移动的指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotArriveToUnloadingLocationState.IsCompleted">
+            <summary>
+            指示堆垛机是否已到达放货点
+            </summary>
+            <remarks>
+            <para>完成条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、设备已连接并且获取到了当前所处位置数据</para>
+            <para>3、设备的当前位置（层、列）和逻辑动作的结束位置（层、列）一致</para>
+            </remarks>
+            <returns>完成返回 true；未完成返回假 false</returns>
+            <exception cref="T:System.NotSupportedException">物理动作所属的逻辑动作结束位置不是货架位置是引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotArriveToUnloadingLocationState.Perform">
+            <summary>
+            发送向放货点移动指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.NotPickingState">
+            <summary>
+            未取货，等待取货
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotPickingState.CanPerform">
+            <summary>
+            指示当前是否可以发送取货指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、设备的当前位置（层、列）和逻辑动作的起始位置（层、列）一致</para>
+            <para>4、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Wcs.DefaultImpls.Crane.NotPickingState.IsCompleted”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wcs.DefaultImpls.Crane.NotPickingState.Perform">
+            <summary>
+            发送取货指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.NotUnloadingState">
+            <summary>
+            未放货，等待放货
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.NotUnloadingState.CanPerform">
+            <summary>
+            指示当前是否可以发送放货动指令
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、设备的当前位置（层、列）和逻辑动作的终点位置（层、列）一致</para>
+            <para>4、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Wcs.DefaultImpls.Crane.NotUnloadingState.IsCompleted”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wcs.DefaultImpls.Crane.NotUnloadingState.Perform">
+            <summary>
+            发送放货指令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.PickingAndUnloadingWithStepByStepStateManager.#ctor(Wcs.Framework.EquipmentAction,Wcs.Framework.TaskableDevice)">
+            <summary>
+            初始化 <seealso cref="T:PickingAndUnloadingWithStepByStepStateManager"/> 类的新实例。
+            </summary>
+            <param name="equipmentAction">物理动作</param>
+            <param name="device">关联设备</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.PickingAndUnloadingWithStepByStepStateManager.BuildStateLink">
+            <summary>
+            创建状态链
+            </summary>
+            <remarks>
+            <para>1、<see cref="T:NotArriveToPickingLocationState"/>未到达取货点</para>
+            <para>2、<see cref="T:NotPickingState"/>未取货</para>
+            <para>3、<see cref="T:NotArriveToUnloadingLocationState"/>未到达放货点</para>
+            <para>4、<see cref="T:NotUnloadingState"/>未放货</para>
+            </remarks>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.ForkAction">
+            <summary>
+            货叉动作，表示货叉可进行的动作
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkAction.None">
+            <summary>
+            禁止任何货叉东西
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkAction.Pickup">
+            <summary>
+            取
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkAction.Putdown">
+            <summary>
+            放
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneAutomaticTransferAction">
+            <summary>
+            表示一个堆垛机的全自动物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneAutomaticTransferAction.LoadLocation">
+            <summary>
+            取货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneAutomaticTransferAction.UnloadLocation">
+            <summary>
+            卸货位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneAutomaticTransferMovement">
+            <summary>
+            表示堆垛机的一个全自动的取货放货任务
+            到 A 点取货然后卸到 B 点
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneMoveAction">
+            <summary>
+            表示一个堆垛机的半自动移动动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneMoveAction.ToLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneMoveMovement">
+            <summary>
+            表示堆垛机的一个半自动行走任务
+            到 A 点行走到 B 点
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CranePickAction">
+            <summary>
+            表示一个堆垛机的半自动取货动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CranePickAction.PickLocation">
+            <summary>
+            伸叉方向
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneAutomaticTransferWithStepByStepMovement">
+            <summary>
+            表示堆垛机的一个单步执行的全自动的取货放货任务
+            到 A 点取货然后卸到 B 点
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneAutomaticTransferWithStepByStepAction">
+            <summary>
+            表示一个堆垛机的一个单步执行全自动物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneAutomaticTransferWithStepByStepAction.LoadLocation">
+            <summary>
+            取货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneAutomaticTransferWithStepByStepAction.UnloadLocation">
+            <summary>
+            卸货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneAutomaticTransferWithStepByStepAction.StateManager">
+            <summary>
+            状态上下文
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneEvent">
+            <summary>
+            堆垛机事件
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.Initialized">
+            <summary>已初始化</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.BeginRunning">
+            <summary>正在运行</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.BeginPickup">
+            <summary>正在取货</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.EndPickup">
+            <summary>取货完成</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.BeginPutin">
+            <summary>正在放货</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.EndPutin">
+            <summary>放货完成</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.Finished">
+            <summary>完成</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.EmergencyStop">
+            <summary>急停</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.CompletedWithError">
+            <summary>出错完成</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneEvent.BackToTheOrigin">
+            <summary>回原点</summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneNetPacket">
+            <summary>
+            定义该对象只为套用系统结构
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.CraneNetPacket.Length">
+            <summary>
+            获取数据报长度
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.CraneStatus">
+            <summary>
+            堆垛机状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.Initialized">
+            <summary>
+            初始化
+            </summary> 
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.BackToTheOrigin">
+            <summary>
+            回原点
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.无货待命">
+            <summary>
+            无货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.有货待命">
+            <summary>
+            有货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.无货运行">
+            <summary>
+            无货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.有货运行">
+            <summary>
+            有货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.Pickup">
+            <summary>
+            取货
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.Putin">
+            <summary>
+            放货
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.AlarmAndShutdown">
+            <summary>
+            报警停机
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.ResetAlarm">
+            <summary>
+            报警复位
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.奇怪的状态">
+            <summary>
+            ???
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.Disconnected">
+            <summary>
+            未连接
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.CraneStatus.ManualMode">
+            <summary>
+            手动操作
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.DefaultTcpCraneDataComparer">
+            <summary>
+            默认的堆垛机状态数据对比器
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.DefaultTcpCraneDataReceiver.FetchTelexTransferObject">
+            <summary>
+            尝试从当前已接收的数据区获取一个完整的报文对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.TaskCurrentLocationChangedEventArgs">
+            <summary>
+            任务当前位置改变事件数据
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.Crane.TaskCurrentLocationChangedEventArgs.#ctor(System.Int32,System.Int32,System.Int32,Wcs.DefaultImpls.Crane.RackLocation)">
+            <summary>
+            默认构造函数
+            </summary>
+            <param name="equipmentTaskId">设备任务号</param>
+            <param name="column">当前所在列</param>
+            <param name="level">当前所在层</param>
+            <param name="rackLocation">当前所在的货架位置（可为 null）</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.TaskCurrentLocationChangedEventArgs.EquipmentTaskId">
+            <summary>
+            设备任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.TaskCurrentLocationChangedEventArgs.Column">
+            <summary>
+            当前所在列
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.TaskCurrentLocationChangedEventArgs.Level">
+            <summary>
+            当前所在层
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.TaskCurrentLocationChangedEventArgs.RackLocation">
+            <summary>
+            当前所在的货架位置（可能为 null）
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.ForkDirection">
+            <summary>
+            货叉方向<br />
+            指示堆垛机执行动作时伸叉的方向（相对于对堆机本身）
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkDirection.Left">
+            <summary>
+            左排
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkDirection.Right">
+            <summary>
+            右排
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkDirection.Left2">
+            <summary>
+            左排2(双伸位)
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkDirection.Right2">
+            <summary>
+            右排2(双伸位)
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.ForkVerticalPosition">
+            <summary>
+            位置垂直方向的位置状态（高低位）
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkVerticalPosition.Middle">
+            <summary>中位</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkVerticalPosition.Top">
+            <summary>高位</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkVerticalPosition.Bottom">
+            <summary>低位</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkVerticalPosition.Unknow">
+            <summary>未知</summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.ForkHorizontalPosition">
+            <summary>
+            位置水平方向的位置状态（左右位）
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.Unknow">
+            <summary>未知</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.Center">
+            <summary>中位</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.Left">
+            <summary>左位</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.LeftLimit">
+            <summary>左极限</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.Right">
+            <summary>右位</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.RightLimit">
+            <summary>右极限</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.E6">
+            <summary>左（外）</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.E7">
+            <summary>左（外）极限</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.E8">
+            <summary>右（外）</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.Crane.ForkHorizontalPosition.E9">
+            <summary>右（外）极限</summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.InvalidTelexTransferObjectException`1">
+            <summary>
+            表示一个无效的报文传输对象异常
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.InvalidTelexTransferObjectException`1.InvalidTelex">
+            <summary>
+            无效的报文内容
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject">
+            <summary>
+            表示一个堆垛机状态回报报文
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.State">
+            <summary>
+            堆垛机状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.Column">
+            <summary>
+            当前所在列
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.Level">
+            <summary>
+            当前所在层
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.ForkHorizontalPosition">
+            <summary>
+            货叉水平位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.ForkVerticalPosition">
+            <summary>
+            货叉上下位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.AtStation">
+            <summary>
+            指示堆垛机当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.Event">
+            <summary>
+            堆垛机事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyTelexTransferObject.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.AddTaskCommandReplyTelexTransferObject">
+            <summary>
+            表示一个发送 <see cref="T:Wcs.DefaultImpls.Crane.AddTaskCommand"/> 命令给堆垛机后，堆垛机的应答状态报文
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.RackLocationWildcard">
+            <summary>
+            货架位置通配符
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog">
+            <summary>
+            表示一个堆垛机状态回报报文数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.State">
+            <summary>
+            堆垛机状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.Column">
+            <summary>
+            当前所在列
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.Level">
+            <summary>
+            当前所在层
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.ForkHorizontalPosition">
+            <summary>
+            货叉水平位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.ForkVerticalPosition">
+            <summary>
+            货叉上下位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.AtStation">
+            <summary>
+            指示堆垛机当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.Event">
+            <summary>
+            堆垛机事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.RequestStateCommandReplyDataLog.Telex">
+            <summary>
+            原始报文信息
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Crane.AddTaskCommandReplyDataLog">
+            <summary>
+            发送 <see cref="T:Wcs.DefaultImpls.Crane.AddTaskCommand"/> 命令给堆垛机后，堆垛机的应答状态报文数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommandReplyDataLog.Result">
+            <summary>
+            设备处理结果
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommandReplyDataLog.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Crane.AddTaskCommandReplyDataLog.Telex">
+            <summary>
+            原始报文信息
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Conveyor.ICompareResultHandler">
+            <summary>
+            缓冲区数据对比结果处理程序接口
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject">
+            <summary>
+            表示该类的子类是一个子系统通讯报文对象
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.Prefix">
+            <summary>
+            报文前缀
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.Suffix">
+            <summary>
+            报文后缀
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.ToTelex">
+            <summary>
+            转换为字符串形式的报文内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.#ctor">
+            <summary>
+            默认无参构造函数
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.ValidateType(System.String)">
+            <summary>
+            验证一个字符串形式的报文内容是否是与该类型一致
+            </summary>
+            <param name="telex">要进行比较的报文串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.GetBytes">
+            <summary>
+            将对象转换为可以写入网络流的的 byte 数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.TypeFlag">
+            <summary>
+            报文类型标识
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObject.Length">
+            <summary>
+            报文的长度<br />
+            堆垛机的报文长度通常固定，为了增加安全性，强制编码固定该长度，并在接收后进行报文验证。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommand.ContainerCode">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommand.FromStation">
+            <summary>
+            起始站
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommand.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommand.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommand.ToStation">
+            <summary>
+            终点站
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.CancelTaskCommand.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.FeedbackTaskStatusReplyTelexCommand">
+            <summary>
+            回复给子系统已接收到的任务状态处理结果命令
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.FeedbackTaskStatusReplyTelexCommand.Result">
+            <summary>
+            处理结果，该结果可以是1或2。但实际使用中只要回复给他都是成功。所以此处直接引用常量。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.FeedbackTaskStatusReplyTelexCommand.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.DefaultSubSystemDataReceiver.FetchTelexTransferObject">
+            <summary>
+            尝试从当前已接收的数据区获取一个完整的报文对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.frmSubSystemUI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.frmSubSystemUI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.frmSubSystemUI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SubSystemLocationWildcard">
+            <summary>
+            货架位置通配符
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SubSystemLocation">
+            <summary>
+            子系统位置
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemLocation.#ctor(Wcs.DefaultImpls.SubSystem.SubSystemDevice,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="device">位置所属设备</param>
+            <param name="userCode">设备编码</param>
+            <param name="userCode">用户编码</param>
+            <param name="stationNo">站号</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemLocation.StationNo">
+            <summary>
+            站号
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SubSystemAction">
+            <summary>
+            表示一个堆垛机的半自动移动动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemAction.LoadLocation">
+            <summary>
+            起点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemAction.UnloadLocation">
+            <summary>
+            终点位置
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TelexBuffer">
+            <summary>
+            数据接收缓冲区
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.AddTaskCommandReplyTelexTransferObject">
+            <summary>
+            表示一个任务发送反馈信息
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommandReplyTelexTransferObject.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommandReplyTelexTransferObject.Result">
+            <summary>
+            接收结果
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SubSystemNetPacket">
+            <summary>
+            定义该对象只为套用系统结构
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemNetPacket.Length">
+            <summary>
+            获取数据报长度
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject">
+            <summary>
+             穿梭车状态报文 
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.ValidateNoConnectedTelex(System.String)">
+            <summary>
+            验证是否属于一个未连接的空报文
+            </summary>
+            <param name="telex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.Position">
+            <summary>
+            位置值
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.CurrentStation">
+            <summary>
+            当前站台号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.AtStation">
+            <summary>
+            指示穿梭车当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.State">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.Event">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.ContainerCode">
+            <summary>
+            托盘条码
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.FromStation">
+            <summary>
+            起点
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.ToStation">
+            <summary>
+            目的的
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.TaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.StateTelexTransferObject.CarNo">
+            <summary>
+            车号
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SubSystemDevice">
+            <summary>
+            表示一个子系统设备
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.SubSystemDevice.FetchStatus``1">
+            <summary>
+            从当前状态缓冲区取出一个状态
+            </summary>
+            <typeparam name="TState"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.Initialized">
+            <summary>无货无任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.TaskedAndNotRunning">
+            <summary>接到任务未运行</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.Running">
+            <summary>行走运行</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.ArrivedStartStation">
+            <summary>到达起始点</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.ArrivedEndStation">
+            <summary>到达目的地</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.ClearedTheWay">
+            <summary>执行让道任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.AutomaticTaskCompletion">
+            <summary>
+            自动任务完成
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.TaskCompletionByManual">
+            <summary>
+            手动报完成
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleEvent.交接货超时">
+            <summary>
+            交接货超时
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.初始化">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.手动模式">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.无货待命">
+            <summary>
+            无货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.有货待命">
+            <summary>
+            有货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.无货运行">
+            <summary>
+            无货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.有货运行">
+            <summary>
+            有货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.输送线运行">
+            <summary>
+            输送线运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.停止">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.报警停机">
+            <summary>
+            报警停机
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleStatus.有货">
+            <summary>
+            有货
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode.Initialized">
+            <summary>无任务类型</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode.AutomaticTask">
+            <summary>表示HB任务
+            全自动任务
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode.Picking">
+            <summary>取货任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode.Putting">
+            <summary>放货任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode.WalkWithGoods">
+            <summary>有货行走</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicle.RailGuidedVehicleTaskMode.Walk">
+            <summary>无货行走</summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TaskStatusReplyTelexTransferObject">
+            <summary>
+            表示一个任务状态回复反馈信息
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TaskStatusReplyTelexTransferObject.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TaskStatusReplyTelexTransferObject.Status">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.CancelTaskCommandReplyTelexTransferObject">
+            <summary>
+            表示一个取消任务反馈信息
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.CancelTaskCommandReplyTelexTransferObject.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.CancelTaskCommandReplyTelexTransferObject.Result">
+            <summary>
+            接收结果
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent">
+            <summary>
+            小车链条事件
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.无任务">
+            <summary>无任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.左上货">
+            <summary>左上货</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.左卸货">
+            <summary>左卸货</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.右上货">
+            <summary>右上货</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.右卸货">
+            <summary>右卸货6</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.任务完成">
+            <summary>
+            任务完成
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainEvent.手动报完成">
+            <summary>
+            手动报完成
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.CurrentStation">
+            <summary>
+            当前站台号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.AtStation">
+            <summary>
+            指示穿梭车当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.Event">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.State">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.ContainerCode">
+            <summary>
+            托盘条码
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.FromStation">
+            <summary>
+            起点
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.ToStation">
+            <summary>
+            目的的
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.TaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.FromStationTaskMode">
+            <summary>
+            起始站任务模式
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainInfo.ToStationTaskMode">
+            <summary>
+            目的站任务模式
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus">
+            <summary>
+            小车链条状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.初始化">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.手动模式">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.无货待命">
+            <summary>
+            无货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.有货待命">
+            <summary>
+            有货待命
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.无货运行">
+            <summary>
+            无货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.有货运行">
+            <summary>
+            有货运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.输送线运行">
+            <summary>
+            输送线运行
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.停止">
+            <summary>
+            停止
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.报警停机">
+            <summary>
+            报警停机
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainStatus.有货">
+            <summary>
+            有货
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainTaskMode">
+            <summary>
+            小车链条任务模式
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainTaskMode.无任务类型">
+            <summary>无任务类型</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainTaskMode.有货行走">
+            <summary>有货行走</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainTaskMode.取货任务">
+            <summary>取货任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainTaskMode.放货任务">
+            <summary>放货任务</summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.ChainTaskMode.无货行走">
+            <summary>无货行走</summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject">
+            <summary>
+             穿梭车状态报文 
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject.ValidateNoConnectedTelex(System.String)">
+            <summary>
+            验证是否属于一个未连接的空报文
+            </summary>
+            <param name="telex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject.Position">
+            <summary>
+            位置值
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject.CarNo">
+            <summary>
+            车号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject.Chain1">
+            <summary>
+            链1状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicle.StateTelexTransferObject.Chain2">
+            <summary>
+            链2状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.AddTaskCommandReplyTelexTransferObjectDataLog">
+            <summary>
+            表示一个任务发送反馈信息数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObjectDataLog.TypeFlag">
+            <summary>
+            报文类型标识
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SubSystemTelexTransferObjectDataLog.Telex">
+            <summary>
+            原始报文串
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommandReplyTelexTransferObjectDataLog.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.AddTaskCommandReplyTelexTransferObjectDataLog.Result">
+            <summary>
+            接收结果
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.Position">
+            <summary>
+            当前位置（测距位置）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.CurrentStation">
+            <summary>
+            当前站台号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.AtStation">
+            <summary>
+            指示穿梭车当前是否在站点位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.State">
+            <summary>
+            穿梭车状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.Event">
+            <summary>
+            穿梭车事件
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.TaskId">
+            <summary>
+            当前任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.ContainerCode">
+            <summary>
+            托盘条码
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.FromStation">
+            <summary>
+            起点
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.ToStation">
+            <summary>
+            目的的
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.SinglePlatformRailGuidedVehicleStateTelexTransferObjectDataLog.TaskMode">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.CancelTaskCommandReplyTelexTransferObjectDataLog">
+            <summary>
+            表示一个取消任务指令的反馈信息数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.CancelTaskCommandReplyTelexTransferObjectDataLog.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.CancelTaskCommandReplyTelexTransferObjectDataLog.Result">
+            <summary>
+            接收结果
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.SubSystem.TaskStatusReplyTelexTransferObjectDataLog">
+            <summary>
+            表示一个任务状态回复反馈信息数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TaskStatusReplyTelexTransferObjectDataLog.TaskId">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TaskStatusReplyTelexTransferObjectDataLog.Status">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicleStateTelexTransferObjectDataLog.Position">
+            <summary>
+            位置值
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicleStateTelexTransferObjectDataLog.ErrorCode">
+            <summary>
+            错误码（默认为 0）
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicleStateTelexTransferObjectDataLog.Chain1">
+            <summary>
+            链1状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.SubSystem.TwoPlatformRailGuidedVehicleStateTelexTransferObjectDataLog.Chain2">
+            <summary>
+            链2状态
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory._helper._同一组(System.Collections.Generic.List{Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory.ActionInfo})">
+            <summary>
+            1、Task属性同一Group
+            2、取货点属于同一个RackLocationGroup
+            3、放货点属于同一个RackLocationGroup
+            4、取货点无阻挡（取Left2没有同一列层的未执行Left动作，或取Right2没有同同列层的未执行Right动作）或取货点在同一列层位置（调度程序可先取外面的货，再取里面的货）
+            5、放货点无阻挡（放Left2没有同一列层的未执行Left动作，或放Right2没有同同列层的未执行Right动作）或放货点在同一列层位置（调度程序可先放里面的货，再放里面的货）
+            </summary>
+            <param name="actions">候选物理动作</param>
+            <returns>创建的Job集合，同时已创建Job的Action将被从actions参数中移除。</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory._helper._可同时取放货(System.Collections.Generic.List{Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory.ActionInfo})">
+            <summary>
+            1、取货点属于同一个RackLocationGroup
+            2、放货点属于同一个RackLocationGroup
+            3、取货点无阻挡（取Left2没有同一列层的未执行Left动作，或取Right2没有同同列层的未执行Right动作）或取货点在同一列层位置（调度程序可先取外面的货，再取里面的货）
+            4、放货点无阻挡（放Left2没有同一列层的未执行Left动作，或放Right2没有同同列层的未执行Right动作）或放货点在同一列层位置（调度程序可先放里面的货，再放里面的货）
+            </summary>
+            <param name="actions">候选物理动作</param>
+            <returns>创建的Job集合，同时已创建Job的Action将被从actions参数中移除。</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory._helper._可同时放货(System.Collections.Generic.List{Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory.ActionInfo})">
+            <summary>
+            1、放货点属于同一个RackLocationGroup
+            2、放货点无阻挡（放Left2没有同一列层的未执行Left动作，或放Right2没有同同列层的未执行Right动作）
+            3、取货点无阻挡（取Left2没有同一列层的未执行Left动作，或取Right2没有同同列层的未执行Right动作）或取货点在同一列层位置（调度程序可先取外面的货，再取里面的货）
+            </summary>
+            <param name="actions">候选物理动作</param>
+            <returns>创建的Job集合，同时已创建Job的Action将被从actions参数中移除。</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory._helper._可同时取货(System.Collections.Generic.List{Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory.ActionInfo})">
+            <summary>
+            1、取放货点属于同一个RackLocationGroup
+            2、取货点无阻挡（取Left2没有同一列层的未执行Left动作，或取Right2没有同同列层的未执行Right动作）
+            3、放货点无阻挡（放Left2没有同一列层的未执行Left动作，或放Right2没有同同列层的未执行Right动作）或放货点在同一列层位置（调度程序可先放里面的货，再放里面的货）
+            </summary>
+            <param name="actions">候选物理动作</param>
+            <returns>创建的Job集合，同时已创建Job的Action将被从actions参数中移除。</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory._helper._其它类型(System.Collections.Generic.List{Wcs.DefaultImpls.TwoForksCrane.DoubleDeepTwoForksCraneJobFactory.ActionInfo})">
+            <summary>
+            1、取货点无阻挡（取Left2没有同一列层的未执行Left动作，或取Right2没有同同列层的未执行Right动作）或取货点在同一列层位置（调度程序可先取外面的货，再取里面的货）
+            2、放货点无阻挡（放Left2没有同一列层的未执行Left动作，或放Right2没有同同列层的未执行Right动作）或放货点在同一列层位置（调度程序可先放里面的货，再放里面的货）
+            3、要考虑两个物理动作的取货点和放货点相距多少距离，应该设置最大距离（常量）
+            </summary>
+            <param name="actions">候选物理动作</param>
+            <returns>创建的Job集合，同时已创建Job的Action将被从actions参数中移除。</returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.AddAutomaticTransferWithStepByStepCommand">
+            <summary>
+            表示一个添加堆垛机的一个单步执行全自动物理动作命令指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.BackToTheOriginCommand">
+            <summary>
+            回原点命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TelexTransferObject">
+            <summary>
+            表示一个报文传输对象
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.CancelAutomaticTransferWithStepByStepCommand">
+            <summary>
+            表示一个取消堆垛机的一个单步执行全自动物理动作命令指令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.CancelEmergencyStopCommand">
+            <summary>
+            取消急停命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.EmergencyStopCommand">
+            <summary>
+            急停命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.RequestStateCommand">
+            <summary>
+            请求设备报告当前状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.ResetWarnCommand">
+            <summary>
+            表示一个报警复位命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksLoadCommand">
+            <summary>
+            双货叉取货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommand">
+            <summary>
+            表示一个新增任务命令
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommand.CraneDevice">
+            <summary>
+            命令所属的堆垛机<br />
+            将命令实例限定到具体的设备，在发送前进行验证，防止命令中指定的位置与最终接收命令的设备位置系统不一致，增加安全性。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommand.StartPostion">
+            <summary>
+            任务开始位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommand.EndPostion">
+            <summary>
+            任务结束位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommand.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommand.TaskId">
+            <summary>
+            任务号<br />
+            为兼容旧系统中的 GOT 打头的任务，将此字段设为 <see cref="T:System.String"/> 类型。
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.Fork1LoadCommand">
+            <summary>
+            货叉1取货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.Fork2LoadCommand">
+            <summary>
+            货叉1取货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.Fork1UnloadCommand">
+            <summary>
+            货叉1放货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.Fork2UnloadCommand">
+            <summary>
+            货叉1放货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksUnloadCommand">
+            <summary>
+            双货叉放货命令
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.WalkCommand">
+            <summary>
+            行走命令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DefaultTwoForksCraneDataReceiverElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.DefaultTcpTwoForksCraneDataReceiver.FetchTelexTransferObject">
+            <summary>
+            尝试从当前已接收的数据区获取一个完整的报文对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.NotPickingCompletedState">
+            <summary>
+            取货未完成
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPickingCompletedState.CanPerform">
+            <summary>
+            指示当前是否可以执行取货任务
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPickingCompletedState.IsCompleted">
+            <summary>
+            指示堆垛机是否已到达取货点
+            </summary>
+            <remarks>
+            <para>完成条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、设备已连接并且获取到了当前所处位置数据</para>
+            <para>3、设备的当前位置（层、列）和逻辑动作的起始位置（层、列）一致</para>
+            </remarks>
+            <returns>完成返回 true；未完成返回假 false</returns>
+            <exception cref="T:System.NotSupportedException">物理动作所属的逻辑动作起始位置不是货架位置是引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPickingCompletedState.Perform">
+            <summary>
+            发送向取货点移动的指令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPickingCompletedState.getWalkDistance(Wcs.DefaultImpls.Crane.RackLocation,Wcs.DefaultImpls.Crane.RackLocation,Wcs.DefaultImpls.Crane.RackLocation)">
+            <summary>
+            获取从 a 点到 b 点，再到 c 点的距离
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.NotPuttingCompletedState">
+            <summary>
+            放货未完成
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPuttingCompletedState.CanPerform">
+            <summary>
+            指示当前是否可以执行放货任务
+            </summary>
+            <remarks>
+            <para>发送条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、当前状态未完成</para>
+            <para>3、上下文中的物理动作状态为 Executing</para>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPuttingCompletedState.IsCompleted">
+            <summary>
+            指示堆垛机是否已放货完成
+            </summary>
+            <remarks>
+            <para>完成条件：</para>
+            <para>1、设备处于空闲状态</para>
+            <para>2、堆垛机双货叉上无货</para>
+            </remarks>
+            <returns>完成返回 true；未完成返回假 false</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPuttingCompletedState.Perform">
+            <summary>
+            发送向放货点移动的指令
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.NotPuttingCompletedState.getWalkDistance(Wcs.DefaultImpls.Crane.RackLocation,Wcs.DefaultImpls.Crane.RackLocation,Wcs.DefaultImpls.Crane.RackLocation)">
+            <summary>
+            获取从 a 点到 b 点，再到 c 点的距离
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneStateManager.#ctor(Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneJob,Wcs.Framework.TaskableDevice)">
+            <summary>
+            初始化 <seealso cref="T:PickingAndUnloadingWithStepByStepStateManager"/> 类的新实例。
+            </summary>
+            <param name="job">物理动作</param>
+            <param name="device">关联设备</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneStateManager.BuildStateLink">
+            <summary>
+            创建状态链
+            </summary>
+            <remarks>
+            <para>1、<see cref="T:NotPickingCompletedState"/>取货未完成</para>
+            <para>2、<see cref="T:NotPuttingCompletedState"/>放货未完成</para>
+            </remarks>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.RestoreTwoForksStateManagerApplicationStartup">
+            <summary>
+            双货叉堆垛机状态上下文恢复程序
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroupCollection.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocationElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroupElement.#ctor(System.Xml.XmlNode,Wcs.Framework.Cfg.ParticularLocationCollection,Wcs.Framework.Cfg.WcsConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">配置节点</param>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.Forks">
+            <summary>
+            堆垛机货叉
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.TwoForksCrane.Forks.Fork1">
+            <summary>
+            货叉1
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.TwoForksCrane.Forks.Fork2">
+            <summary>
+            货叉2
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup">
+            <summary>
+            货格组
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.GetFork(Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation)">
+            <summary>
+            获取指定的货位在当前组中使用的货叉
+            </summary>
+            <param name="loc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.GetRackLocation(Wcs.DefaultImpls.TwoForksCrane.Forks,Wcs.DefaultImpls.Crane.ForkDirection)">
+            <summary>
+            在该组中获取使用指定货叉可以向指定方向伸叉操作的货位
+            </summary>
+            <param name="fork"></param>
+            <param name="forkDirection"></param>
+            <returns>存在时返回双货位堆垛机位置，不存在时引发异常</returns>
+            <exception cref="T:System.InvalidOperationException">在未找到指定位置时引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.GetRackLocation(Wcs.DefaultImpls.Crane.ForkDirection)">
+            <summary>
+            在该组中获取向指定方向伸叉操作的货位
+            </summary>
+            <param name="fork"></param>
+            <param name="forkDirection"></param>
+            <returns>存在时返回双货位堆垛机位置，不存在时引发异常</returns>
+            <exception cref="T:System.InvalidOperationException">在未找到指定位置时引发</exception>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.InGroup(Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation)">
+            <summary>
+            指示指定的位置是否包含在当前组中
+            </summary>
+            <param name="loc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.AddLocation(Wcs.DefaultImpls.TwoForksCrane.Forks,Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation)">
+            <summary>
+            将指定的位置加入到当前组中
+            </summary>
+            <param name="loc">位置</param>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.Locations">
+            <summary>
+            获取组内包含的所有货位
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup.Forks">
+            <summary>
+            获取该组中可以使用的货叉
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAutomaticTransferMovement">
+            <summary>
+            表示堆垛机的一个全自动的取货放货任务
+            到 A 点取货然后卸到 B 点
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAutomaticTransferAction">
+            <summary>
+            表示一个堆垛机的全自动物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAutomaticTransferAction.LoadLocation">
+            <summary>
+            取货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAutomaticTransferAction.UnloadLocation">
+            <summary>
+            放货位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneJob.Fork1EquipmentAction">
+            <summary>
+            货叉1关联的堆垛机物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneJob.Fork2EquipmentAction">
+            <summary>
+            货叉2关联的堆垛机物理动作
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneJob.StateManager">
+            <summary>
+            状态上下文
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.ForkStatus">
+            <summary>
+            货叉状态
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.TwoForksCrane.ForkStatus.初始化">
+            <summary>
+            该状态为非协议状态，堆垛机在任何时间不应该回复该状态。
+            增加此状态的原因是为防止个别项目未将程序调整到最新版而回意外回复了该状态。
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.GetGroup(Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation,Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation)">
+            <summary>
+            获取指定的两个位置所在的相当的组
+            </summary>
+            <param name="loc1">位置1</param>
+            <param name="loc2">位置2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.IsFork(Wcs.DefaultImpls.TwoForksCrane.Forks,Wcs.DefaultImpls.TwoForksCrane.Forks)">
+            <summary>
+            返回一个值，指示指定的货叉value 是否包含在 forks 当中。
+            </summary>
+            <param name="forks">货叉集合</param>
+            <param name="value">要验证是否存在的货叉</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.GetRackLocation(Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneDevice,System.Int32,System.Int32,Wcs.DefaultImpls.TwoForksCrane.Forks)">
+            <summary>
+            在指定的堆垛机所有位置中获取可以在指定的列层位置使用指定货叉双货位堆垛机位置
+            </summary>
+            <param name="craneDevice">堆垛机</param>
+            <param name="column">列</param>
+            <param name="level">层</param>
+            <param name="fork">货叉（可以使用 | 运算符）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.GetGroup(Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneDevice,System.Int32,System.Int32)">
+            <summary>
+            从指定的双货位堆垛机位置集合中查找指定列、层的位置组
+            </summary>
+            <param name="craneDevice">堆垛机</param>
+            <param name="column">列</param>
+            <param name="level">层</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.GetGroup(Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneDevice,System.Int32,System.Int32,System.Nullable{Wcs.DefaultImpls.Crane.ForkDirection},System.Nullable{Wcs.DefaultImpls.Crane.ForkDirection})">
+            <summary>
+            从指定的双货位堆垛机位置集合中查找指定列、层的位置组
+            </summary>
+            <param name="craneDevice">堆垛机</param>
+            <param name="column">列</param>
+            <param name="level">层</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.GetGroupByUserColumnAndLevel(Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneDevice,System.Int32,System.Int32,System.Nullable{Wcs.DefaultImpls.Crane.ForkDirection},System.Nullable{Wcs.DefaultImpls.Crane.ForkDirection})">
+            <summary>
+            从指定的双货位堆垛机位置集合中查找指定列、层的位置组
+            </summary>
+            <param name="craneDevice">堆垛机</param>
+            <param name="userColumn">列</param>
+            <param name="userLevel">层</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneHelper.创建行走任务号(Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneJob)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneJobTaskErrorHandler.FireTaskErrorEvent(Wcs.Framework.TaskableDevice,System.Int32,System.String,System.String)">
+            <summary>
+            引发任务完成事件
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneTaskLocation">
+            <summary>
+            双货位堆垛机任务位置。
+            包含一组用于描述双货们堆垛机任务在一组位置中的操作约束信息。
+            该类型表示的位置并不是真正意义上的存在，而只是在运行时动态生成。
+            </summary>
+        </member>
+        <member name="F:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneUserInterface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneUserInterface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneUserInterface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation">
+            <summary>
+            双伸叉的货架位置
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation.AddGroup(Wcs.DefaultImpls.TwoForksCrane.RackLocationGroup)">
+            <summary>
+            将此位置添加一个所属组对象
+            </summary>
+            <param name="group"></param>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation.GetGroup(Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation,Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation,Wcs.DefaultImpls.TwoForksCrane.Forks)">
+            <summary>
+            获取两个货位所属的同一个组对象
+            </summary>
+            <param name="fork1Location"></param>
+            <param name="fork2Location"></param>
+            <returns>可能返回 null</returns>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation.GetGroup(Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation,Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation)">
+            <summary>
+            获取两个货位所属的同一个组对象
+            </summary>
+            <param name="fork1Location"></param>
+            <param name="fork2Location"></param>
+            <returns>可能返回 null</returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation.Groups">
+            <summary>
+            获取货位所属的组，一个货位最多能属于两个组。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation.GroupA">
+            <summary>
+            所有组A
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksRackLocation.GroupB">
+            <summary>
+            所属组B
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommandReplyTelexTransferObject">
+            <summary>
+            表示一个发送 <see cref="T:Wcs.DefaultImpls.Crane.AddTaskCommand"/> 命令给堆垛机后，堆垛机的应答状态报文
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommandReplyTelexTransferObject.StartLocation">
+            <summary>
+            任务起始位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommandReplyTelexTransferObject.EndLocation">
+            <summary>
+            任务结束位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.AddTaskCommandReplyTelexTransferObject.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.CranePostion">
+            <summary>
+            表示一个堆垛机位置<br />
+            它包含一组描述堆垛机位置及货叉伸叉方向的信息
+            </summary>
+        </member>
+        <member name="M:Wcs.DefaultImpls.TwoForksCrane.CranePostion.IsEmpty">
+            <summary>
+            指示当前对象是否是一个空对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.CranePostion.Fork1Direction">
+            <summary>
+            货叉1方向
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.CranePostion.Fork2Direction">
+            <summary>
+            货叉2方向
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.CranePostion.Column">
+            <summary>
+            列
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.CranePostion.Level">
+            <summary>
+            层
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.RequestStateCommandReplyTelexTransferObject">
+            <summary>
+            表示一个堆垛机状态回报报文
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.RequestStateCommandReplyTelexTransferObject.Fork1HorizontalPosition">
+            <summary>
+            货叉1水平位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.RequestStateCommandReplyTelexTransferObject.Fork2HorizontalPosition">
+            <summary>
+            货叉2水平位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.RequestStateCommandReplyTelexTransferObject.Fork1Status">
+            <summary>
+            货叉1状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.RequestStateCommandReplyTelexTransferObject.Fork2Status">
+            <summary>
+            货叉2状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneDevice">
+            <summary>
+            表示一个双货位的堆垛机设备
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAddTaskCommandReplyDataLog">
+            <summary>
+            发送 <see cref="T:Wcs.DefaultImpls.Crane.AddTaskCommand"/> 命令给堆垛机后，堆垛机的应答状态报文数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAddTaskCommandReplyDataLog.StartLocation">
+            <summary>
+            任务起始位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAddTaskCommandReplyDataLog.EndLocation">
+            <summary>
+            任务结束位置
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneAddTaskCommandReplyDataLog.CommandType">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneRequestStateCommandReplyDataLog">
+            <summary>
+            表示一个堆垛机状态回报报文数据日志
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneRequestStateCommandReplyDataLog.Fork1HorizontalPosition">
+            <summary>
+            货叉1水平位置状态
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.TwoForksCrane.TwoForksCraneRequestStateCommandReplyDataLog.Fork2HorizontalPosition">
+            <summary>
+            货叉2水平位置状态
+            </summary>
+        </member>
+        <member name="T:Wcs.DefaultImpls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Wcs.DefaultImpls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

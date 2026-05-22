@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImpls" namespace="Wcs.DefaultImpls.Crane">
+  <subclass name="AddTaskCommandReplyDataLog" discriminator-value="AddTaskCommandReplyDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="Result" column="`AddTaskCommandReplyDataLog_Result`" type="AddTaskCommandReplyTelexTransferObjectResult" />
+    <property name="TaskId" column="`AddTaskCommandReplyDataLog_TaskId`" type="String" />
+    <property name="Telex" column="`AddTaskCommandReplyDataLog_Telex`" type="String" />
+  </subclass>
+  <subclass name="RequestStateCommandReplyDataLog" discriminator-value="RequestStateCommandReplyDataLog" extends="Wcs.Framework.ReceivedDataLog">
+    <property name="State" column="`RequestStateCommandReplyDataLog_State`" type="CraneStatus" />
+    <property name="Column" column="`RequestStateCommandReplyDataLog_Column`" type="Int32" />
+    <property name="Level" column="`RequestStateCommandReplyDataLog_Level`" type="Int32" />
+    <property name="ForkHorizontalPosition" column="`RequestStateCommandReplyDataLog_ForkHorizontalPosition`" type="ForkHorizontalPosition" />
+    <property name="ForkVerticalPosition" column="`RequestStateCommandReplyDataLog_ForkVerticalPosition`" type="ForkVerticalPosition" />
+    <property name="AtStation" column="`RequestStateCommandReplyDataLog_AtStation`" type="Boolean" />
+    <property name="ErrorCode" column="`RequestStateCommandReplyDataLog_ErrorCode`" type="Int32" />
+    <property name="Event" column="`RequestStateCommandReplyDataLog_Event`" type="CraneEvent" />
+    <property name="TaskId" column="`RequestStateCommandReplyDataLog_TaskId`" type="String" />
+    <property name="Telex" column="`RequestStateCommandReplyDataLog_Telex`" type="String" />
+  </subclass>
+</hibernate-mapping>

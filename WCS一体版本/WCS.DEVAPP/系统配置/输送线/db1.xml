@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+  <senderEncoding>
+    <collection type="Wcs.DefaultImpls.Conveyor.TaskCommand, Wcs.DefaultImpls" blockBytes="28" itemCount="1">
+      <property name="HandShake" index="0" size="2" type="UInt16" />
+      <property name="AssignmentID" index="2" size="4" type="UInt32" />
+      <property name="TU_ID" index="6" size="2" type="UInt16" />
+      <property name="TU_Type" index="8" size="2" type="UInt16" />
+      <property name="IO_Data" index="10" size="2" type="UInt16" />
+      <property name="RotingNo" index="12" size="2" type="UInt16" />
+      <property name="StartMotorNo" index="14" size="2" type="UInt16" />
+      <property name="DestinationNo" index="16" size="2" type="UInt16" />
+      <property name="Index" index="18" size="2" type="UInt16" />
+      <property name="DataId" index="20" size="4" type="UInt32" />
+      <property name="Spare" index="24" size="4" type="UInt32" />
+    </collection>
+    <collection type="Wcs.DefaultImpls.Conveyor.HoldSignalCommand, Wcs.DefaultImpls" blockBytes="20" itemCount="1">
+      <property name="PosNo" index="0" size="2" type="UInt16" />
+      <property name="HandShake" index="2" size="2" type="UInt16" />
+      <property name="AssignmentID" index="4" size="4" type="UInt32" />
+      <property name="TU_ID" index="8" size="2" type="UInt16" />
+      <property name="TU_Type" index="10" size="2" type="UInt16" />
+      <property name="IO_Data" index="12" size="2" type="UInt16" />
+      <property name="Index"  index="14" size="2" type="UInt16" />
+      <property name="DataId" index="16" size="4" type="UInt32" />
+    </collection>
+    <collection type="Wcs.DefaultImpls.Conveyor.ClearLocationTaskCommand, Wcs.DefaultImpls" blockBytes="14" itemCount="1">
+      <property name="PosNo" index="0" size="2" type="UInt16" />
+      <property name="TaskNo" index="2" size="4" type="UInt32" />
+      <property name="TUID" index="6" size="2" type="UInt16" />
+      <property name="Index" index="8" size="2" type="UInt16" />
+      <property name="DataId" index="10" size="4" type="UInt32" />
+    </collection>
+  </senderEncoding>
+

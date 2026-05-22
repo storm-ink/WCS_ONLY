@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.Framework" namespace="Wcs.Framework">
+	<class name="Task" table="`Tasks`" dynamic-update="true"  batch-size="500" discriminator-value="Task">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='Tasks'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<discriminator column="`discriminator`" length="255" type="String" not-null="false" />
+		<property name="TaskCode" type="String" length="50" column="`TaskCode`" unique="true" />
+		<property name="MasterTaskCode" type="String" length="50" column="`MasterTaskCode`" />
+		<many-to-one class="Request" name="FromRequest" column="`ReqeustId`" not-found="ignore" not-null="false" lazy="false" cascade="delete" />
+		<property name="Source" type="Wcs.Framework.TaskSource, Wcs.Framework" column="`Source`" not-null="true" />
+		<component class="LocationInfo" name="StartLocation">
+			<property column="`StartLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`StartLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<component class="LocationInfo" name="EndLocation">
+			<property column="`EndLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`EndLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`EndLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`EndLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<component class="LocationInfo" name="CurrentLocation">
+			<property column="`CurrentLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`CurrentLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`CurrentLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`CurrentLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<property name="Direction" column="Direction" type="TaskDirection" not-null="true" />
+		<property name="Status" column="`Status`" type="TaskStatus" not-null="true" />
+		<property name="BizType" column="BizType" type="TaskBizType" not-null="true" />
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="FinishedAt" type="DateTime" column="`FinishedAt`" />
+		<property name="Description" type="String" column="`Description`" length="500" />
+		<property name="Priority" type="Int32" column="`Priority`" not-null="true" />
+		<property name="WcsPriority" type="Int32" column="`WcsPriority`" not-null="true" />
+		<property name="ManualPriority" type="Boolean" column="`ManualPriority`" not-null="true" />
+		<property name="TaskType" type="String" column="`TaskType`" not-null="false" length="25" />
+		<property name="Group" type="String" column="`Group`" not-null="false" length="50" />
+		<property name="PartnersCount" type="Int32">
+			<column name="`PartnersCount`" default="1" not-null="true"  />
+		</property>
+
+		<set name="ContainerCodes" table="TaskContainerCodes" lazy="false" cascade="all-delete-orphan" batch-size="500" >
+			<key column="`TaskId`" not-null="true"/>
+			<element column="`Value`" length="50" not-null="true" type="String" />
+		</set>
+		<set name="Movements" table="Movements" inverse="true" lazy="false" cascade="all-delete-orphan" batch-size="500">
+			<key column="`TaskId`" not-null="true"/>
+			<one-to-many class="LogicMovement"/>
+		</set>
+		<map name="AdditionalInfo" table="TaskAdditionalInfo" lazy="false" batch-size="500">
+			<key column="TaskId" not-null="true" />
+			<map-key column="`Key`" type="String" length="255" />
+			<element column="`Value`" type="String" length="6000" />
+		</map>
+		<map name="TaskPredictRoutes" table="TaskPredictRoutes" lazy="false" batch-size="500">
+			<key column="TaskId" not-null="true" />
+			<map-key column="`Key`" type="Int32"/>
+			<element column="`Value`" type="Int32" length="2000" />
+		</map>
+	</class>
+
+	<subclass name="UndefinedEndLocationTask" discriminator-value="`UndefinedEndLocationTask`" extends="Task" dynamic-update="true">
+		<set name="AvailableEndLocations" table="UndefinedEndLocationTask_AvailableEndLocations" inverse="false" lazy="false" cascade="all-delete-orphan" batch-size="500">
+			<key column="`TaskId`" not-null="true"/>
+			<composite-element class="LocationInfo">
+				<property column="`UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+				<property column="`DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+				<property column="`UserCode`" name="UserCode" type="String" not-null="true"/>
+				<property column="`DeviceName`" name="DeviceName" type="String" not-null="true"/>
+			</composite-element>
+		</set>
+	</subclass>
+
+	<class name="Request" table="`Requests`" dynamic-update="true" batch-size="500">
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='Requests'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<component class="LocationInfo" name="Source" lazy="false">
+			<property column="`StartLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`StartLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<property name="Status" column="`Status`" type="Wcs.Framework.RequestStatus, Wcs.Framework" not-null="true" />
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="InvalidAt" type="DateTime" column="`InvalidAt`" />
+		<set name="ContainerCodes" table="RequestContainerCodes" cascade="all-delete-orphan" lazy="false" batch-size="500">
+			<key column="`RequestId`" not-null="true"/>
+			<element column="`Value`" length="50" not-null="true" type="String" />
+		</set>
+		<property name="Comments" type="String" column="`Comments`" />
+		<map name="AdditionalInfo" table="RequestAdditionalInfo" lazy="false" batch-size="500">
+			<key column="RequestId" not-null="true" />
+			<map-key column="`Key`" type="String" length="255" />
+			<element column="`Value`" type="String" length="2000" />
+		</map>
+	</class>
+
+	<class name="LogicMovement" table="LogicMovements" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='LogicMovements'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<discriminator column="`discriminator`" type="String" not-null="true"/>
+		<property name="Ordering" column="`Ordering`" type="Int32" not-null="true" />
+		<property name="RouteId" column="`RouteId`" type="Int32" not-null="false" />
+		<property name="Status" column="`Status`" type="Wcs.Framework.LogicMovementStatus, Wcs.Framework" not-null="true" />
+		<property column="`DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		<many-to-one name="Task" class="Task" column="`TaskId`" not-null="true" lazy="false"/>
+		<set name="EquipmentActions" table="EquipmentActions" inverse="true" cascade="all-delete-orphan" lazy="false" batch-size="500">
+			<key column="`LogicMovementId`" not-null="true"/>
+			<one-to-many class="EquipmentAction"/>
+		</set>
+		<component class="LocationInfo" name="StartLocation">
+			<property column="`StartLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`StartLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`StartLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<component class="LocationInfo" name="EndLocation">
+			<property column="`EndLocation_UnifiedCode`" name="UnifiedCode" type="String"  not-null="true"/>
+			<property column="`EndLocation_DeviceCode`" name="DeviceCode" type="String"  not-null="true"/>
+			<property column="`EndLocation_UserCode`" name="UserCode" type="String" not-null="true"/>
+			<property column="`EndLocation_DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		</component>
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="FinishedAt" type="DateTime" column="`FinishedAt`" />
+	</class>
+
+	<class name="EquipmentAction" table="EquipmentActions" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='EquipmentActions'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<discriminator column="`discriminator`" type="String" not-null="true"/>
+		<property name="Ordering" column="`Ordering`" type="Int32" not-null="true" />
+		<property name="SequenceOrdering" column="`SequenceOrdering`" type="Int32" not-null="false" />
+		<component class="EquipmentActionGroup" name="Group">
+			<property column="`Group_Id`" name="Id" type="Guid" not-null="true"/>
+		</component>
+		<property name="EquipmentTaskId" column="EquipmentTaskId" type="Int32" not-null="true" />
+		<property name="ContainerCode" column="ContainerCode" type="Int16" not-null="true" />
+		<property column="`DeviceName`" name="DeviceName" type="String" not-null="true"/>
+		<property column="`ActuatingDeviceName`" name="ActuatingDeviceName" type="String" not-null="true"/>
+		<property name="Status" column="Status" type="Wcs.Framework.EquipmentActionStatus, Wcs.Framework" not-null="true" />
+		<many-to-one name="Movement" class="LogicMovement" column="`LogicMovementId`" not-null="false" lazy="false"/>
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="FinishedAt" type="DateTime" column="`FinishedAt`" />
+		<property name="SentAt" type="DateTime" column="`SentAt`" />
+
+		<set name="Warnings" table="EquipmentActionWarnings" inverse="true" lazy="false" cascade="all-delete-orphan" batch-size="500" >
+			<key column="`EquipmentActionId`" not-null="true"/>
+			<one-to-many class="EquipmentActionWarning"/>
+		</set>
+		<set name="Locks" table="Locks" inverse="true" lazy="false" cascade="all-delete-orphan" batch-size="500">
+			<key column="`Id`" not-null="true"/>
+			<one-to-many class="RouteLock"/>
+		</set>
+	</class>
+
+	<class name="EquipmentActionWarning" table="EquipmentActionWarnings" batch-size="500" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='EquipmentActionWarnings'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<many-to-one name="EquipmentAction" class="EquipmentAction" column="`EquipmentActionId`" not-null="true" lazy="false"/>
+		<property name="Code" column="Code" type="String" />
+		<property name="Description" column="Description" type="String" length="500" />
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="DeviceName" column="DeviceName" type="String" />
+	</class>
+
+	<class name="EquipmentActionScheduler" table="EquipmentActionSchedulers" batch-size="50" dynamic-update="true">
+		<id name="DeviceName" column="`DeviceName`" type="String" length="50" generator="assigned" />
+		<discriminator column="`discriminator`" type="String" not-null="true"/>
+		<many-to-one name="CurrentAction" class="EquipmentAction" column="`EquipmentActionId`" unique="false" not-found="ignore" />
+	</class>
+
+	<!-- 手工任务号流水 -->
+	<class name="ManualTaskCodeSerialNumber" table="`ManualTaskCodeSerialNumber`">
+		<id name="DateValue" column="DateValue" type="DateTime">
+			<generator class="assigned" />
+		</id>
+		<property name="NextSn" type="Int32" column="NextSn" not-null="true" />
+	</class>
+
+	<!-- 设备任务号流水 -->
+	<class name="EquipmentTaskIdSerialNumber" table="`EquipmentTaskIdSerialNumber`">
+		<id name="DateValue" column="DateValue" type="DateTime">
+			<generator class="assigned" />
+		</id>
+		<property name="NextSn" type="Int32" column="NextSn" not-null="true" />
+	</class>
+
+	<class name="Wcs.Framework.DeviceLockerInformation" table="DeviceLockerInformations" batch-size="500">
+		<id name="DeviceName" column="DeviceName" type="String">
+			<generator class="assigned" />
+		</id>
+		<component class="Wcs.Framework.LockerInfo, Wcs.Framework" name="LockerInfo">
+			<property column="`LockerInfo_UserName`" name="UserName" type="String" not-null="true"/>
+			<property column="`LockerInfo_IpAddress`" name="IPAddress" type="String" not-null="true"/>
+		</component>
+	</class>
+	<class name="Wcs.Framework.StateManagerRestoreInfo" table="StateManagerRestoreInfos" batch-size="50">
+		<id name="EquipmentActionId" column="`EquipmentActionId`" type="Int32">
+			<generator class="assigned" />
+		</id>
+		<property name="CurrentStateName" column="`CurrentStateName`" type="String" length="255" not-null="true" />
+		<property name="OwnDeviceName" column="`OwnDeviceName`" type="String" length="255" not-null="true" />
+		<property name="ActuatingDeviceName" column="`ActuatingDeviceName`" type="String" length="255" not-null="true" />
+		<property name="CreatedAt" column="`CreatedAt`" type="DateTime" not-null="true" />
+		<property name="LastUpdateAt" column="`LastUpdateAt`" type="DateTime" not-null="true" />
+	</class>
+
+	<class name="Wcs.Framework.ReceivedDataLog" table="ReceivedDataLogs">
+		<id name="Id" column="`Id`" type="Int32">
+			<generator class="hilo">
+				<param name="table">hilo_values</param>
+				<param name="where">clazz='ReceivedDataLogs'</param>
+				<param name="column">next_hi</param>
+				<param name="max_lo">5</param>
+			</generator>
+		</id>
+		<discriminator column="discriminator" type="String" not-null="true" />
+		<property name="DeviceName" column="`DeviceName`" length="50" type="String" not-null="true" />
+		<property name="CreatedAt" type="DateTime" column="`CreatedAt`" not-null="true" />
+		<property name="DataLevel" type="ReceivedDataLogLevel" column="`ReceivedDataLogLevel`" not-null="true" />
+	</class>
+
+	<database-object>
+		<create>
+			<![CDATA[
+      IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[hilo_values]') AND type in (N'U'))
+DROP TABLE [dbo].[hilo_values]
+go
+CREATE TABLE [dbo].[hilo_values](
+	[next_hi] [int] NOT NULL,
+	[clazz] [nvarchar](255) NOT NULL,
+ CONSTRAINT [PK_hilo_values] PRIMARY KEY CLUSTERED 
+(
+	[clazz] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+      ]]>
+		</create>
+		<drop>
+			<![CDATA[
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[hilo_values]') AND type in (N'U'))
+DROP TABLE [dbo].[hilo_values]
+      ]]>
+		</drop>
+	</database-object>
+</hibernate-mapping>

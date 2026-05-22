@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Wcs.DefaultImplementCollection.RailGuidedVehicle" namespace="Wcs.DefaultImplementCollection.RailGuidedVehicle" auto-import="false">
+  <subclass name="Wcs.DefaultImplementCollection.RailGuidedVehicle.StateTelexTransferObjectDataLog" discriminator-value="FRK_StateTelexTransferObjectDataLog" extends="Wcs.Framework.ReceivedDataLog, Wcs.Framework">
+    <property name="Position" column="`StateTelexTransferObjectDataLog_Position`" type="Int32" />
+    <property name="CurrentStation" column="`StateTelexTransferObjectDataLog_CurrentStation`" type="Int32" />
+    <property name="AtStation" column="`StateTelexTransferObjectDataLog_AtStation`" type="Boolean" />
+    <property name="ErrorCode" column="`StateTelexTransferObjectDataLog_ErrorCode`" type="Int32" />
+    <property name="State" column="`StateTelexTransferObjectDataLog_State`" type="RailGuidedVehicleStatus" />
+    <property name="Event" column="`StateTelexTransferObjectDataLog_Event`" type="RailGuidedVehicleEvent" />
+    <property name="TaskId" column="`StateTelexTransferObjectDataLog_TaskId`" type="String" />    
+    <property name="ContainerCode" column="`StateTelexTransferObjectDataLog_ContainerCode`" type="Int32" />
+    <property name="FromStation" column="`StateTelexTransferObjectDataLog_FromStation`" type="Int32" />
+    <property name="ToStation" column="`StateTelexTransferObjectDataLog_ToStation`" type="Int32" />
+    <property name="TaskMode" column="`StateTelexTransferObjectDataLog_TaskMode`" type="RailGuidedVehicleTaskMode" />    
+    <property name="Telex" column="`StateTelexTransferObjectDataLog_Telex`" type="String" />
+  </subclass>
+</hibernate-mapping>

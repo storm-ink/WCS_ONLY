@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Wcs.Framework</id>
+    <version>2.1.0.23489</version>
+    <title>Wcs框架</title>
+    <authors>合肥井松自动化科技有限公司</authors>
+    <owners>合肥井松自动化科技有限公司</owners>
+    <licenseUrl>http://www.gen-song.net/</licenseUrl>
+    <projectUrl>http://www.gen-song.net/Wcs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wcs框架模块</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="Wcs" version="2.1.0.23486" />
+    </dependencies>
+  </metadata>
+</package>

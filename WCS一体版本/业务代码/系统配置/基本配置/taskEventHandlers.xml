@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<taskEventHandlers>
+	<onRunning>
+		<handler type="Wcs.Framework.DefaultTaskRunningEventHandler, Wcs.Framework" />
+	</onRunning>
+	<onCompleted>
+		<!--<handler type="ZHQXC.SpecialAircraftEquipmentTaskCompeltedCheck, ZHQXC" />-->
+		<handler type="Wcs.Framework.DefaultTaskCompletedEventHandler, Wcs.Framework" />
+	</onCompleted>
+	<onError>
+		<handler type="Wcs.Framework.DefaultTaskErrorEventHandler, Wcs.Framework" />
+	</onError>
+	<onRequest>
+		<handler type="Wcs.Framework.DefaultTaskRequestEventHandler, Wcs.Framework" />
+	</onRequest>
+	<onCurrentLocationChanged>
+		<handler type="Wcs.Framework.DefaultTaskCurrentLocationChangedEventHandler, Wcs.Framework" />
+	</onCurrentLocationChanged>
+</taskEventHandlers>
+
